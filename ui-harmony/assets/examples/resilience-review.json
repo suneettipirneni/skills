@@ -1,0 +1,120 @@
+{
+  "status": "partial",
+  "task": "Read and choose the delivery inspector actions with enlarged text.",
+  "audience": "People reviewing delivery details, including those using larger text.",
+  "scope": "Synthetic 420px inspector within a 1440px viewport, 32px text; baseline critique plus verified composition repair.",
+  "identityToPreserve": "Olive primary action, clear secondary action, larger text and existing spacing.",
+  "strengths": [
+    "Both actions retain meaningful visible labels and contrasting priority; no text is clipped."
+  ],
+  "scenarios": [
+    {
+      "id": "before-large-text",
+      "status": "tested",
+      "evidence": "assets/examples/resilience-before.png and resilience-before-geometry.json"
+    },
+    {
+      "id": "after-large-text",
+      "status": "tested",
+      "evidence": "assets/examples/resilience-after.png and resilience-after-geometry.json"
+    },
+    {
+      "id": "actual-browser-zoom",
+      "status": "untested",
+      "evidence": "Fixture increases CSS text size; browser zoom and assistive technology were not tested."
+    }
+  ],
+  "dimensions": {
+    "taskHierarchy": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "groupingRhythm": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "typography": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "colorSurfaces": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "componentLanguage": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "compositionCharacter": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "contentMeaning": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "interactionState": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "adaptation": {
+      "rating": 1,
+      "reason": "In the baseline, fixed 180px action bases retain two narrow columns at enlarged text, producing tall fragmented labels despite zero audit findings.",
+      "evidence": [
+        "assets/examples/resilience-before.png",
+        "assets/examples/resilience-before-geometry.json"
+      ],
+      "tradeoff": "Stacking actions takes a different scan path; the repair preserves DOM/action order and compares normal and grown text."
+    }
+  },
+  "accessibilityGates": [],
+  "findings": [
+    {
+      "id": "content-relative-action-wrap",
+      "dimension": "adaptation",
+      "severity": "moderate",
+      "confidence": "medium",
+      "ownerRoute": "action-group",
+      "routePath": [
+        "action-group",
+        "spacing",
+        "resilient-css"
+      ],
+      "location": "420 CSS px inspector, 1440 CSS px viewport, 32px fixture text",
+      "observation": "Before: each action is 187px wide and 258px tall, with no overflow/clipping finding. Visual inspection shows fragmented multiline labels.",
+      "intendedRelationship": "Related actions should remain readable as text grows while keeping their priority and order.",
+      "consequence": "Inferred reading friction from fragmented action wording; no task time or comprehension measurement.",
+      "proposal": "Use a text-relative 11.25em flex basis in this fixture instead of 180px, allowing actions to stack when enlarged text needs space.",
+      "preserve": "32px text, primary/secondary colors, 12px gap, DOM/action order and full labels.",
+      "alternative": "Keep horizontal actions if actual labels and available space remain readable; the exact basis is a local design hypothesis, not a universal rule.",
+      "verification": "After: actions are 386px wide and 114px tall, stacked in original order with no clipping. Five captures exercise 300/420px containers, normal/long grown text and an intentionally broken fixed-width variant. Real zoom remains untested.",
+      "evidence": [
+        "assets/examples/resilience-before.png",
+        "assets/examples/resilience-after.png",
+        "assets/examples/resilience-before-geometry.json",
+        "assets/examples/resilience-after-geometry.json"
+      ],
+      "provenance": "proposed-heuristic"
+    }
+  ],
+  "unknowns": [
+    "Actual user comprehension and task speed were not measured.",
+    "Simulated CSS text growth is not a real zoom or assistive-technology test."
+  ]
+}

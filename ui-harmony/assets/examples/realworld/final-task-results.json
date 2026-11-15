@@ -1,0 +1,96 @@
+[
+  {
+    "id": "govuk",
+    "steps": [
+      {
+        "step": "optional-cookies-rejected"
+      },
+      {
+        "step": "first-tab",
+        "focus": {
+          "tag": "INPUT",
+          "text": "",
+          "rect": {
+            "x": 15,
+            "y": 134.5625,
+            "width": 310,
+            "height": 50,
+            "top": 134.5625,
+            "right": 325,
+            "bottom": 184.5625,
+            "left": 15
+          }
+        }
+      },
+      {
+        "error": "locator.getAttribute: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a').filter({ hasText: /^Start now$/ }).first()\u001b[22m\n"
+      }
+    ]
+  },
+  {
+    "id": "stripe",
+    "steps": [
+      {
+        "step": "menu-open",
+        "links": [
+          {
+            "text": "Learn more",
+            "href": "https://openrouter.ai/"
+          },
+          {
+            "text": "Get started",
+            "href": "https://dashboard.stripe.com/register"
+          },
+          {
+            "text": "Sign up with Google",
+            "href": "https://dashboard.stripe.com/login/oauth/google/init"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Sign in",
+            "href": "https://dashboard.stripe.com/login"
+          },
+          {
+            "text": "Get recommendations\nTell us about your business",
+            "href": "/personalize"
+          },
+          {
+            "text": "See all products\nExplore our full product catalog",
+            "href": "/products"
+          },
+          {
+            "text": "Start now",
+            "href": "https://dashboard.stripe.com/register"
+          },
+          {
+            "text": "Contact sales",
+            "href": "/contact/sales"
+          }
+        ]
+      },
+      {
+        "step": "escape",
+        "expanded": "false",
+        "focused": null
+      }
+    ]
+  },
+  {
+    "id": "berkshire",
+    "steps": [
+      {
+        "step": "current-letter-directory",
+        "url": "https://www.berkshirehathaway.com/letters/gealetters.html",
+        "links": [
+          {
+            "text": "2025",
+            "href": "https://www.berkshirehathaway.com/letters/2025ltr.pdf"
+          }
+        ]
+      }
+    ]
+  }
+]

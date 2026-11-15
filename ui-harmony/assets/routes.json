@@ -1,0 +1,1771 @@
+{
+  "version": 1,
+  "layers": [
+    "workflow",
+    "pages",
+    "templates",
+    "organisms",
+    "molecules",
+    "atoms",
+    "foundations",
+    "conditions"
+  ],
+  "nodes": [
+    {
+      "id": "frame",
+      "layer": "workflow",
+      "title": "Frame the problem and evidence",
+      "file": "references/workflow/frame.md",
+      "useWhen": "The task, audience, constraints or success criterion is unclear.",
+      "avoidWhen": "Repeating discovery for a scoped repair with known context.",
+      "alternatives": [],
+      "related": [
+        {
+          "id": "structure",
+          "when": "Object relationships or journey are uncertain"
+        },
+        {
+          "id": "explore",
+          "when": "The problem is clear but solution is uncertain"
+        },
+        {
+          "id": "evaluate",
+          "when": "An existing task failure needs observation"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "structure",
+      "layer": "workflow",
+      "title": "Model tasks, information and commitments",
+      "file": "references/workflow/structure.md",
+      "useWhen": "Navigation, sequence, scope or object relationships need design.",
+      "avoidWhen": "Only local appearance changed and relationships are established.",
+      "alternatives": [],
+      "related": [
+        {
+          "id": "explore",
+          "when": "Compare alternative task structures"
+        },
+        {
+          "id": "page-instance",
+          "when": "Bind the chosen structure to concrete content"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "explore",
+      "layer": "workflow",
+      "title": "Explore meaningful alternatives",
+      "file": "references/workflow/explore.md",
+      "useWhen": "The screen idiom or interaction architecture remains open.",
+      "avoidWhen": "The task is an agreed narrow defect with no meaningful alternatives.",
+      "alternatives": [],
+      "related": [
+        {
+          "id": "page-instance",
+          "when": "Instantiate a candidate for evaluation"
+        },
+        {
+          "id": "compose",
+          "when": "Task structure is selected"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "compose",
+      "layer": "workflow",
+      "title": "Compose the interaction and visual system",
+      "file": "references/workflow/compose.md",
+      "useWhen": "Structure is plausible and needs coherent behavior and appearance.",
+      "avoidWhen": "Polishing a structure already known to fail the task.",
+      "alternatives": [],
+      "related": [
+        {
+          "id": "page-instance",
+          "when": "Test the composition with real content"
+        },
+        {
+          "id": "evaluate",
+          "when": "Inspect the composed result"
+        },
+        {
+          "id": "resilient-css",
+          "when": "Apply Andy Bell\u2019s flexible composition and CSS ownership principles"
+        },
+        {
+          "id": "modern-saas",
+          "when": "Apply or score the user's preferred visual direction"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "evaluate",
+      "layer": "workflow",
+      "title": "Prototype, inspect and learn",
+      "file": "references/workflow/evaluate.md",
+      "useWhen": "A design decision or implemented behavior needs evidence.",
+      "avoidWhen": "Using screenshot taste as proof of task success.",
+      "alternatives": [],
+      "related": [
+        {
+          "id": "handoff",
+          "when": "Evidence supports implementation or completion"
+        },
+        {
+          "id": "explore",
+          "when": "The task structure failed"
+        },
+        {
+          "id": "compose",
+          "when": "A local relationship needs repair"
+        },
+        {
+          "id": "reference-calibration",
+          "when": "Check the critique against real praised and criticized designs"
+        },
+        {
+          "id": "modern-saas",
+          "when": "Apply or score the user's preferred visual direction"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "handoff",
+      "layer": "workflow",
+      "title": "Specify, implement and iterate",
+      "file": "references/workflow/handoff.md",
+      "useWhen": "An accepted design needs implementation or a completed change needs handoff.",
+      "avoidWhen": "Producing a specification nobody needs for a tiny repair.",
+      "alternatives": [],
+      "related": [
+        {
+          "id": "resilient-css",
+          "when": "Apply Andy Bell\u2019s flexible composition and CSS ownership principles"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "page-instance",
+      "layer": "pages",
+      "title": "Bind templates to actual pages and states",
+      "file": "references/pages/page-instance.md",
+      "useWhen": "A template needs to be tested against representative content or an existing screen reviewed.",
+      "avoidWhen": "A blank placeholder presented as validation of a template.",
+      "children": [
+        {
+          "id": "monitoring",
+          "when": "Detect exceptions and decide the next intervention."
+        },
+        {
+          "id": "analytics",
+          "when": "Explain change, compare distributions or investigate a hypothesis."
+        },
+        {
+          "id": "collection",
+          "when": "Find, compare, select or manage objects sharing a domain."
+        },
+        {
+          "id": "search-results",
+          "when": "The user expresses an information need and evaluates relevance."
+        },
+        {
+          "id": "record-detail",
+          "when": "Inspect a known object, related objects or its state."
+        },
+        {
+          "id": "form",
+          "when": "Capture or edit related information with an understandable commitment."
+        },
+        {
+          "id": "wizard",
+          "when": "Later stages depend on earlier choices or a long transaction needs staged progression."
+        },
+        {
+          "id": "task-hub",
+          "when": "A longer service comprises tasks with flexible order or multiple sessions."
+        },
+        {
+          "id": "settings",
+          "when": "Adjust persistent product or account behavior."
+        },
+        {
+          "id": "authentication",
+          "when": "Sign in, verify, recover access or return after session expiry."
+        },
+        {
+          "id": "article",
+          "when": "Comprehension and reading continuity are the primary goals."
+        },
+        {
+          "id": "landing",
+          "when": "Help visitors understand relevance and choose a next step."
+        },
+        {
+          "id": "pricing",
+          "when": "Evaluate alternatives by cost, fit and constraints."
+        },
+        {
+          "id": "checkout",
+          "when": "Submit a purchase, booking or consequential application."
+        },
+        {
+          "id": "workspace",
+          "when": "Create or edit with tools, inspectors, previews or multiple contexts."
+        },
+        {
+          "id": "conversation",
+          "when": "Participate in a chronological exchange with another person or assistant."
+        },
+        {
+          "id": "activity",
+          "when": "Scan changes, notifications or chronological activity and act selectively."
+        },
+        {
+          "id": "specialist",
+          "when": "Calendar, spatial map, media player, canvas, or another dominant interaction lacks adequate coverage."
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "monitoring",
+      "layer": "templates",
+      "title": "Monitor and triage work",
+      "file": "references/templates/monitoring.md",
+      "useWhen": "Detect exceptions and decide the next intervention.",
+      "avoidWhen": "Explaining long-term causes without an immediate operational decision.",
+      "children": [
+        {
+          "id": "collection-region",
+          "when": "Triage repeated records"
+        },
+        {
+          "id": "metric",
+          "when": "A summary changes the intervention decision"
+        },
+        {
+          "id": "detail-region",
+          "when": "Repeated inspection benefits from retained queue context"
+        },
+        {
+          "id": "feedback",
+          "when": "A source is stale, partial or unavailable"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "analytics",
+          "when": "The task is explanation and comparison over time"
+        },
+        {
+          "id": "task-hub",
+          "when": "The user is completing independent setup tasks"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "analytics",
+      "layer": "templates",
+      "title": "Analyze and compare evidence",
+      "file": "references/templates/analytics.md",
+      "useWhen": "Explain change, compare distributions or investigate a hypothesis.",
+      "avoidWhen": "Urgent operations where summary exploration delays the intervention.",
+      "children": [
+        {
+          "id": "data-viz",
+          "when": "Choose encodings and comparisons"
+        },
+        {
+          "id": "search-filter",
+          "when": "Control analytical scope"
+        },
+        {
+          "id": "collection-region",
+          "when": "Exact values or source records matter"
+        },
+        {
+          "id": "metric",
+          "when": "A bounded summary answers a question"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "monitoring",
+          "when": "The key outcome is an immediate intervention"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "collection",
+      "layer": "templates",
+      "title": "Browse or compare a collection",
+      "file": "references/templates/collection.md",
+      "useWhen": "Find, compare, select or manage objects sharing a domain.",
+      "avoidWhen": "A single known object or chronological conversation is the main task.",
+      "children": [
+        {
+          "id": "collection-region",
+          "when": "Compose table/list/card behavior"
+        },
+        {
+          "id": "search-filter",
+          "when": "Retrieval needs controls"
+        },
+        {
+          "id": "pagination",
+          "when": "Partition or progressively retrieve results"
+        },
+        {
+          "id": "detail-region",
+          "when": "Contextual inspection is needed"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "search-results",
+          "when": "Query interpretation and relevance dominate"
+        },
+        {
+          "id": "record-detail",
+          "when": "Only one known object matters"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "search-results",
+      "layer": "templates",
+      "title": "Search and refine results",
+      "file": "references/templates/search-results.md",
+      "useWhen": "The user expresses an information need and evaluates relevance.",
+      "avoidWhen": "A fixed short collection needs only browsing or sorting.",
+      "children": [
+        {
+          "id": "search-filter",
+          "when": "Enter and refine the query"
+        },
+        {
+          "id": "collection-region",
+          "when": "Render independently actionable results"
+        },
+        {
+          "id": "feedback",
+          "when": "No matches or partial search failure"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "collection",
+          "when": "Browsing common metadata dominates"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "record-detail",
+      "layer": "templates",
+      "title": "Understand and act on one record",
+      "file": "references/templates/record-detail.md",
+      "useWhen": "Inspect a known object, related objects or its state.",
+      "avoidWhen": "Repeated independent records require comparison before selecting one.",
+      "children": [
+        {
+          "id": "detail-region",
+          "when": "Compose identity, properties and relationships"
+        },
+        {
+          "id": "form-section",
+          "when": "Edit related properties together"
+        },
+        {
+          "id": "tabs",
+          "when": "Independent panels justify a tab widget"
+        },
+        {
+          "id": "overlay",
+          "when": "A contextual panel or scoped dialog is appropriate"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "collection",
+          "when": "Records must be compared before selection"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "form",
+      "layer": "templates",
+      "title": "Complete a coherent form",
+      "file": "references/templates/form.md",
+      "useWhen": "Capture or edit related information with an understandable commitment.",
+      "avoidWhen": "Independent work across sessions or purely immediate preferences.",
+      "children": [
+        {
+          "id": "form-section",
+          "when": "Group related fields and validation"
+        },
+        {
+          "id": "action-group",
+          "when": "Specify submit/cancel consequences"
+        },
+        {
+          "id": "feedback",
+          "when": "Communicate recoverable validation or uncertain submission"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "wizard",
+          "when": "A real sequence or dependency justifies stages"
+        },
+        {
+          "id": "task-hub",
+          "when": "Independent tasks can be completed out of order"
+        },
+        {
+          "id": "settings",
+          "when": "Preference persistence is the primary decision"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "wizard",
+      "layer": "templates",
+      "title": "Guide a dependent sequence",
+      "file": "references/templates/wizard.md",
+      "useWhen": "Later stages depend on earlier choices or a long transaction needs staged progression.",
+      "avoidWhen": "Independent tasks that users can complete in any order.",
+      "children": [
+        {
+          "id": "form-section",
+          "when": "Each stage captures related information"
+        },
+        {
+          "id": "progress",
+          "when": "Represent actual stage/completion"
+        },
+        {
+          "id": "receipt",
+          "when": "A completed transaction needs durable proof"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "task-hub",
+          "when": "Work is independent and resumable"
+        },
+        {
+          "id": "form",
+          "when": "One view preserves useful context"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "task-hub",
+      "layer": "templates",
+      "title": "Resume independent tasks",
+      "file": "references/templates/task-hub.md",
+      "useWhen": "A longer service comprises tasks with flexible order or multiple sessions.",
+      "avoidWhen": "Mandatory sequential dependencies should determine the next step.",
+      "children": [
+        {
+          "id": "collection-region",
+          "when": "List task groups and their status"
+        },
+        {
+          "id": "feedback",
+          "when": "Explain blocked tasks and saved state"
+        },
+        {
+          "id": "receipt",
+          "when": "Final submission needs a receipt"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "wizard",
+          "when": "Dependencies require a sequence"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "layer": "templates",
+      "title": "Change preferences and configuration",
+      "file": "references/templates/settings.md",
+      "useWhen": "Adjust persistent product or account behavior.",
+      "avoidWhen": "A one-time transaction or context-local option is better handled in the task.",
+      "children": [
+        {
+          "id": "form-section",
+          "when": "Several dependent settings share a save"
+        },
+        {
+          "id": "choice",
+          "when": "Choose appropriate preference controls"
+        },
+        {
+          "id": "feedback",
+          "when": "Communicate saving and failure"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "form",
+          "when": "A one-time submission dominates"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "authentication",
+      "layer": "templates",
+      "title": "Enter, recover and resume identity",
+      "file": "references/templates/authentication.md",
+      "useWhen": "Sign in, verify, recover access or return after session expiry.",
+      "avoidWhen": "General onboarding tasks after identity is already established.",
+      "children": [
+        {
+          "id": "form-section",
+          "when": "Capture identity or verification"
+        },
+        {
+          "id": "feedback",
+          "when": "Explain recovery and expiry"
+        },
+        {
+          "id": "action-group",
+          "when": "Offer clear alternate methods"
+        }
+      ],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "article",
+      "layer": "templates",
+      "title": "Read and navigate long-form content",
+      "file": "references/templates/article.md",
+      "useWhen": "Comprehension and reading continuity are the primary goals.",
+      "avoidWhen": "Rapid exact comparison or a transactional workflow dominates.",
+      "children": [
+        {
+          "id": "reading-region",
+          "when": "Compose body, media and ancillary navigation"
+        },
+        {
+          "id": "typography",
+          "when": "Set role-based text relationships"
+        },
+        {
+          "id": "image-icon",
+          "when": "Treat meaningful media and captions"
+        }
+      ],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        },
+        {
+          "id": "resilient-css",
+          "when": "Apply Andy Bell\u2019s flexible composition and CSS ownership principles"
+        }
+      ]
+    },
+    {
+      "id": "landing",
+      "layer": "templates",
+      "title": "Explain an offer or service entry",
+      "file": "references/templates/landing.md",
+      "useWhen": "Help visitors understand relevance and choose a next step.",
+      "avoidWhen": "Users already know the task and need a working application surface.",
+      "children": [
+        {
+          "id": "marketing-region",
+          "when": "Compose proposition, proof and action"
+        },
+        {
+          "id": "action-group",
+          "when": "Prioritize the next step"
+        },
+        {
+          "id": "reading-region",
+          "when": "Explain prerequisites or evidence"
+        }
+      ],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "layer": "templates",
+      "title": "Compare plans and commitments",
+      "file": "references/templates/pricing.md",
+      "useWhen": "Evaluate alternatives by cost, fit and constraints.",
+      "avoidWhen": "A single straightforward offer does not need a comparison framework.",
+      "children": [
+        {
+          "id": "collection-region",
+          "when": "Compare shared plan attributes"
+        },
+        {
+          "id": "metric",
+          "when": "Present price with units and cadence"
+        },
+        {
+          "id": "action-group",
+          "when": "Use truthful action consequences"
+        }
+      ],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "checkout",
+      "layer": "templates",
+      "title": "Review and commit a transaction",
+      "file": "references/templates/checkout.md",
+      "useWhen": "Submit a purchase, booking or consequential application.",
+      "avoidWhen": "An ordinary preference change has no transaction boundary.",
+      "children": [
+        {
+          "id": "form-section",
+          "when": "Capture required transaction data"
+        },
+        {
+          "id": "detail-region",
+          "when": "Present the commitment summary"
+        },
+        {
+          "id": "receipt",
+          "when": "Provide durable outcome and next steps"
+        },
+        {
+          "id": "feedback",
+          "when": "Handle pending and uncertain outcomes"
+        }
+      ],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "workspace",
+      "layer": "templates",
+      "title": "Work repeatedly on a central object",
+      "file": "references/templates/workspace.md",
+      "useWhen": "Create or edit with tools, inspectors, previews or multiple contexts.",
+      "avoidWhen": "A short form does not warrant application-like panel complexity.",
+      "children": [
+        {
+          "id": "workbench",
+          "when": "Compose tools, working surface and inspectors"
+        },
+        {
+          "id": "overlay",
+          "when": "A scoped subtask needs a dialog"
+        },
+        {
+          "id": "feedback",
+          "when": "Show save/sync/conflict state"
+        }
+      ],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "conversation",
+      "layer": "templates",
+      "title": "Exchange messages and maintain context",
+      "file": "references/templates/conversation.md",
+      "useWhen": "Participate in a chronological exchange with another person or assistant.",
+      "avoidWhen": "Notifications are primarily triage tasks or records need sorting/comparison.",
+      "children": [
+        {
+          "id": "conversation-region",
+          "when": "Compose history and composer"
+        },
+        {
+          "id": "feedback",
+          "when": "Differentiate sending, failure and stream states"
+        },
+        {
+          "id": "input",
+          "when": "Support multiline composition"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "activity",
+          "when": "Items are events or notifications to triage"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "activity",
+      "layer": "templates",
+      "title": "Review events and notifications",
+      "file": "references/templates/activity.md",
+      "useWhen": "Scan changes, notifications or chronological activity and act selectively.",
+      "avoidWhen": "A live conversation or prioritized work queue is the real task.",
+      "children": [
+        {
+          "id": "collection-region",
+          "when": "Render grouped events"
+        },
+        {
+          "id": "action-group",
+          "when": "Scope read/dismiss actions"
+        },
+        {
+          "id": "feedback",
+          "when": "Explain unavailable destinations"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "monitoring",
+          "when": "Prioritized intervention dominates"
+        },
+        {
+          "id": "conversation",
+          "when": "People exchange replies in context"
+        }
+      ],
+      "related": [
+        {
+          "id": "app-shell",
+          "when": "Stable cross-screen navigation is part of this scope"
+        }
+      ]
+    },
+    {
+      "id": "specialist",
+      "layer": "templates",
+      "title": "Escalate a specialist interaction",
+      "file": "references/templates/specialist.md",
+      "useWhen": "Calendar, spatial map, media player, canvas, or another dominant interaction lacks adequate coverage.",
+      "avoidWhen": "Forcing a specialist surface into generic cards, forms or dashboards.",
+      "children": [
+        {
+          "id": "workbench",
+          "when": "A central working surface is useful"
+        },
+        {
+          "id": "collection-region",
+          "when": "An accessible alternate list supports the task"
+        },
+        {
+          "id": "platform-access",
+          "when": "Input and platform constraints need explicit review"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "app-shell",
+      "layer": "organisms",
+      "title": "Navigation and application frame",
+      "file": "references/organisms/app-shell.md",
+      "useWhen": "Users move among stable destinations or scopes.",
+      "avoidWhen": "Adding persistent chrome to a self-contained short task.",
+      "children": [
+        {
+          "id": "navigation",
+          "when": "Choose links, disclosures or actual menus"
+        },
+        {
+          "id": "spacing",
+          "when": "Allocate frame and content relationships"
+        },
+        {
+          "id": "platform-access",
+          "when": "Check navigation under input/access constraints"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "collection-region",
+      "layer": "organisms",
+      "title": "Table, list, cards and selection",
+      "file": "references/organisms/collection-region.md",
+      "useWhen": "Repeated records need readable structure and scoped interaction.",
+      "avoidWhen": "Using one generic card for all semantic relationships.",
+      "children": [
+        {
+          "id": "card-row",
+          "when": "Compose individual records"
+        },
+        {
+          "id": "search-filter",
+          "when": "Filter/sort the collection"
+        },
+        {
+          "id": "pagination",
+          "when": "Retrieve additional records"
+        },
+        {
+          "id": "action-group",
+          "when": "Handle row and bulk actions"
+        },
+        {
+          "id": "feedback",
+          "when": "Explain partial bulk failure"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "detail-region",
+      "layer": "organisms",
+      "title": "Identity, properties and relationships",
+      "file": "references/organisms/detail-region.md",
+      "useWhen": "A selected object needs understandable detail in a page or panel.",
+      "avoidWhen": "A large unstructured dump of every database property.",
+      "children": [
+        {
+          "id": "action-group",
+          "when": "Place record-scoped actions"
+        },
+        {
+          "id": "text",
+          "when": "Express headings, values and secondary metadata"
+        },
+        {
+          "id": "tabs",
+          "when": "Independent related panels are needed"
+        },
+        {
+          "id": "feedback",
+          "when": "Some properties are unavailable"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "form-section",
+      "layer": "organisms",
+      "title": "Related fields and validation boundary",
+      "file": "references/organisms/form-section.md",
+      "useWhen": "Several fields form a meaningful group or share a submission.",
+      "avoidWhen": "Grouping fields solely because their database types match.",
+      "children": [
+        {
+          "id": "field",
+          "when": "Pair controls with labels, hints and errors"
+        },
+        {
+          "id": "choice",
+          "when": "Select the correct choice primitive"
+        },
+        {
+          "id": "action-group",
+          "when": "Define submission boundaries"
+        },
+        {
+          "id": "feedback",
+          "when": "Summarize recoverable failures"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "reading-region",
+      "layer": "organisms",
+      "title": "Reading flow, media and supporting navigation",
+      "file": "references/organisms/reading-region.md",
+      "useWhen": "Sustained comprehension needs a coherent content sequence.",
+      "avoidWhen": "A comparison task benefits more from aligned values.",
+      "children": [
+        {
+          "id": "text",
+          "when": "Use semantic text roles"
+        },
+        {
+          "id": "image-icon",
+          "when": "Compose purposeful imagery"
+        },
+        {
+          "id": "typography",
+          "when": "Tune readable and expressive roles"
+        },
+        {
+          "id": "spacing",
+          "when": "Make attachment and separation legible"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "marketing-region",
+      "layer": "organisms",
+      "title": "Proposition, proof and next action",
+      "file": "references/organisms/marketing-region.md",
+      "useWhen": "A visitor needs to understand value and decide whether to continue.",
+      "avoidWhen": "Decoration substitutes for evidence or a task entry already explains itself.",
+      "children": [
+        {
+          "id": "action-group",
+          "when": "Choose the appropriate next action"
+        },
+        {
+          "id": "image-icon",
+          "when": "Support the proposition with relevant media"
+        },
+        {
+          "id": "text",
+          "when": "Make claims concrete"
+        },
+        {
+          "id": "spacing",
+          "when": "Create meaningful sectional rhythm"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "workbench",
+      "layer": "organisms",
+      "title": "Tools, central surface and inspector",
+      "file": "references/organisms/workbench.md",
+      "useWhen": "Repeated editing requires persistent context and controls.",
+      "avoidWhen": "One short edit can be handled by a simple form.",
+      "children": [
+        {
+          "id": "action-group",
+          "when": "Group scoped commands"
+        },
+        {
+          "id": "overlay",
+          "when": "Use temporary scoped interaction when justified"
+        },
+        {
+          "id": "feedback",
+          "when": "Show mode/save/conflict state"
+        },
+        {
+          "id": "spacing",
+          "when": "Allocate space to the working task"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "conversation-region",
+      "layer": "organisms",
+      "title": "History, messages and composer",
+      "file": "references/organisms/conversation-region.md",
+      "useWhen": "A conversation must preserve context while messages change.",
+      "avoidWhen": "An inbox or static event log has no conversational turn-taking.",
+      "children": [
+        {
+          "id": "field",
+          "when": "Compose accessible input and attachments"
+        },
+        {
+          "id": "action-group",
+          "when": "Scope send/retry/message actions"
+        },
+        {
+          "id": "feedback",
+          "when": "Explain sending, failure and new content"
+        },
+        {
+          "id": "text",
+          "when": "Preserve readable message structure"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "data-viz",
+      "layer": "organisms",
+      "title": "Charts and coordinated comparison",
+      "file": "references/organisms/data-viz.md",
+      "useWhen": "A visual encoding helps answer a quantitative question.",
+      "avoidWhen": "Exact lookup or a simple number is clearer in text/table.",
+      "children": [
+        {
+          "id": "metric",
+          "when": "Summarize a defined quantity"
+        },
+        {
+          "id": "color",
+          "when": "Use meaningful consistent encodings"
+        },
+        {
+          "id": "text",
+          "when": "Label units and comparisons"
+        },
+        {
+          "id": "search-filter",
+          "when": "Control coordinated scope"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "field",
+      "layer": "molecules",
+      "title": "Label, input, hint and error",
+      "file": "references/molecules/field.md",
+      "useWhen": "A person must supply or edit a named value.",
+      "avoidWhen": "A bare input is assumed self-explanatory because it has placeholder text.",
+      "children": [
+        {
+          "id": "input",
+          "when": "Choose entry behavior"
+        },
+        {
+          "id": "choice",
+          "when": "Choose selection behavior"
+        },
+        {
+          "id": "text",
+          "when": "Write meaningful labels/hints"
+        },
+        {
+          "id": "spacing",
+          "when": "Encode internal/external relationships"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "search-filter",
+      "layer": "molecules",
+      "title": "Query, filters and scope",
+      "file": "references/molecules/search-filter.md",
+      "useWhen": "A collection or analysis needs retrieval controls.",
+      "avoidWhen": "Controls are decorative or have no meaningful effect on the task.",
+      "children": [
+        {
+          "id": "input",
+          "when": "Enter query text"
+        },
+        {
+          "id": "choice",
+          "when": "Choose a filter value"
+        },
+        {
+          "id": "navigation",
+          "when": "Distinguish commands and destinations"
+        },
+        {
+          "id": "feedback",
+          "when": "Communicate pending/no matches"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "action-group",
+      "layer": "molecules",
+      "title": "Actions, scope and commitment",
+      "file": "references/molecules/action-group.md",
+      "useWhen": "Several related actions compete for attention or need clear consequences.",
+      "avoidWhen": "Applying exactly one primary button to every page regardless of independent task regions.",
+      "children": [
+        {
+          "id": "button-link",
+          "when": "Implement correct action/navigation semantics"
+        },
+        {
+          "id": "image-icon",
+          "when": "Name and align icon actions"
+        },
+        {
+          "id": "feedback",
+          "when": "Show pending and result"
+        },
+        {
+          "id": "spacing",
+          "when": "Group actions by scope"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "metric",
+      "layer": "molecules",
+      "title": "Quantity, label and comparison",
+      "file": "references/molecules/metric.md",
+      "useWhen": "A concise quantity answers a named question.",
+      "avoidWhen": "A large number is decorative or lacks useful context.",
+      "children": [
+        {
+          "id": "text",
+          "when": "Label value, unit and context"
+        },
+        {
+          "id": "color",
+          "when": "Encode status rather than arbitrary direction"
+        },
+        {
+          "id": "typography",
+          "when": "Establish value/context hierarchy"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "card-row",
+      "layer": "molecules",
+      "title": "Repeated item identity and action",
+      "file": "references/molecules/card-row.md",
+      "useWhen": "A record needs a compact repeated presentation.",
+      "avoidWhen": "Wrapping unrelated content in cards merely to fill a grid.",
+      "children": [
+        {
+          "id": "button-link",
+          "when": "Provide explicit scoped actions"
+        },
+        {
+          "id": "image-icon",
+          "when": "Use meaningful media"
+        },
+        {
+          "id": "text",
+          "when": "Prioritize identifying information"
+        },
+        {
+          "id": "surface",
+          "when": "Decide whether a boundary is needed"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "tabs",
+      "layer": "molecules",
+      "title": "Alternate panels with tab behavior",
+      "file": "references/molecules/tabs.md",
+      "useWhen": "A small set of related panels shares one local context.",
+      "avoidWhen": "Ordinary page links, sequential steps or hidden critical content.",
+      "children": [
+        {
+          "id": "button-link",
+          "when": "Implement focusable activators with correct tab roles"
+        },
+        {
+          "id": "color",
+          "when": "Separate selected, hover and focus"
+        },
+        {
+          "id": "feedback",
+          "when": "Explain unavailable panel data"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "navigation",
+      "layer": "molecules",
+      "title": "Links, disclosures and command menus",
+      "file": "references/molecules/navigation.md",
+      "useWhen": "A compact control reveals destinations or commands.",
+      "avoidWhen": "Choosing menu semantics from a dropdown silhouette alone.",
+      "children": [
+        {
+          "id": "button-link",
+          "when": "Choose trigger and destination semantics"
+        },
+        {
+          "id": "choice",
+          "when": "Route value selection to an appropriate control"
+        },
+        {
+          "id": "overlay",
+          "when": "Resolve placement and modality separately"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "pagination",
+      "layer": "molecules",
+      "title": "Retrieve and navigate additional records",
+      "file": "references/molecules/pagination.md",
+      "useWhen": "The collection exceeds one useful rendering unit.",
+      "avoidWhen": "Adding page controls to a short stable set without benefit.",
+      "children": [
+        {
+          "id": "button-link",
+          "when": "Provide navigation or load actions"
+        },
+        {
+          "id": "feedback",
+          "when": "Show pending/end/failure"
+        },
+        {
+          "id": "text",
+          "when": "Explain current scope"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "overlay",
+      "layer": "molecules",
+      "title": "Dialog, popover, sheet or contextual panel",
+      "file": "references/molecules/overlay.md",
+      "useWhen": "A scoped subtask or related detail benefits from retained context.",
+      "avoidWhen": "A large primary workflow is hidden in a cramped modal by default.",
+      "children": [
+        {
+          "id": "action-group",
+          "when": "Clarify completion/cancel"
+        },
+        {
+          "id": "platform-access",
+          "when": "Check modality and platform adaptation"
+        }
+      ],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "form-section",
+          "when": "Capture scoped values"
+        }
+      ]
+    },
+    {
+      "id": "feedback",
+      "layer": "molecules",
+      "title": "State, error and recovery messages",
+      "file": "references/molecules/feedback.md",
+      "useWhen": "The interface must explain outcome, pending work or an exceptional state.",
+      "avoidWhen": "Adding success toasts for every inconsequential interaction.",
+      "children": [
+        {
+          "id": "progress",
+          "when": "Represent ongoing work honestly"
+        },
+        {
+          "id": "button-link",
+          "when": "Provide a meaningful recovery action"
+        },
+        {
+          "id": "text",
+          "when": "Explain cause/scope without blame"
+        },
+        {
+          "id": "color",
+          "when": "Encode state accessibly"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "receipt",
+      "layer": "molecules",
+      "title": "Durable confirmation and next steps",
+      "file": "references/molecules/receipt.md",
+      "useWhen": "A consequential transaction has completed or has a trackable pending outcome.",
+      "avoidWhen": "An ephemeral local action only needs a short acknowledgment.",
+      "children": [
+        {
+          "id": "text",
+          "when": "Name the actual outcome"
+        },
+        {
+          "id": "action-group",
+          "when": "Provide return/copy/next steps"
+        },
+        {
+          "id": "feedback",
+          "when": "Represent pending or changed status"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "button-link",
+      "layer": "atoms",
+      "title": "Action, destination and toggle",
+      "file": "references/atoms/button-link.md",
+      "useWhen": "A control changes state or navigates.",
+      "avoidWhen": "Choosing semantics solely from a filled or underlined appearance.",
+      "children": [
+        {
+          "id": "color",
+          "when": "Contrast and state roles"
+        },
+        {
+          "id": "spacing",
+          "when": "Optical padding and target relationships"
+        },
+        {
+          "id": "semantics",
+          "when": "Correct names and roles"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "input",
+      "layer": "atoms",
+      "title": "Text entry and editing",
+      "file": "references/atoms/input.md",
+      "useWhen": "A person enters free text or a structured value.",
+      "avoidWhen": "A constrained choice is better understood as selection.",
+      "children": [
+        {
+          "id": "typography",
+          "when": "Legible input and placeholder roles"
+        },
+        {
+          "id": "semantics",
+          "when": "Name and describe entry correctly"
+        },
+        {
+          "id": "spacing",
+          "when": "Fit text and target geometry"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "choice",
+      "layer": "atoms",
+      "title": "Checkbox, radio, switch and select",
+      "file": "references/atoms/choice.md",
+      "useWhen": "Select among values or enable a binary setting.",
+      "avoidWhen": "Making an action look like a switch without a persistent state.",
+      "children": [
+        {
+          "id": "semantics",
+          "when": "Name groups and expose state"
+        },
+        {
+          "id": "color",
+          "when": "Differentiate selected and focus states"
+        },
+        {
+          "id": "spacing",
+          "when": "Keep control and label attached"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "text",
+      "layer": "atoms",
+      "title": "Semantic text and labels",
+      "file": "references/atoms/text.md",
+      "useWhen": "Words identify, explain, navigate or structure content.",
+      "avoidWhen": "Styling every phrase as a heading or using visual size as the only structure.",
+      "children": [
+        {
+          "id": "typography",
+          "when": "Assign role-based styles"
+        },
+        {
+          "id": "semantics",
+          "when": "Keep structure and accessible names meaningful"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "image-icon",
+      "layer": "atoms",
+      "title": "Images, icons and optical alignment",
+      "file": "references/atoms/image-icon.md",
+      "useWhen": "A visual carries identity, explanation, status or action meaning.",
+      "avoidWhen": "Using generic decorative icons as a substitute for content hierarchy.",
+      "children": [
+        {
+          "id": "shape",
+          "when": "Maintain compatible strokes and geometry"
+        },
+        {
+          "id": "color",
+          "when": "Contrast meaningful visuals"
+        },
+        {
+          "id": "semantics",
+          "when": "Provide appropriate alternatives"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "surface",
+      "layer": "atoms",
+      "title": "Boundary, divider and elevation",
+      "file": "references/atoms/surface.md",
+      "useWhen": "A container or separator needs to communicate grouping or layering.",
+      "avoidWhen": "Adding cards, shadows and borders to every nested region.",
+      "children": [
+        {
+          "id": "shape",
+          "when": "Relate radius and elevation roles"
+        },
+        {
+          "id": "color",
+          "when": "Use surfaces and contrast deliberately"
+        },
+        {
+          "id": "spacing",
+          "when": "Prefer clear relationships over redundant boxes"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "progress",
+      "layer": "atoms",
+      "title": "Progress, pending and busy state",
+      "file": "references/atoms/progress.md",
+      "useWhen": "Work is underway and its scope or completion needs explanation.",
+      "avoidWhen": "Decorative spinners stand in for an unknown task state forever.",
+      "children": [
+        {
+          "id": "motion",
+          "when": "Make activity understandable with reduced motion"
+        },
+        {
+          "id": "semantics",
+          "when": "Expose useful state without announcement overload"
+        },
+        {
+          "id": "text",
+          "when": "Name actual scope and outcome"
+        }
+      ],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "typography",
+      "layer": "foundations",
+      "title": "Type roles, rhythm and optical clarity",
+      "file": "references/foundations/typography.md",
+      "useWhen": "Text hierarchy, reading comfort or type consistency needs diagnosis.",
+      "avoidWhen": "Applying a fashionable scale independently of content and identity.",
+      "children": [],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "resilient-css",
+          "when": "Apply Andy Bell\u2019s flexible composition and CSS ownership principles"
+        }
+      ]
+    },
+    {
+      "id": "spacing",
+      "layer": "foundations",
+      "title": "Relationship-owned spacing and layout",
+      "file": "references/foundations/spacing.md",
+      "useWhen": "Grouping, rhythm, alignment or fit is unclear.",
+      "avoidWhen": "Forcing all gaps to multiples of a preferred base regardless of meaning.",
+      "children": [],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "resilient-css",
+          "when": "Apply Andy Bell\u2019s flexible composition and CSS ownership principles"
+        }
+      ]
+    },
+    {
+      "id": "color",
+      "layer": "foundations",
+      "title": "Color roles, contrast and meaningful variation",
+      "file": "references/foundations/color.md",
+      "useWhen": "Color hierarchy, state communication or theme coherence needs review.",
+      "avoidWhen": "Normalizing brand expression to one neutral/accent palette by default.",
+      "children": [],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "shape",
+      "layer": "foundations",
+      "title": "Shape, stroke and layering language",
+      "file": "references/foundations/shape.md",
+      "useWhen": "Components feel visually unrelated or depth is misleading.",
+      "avoidWhen": "Enforcing a single radius on every size and semantic role.",
+      "children": [],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "motion",
+      "layer": "foundations",
+      "title": "Motion, continuity and interruption",
+      "file": "references/foundations/motion.md",
+      "useWhen": "State changes, direct manipulation or spatial relationships involve animation.",
+      "avoidWhen": "Adding animation purely because a static interface feels generic.",
+      "children": [],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "semantics",
+      "layer": "foundations",
+      "title": "Meaning, structure and accessible interaction",
+      "file": "references/foundations/semantics.md",
+      "useWhen": "A visual element\u2019s role or accessible behavior is uncertain.",
+      "avoidWhen": "Assigning ARIA roles by visual resemblance.",
+      "children": [],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "adaptation",
+      "layer": "conditions",
+      "title": "Responsive, content and localization stress",
+      "file": "references/conditions/adaptation.md",
+      "useWhen": "Layout or meaning may fail as available space or content changes.",
+      "avoidWhen": "Treating one phone screenshot as proof of responsiveness.",
+      "children": [],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "resilient-css",
+          "when": "Apply Andy Bell\u2019s flexible composition and CSS ownership principles"
+        }
+      ]
+    },
+    {
+      "id": "states",
+      "layer": "conditions",
+      "title": "Lifecycle, persistence and failure coverage",
+      "file": "references/conditions/states.md",
+      "useWhen": "An interaction changes data, loads asynchronously or spans sessions.",
+      "avoidWhen": "Treating a happy-path screenshot as the entire design.",
+      "children": [],
+      "alternatives": [],
+      "related": []
+    },
+    {
+      "id": "platform-access",
+      "layer": "conditions",
+      "title": "Platform, input and evidence boundaries",
+      "file": "references/conditions/platform-access.md",
+      "useWhen": "Native, screenshot-only, canvas or accessibility behavior changes the available evidence.",
+      "avoidWhen": "Pretending DOM tools measure every interface or every input modality.",
+      "children": [],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "reference-calibration",
+          "when": "Check the critique against real praised and criticized designs"
+        }
+      ]
+    },
+    {
+      "id": "resilient-css",
+      "layer": "foundations",
+      "title": "Resilient composition and CSS ownership",
+      "file": "references/foundations/resilient-css.md",
+      "useWhen": "Layout fails under content/container changes or repairs accumulate overrides.",
+      "avoidWhen": "A narrow repair does not justify a methodology migration.",
+      "children": [],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "spacing",
+          "when": "Spacing relationships need intrinsic layout rules"
+        },
+        {
+          "id": "typography",
+          "when": "Fluid text needs actual growth testing"
+        },
+        {
+          "id": "adaptation",
+          "when": "Available space/content changes"
+        },
+        {
+          "id": "handoff",
+          "when": "Record layout ownership and acceptance"
+        }
+      ]
+    },
+    {
+      "id": "reference-calibration",
+      "layer": "conditions",
+      "title": "Calibrate with praised, criticized and disputed designs",
+      "file": "references/conditions/reference-calibration.md",
+      "useWhen": "Evaluate the skill against real interfaces and challenge reputation or style bias.",
+      "avoidWhen": "Treating awards or bad-design lists as ground truth for current task success.",
+      "children": [],
+      "alternatives": [],
+      "related": [
+        {
+          "id": "evaluate",
+          "when": "Choose task and interaction evidence"
+        },
+        {
+          "id": "platform-access",
+          "when": "Capture evidence is limited"
+        },
+        {
+          "id": "motion",
+          "when": "Timing or changing content affects the task"
+        },
+        {
+          "id": "modern-saas",
+          "when": "Apply or score the user's preferred visual direction"
+        }
+      ]
+    },
+    {
+      "id": "modern-saas",
+      "layer": "conditions",
+      "title": "Modern SaaS minimalism preference",
+      "file": "references/preferences/modern-saas.md",
+      "useWhen": "Create or substantially refine this user's interfaces, or evaluate their preferred SaaS style fit.",
+      "avoidWhen": "The current brief chooses another style or the task is a narrow repair with no style decision.",
+      "alternatives": [],
+      "related": [
+        {
+          "id": "collection",
+          "when": "Choose an efficient collection idiom"
+        },
+        {
+          "id": "settings",
+          "when": "Compose restrained labeled settings"
+        },
+        {
+          "id": "surface",
+          "when": "Resolve containment and elevation"
+        },
+        {
+          "id": "typography",
+          "when": "Let type carry hierarchy"
+        },
+        {
+          "id": "resilient-css",
+          "when": "Keep compact composition adaptable"
+        },
+        {
+          "id": "evaluate",
+          "when": "Separate preference from task evidence"
+        }
+      ],
+      "children": []
+    }
+  ]
+}

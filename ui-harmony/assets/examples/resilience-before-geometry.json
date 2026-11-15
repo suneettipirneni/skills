@@ -1,0 +1,34 @@
+{
+  "container": {
+    "left": 24,
+    "right": 444,
+    "width": 420
+  },
+  "buttons": [
+    {
+      "left": 41,
+      "right": 228,
+      "top": 330.59375,
+      "bottom": 588.59375,
+      "width": 187,
+      "height": 258,
+      "clientWidth": 185,
+      "scrollWidth": 185,
+      "clientHeight": 256,
+      "scrollHeight": 256
+    },
+    {
+      "left": 240,
+      "right": 427,
+      "top": 330.59375,
+      "bottom": 588.59375,
+      "width": 187,
+      "height": 258,
+      "clientWidth": 185,
+      "scrollWidth": 185,
+      "clientHeight": 256,
+      "scrollHeight": 256
+    }
+  ],
+  "fontSize": "32px"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "modern-saas",
+  "version": 1,
+  "label": "Modern SaaS minimalism preference fit",
+  "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+  "criteria": [
+    {
+      "id": "quietHierarchy",
+      "weight": 20,
+      "label": "Quiet hierarchy",
+      "anchors": [
+        "Chrome or decoration dominates the work; priorities are visually inverted.",
+        "Several unrelated elements compete with the main task.",
+        "Main task is visible, but headings, navigation or actions still compete.",
+        "Content leads; navigation recedes; action emphasis follows task importance.",
+        "Hierarchy stays precise in the reviewed content and states with very little competing chrome."
+      ]
+    },
+    {
+      "id": "surfaceRestraint",
+      "weight": 20,
+      "label": "Restrained surfaces",
+      "anchors": [
+        "Repeated ornate or nested containers overwhelm relationships.",
+        "Heavy shadows, pills or boxes dominate without structural purpose.",
+        "Mostly quiet surfaces with redundant card/border/depth treatments.",
+        "Flat content planes and purposeful boundaries; elevation identifies overlays.",
+        "Every reviewed boundary or layer clarifies ownership; restrained depth remains distinct in the reviewed theme."
+      ]
+    },
+    {
+      "id": "typography",
+      "weight": 15,
+      "label": "Typography-led composition",
+      "anchors": [
+        "Type treatment fights the desired restrained app character throughout.",
+        "Display-scale headings or excessive styles dominate routine work.",
+        "Mostly compact type roles with distracting size/weight/wrapping drift.",
+        "Compact readable sans-led UI, distinct roles, intentional weight and number alignment.",
+        "Optically careful type, wrapping and numeric rhythm carry hierarchy without unnecessary scale changes."
+      ]
+    },
+    {
+      "id": "densityRhythm",
+      "weight": 15,
+      "label": "Useful density and rhythm",
+      "anchors": [
+        "Empty expanses or crowding destroy the working rhythm.",
+        "Oversized padding/cards separate information needed together, or compression obscures groups.",
+        "Useful content fits, but grouping or whitespace remains uneven.",
+        "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+        "Density is tuned to the screen idiom; comparisons stay close and long content retains clear rhythm."
+      ]
+    },
+    {
+      "id": "componentPrecision",
+      "weight": 15,
+      "label": "Precise component language",
+      "anchors": [
+        "Unrelated shapes, icons and control styles dominate.",
+        "Multiple inconsistent radii/strokes/variants make routine controls visually noisy.",
+        "A recognizable system has repeated alignment or variant inconsistencies.",
+        "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+        "Optical alignment and states feel deliberately related; exceptions have a clear role."
+      ]
+    },
+    {
+      "id": "purposefulColor",
+      "weight": 10,
+      "label": "Purposeful color",
+      "anchors": [
+        "Decorative color or gradients dominate the working surface without hierarchy.",
+        "Saturated containers and competing accents dilute priority.",
+        "Quiet base with some ambiguous accent/state usage.",
+        "Neutral or low-chroma working surfaces; accents identify action, selection, data or status.",
+        "Color is sparse where appropriate and rich where meaningful; brand, state and data roles remain distinct."
+      ]
+    },
+    {
+      "id": "productCharacter",
+      "weight": 5,
+      "label": "Product-specific restraint",
+      "anchors": [
+        "Generic spectacle or borrowed branding obscures product identity.",
+        "Template flourishes dominate and content feels interchangeable.",
+        "Coherent but generic treatment with limited connection to product content.",
+        "Restrained brand details, deliberate neutrality or domain-specific content ground the design in its product.",
+        "Purposeful identity or precisely judged neutrality feels specific to the work without unnecessary novelty."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "profile": "modern-saas",
+  "rubricVersion": 1,
+  "candidate": "Name the actual candidate",
+  "reviewer": "Name the reviewer",
+  "scope": "Declare the exact reviewed regions and scenarios",
+  "context": {
+    "task": "Describe the user task",
+    "route": "Name the route or screen",
+    "surface": "product",
+    "fixture": "Identify the representative content fixture",
+    "viewport": "Record dimensions and units",
+    "theme": "Record the theme",
+    "state": "Record the state",
+    "evidenceMode": "screenshot",
+    "audience": "Describe intended users"
+  },
+  "criteria": {
+    "quietHierarchy": {
+      "rating": null,
+      "reason": "Not inspected yet"
+    },
+    "surfaceRestraint": {
+      "rating": null,
+      "reason": "Not inspected yet"
+    },
+    "typography": {
+      "rating": null,
+      "reason": "Not inspected yet"
+    },
+    "densityRhythm": {
+      "rating": null,
+      "reason": "Not inspected yet"
+    },
+    "componentPrecision": {
+      "rating": null,
+      "reason": "Not inspected yet"
+    },
+    "purposefulColor": {
+      "rating": null,
+      "reason": "Not inspected yet"
+    },
+    "productCharacter": {
+      "rating": null,
+      "reason": "Not inspected yet"
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "unknown",
+      "reason": "No scoped checks performed yet",
+      "evidence": [
+        "No behavioral or measurement evidence supplied"
+      ]
+    },
+    "legibility": {
+      "status": "unknown",
+      "reason": "No scoped checks performed yet",
+      "evidence": [
+        "No behavioral or measurement evidence supplied"
+      ]
+    },
+    "interaction": {
+      "status": "unknown",
+      "reason": "No scoped checks performed yet",
+      "evidence": [
+        "No behavioral or measurement evidence supplied"
+      ]
+    },
+    "adaptation": {
+      "status": "unknown",
+      "reason": "No scoped checks performed yet",
+      "evidence": [
+        "No behavioral or measurement evidence supplied"
+      ]
+    }
+  }
+}

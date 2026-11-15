@@ -1,0 +1,122 @@
+{
+  "status": "partial",
+  "task": "Find an electric bicycle, understand its price and open the relevant details.",
+  "audience": "Prospective catalog visitors; no participants recruited.",
+  "scope": "Current Arngren phone390x844 and desktop1440x1000 captures plus category navigation probe,2026-11-15. Failed counter-image resource leaves readiness incomplete.",
+  "identityToPreserve": "Direct category vocabulary, visible product/price cues and abundant catalog content.",
+  "strengths": [
+    "An electric-bicycle category link is visible and successfully opens sykkel.html.",
+    "The initial phone view contains a bicycle image and price; clutter does not prove this task impossible."
+  ],
+  "scenarios": [
+    {
+      "id": "phone-initial",
+      "status": "tested",
+      "evidence": "assets/examples/realworld/arngren-phone.png; capture-summary.json arngren-v3 phone geometry"
+    },
+    {
+      "id": "category-navigation",
+      "status": "tested",
+      "evidence": "assets/examples/realworld/arngren-task.png; task-results.json"
+    },
+    {
+      "id": "participant-task",
+      "status": "untested",
+      "evidence": "No participant test, purchase or comprehension observation."
+    }
+  ],
+  "dimensions": {
+    "taskHierarchy": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "groupingRhythm": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "typography": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "colorSurfaces": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "componentLanguage": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "compositionCharacter": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "contentMeaning": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "interactionState": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "adaptation": {
+      "rating": 1,
+      "reason": "The phone document has3105px of root horizontal excess; the category view separates task-relevant product context from the initial narrow frame.",
+      "evidence": [
+        "assets/examples/realworld/arngren-phone.png",
+        "assets/examples/realworld/arngren-task.png",
+        "assets/examples/realworld/capture-summary.json"
+      ],
+      "tradeoff": "Keep product abundance and direct category access; excessive spaciousness or hidden navigation could worsen scanning."
+    }
+  },
+  "accessibilityGates": [],
+  "findings": [
+    {
+      "id": "arngren-root-fit",
+      "dimension": "adaptation",
+      "severity": "major",
+      "confidence": "high",
+      "ownerRoute": "collection-region",
+      "routePath": [
+        "collection",
+        "collection-region"
+      ],
+      "location": "Phone390 CSS px viewport, current catalog and bicycle category",
+      "observation": "Actual body scroller is3495px wide:3105px beyond the phone viewport. Old root-only collector incorrectly reported zero. Category navigation works, but the initial category frame lacks the nearby photo/price context.",
+      "intendedRelationship": "Product identity, photo, price and detail action should remain understandable together within the available space.",
+      "consequence": "Large root scrolling and separated product context can make scanning/comparison harder. This is an inference; an agent successfully found the category, and no participant failure rate was measured.",
+      "proposal": "Recompose catalog items and category detail for narrow screens while retaining visible categories and product abundance. Aim for no page-level overflow of ordinary product content; evaluate any necessary local scroller separately.",
+      "preserve": "Working category path, clear prices on visible items and direct catalog character.",
+      "alternative": "Keep dense desktop organization if it serves comparison; density itself is not the defect. Do not globally normalize type or remove products to reduce warning count.",
+      "verification": "After any authorized implementation, recapture390/1440px and follow the same category path; verify identity/photo/price association and keyboard reachability. This evaluation did not modify Arngren.",
+      "evidence": [
+        "assets/examples/realworld/capture-summary.json",
+        "assets/examples/realworld/arngren-phone.png",
+        "assets/examples/realworld/arngren-task.png",
+        "assets/examples/realworld/task-results.json"
+      ],
+      "provenance": "semantic-judgment"
+    }
+  ],
+  "unknowns": [
+    "A broken third-party counter image was observed; overall automated readiness remains incomplete.",
+    "Full product comparison and purchase were not tested.",
+    "Motion, screen-reader behavior and all automated candidates remain outside this scoped semantic finding."
+  ]
+}

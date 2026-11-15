@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-15",
+  "purpose": "Development calibration; not a representative benchmark or independent usability study.",
+  "cases": [
+    {
+      "id": "govuk",
+      "reception": "historical award",
+      "source": "https://designmuseum.org/exhibitions/beazley-designs-of-the-year/designs-of-the-decades",
+      "sourceDate": "2013 award; retrospective date unspecified",
+      "capture": "current passport service entry, not the awarded historical whole-service version",
+      "route": [
+        "landing",
+        "action-group",
+        "button-link"
+      ],
+      "status": "captured and scoped keyboard/entry-action probe"
+    },
+    {
+      "id": "stripe",
+      "reception": "community praise and disagreement",
+      "source": "https://www.reddit.com/r/web_design/comments/hmhb5u/",
+      "sourceDate": "2020 discussion",
+      "capture": "current homepage, not necessarily discussed version",
+      "route": [
+        "landing",
+        "app-shell",
+        "navigation"
+      ],
+      "status": "captured; keyboard menu open/Escape/focus checked"
+    },
+    {
+      "id": "arngren",
+      "reception": "historically criticized",
+      "source": "https://www.cl.cam.ac.uk/teaching/1415/ECommerce/ECommerce3.pdf",
+      "sourceDate": "2014-15 teaching material",
+      "capture": "current catalog and bicycle category",
+      "route": [
+        "collection",
+        "collection-region",
+        "card-row"
+      ],
+      "status": "captured with failed counter-image resource; category navigation checked"
+    },
+    {
+      "id": "berkshire",
+      "reception": "contested plain design; practitioner defense",
+      "source": "https://builtin.com/articles/berkshire-hathaway-human-centered-design",
+      "sourceDate": "2020-04-12",
+      "capture": "current shareholder directory and report/letter destinations",
+      "route": [
+        "collection",
+        "navigation",
+        "text"
+      ],
+      "status": "captured and document-directory navigation checked"
+    },
+    {
+      "id": "yale",
+      "reception": "criticized and defended",
+      "sources": [
+        "https://blog.hubspot.com/website/bad-vs-good-design",
+        "https://designobserver.com/olia-lialina-relics-of-the-lost-web/"
+      ],
+      "sourceDate": "criticism current retrieved article; defense2007-09-01",
+      "status": "unavailable: browser navigation timeouts at www and canonical host; no current visual verdict"
+    },
+    {
+      "id": "pennyjuice",
+      "reception": "historical criticism; version drift unresolved",
+      "source": "https://shelbyelisepaine.wordpress.com/2014/11/07/making-a-bad-web-design-good-or-at-least-better/",
+      "sourceDate": "2014-11-07; limited practitioner/student-post evidence",
+      "status": "unavailable: browser navigation timeouts; no current visual verdict"
+    },
+    {
+      "id": "adidas-heldout",
+      "reception": "specific category-navigation example praised in participant research",
+      "source": "https://baymard.com/research-articles/apparel-search",
+      "sourceDate": "2024-07-23",
+      "status": "held-out attempt unavailable: HTTP403; not a validation pass"
+    },
+    {
+      "id": "catbird-heldout",
+      "reception": "specific budget-navigation example praised in participant research",
+      "source": "https://baymard.com/research-articles/apparel-search",
+      "sourceDate": "2024-07-23",
+      "status": "held-out replacement unavailable: HTTP403; not a validation pass"
+    },
+    {
+      "id": "siemens-historical",
+      "reception": "documented participant task failure",
+      "source": "https://www.nngroup.com/articles/auto-forwarding/",
+      "sourceDate": "2013-01-19",
+      "status": "literature-only timing counterexample; no current Siemens capture or automatic measurement"
+    }
+  ]
+}

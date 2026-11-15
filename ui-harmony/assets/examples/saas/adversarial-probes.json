@@ -1,0 +1,2502 @@
+[
+  {
+    "name": "all rating3 gives75 and eligible",
+    "result": {
+      "structurallyValid": true,
+      "errors": [],
+      "profile": "modern-saas",
+      "rubricVersion": 1,
+      "candidate": "Dense incident monitor A",
+      "context": {
+        "task": "Find and acknowledge an active incident",
+        "route": "/incidents",
+        "surface": "product",
+        "fixture": "12 incidents including two urgent and one long service name",
+        "viewport": "1280x900 CSS px; 390x844 CSS px",
+        "theme": "light",
+        "state": "urgent incidents present",
+        "evidenceMode": "rendered",
+        "audience": "Describe intended users"
+      },
+      "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+      "styleFit": 75,
+      "scale": 100,
+      "label": "Modern SaaS minimalism preference fit",
+      "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+      "reviewedWeight": 100,
+      "recommendation": "eligible-for-scoped-comparison",
+      "failedGates": [],
+      "unknownGates": [],
+      "gates": {
+        "task": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#task"
+          ]
+        },
+        "legibility": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#legibility"
+          ]
+        },
+        "interaction": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#interaction"
+          ]
+        },
+        "adaptation": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#adaptation"
+          ]
+        }
+      },
+      "breakdown": [
+        {
+          "criterion": "quietHierarchy",
+          "label": "Quiet hierarchy",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Content leads; navigation recedes; action emphasis follows task importance.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#quietHierarchy"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "label": "Restrained surfaces",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Flat content planes and purposeful boundaries; elevation identifies overlays.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#surfaceRestraint"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "typography",
+          "label": "Typography-led composition",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Compact readable sans-led UI, distinct roles, intentional weight and number alignment.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#typography"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "densityRhythm",
+          "label": "Useful density and rhythm",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#densityRhythm"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "componentPrecision",
+          "label": "Precise component language",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#componentPrecision"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "purposefulColor",
+          "label": "Purposeful color",
+          "weight": 10,
+          "rating": 3,
+          "anchor": "Neutral or low-chroma working surfaces; accents identify action, selection, data or status.",
+          "contribution": 7.5,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#purposefulColor"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "productCharacter",
+          "label": "Product-specific restraint",
+          "weight": 5,
+          "rating": 3,
+          "anchor": "Restrained brand details, deliberate neutrality or domain-specific content ground the design in its product.",
+          "contribution": 3.75,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#productCharacter"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        }
+      ],
+      "priorities": [
+        {
+          "criterion": "quietHierarchy",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "typography",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "densityRhythm",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "componentPrecision",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "purposefulColor",
+          "weightedGap": 2.5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "productCharacter",
+          "weightedGap": 1.25,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        }
+      ],
+      "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+    }
+  },
+  {
+    "name": "null criterion withholds total",
+    "result": {
+      "structurallyValid": true,
+      "errors": [],
+      "profile": "modern-saas",
+      "rubricVersion": 1,
+      "candidate": "Dense incident monitor A",
+      "context": {
+        "task": "Find and acknowledge an active incident",
+        "route": "/incidents",
+        "surface": "product",
+        "fixture": "12 incidents including two urgent and one long service name",
+        "viewport": "1280x900 CSS px; 390x844 CSS px",
+        "theme": "light",
+        "state": "urgent incidents present",
+        "evidenceMode": "rendered",
+        "audience": "Describe intended users"
+      },
+      "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+      "styleFit": null,
+      "scale": 100,
+      "label": "Modern SaaS minimalism preference fit",
+      "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+      "reviewedWeight": 85,
+      "recommendation": "incomplete",
+      "failedGates": [],
+      "unknownGates": [],
+      "gates": {
+        "task": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#task"
+          ]
+        },
+        "legibility": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#legibility"
+          ]
+        },
+        "interaction": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#interaction"
+          ]
+        },
+        "adaptation": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#adaptation"
+          ]
+        }
+      },
+      "breakdown": [
+        {
+          "criterion": "quietHierarchy",
+          "label": "Quiet hierarchy",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Content leads; navigation recedes; action emphasis follows task importance.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#quietHierarchy"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "label": "Restrained surfaces",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Flat content planes and purposeful boundaries; elevation identifies overlays.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#surfaceRestraint"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "typography",
+          "label": "Typography-led composition",
+          "weight": 15,
+          "rating": null,
+          "anchor": null,
+          "contribution": null,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#typography"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "densityRhythm",
+          "label": "Useful density and rhythm",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#densityRhythm"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "componentPrecision",
+          "label": "Precise component language",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#componentPrecision"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "purposefulColor",
+          "label": "Purposeful color",
+          "weight": 10,
+          "rating": 3,
+          "anchor": "Neutral or low-chroma working surfaces; accents identify action, selection, data or status.",
+          "contribution": 7.5,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#purposefulColor"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "productCharacter",
+          "label": "Product-specific restraint",
+          "weight": 5,
+          "rating": 3,
+          "anchor": "Restrained brand details, deliberate neutrality or domain-specific content ground the design in its product.",
+          "contribution": 3.75,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#productCharacter"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        }
+      ],
+      "priorities": [
+        {
+          "criterion": "quietHierarchy",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "densityRhythm",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "componentPrecision",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "purposefulColor",
+          "weightedGap": 2.5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "productCharacter",
+          "weightedGap": 1.25,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        }
+      ],
+      "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+    }
+  },
+  {
+    "name": "failed legibility blocks100",
+    "result": {
+      "structurallyValid": true,
+      "errors": [],
+      "profile": "modern-saas",
+      "rubricVersion": 1,
+      "candidate": "Dense incident monitor A",
+      "context": {
+        "task": "Find and acknowledge an active incident",
+        "route": "/incidents",
+        "surface": "product",
+        "fixture": "12 incidents including two urgent and one long service name",
+        "viewport": "1280x900 CSS px; 390x844 CSS px",
+        "theme": "light",
+        "state": "urgent incidents present",
+        "evidenceMode": "rendered",
+        "audience": "Describe intended users"
+      },
+      "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+      "styleFit": 100,
+      "scale": 100,
+      "label": "Modern SaaS minimalism preference fit",
+      "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+      "reviewedWeight": 100,
+      "recommendation": "blocked",
+      "failedGates": [
+        "legibility"
+      ],
+      "unknownGates": [],
+      "gates": {
+        "task": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#task"
+          ]
+        },
+        "legibility": {
+          "status": "fail",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#legibility"
+          ]
+        },
+        "interaction": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#interaction"
+          ]
+        },
+        "adaptation": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#adaptation"
+          ]
+        }
+      },
+      "breakdown": [
+        {
+          "criterion": "quietHierarchy",
+          "label": "Quiet hierarchy",
+          "weight": 20,
+          "rating": 4,
+          "anchor": "Hierarchy stays precise in the reviewed content and states with very little competing chrome.",
+          "contribution": 20,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#quietHierarchy"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "label": "Restrained surfaces",
+          "weight": 20,
+          "rating": 4,
+          "anchor": "Every reviewed boundary or layer clarifies ownership; restrained depth remains distinct in the reviewed theme.",
+          "contribution": 20,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#surfaceRestraint"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "typography",
+          "label": "Typography-led composition",
+          "weight": 15,
+          "rating": 4,
+          "anchor": "Optically careful type, wrapping and numeric rhythm carry hierarchy without unnecessary scale changes.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#typography"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "densityRhythm",
+          "label": "Useful density and rhythm",
+          "weight": 15,
+          "rating": 4,
+          "anchor": "Density is tuned to the screen idiom; comparisons stay close and long content retains clear rhythm.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#densityRhythm"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "componentPrecision",
+          "label": "Precise component language",
+          "weight": 15,
+          "rating": 4,
+          "anchor": "Optical alignment and states feel deliberately related; exceptions have a clear role.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#componentPrecision"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "purposefulColor",
+          "label": "Purposeful color",
+          "weight": 10,
+          "rating": 4,
+          "anchor": "Color is sparse where appropriate and rich where meaningful; brand, state and data roles remain distinct.",
+          "contribution": 10,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#purposefulColor"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "productCharacter",
+          "label": "Product-specific restraint",
+          "weight": 5,
+          "rating": 4,
+          "anchor": "Purposeful identity or precisely judged neutrality feels specific to the work without unnecessary novelty.",
+          "contribution": 5,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#productCharacter"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        }
+      ],
+      "priorities": [],
+      "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+    }
+  },
+  {
+    "name": "unknown interaction provisional",
+    "result": {
+      "structurallyValid": true,
+      "errors": [],
+      "profile": "modern-saas",
+      "rubricVersion": 1,
+      "candidate": "Dense incident monitor A",
+      "context": {
+        "task": "Find and acknowledge an active incident",
+        "route": "/incidents",
+        "surface": "product",
+        "fixture": "12 incidents including two urgent and one long service name",
+        "viewport": "1280x900 CSS px; 390x844 CSS px",
+        "theme": "light",
+        "state": "urgent incidents present",
+        "evidenceMode": "rendered",
+        "audience": "Describe intended users"
+      },
+      "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+      "styleFit": 75,
+      "scale": 100,
+      "label": "Modern SaaS minimalism preference fit",
+      "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+      "reviewedWeight": 100,
+      "recommendation": "provisional",
+      "failedGates": [],
+      "unknownGates": [
+        "interaction"
+      ],
+      "gates": {
+        "task": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#task"
+          ]
+        },
+        "legibility": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#legibility"
+          ]
+        },
+        "interaction": {
+          "status": "unknown",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#interaction"
+          ]
+        },
+        "adaptation": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#adaptation"
+          ]
+        }
+      },
+      "breakdown": [
+        {
+          "criterion": "quietHierarchy",
+          "label": "Quiet hierarchy",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Content leads; navigation recedes; action emphasis follows task importance.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#quietHierarchy"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "label": "Restrained surfaces",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Flat content planes and purposeful boundaries; elevation identifies overlays.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#surfaceRestraint"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "typography",
+          "label": "Typography-led composition",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Compact readable sans-led UI, distinct roles, intentional weight and number alignment.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#typography"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "densityRhythm",
+          "label": "Useful density and rhythm",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#densityRhythm"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "componentPrecision",
+          "label": "Precise component language",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#componentPrecision"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "purposefulColor",
+          "label": "Purposeful color",
+          "weight": 10,
+          "rating": 3,
+          "anchor": "Neutral or low-chroma working surfaces; accents identify action, selection, data or status.",
+          "contribution": 7.5,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#purposefulColor"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "productCharacter",
+          "label": "Product-specific restraint",
+          "weight": 5,
+          "rating": 3,
+          "anchor": "Restrained brand details, deliberate neutrality or domain-specific content ground the design in its product.",
+          "contribution": 3.75,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#productCharacter"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        }
+      ],
+      "priorities": [
+        {
+          "criterion": "quietHierarchy",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "typography",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "densityRhythm",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "componentPrecision",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "purposefulColor",
+          "weightedGap": 2.5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "productCharacter",
+          "weightedGap": 1.25,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        }
+      ],
+      "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+    }
+  },
+  {
+    "name": "static allpass rejected",
+    "result": {
+      "structurallyValid": false,
+      "errors": [
+        "task: static evidence cannot pass functional gates; use unknown or fail",
+        "legibility: static evidence cannot pass functional gates; use unknown or fail",
+        "interaction: static evidence cannot pass functional gates; use unknown or fail",
+        "adaptation: static evidence cannot pass functional gates; use unknown or fail"
+      ],
+      "styleFit": null,
+      "recommendation": "invalid"
+    }
+  },
+  {
+    "name": "static unknown provisional",
+    "result": {
+      "structurallyValid": true,
+      "errors": [],
+      "profile": "modern-saas",
+      "rubricVersion": 1,
+      "candidate": "Dense incident monitor A",
+      "context": {
+        "task": "Find and acknowledge an active incident",
+        "route": "/incidents",
+        "surface": "product",
+        "fixture": "12 incidents including two urgent and one long service name",
+        "viewport": "1280x900 CSS px; 390x844 CSS px",
+        "theme": "light",
+        "state": "urgent incidents present",
+        "evidenceMode": "screenshot",
+        "audience": "Describe intended users"
+      },
+      "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+      "styleFit": 75,
+      "scale": 100,
+      "label": "Modern SaaS minimalism preference fit",
+      "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+      "reviewedWeight": 100,
+      "recommendation": "provisional",
+      "failedGates": [],
+      "unknownGates": [
+        "task",
+        "legibility",
+        "interaction",
+        "adaptation"
+      ],
+      "gates": {
+        "task": {
+          "status": "unknown",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#task"
+          ]
+        },
+        "legibility": {
+          "status": "unknown",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#legibility"
+          ]
+        },
+        "interaction": {
+          "status": "unknown",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#interaction"
+          ]
+        },
+        "adaptation": {
+          "status": "unknown",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#adaptation"
+          ]
+        }
+      },
+      "breakdown": [
+        {
+          "criterion": "quietHierarchy",
+          "label": "Quiet hierarchy",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Content leads; navigation recedes; action emphasis follows task importance.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#quietHierarchy"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "label": "Restrained surfaces",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Flat content planes and purposeful boundaries; elevation identifies overlays.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#surfaceRestraint"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "typography",
+          "label": "Typography-led composition",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Compact readable sans-led UI, distinct roles, intentional weight and number alignment.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#typography"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "densityRhythm",
+          "label": "Useful density and rhythm",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#densityRhythm"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "componentPrecision",
+          "label": "Precise component language",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#componentPrecision"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "purposefulColor",
+          "label": "Purposeful color",
+          "weight": 10,
+          "rating": 3,
+          "anchor": "Neutral or low-chroma working surfaces; accents identify action, selection, data or status.",
+          "contribution": 7.5,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#purposefulColor"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "productCharacter",
+          "label": "Product-specific restraint",
+          "weight": 5,
+          "rating": 3,
+          "anchor": "Restrained brand details, deliberate neutrality or domain-specific content ground the design in its product.",
+          "contribution": 3.75,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#productCharacter"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        }
+      ],
+      "priorities": [
+        {
+          "criterion": "quietHierarchy",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "typography",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "densityRhythm",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "componentPrecision",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "purposefulColor",
+          "weightedGap": 2.5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "productCharacter",
+          "weightedGap": 1.25,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        }
+      ],
+      "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+    }
+  },
+  {
+    "name": "bad rating undefined",
+    "valid": false
+  },
+  {
+    "name": "bad rating 4",
+    "valid": false
+  },
+  {
+    "name": "bad rating true",
+    "valid": false
+  },
+  {
+    "name": "bad rating 4.1",
+    "valid": false
+  },
+  {
+    "name": "bad rating 5",
+    "valid": false
+  },
+  {
+    "name": "bad rating -1",
+    "valid": false
+  },
+  {
+    "name": "bad rating NaN",
+    "valid": false
+  },
+  {
+    "name": "bad rating Infinity",
+    "valid": false
+  },
+  {
+    "name": "bad rating [object Object]",
+    "valid": false
+  },
+  {
+    "name": "bad rating ",
+    "valid": false
+  },
+  {
+    "name": "malformed context null",
+    "valid": false
+  },
+  {
+    "name": "malformed context []",
+    "valid": false
+  },
+  {
+    "name": "malformed context false",
+    "valid": false
+  },
+  {
+    "name": "malformed context \"x\"",
+    "valid": false
+  },
+  {
+    "name": "malformed context 7",
+    "valid": false
+  },
+  {
+    "name": "malformed criteria null",
+    "valid": false
+  },
+  {
+    "name": "malformed criteria []",
+    "valid": false
+  },
+  {
+    "name": "malformed criteria false",
+    "valid": false
+  },
+  {
+    "name": "malformed criteria \"x\"",
+    "valid": false
+  },
+  {
+    "name": "malformed criteria 7",
+    "valid": false
+  },
+  {
+    "name": "malformed gates null",
+    "valid": false
+  },
+  {
+    "name": "malformed gates []",
+    "valid": false
+  },
+  {
+    "name": "malformed gates false",
+    "valid": false
+  },
+  {
+    "name": "malformed gates \"x\"",
+    "valid": false
+  },
+  {
+    "name": "malformed gates 7",
+    "valid": false
+  },
+  {
+    "name": "comparison rejects changed task",
+    "comparable": false
+  },
+  {
+    "name": "comparison rejects changed route",
+    "comparable": false
+  },
+  {
+    "name": "comparison rejects changed surface",
+    "comparable": false
+  },
+  {
+    "name": "comparison rejects changed fixture",
+    "comparable": false
+  },
+  {
+    "name": "comparison rejects changed viewport",
+    "comparable": false
+  },
+  {
+    "name": "comparison rejects changed theme",
+    "comparable": false
+  },
+  {
+    "name": "comparison rejects changed state",
+    "comparable": false
+  },
+  {
+    "name": "comparison rejects changed evidenceMode",
+    "comparable": false
+  },
+  {
+    "name": "comparison rejects changed audience",
+    "comparable": false
+  },
+  {
+    "name": "comparison rejects changed scope",
+    "comparable": false
+  },
+  {
+    "name": "comparison rejects changed reviewer",
+    "comparable": false
+  },
+  {
+    "name": "comparison refuses failed higher fit",
+    "result": {
+      "comparable": false,
+      "reasons": [
+        "right: blocked"
+      ],
+      "left": {
+        "structurallyValid": true,
+        "errors": [],
+        "profile": "modern-saas",
+        "rubricVersion": 1,
+        "candidate": "Dense incident monitor A",
+        "context": {
+          "task": "Find and acknowledge an active incident",
+          "route": "/incidents",
+          "surface": "product",
+          "fixture": "12 incidents including two urgent and one long service name",
+          "viewport": "1280x900 CSS px; 390x844 CSS px",
+          "theme": "light",
+          "state": "urgent incidents present",
+          "evidenceMode": "rendered",
+          "audience": "Describe intended users"
+        },
+        "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+        "styleFit": 75,
+        "scale": 100,
+        "label": "Modern SaaS minimalism preference fit",
+        "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+        "reviewedWeight": 100,
+        "recommendation": "eligible-for-scoped-comparison",
+        "failedGates": [],
+        "unknownGates": [],
+        "gates": {
+          "task": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#task"
+            ]
+          },
+          "legibility": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#legibility"
+            ]
+          },
+          "interaction": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#interaction"
+            ]
+          },
+          "adaptation": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#adaptation"
+            ]
+          }
+        },
+        "breakdown": [
+          {
+            "criterion": "quietHierarchy",
+            "label": "Quiet hierarchy",
+            "weight": 20,
+            "rating": 3,
+            "anchor": "Content leads; navigation recedes; action emphasis follows task importance.",
+            "contribution": 15,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#quietHierarchy"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "surfaceRestraint",
+            "label": "Restrained surfaces",
+            "weight": 20,
+            "rating": 3,
+            "anchor": "Flat content planes and purposeful boundaries; elevation identifies overlays.",
+            "contribution": 15,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#surfaceRestraint"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "typography",
+            "label": "Typography-led composition",
+            "weight": 15,
+            "rating": 3,
+            "anchor": "Compact readable sans-led UI, distinct roles, intentional weight and number alignment.",
+            "contribution": 11.25,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#typography"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "densityRhythm",
+            "label": "Useful density and rhythm",
+            "weight": 15,
+            "rating": 3,
+            "anchor": "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+            "contribution": 11.25,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#densityRhythm"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "componentPrecision",
+            "label": "Precise component language",
+            "weight": 15,
+            "rating": 3,
+            "anchor": "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+            "contribution": 11.25,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#componentPrecision"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "purposefulColor",
+            "label": "Purposeful color",
+            "weight": 10,
+            "rating": 3,
+            "anchor": "Neutral or low-chroma working surfaces; accents identify action, selection, data or status.",
+            "contribution": 7.5,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#purposefulColor"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "productCharacter",
+            "label": "Product-specific restraint",
+            "weight": 5,
+            "rating": 3,
+            "anchor": "Restrained brand details, deliberate neutrality or domain-specific content ground the design in its product.",
+            "contribution": 3.75,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#productCharacter"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          }
+        ],
+        "priorities": [
+          {
+            "criterion": "quietHierarchy",
+            "weightedGap": 5,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "surfaceRestraint",
+            "weightedGap": 5,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "typography",
+            "weightedGap": 3.75,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "densityRhythm",
+            "weightedGap": 3.75,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "componentPrecision",
+            "weightedGap": 3.75,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "purposefulColor",
+            "weightedGap": 2.5,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "productCharacter",
+            "weightedGap": 1.25,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          }
+        ],
+        "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+      },
+      "right": {
+        "structurallyValid": true,
+        "errors": [],
+        "profile": "modern-saas",
+        "rubricVersion": 1,
+        "candidate": "Dense incident monitor A",
+        "context": {
+          "task": "Find and acknowledge an active incident",
+          "route": "/incidents",
+          "surface": "product",
+          "fixture": "12 incidents including two urgent and one long service name",
+          "viewport": "1280x900 CSS px; 390x844 CSS px",
+          "theme": "light",
+          "state": "urgent incidents present",
+          "evidenceMode": "rendered",
+          "audience": "Describe intended users"
+        },
+        "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+        "styleFit": 100,
+        "scale": 100,
+        "label": "Modern SaaS minimalism preference fit",
+        "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+        "reviewedWeight": 100,
+        "recommendation": "blocked",
+        "failedGates": [
+          "task"
+        ],
+        "unknownGates": [],
+        "gates": {
+          "task": {
+            "status": "fail",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#task"
+            ]
+          },
+          "legibility": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#legibility"
+            ]
+          },
+          "interaction": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#interaction"
+            ]
+          },
+          "adaptation": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#adaptation"
+            ]
+          }
+        },
+        "breakdown": [
+          {
+            "criterion": "quietHierarchy",
+            "label": "Quiet hierarchy",
+            "weight": 20,
+            "rating": 4,
+            "anchor": "Hierarchy stays precise in the reviewed content and states with very little competing chrome.",
+            "contribution": 20,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#quietHierarchy"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "surfaceRestraint",
+            "label": "Restrained surfaces",
+            "weight": 20,
+            "rating": 4,
+            "anchor": "Every reviewed boundary or layer clarifies ownership; restrained depth remains distinct in the reviewed theme.",
+            "contribution": 20,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#surfaceRestraint"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "typography",
+            "label": "Typography-led composition",
+            "weight": 15,
+            "rating": 4,
+            "anchor": "Optically careful type, wrapping and numeric rhythm carry hierarchy without unnecessary scale changes.",
+            "contribution": 15,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#typography"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "densityRhythm",
+            "label": "Useful density and rhythm",
+            "weight": 15,
+            "rating": 4,
+            "anchor": "Density is tuned to the screen idiom; comparisons stay close and long content retains clear rhythm.",
+            "contribution": 15,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#densityRhythm"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "componentPrecision",
+            "label": "Precise component language",
+            "weight": 15,
+            "rating": 4,
+            "anchor": "Optical alignment and states feel deliberately related; exceptions have a clear role.",
+            "contribution": 15,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#componentPrecision"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "purposefulColor",
+            "label": "Purposeful color",
+            "weight": 10,
+            "rating": 4,
+            "anchor": "Color is sparse where appropriate and rich where meaningful; brand, state and data roles remain distinct.",
+            "contribution": 10,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#purposefulColor"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "productCharacter",
+            "label": "Product-specific restraint",
+            "weight": 5,
+            "rating": 4,
+            "anchor": "Purposeful identity or precisely judged neutrality feels specific to the work without unnecessary novelty.",
+            "contribution": 5,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#productCharacter"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          }
+        ],
+        "priorities": [],
+        "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+      },
+      "styleFitDelta": null,
+      "note": "Delta is only preference-fit arithmetic for matched reviewed cases. It does not establish a usability improvement or an automatic winner."
+    }
+  },
+  {
+    "name": "unknown weights metadata cannot change score but accepted",
+    "result": {
+      "structurallyValid": true,
+      "errors": [],
+      "profile": "modern-saas",
+      "rubricVersion": 1,
+      "candidate": "Dense incident monitor A",
+      "context": {
+        "task": "Find and acknowledge an active incident",
+        "route": "/incidents",
+        "surface": "product",
+        "fixture": "12 incidents including two urgent and one long service name",
+        "viewport": "1280x900 CSS px; 390x844 CSS px",
+        "theme": "light",
+        "state": "urgent incidents present",
+        "evidenceMode": "rendered",
+        "audience": "Describe intended users"
+      },
+      "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+      "styleFit": 75,
+      "scale": 100,
+      "label": "Modern SaaS minimalism preference fit",
+      "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+      "reviewedWeight": 100,
+      "recommendation": "eligible-for-scoped-comparison",
+      "failedGates": [],
+      "unknownGates": [],
+      "gates": {
+        "task": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#task"
+          ]
+        },
+        "legibility": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#legibility"
+          ]
+        },
+        "interaction": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#interaction"
+          ]
+        },
+        "adaptation": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#adaptation"
+          ]
+        }
+      },
+      "breakdown": [
+        {
+          "criterion": "quietHierarchy",
+          "label": "Quiet hierarchy",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Content leads; navigation recedes; action emphasis follows task importance.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#quietHierarchy"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "label": "Restrained surfaces",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Flat content planes and purposeful boundaries; elevation identifies overlays.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#surfaceRestraint"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "typography",
+          "label": "Typography-led composition",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Compact readable sans-led UI, distinct roles, intentional weight and number alignment.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#typography"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "densityRhythm",
+          "label": "Useful density and rhythm",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#densityRhythm"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "componentPrecision",
+          "label": "Precise component language",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#componentPrecision"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "purposefulColor",
+          "label": "Purposeful color",
+          "weight": 10,
+          "rating": 3,
+          "anchor": "Neutral or low-chroma working surfaces; accents identify action, selection, data or status.",
+          "contribution": 7.5,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#purposefulColor"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "productCharacter",
+          "label": "Product-specific restraint",
+          "weight": 5,
+          "rating": 3,
+          "anchor": "Restrained brand details, deliberate neutrality or domain-specific content ground the design in its product.",
+          "contribution": 3.75,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#productCharacter"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        }
+      ],
+      "priorities": [
+        {
+          "criterion": "quietHierarchy",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "typography",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "densityRhythm",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "componentPrecision",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "purposefulColor",
+          "weightedGap": 2.5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "productCharacter",
+          "weightedGap": 1.25,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        }
+      ],
+      "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+    }
+  },
+  {
+    "name": "audience is not bound in comparison",
+    "result": {
+      "comparable": false,
+      "reasons": [
+        "Different audience"
+      ],
+      "left": {
+        "structurallyValid": true,
+        "errors": [],
+        "profile": "modern-saas",
+        "rubricVersion": 1,
+        "candidate": "Dense incident monitor A",
+        "context": {
+          "task": "Find and acknowledge an active incident",
+          "route": "/incidents",
+          "surface": "product",
+          "fixture": "12 incidents including two urgent and one long service name",
+          "viewport": "1280x900 CSS px; 390x844 CSS px",
+          "theme": "light",
+          "state": "urgent incidents present",
+          "evidenceMode": "rendered",
+          "audience": "trained SRE"
+        },
+        "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+        "styleFit": 75,
+        "scale": 100,
+        "label": "Modern SaaS minimalism preference fit",
+        "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+        "reviewedWeight": 100,
+        "recommendation": "eligible-for-scoped-comparison",
+        "failedGates": [],
+        "unknownGates": [],
+        "gates": {
+          "task": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#task"
+            ]
+          },
+          "legibility": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#legibility"
+            ]
+          },
+          "interaction": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#interaction"
+            ]
+          },
+          "adaptation": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#adaptation"
+            ]
+          }
+        },
+        "breakdown": [
+          {
+            "criterion": "quietHierarchy",
+            "label": "Quiet hierarchy",
+            "weight": 20,
+            "rating": 3,
+            "anchor": "Content leads; navigation recedes; action emphasis follows task importance.",
+            "contribution": 15,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#quietHierarchy"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "surfaceRestraint",
+            "label": "Restrained surfaces",
+            "weight": 20,
+            "rating": 3,
+            "anchor": "Flat content planes and purposeful boundaries; elevation identifies overlays.",
+            "contribution": 15,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#surfaceRestraint"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "typography",
+            "label": "Typography-led composition",
+            "weight": 15,
+            "rating": 3,
+            "anchor": "Compact readable sans-led UI, distinct roles, intentional weight and number alignment.",
+            "contribution": 11.25,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#typography"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "densityRhythm",
+            "label": "Useful density and rhythm",
+            "weight": 15,
+            "rating": 3,
+            "anchor": "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+            "contribution": 11.25,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#densityRhythm"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "componentPrecision",
+            "label": "Precise component language",
+            "weight": 15,
+            "rating": 3,
+            "anchor": "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+            "contribution": 11.25,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#componentPrecision"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "purposefulColor",
+            "label": "Purposeful color",
+            "weight": 10,
+            "rating": 3,
+            "anchor": "Neutral or low-chroma working surfaces; accents identify action, selection, data or status.",
+            "contribution": 7.5,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#purposefulColor"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "productCharacter",
+            "label": "Product-specific restraint",
+            "weight": 5,
+            "rating": 3,
+            "anchor": "Restrained brand details, deliberate neutrality or domain-specific content ground the design in its product.",
+            "contribution": 3.75,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#productCharacter"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          }
+        ],
+        "priorities": [
+          {
+            "criterion": "quietHierarchy",
+            "weightedGap": 5,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "surfaceRestraint",
+            "weightedGap": 5,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "typography",
+            "weightedGap": 3.75,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "densityRhythm",
+            "weightedGap": 3.75,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "componentPrecision",
+            "weightedGap": 3.75,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "purposefulColor",
+            "weightedGap": 2.5,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "productCharacter",
+            "weightedGap": 1.25,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          }
+        ],
+        "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+      },
+      "right": {
+        "structurallyValid": true,
+        "errors": [],
+        "profile": "modern-saas",
+        "rubricVersion": 1,
+        "candidate": "Dense incident monitor A",
+        "context": {
+          "task": "Find and acknowledge an active incident",
+          "route": "/incidents",
+          "surface": "product",
+          "fixture": "12 incidents including two urgent and one long service name",
+          "viewport": "1280x900 CSS px; 390x844 CSS px",
+          "theme": "light",
+          "state": "urgent incidents present",
+          "evidenceMode": "rendered",
+          "audience": "first-time customer"
+        },
+        "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+        "styleFit": 75,
+        "scale": 100,
+        "label": "Modern SaaS minimalism preference fit",
+        "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+        "reviewedWeight": 100,
+        "recommendation": "eligible-for-scoped-comparison",
+        "failedGates": [],
+        "unknownGates": [],
+        "gates": {
+          "task": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#task"
+            ]
+          },
+          "legibility": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#legibility"
+            ]
+          },
+          "interaction": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#interaction"
+            ]
+          },
+          "adaptation": {
+            "status": "pass",
+            "reason": "Synthetic asserted evidence for validator probe",
+            "evidence": [
+              "probe#adaptation"
+            ]
+          }
+        },
+        "breakdown": [
+          {
+            "criterion": "quietHierarchy",
+            "label": "Quiet hierarchy",
+            "weight": 20,
+            "rating": 3,
+            "anchor": "Content leads; navigation recedes; action emphasis follows task importance.",
+            "contribution": 15,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#quietHierarchy"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "surfaceRestraint",
+            "label": "Restrained surfaces",
+            "weight": 20,
+            "rating": 3,
+            "anchor": "Flat content planes and purposeful boundaries; elevation identifies overlays.",
+            "contribution": 15,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#surfaceRestraint"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "typography",
+            "label": "Typography-led composition",
+            "weight": 15,
+            "rating": 3,
+            "anchor": "Compact readable sans-led UI, distinct roles, intentional weight and number alignment.",
+            "contribution": 11.25,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#typography"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "densityRhythm",
+            "label": "Useful density and rhythm",
+            "weight": 15,
+            "rating": 3,
+            "anchor": "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+            "contribution": 11.25,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#densityRhythm"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "componentPrecision",
+            "label": "Precise component language",
+            "weight": 15,
+            "rating": 3,
+            "anchor": "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+            "contribution": 11.25,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#componentPrecision"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "purposefulColor",
+            "label": "Purposeful color",
+            "weight": 10,
+            "rating": 3,
+            "anchor": "Neutral or low-chroma working surfaces; accents identify action, selection, data or status.",
+            "contribution": 7.5,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#purposefulColor"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          },
+          {
+            "criterion": "productCharacter",
+            "label": "Product-specific restraint",
+            "weight": 5,
+            "rating": 3,
+            "anchor": "Restrained brand details, deliberate neutrality or domain-specific content ground the design in its product.",
+            "contribution": 3.75,
+            "reason": "Illustrative probe assertion, not an actual visual assessment",
+            "evidence": [
+              "fixture#productCharacter"
+            ],
+            "tradeoff": "Preserve scan speed",
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content",
+            "confidence": "medium"
+          }
+        ],
+        "priorities": [
+          {
+            "criterion": "quietHierarchy",
+            "weightedGap": 5,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "surfaceRestraint",
+            "weightedGap": 5,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "typography",
+            "weightedGap": 3.75,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "densityRhythm",
+            "weightedGap": 3.75,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "componentPrecision",
+            "weightedGap": 3.75,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "purposefulColor",
+            "weightedGap": 2.5,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          },
+          {
+            "criterion": "productCharacter",
+            "weightedGap": 1.25,
+            "nextChange": "No change asserted by structural probe",
+            "preserve": "Critical incident content"
+          }
+        ],
+        "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+      },
+      "styleFitDelta": null,
+      "note": "Delta is only preference-fit arithmetic for matched reviewed cases. It does not establish a usability improvement or an automatic winner."
+    }
+  },
+  {
+    "name": "embedded contradictory review accepted",
+    "errors": [
+      "styleReview: task, audience and scope must match the enclosing review",
+      "styleReview: unresolved accessibilityGates cannot coexist with a legibility pass"
+    ],
+    "styleResult": {
+      "structurallyValid": true,
+      "errors": [],
+      "profile": "modern-saas",
+      "rubricVersion": 1,
+      "candidate": "Dense incident monitor A",
+      "context": {
+        "task": "Find and acknowledge an active incident",
+        "route": "/incidents",
+        "surface": "product",
+        "fixture": "12 incidents including two urgent and one long service name",
+        "viewport": "1280x900 CSS px; 390x844 CSS px",
+        "theme": "light",
+        "state": "urgent incidents present",
+        "evidenceMode": "rendered",
+        "audience": "Describe intended users"
+      },
+      "scope": "Incident table, filtering and acknowledgement at 1280px and 390px",
+      "styleFit": 75,
+      "scale": 100,
+      "label": "Modern SaaS minimalism preference fit",
+      "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+      "reviewedWeight": 100,
+      "recommendation": "eligible-for-scoped-comparison",
+      "failedGates": [],
+      "unknownGates": [],
+      "gates": {
+        "task": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#task"
+          ]
+        },
+        "legibility": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#legibility"
+          ]
+        },
+        "interaction": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#interaction"
+          ]
+        },
+        "adaptation": {
+          "status": "pass",
+          "reason": "Synthetic asserted evidence for validator probe",
+          "evidence": [
+            "probe#adaptation"
+          ]
+        }
+      },
+      "breakdown": [
+        {
+          "criterion": "quietHierarchy",
+          "label": "Quiet hierarchy",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Content leads; navigation recedes; action emphasis follows task importance.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#quietHierarchy"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "label": "Restrained surfaces",
+          "weight": 20,
+          "rating": 3,
+          "anchor": "Flat content planes and purposeful boundaries; elevation identifies overlays.",
+          "contribution": 15,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#surfaceRestraint"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "typography",
+          "label": "Typography-led composition",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Compact readable sans-led UI, distinct roles, intentional weight and number alignment.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#typography"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "densityRhythm",
+          "label": "Useful density and rhythm",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#densityRhythm"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "componentPrecision",
+          "label": "Precise component language",
+          "weight": 15,
+          "rating": 3,
+          "anchor": "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+          "contribution": 11.25,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#componentPrecision"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "purposefulColor",
+          "label": "Purposeful color",
+          "weight": 10,
+          "rating": 3,
+          "anchor": "Neutral or low-chroma working surfaces; accents identify action, selection, data or status.",
+          "contribution": 7.5,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#purposefulColor"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        },
+        {
+          "criterion": "productCharacter",
+          "label": "Product-specific restraint",
+          "weight": 5,
+          "rating": 3,
+          "anchor": "Restrained brand details, deliberate neutrality or domain-specific content ground the design in its product.",
+          "contribution": 3.75,
+          "reason": "Illustrative probe assertion, not an actual visual assessment",
+          "evidence": [
+            "fixture#productCharacter"
+          ],
+          "tradeoff": "Preserve scan speed",
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content",
+          "confidence": "medium"
+        }
+      ],
+      "priorities": [
+        {
+          "criterion": "quietHierarchy",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "surfaceRestraint",
+          "weightedGap": 5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "typography",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "densityRhythm",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "componentPrecision",
+          "weightedGap": 3.75,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "purposefulColor",
+          "weightedGap": 2.5,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        },
+        {
+          "criterion": "productCharacter",
+          "weightedGap": 1.25,
+          "nextChange": "No change asserted by structural probe",
+          "preserve": "Critical incident content"
+        }
+      ],
+      "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+    }
+  }
+]

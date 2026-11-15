@@ -1,0 +1,14 @@
+{
+  "task": "",
+  "evidenceMode": "rendered-web",
+  "primary": "",
+  "primaryReason": "",
+  "scope": "",
+  "identityToPreserve": "",
+  "assumptions": [],
+  "unknowns": [],
+  "preserve": [],
+  "rejectedAlternatives": [],
+  "paths": [],
+  "scenarios": []
+}

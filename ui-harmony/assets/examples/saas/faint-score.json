@@ -1,0 +1,240 @@
+{
+  "structurallyValid": true,
+  "errors": [],
+  "profile": "modern-saas",
+  "rubricVersion": 1,
+  "candidate": "faint",
+  "reviewer": "main-agent visual inspection 2026-11-15",
+  "context": {
+    "task": "Locate and open the overdue task",
+    "audience": "Operations users; no participant research",
+    "route": "/work-queue",
+    "surface": "product",
+    "fixture": "northstar-four-tasks-v1",
+    "viewport": "1440x1000 and 390x844 CSS px",
+    "theme": "light",
+    "state": "rest plus scoped task activation",
+    "evidenceMode": "rendered"
+  },
+  "scope": "Initial work-queue composition at two widths and activation of the overdue task only; other controls are mocked.",
+  "styleFit": 43,
+  "scale": 100,
+  "label": "Modern SaaS minimalism preference fit",
+  "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+  "reviewedWeight": 100,
+  "recommendation": "blocked",
+  "failedGates": [
+    "legibility"
+  ],
+  "unknownGates": [
+    "interaction",
+    "adaptation"
+  ],
+  "gates": {
+    "task": {
+      "status": "pass",
+      "reason": "Only the scoped overdue-row activation was probed; programmatic focus plus Enter opened the matching task. Discovery by users was not tested.",
+      "evidence": [
+        "assets/examples/saas/rendered/observations.json: faint taskProbe at both widths"
+      ]
+    },
+    "legibility": {
+      "status": "fail",
+      "reason": "Body/task text #aaa on white has calculated sRGB contrast about 2.32:1; normal-sized task labels are visibly faint.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint.html: body.faint color and white body background",
+        "assets/examples/saas/rendered/observations.json: faint bodyColor",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ]
+    },
+    "interaction": {
+      "status": "unknown",
+      "reason": "Task-row Enter activation and detail focus passed; navigation, toolbar and New task are nonfunctional mock controls, so this is not an approved working app.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint.html",
+        "assets/examples/saas/rendered/observations.json"
+      ]
+    },
+    "adaptation": {
+      "status": "unknown",
+      "reason": "Two widths have no root overflow; phone hides owner/due/sidebar and long content was not stress-tested. Full information availability remains unverified.",
+      "evidence": [
+        "assets/examples/saas/rendered/observations.json",
+        "assets/examples/saas/rendered/faint-390.png"
+      ]
+    }
+  },
+  "breakdown": [
+    {
+      "criterion": "quietHierarchy",
+      "label": "Quiet hierarchy",
+      "weight": 20,
+      "rating": 1,
+      "anchor": "Several unrelated elements compete with the main task.",
+      "contribution": 5,
+      "reason": "Heading, actions and content all have similarly weak emphasis; the primary action no longer stands apart.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Restore a clear action treatment and distinct readable type roles.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "surfaceRestraint",
+      "label": "Restrained surfaces",
+      "weight": 20,
+      "rating": 2,
+      "anchor": "Mostly quiet surfaces with redundant card/border/depth treatments.",
+      "contribution": 10,
+      "reason": "Nearly invisible row boundaries leave weaker grouping than the restrained version.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Use visible grouping cues where they carry meaning; do not remove every separator.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "typography",
+      "label": "Typography-led composition",
+      "weight": 15,
+      "rating": 1,
+      "anchor": "Display-scale headings or excessive styles dominate routine work.",
+      "contribution": 3.75,
+      "reason": "Small low-contrast labels create a fragile reading texture; the compact heading alone does not establish useful hierarchy.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Restore readable text roles and inspect contrast before adjusting density.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "densityRhythm",
+      "label": "Useful density and rhythm",
+      "weight": 15,
+      "rating": 3,
+      "anchor": "Efficient rows/groups, clear internal versus external spacing, breathing room at transitions.",
+      "contribution": 11.25,
+      "reason": "Four closely spaced records remain grouped and fit; this density alone does not validate their readability.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Keep comparison proximity while restoring readable control sizing.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "componentPrecision",
+      "label": "Precise component language",
+      "weight": 15,
+      "rating": 2,
+      "anchor": "A recognizable system has repeated alignment or variant inconsistencies.",
+      "contribution": 7.5,
+      "reason": "Consistent controls are present, but 22px visual button heights and faint treatments weaken their appearance as actions.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Restore clear control treatments and verify actual hit-area requirements and exceptions.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "purposefulColor",
+      "label": "Purposeful color",
+      "weight": 10,
+      "rating": 1,
+      "anchor": "Saturated containers and competing accents dilute priority.",
+      "contribution": 2.5,
+      "reason": "The Overdue distinction and primary-action contrast disappear into nearly uniform gray.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Restore semantic color and an unmistakable primary treatment without tinting all content.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "productCharacter",
+      "label": "Product-specific restraint",
+      "weight": 5,
+      "rating": 2,
+      "anchor": "Coherent but generic treatment with limited connection to product content.",
+      "contribution": 2.5,
+      "reason": "The faded brand and content lose the deliberate neutral character of the clearer candidate.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Restore readable identity and domain text; no decorative addition is required.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    }
+  ],
+  "priorities": [
+    {
+      "criterion": "quietHierarchy",
+      "weightedGap": 15,
+      "nextChange": "Restore a clear action treatment and distinct readable type roles.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "typography",
+      "weightedGap": 11.25,
+      "nextChange": "Restore readable text roles and inspect contrast before adjusting density.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "surfaceRestraint",
+      "weightedGap": 10,
+      "nextChange": "Use visible grouping cues where they carry meaning; do not remove every separator.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "componentPrecision",
+      "weightedGap": 7.5,
+      "nextChange": "Restore clear control treatments and verify actual hit-area requirements and exceptions.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "purposefulColor",
+      "weightedGap": 7.5,
+      "nextChange": "Restore semantic color and an unmistakable primary treatment without tinting all content.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "densityRhythm",
+      "weightedGap": 3.75,
+      "nextChange": "Keep comparison proximity while restoring readable control sizing.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "productCharacter",
+      "weightedGap": 2.5,
+      "nextChange": "Restore readable identity and domain text; no decorative addition is required.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    }
+  ],
+  "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+}

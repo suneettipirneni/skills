@@ -1,0 +1,37 @@
+{
+  "viewports": [
+    {"name": "narrow", "width": 320, "height": 800},
+    {"name": "phone", "width": 390, "height": 844},
+    {"name": "desktop", "width": 1440, "height": 1000}
+  ],
+  "geometryTolerance": 1,
+  "groups": [
+    {
+      "name": "field-labels",
+      "selector": "[data-ui=field-label]",
+      "rationale": "Equivalent labels should share a readable type role.",
+      "styles": {"font-size": ["14px"], "font-weight": ["600"]},
+      "minCount": 2,
+      "tolerance": 0.5
+    },
+    {
+      "name": "form-track",
+      "selector": "[data-ui=form-heading], [data-ui=field]",
+      "rationale": "The form title and fields belong to one reading track.",
+      "align": "left",
+      "tolerance": 1,
+      "minCount": 3
+    }
+  ],
+  "separations": [
+    {
+      "name": "form-actions-gap",
+      "a": "[data-ui=last-field]",
+      "b": "[data-ui=form-actions]",
+      "axis": "y",
+      "minGap": 24,
+      "rationale": "Local form convention separates data entry from completion actions."
+    }
+  ],
+  "ignore": []
+}

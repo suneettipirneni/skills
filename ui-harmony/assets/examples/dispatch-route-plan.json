@@ -1,0 +1,61 @@
+{
+  "task": "Dispatchers identify overdue deliveries and contact the owner.",
+  "evidenceMode": "rendered-web",
+  "primary": "monitoring",
+  "primaryReason": "The dominant task is intervention on exceptions, not explaining historical performance.",
+  "scope": "Queue, contextual record inspector and narrow-layout check; fixture example only.",
+  "identityToPreserve": "Compact rows, restrained status color and aligned shared attributes.",
+  "assumptions": [
+    "Dispatchers need repeated inspection; this is a synthetic scenario, not observed user research."
+  ],
+  "unknowns": [
+    "Actual dispatcher usability and production persistence are untested."
+  ],
+  "preserve": [
+    "Compact comparison structure; avoid converting every row into a large card."
+  ],
+  "rejectedAlternatives": [
+    {
+      "id": "analytics",
+      "reason": "Trends are secondary to acting on current exceptions.",
+      "reconsiderWhen": "The task changes to explaining recurring delay causes."
+    }
+  ],
+  "paths": [
+    {
+      "scope": "Queue",
+      "reason": "Triage records and preserve exact status scanning.",
+      "ids": [
+        "monitoring",
+        "collection-region",
+        "card-row"
+      ]
+    },
+    {
+      "scope": "Inspector",
+      "reason": "Inspect one selected record while retaining queue context.",
+      "ids": [
+        "record-detail",
+        "detail-region",
+        "action-group"
+      ]
+    },
+    {
+      "scope": "Narrow content",
+      "reason": "Keep identity, status and action available under constrained space.",
+      "ids": [
+        "adaptation"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "phone-overdue",
+      "fixture": "Synthetic long customer names with overdue and normal deliveries",
+      "state": "390px queue with one selected record",
+      "expected": "Overdue status and contact action remain discoverable; closing detail restores queue context.",
+      "status": "planned",
+      "evidence": "Worked routing example only; no live task interaction claimed."
+    }
+  ]
+}

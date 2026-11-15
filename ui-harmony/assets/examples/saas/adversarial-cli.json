@@ -1,0 +1,14 @@
+{
+  "contradiction": {
+    "exit": 2,
+    "valid": false,
+    "recommendation": "invalid-enclosing-review",
+    "score": null
+  },
+  "dashboard": {
+    "exit": 0,
+    "reviewer": "Independent adversarial reviewer",
+    "score": 70,
+    "recommendation": "provisional"
+  }
+}

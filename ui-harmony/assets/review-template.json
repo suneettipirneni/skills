@@ -1,0 +1,68 @@
+{
+  "status": "partial",
+  "task": "",
+  "audience": "",
+  "scope": "",
+  "identityToPreserve": "",
+  "strengths": [],
+  "scenarios": [],
+  "dimensions": {
+    "taskHierarchy": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "groupingRhythm": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "typography": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "colorSurfaces": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "componentLanguage": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "compositionCharacter": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "contentMeaning": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "interactionState": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "adaptation": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    }
+  },
+  "accessibilityGates": [],
+  "findings": [],
+  "unknowns": []
+}

@@ -1,0 +1,143 @@
+{
+  "profile": "modern-saas",
+  "rubricVersion": 1,
+  "candidate": "warm",
+  "reviewer": "main-agent visual inspection 2026-11-15",
+  "scope": "Initial work-queue composition at two widths and activation of the overdue task only; other controls are mocked.",
+  "context": {
+    "task": "Locate and open the overdue task",
+    "audience": "Operations users; no participant research",
+    "route": "/work-queue",
+    "surface": "product",
+    "fixture": "northstar-four-tasks-v1",
+    "viewport": "1440x1000 and 390x844 CSS px",
+    "theme": "light",
+    "state": "rest plus scoped task activation",
+    "evidenceMode": "rendered"
+  },
+  "criteria": {
+    "quietHierarchy": {
+      "rating": 3,
+      "reason": "Content heading leads the neutral app frame; toolbar and sidebar recede.",
+      "evidence": [
+        "assets/examples/saas/rendered/warm-1440.png",
+        "assets/examples/saas/rendered/warm-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=warm"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Keep content priority; prevent the mobile New task label from wrapping awkwardly.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "surfaceRestraint": {
+      "rating": 3,
+      "reason": "A flat list uses thin row dividers and a single sidebar boundary without raised row cards.",
+      "evidence": [
+        "assets/examples/saas/rendered/warm-1440.png",
+        "assets/examples/saas/rendered/warm-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=warm"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Keep the flat list; test whether all row separators remain useful with longer records.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "typography": {
+      "rating": 3,
+      "reason": "24px page heading and compact labels create stable app roles; mobile New task wraps onto two lines.",
+      "evidence": [
+        "assets/examples/saas/rendered/warm-1440.png",
+        "assets/examples/saas/rendered/warm-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=warm"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Give the header action sufficient intrinsic width or reflow it below the heading.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "densityRhythm": {
+      "rating": 3,
+      "reason": "Four task rows fit the initial viewport at both sizes; status remains beside identity.",
+      "evidence": [
+        "assets/examples/saas/rendered/warm-1440.png",
+        "assets/examples/saas/rendered/warm-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=warm"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Keep comparable fields aligned; inspect a longer task title before tightening row space.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "componentPrecision": {
+      "rating": 3,
+      "reason": "Controls share restrained radii and strokes; title/status columns align.",
+      "evidence": [
+        "assets/examples/saas/rendered/warm-1440.png",
+        "assets/examples/saas/rendered/warm-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=warm"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Retain related control geometry; refine the header action layout on phone.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "purposefulColor": {
+      "rating": 3,
+      "reason": "Warm low-chroma planes and a brown primary action retain restrained hierarchy; Overdue still has a distinct red label.",
+      "evidence": [
+        "assets/examples/saas/rendered/warm-1440.png",
+        "assets/examples/saas/rendered/warm-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=warm"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Keep warm brand color; verify semantic contrast independently rather than replacing it with cool gray.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "productCharacter": {
+      "rating": 3,
+      "reason": "A serif wordmark and warm palette add a modest signature while the app content remains sans-led and direct.",
+      "evidence": [
+        "assets/examples/saas/rendered/warm-1440.png",
+        "assets/examples/saas/rendered/warm-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=warm"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Preserve the restrained signature; no extra logo effects are needed.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "pass",
+      "reason": "Only the scoped overdue-row activation was probed; programmatic focus plus Enter opened the matching task. Discovery by users was not tested.",
+      "evidence": [
+        "assets/examples/saas/rendered/observations.json: warm taskProbe at both widths"
+      ]
+    },
+    "legibility": {
+      "status": "unknown",
+      "reason": "Rendered appearance inspected; complete contrast/accessibility checks were not run.",
+      "evidence": [
+        "No complete contrast or accessibility assessment supplied"
+      ]
+    },
+    "interaction": {
+      "status": "unknown",
+      "reason": "Task-row Enter activation and detail focus passed; navigation, toolbar and New task are nonfunctional mock controls, so this is not an approved working app.",
+      "evidence": [
+        "assets/examples/saas/rendered/warm.html",
+        "assets/examples/saas/rendered/observations.json"
+      ]
+    },
+    "adaptation": {
+      "status": "unknown",
+      "reason": "Two widths have no root overflow; phone hides owner/due/sidebar and long content was not stress-tested. Full information availability remains unverified.",
+      "evidence": [
+        "assets/examples/saas/rendered/observations.json",
+        "assets/examples/saas/rendered/warm-390.png"
+      ]
+    }
+  }
+}

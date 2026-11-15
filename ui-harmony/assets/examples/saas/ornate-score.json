@@ -1,0 +1,237 @@
+{
+  "structurallyValid": true,
+  "errors": [],
+  "profile": "modern-saas",
+  "rubricVersion": 1,
+  "candidate": "ornate",
+  "reviewer": "main-agent visual inspection 2026-11-15",
+  "context": {
+    "task": "Locate and open the overdue task",
+    "audience": "Operations users; no participant research",
+    "route": "/work-queue",
+    "surface": "product",
+    "fixture": "northstar-four-tasks-v1",
+    "viewport": "1440x1000 and 390x844 CSS px",
+    "theme": "light",
+    "state": "rest plus scoped task activation",
+    "evidenceMode": "rendered"
+  },
+  "scope": "Initial work-queue composition at two widths and activation of the overdue task only; other controls are mocked.",
+  "styleFit": 41,
+  "scale": 100,
+  "label": "Modern SaaS minimalism preference fit",
+  "weightProvenance": "User-requested preference; weights and anchors authored for this skill, not empirically validated.",
+  "reviewedWeight": 100,
+  "recommendation": "provisional",
+  "failedGates": [],
+  "unknownGates": [
+    "legibility",
+    "interaction",
+    "adaptation"
+  ],
+  "gates": {
+    "task": {
+      "status": "pass",
+      "reason": "Only the scoped overdue-row activation was probed; programmatic focus plus Enter opened the matching task. Discovery by users was not tested.",
+      "evidence": [
+        "assets/examples/saas/rendered/observations.json: ornate taskProbe at both widths"
+      ]
+    },
+    "legibility": {
+      "status": "unknown",
+      "reason": "Rendered appearance inspected; complete contrast/accessibility checks were not run.",
+      "evidence": [
+        "No complete contrast or accessibility assessment supplied"
+      ]
+    },
+    "interaction": {
+      "status": "unknown",
+      "reason": "Task-row Enter activation and detail focus passed; navigation, toolbar and New task are nonfunctional mock controls, so this is not an approved working app.",
+      "evidence": [
+        "assets/examples/saas/rendered/ornate.html",
+        "assets/examples/saas/rendered/observations.json"
+      ]
+    },
+    "adaptation": {
+      "status": "unknown",
+      "reason": "Two widths have no root overflow; phone hides owner/due/sidebar and long content was not stress-tested. Full information availability remains unverified.",
+      "evidence": [
+        "assets/examples/saas/rendered/observations.json",
+        "assets/examples/saas/rendered/ornate-390.png"
+      ]
+    }
+  },
+  "breakdown": [
+    {
+      "criterion": "quietHierarchy",
+      "label": "Quiet hierarchy",
+      "weight": 20,
+      "rating": 1,
+      "anchor": "Several unrelated elements compete with the main task.",
+      "contribution": 5,
+      "reason": "The large tinted header and purple sidebar compete with the operational rows.",
+      "evidence": [
+        "assets/examples/saas/rendered/ornate-1440.png",
+        "assets/examples/saas/rendered/ornate-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=ornate"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Reduce header area and sidebar emphasis while preserving orientation.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "surfaceRestraint",
+      "label": "Restrained surfaces",
+      "weight": 20,
+      "rating": 1,
+      "anchor": "Heavy shadows, pills or boxes dominate without structural purpose.",
+      "contribution": 5,
+      "reason": "The framed main panel, framed header and raised row cards repeat containment; every row has a 24px radius.",
+      "evidence": [
+        "assets/examples/saas/rendered/ornate-1440.png",
+        "assets/examples/saas/rendered/ornate-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=ornate"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Remove the outer decorative frame and raised row treatment; retain meaningful list grouping.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "typography",
+      "label": "Typography-led composition",
+      "weight": 15,
+      "rating": 2,
+      "anchor": "Mostly compact type roles with distracting size/weight/wrapping drift.",
+      "contribution": 7.5,
+      "reason": "42px desktop heading visually dominates a four-row work queue; row labels remain readable.",
+      "evidence": [
+        "assets/examples/saas/rendered/ornate-1440.png",
+        "assets/examples/saas/rendered/ornate-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=ornate"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Try the same 24px app-heading role as the restrained candidate, retaining body text.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "densityRhythm",
+      "label": "Useful density and rhythm",
+      "weight": 15,
+      "rating": 2,
+      "anchor": "Useful content fits, but grouping or whitespace remains uneven.",
+      "contribution": 7.5,
+      "reason": "Extra row padding and card gaps spread comparable items while all four rows still fit.",
+      "evidence": [
+        "assets/examples/saas/rendered/ornate-1440.png",
+        "assets/examples/saas/rendered/ornate-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=ornate"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Bring related records closer and retain deliberate space between the header and toolbar.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "componentPrecision",
+      "label": "Precise component language",
+      "weight": 15,
+      "rating": 3,
+      "anchor": "Related control geometry, restrained radii and crisp icons; explicit labels where needed.",
+      "contribution": 11.25,
+      "reason": "Rounded controls and pills form a consistent family even though their heavy treatment is not preferred.",
+      "evidence": [
+        "assets/examples/saas/rendered/ornate-1440.png",
+        "assets/examples/saas/rendered/ornate-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=ornate"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Keep consistent controls; tune geometry at the shared token rather than random per-row fixes.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "purposefulColor",
+      "label": "Purposeful color",
+      "weight": 10,
+      "rating": 1,
+      "anchor": "Saturated containers and competing accents dilute priority.",
+      "contribution": 2.5,
+      "reason": "Every status receives the same lavender badge and the Overdue color distinction is lost.",
+      "evidence": [
+        "assets/examples/saas/rendered/ornate-1440.png",
+        "assets/examples/saas/rendered/ornate-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=ornate"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Keep written status labels and reserve color variation for meaningful status or selection.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    },
+    {
+      "criterion": "productCharacter",
+      "label": "Product-specific restraint",
+      "weight": 5,
+      "rating": 2,
+      "anchor": "Coherent but generic treatment with limited connection to product content.",
+      "contribution": 2.5,
+      "reason": "The purple frame and card treatment feel generic rather than specific to exception handling.",
+      "evidence": [
+        "assets/examples/saas/rendered/ornate-1440.png",
+        "assets/examples/saas/rendered/ornate-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=ornate"
+      ],
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Keep product/task vocabulary and reduce generic showcase treatments.",
+      "preserve": "The four task identities, written statuses and working task-detail activation.",
+      "confidence": "medium"
+    }
+  ],
+  "priorities": [
+    {
+      "criterion": "quietHierarchy",
+      "weightedGap": 15,
+      "nextChange": "Reduce header area and sidebar emphasis while preserving orientation.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "surfaceRestraint",
+      "weightedGap": 15,
+      "nextChange": "Remove the outer decorative frame and raised row treatment; retain meaningful list grouping.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "typography",
+      "weightedGap": 7.5,
+      "nextChange": "Try the same 24px app-heading role as the restrained candidate, retaining body text.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "densityRhythm",
+      "weightedGap": 7.5,
+      "nextChange": "Bring related records closer and retain deliberate space between the header and toolbar.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "purposefulColor",
+      "weightedGap": 7.5,
+      "nextChange": "Keep written status labels and reserve color variation for meaningful status or selection.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "componentPrecision",
+      "weightedGap": 3.75,
+      "nextChange": "Keep consistent controls; tune geometry at the shared token rather than random per-row fixes.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    {
+      "criterion": "productCharacter",
+      "weightedGap": 2.5,
+      "nextChange": "Keep product/task vocabulary and reduce generic showcase treatments.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    }
+  ],
+  "note": "Reviewer-authored preference fit, not measured beauty, UX quality or conformance. Gates describe only the declared scope. Small differences may reflect judgment. Fix failed gates before style gaps; weightedGap is not severity."
+}

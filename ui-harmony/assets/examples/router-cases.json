@@ -1,0 +1,354 @@
+{
+  "note": "Independent reviewer-authored applicability cases and manually selected routes; not automated classification labels or usability evidence.",
+  "cases": [
+    {
+      "id": "new-service",
+      "prompt": "Create a new service for small charities to organize volunteer shifts. We have no existing UI and only the founder's assumptions.",
+      "expected": "Framing with explicit assumptions; journey/IA and competing scheduling approaches; minimal prototype to resolve the main uncertainty; scheduling specialist or honest fallback.",
+      "avoid": "Invented participant research or jumping directly to dashboard cards.",
+      "reviewerSelectedPaths": [
+        [
+          "frame",
+          "structure",
+          "explore"
+        ],
+        [
+          "specialist"
+        ],
+        [
+          "states"
+        ]
+      ],
+      "primary": "frame"
+    },
+    {
+      "id": "redesign-preserve",
+      "prompt": "Our dispatchers cannot find late orders quickly on this existing dashboard. Keep its dense visual identity and fix the workflow.",
+      "expected": "Existing-evidence diagnosis, monitoring/work queue, comparison and priority/status; targeted alternative to current structure; preserve density; task verification.",
+      "avoid": "Mandatory rebrand, generic spacious card dashboard, or repeating discovery artifacts already available.",
+      "reviewerSelectedPaths": [
+        [
+          "evaluate"
+        ],
+        [
+          "monitoring",
+          "collection-region",
+          "card-row"
+        ],
+        [
+          "adaptation"
+        ]
+      ],
+      "primary": "evaluate"
+    },
+    {
+      "id": "one-control",
+      "prompt": "Do not redesign the dashboard. Only fix the slightly off-center play icon in this button.",
+      "expected": "Primitive/icon optical correction plus button hit-area context and local visual verification.",
+      "avoid": "Whole dashboard workflow, analytics/charts modules, compulsory journey map.",
+      "reviewerSelectedPaths": [
+        [
+          "image-icon",
+          "shape"
+        ],
+        [
+          "button-link"
+        ]
+      ],
+      "primary": "image-icon"
+    },
+    {
+      "id": "screenshot",
+      "prompt": "I only have this screenshot of a mobile checkout; critique where the pay button and total belong.",
+      "expected": "Checkout commitment/summary hierarchy, mobile composition, visible evidence; unverified interaction and actual CSS metrics explicitly unknown.",
+      "avoid": "Claiming DOM hit areas, true keyboard behavior, validated conversion or completed purchase testing.",
+      "reviewerSelectedPaths": [
+        [
+          "checkout",
+          "detail-region",
+          "action-group",
+          "button-link"
+        ],
+        [
+          "platform-access"
+        ]
+      ],
+      "primary": "checkout"
+    },
+    {
+      "id": "native",
+      "prompt": "Review a SwiftUI iPad inspector popover that becomes cramped on iPhone; users must keep comparing edits with the document.",
+      "expected": "Native platform and workspace/inspector routes; repeated inspection versus modal task; potential panel/sheet/navigation adaptation with tradeoff.",
+      "avoid": "Blind CSS pixel rules or treating adaptation as only reduced padding.",
+      "reviewerSelectedPaths": [
+        [
+          "workspace",
+          "workbench",
+          "overlay",
+          "platform-access"
+        ]
+      ],
+      "primary": "workspace"
+    },
+    {
+      "id": "dashboard-noun-trap",
+      "prompt": "Design a dashboard for a support agent who must triage and resolve the oldest unassigned tickets.",
+      "expected": "Operational queue/collection with prioritization, ownership and record detail; monitoring only where necessary.",
+      "avoid": "Analytics summary cards becoming primary solely because dashboard was said.",
+      "reviewerSelectedPaths": [
+        [
+          "monitoring",
+          "collection-region",
+          "action-group"
+        ]
+      ],
+      "primary": "monitoring"
+    },
+    {
+      "id": "analytics-distinct",
+      "prompt": "An analyst needs to test why retention fell by cohort, compare segments and revise the time range.",
+      "expected": "Analysis/exploration, coordinated filters and comparisons, clear metric definition and comparison basis.",
+      "avoid": "Operational alert queue or fixed KPI tiles as the whole design.",
+      "reviewerSelectedPaths": [
+        [
+          "analytics",
+          "data-viz",
+          "search-filter"
+        ],
+        [
+          "metric"
+        ]
+      ],
+      "primary": "analytics"
+    },
+    {
+      "id": "bulk-selection",
+      "prompt": "Fix select all in a paginated customer table: people think all matches are selected, but it selects only this page.",
+      "expected": "Collection/table bulk action scope, selected count, page versus all matching, filtering changes and confirmation.",
+      "avoid": "Checkbox cosmetics alone or listbox options with nested actions.",
+      "reviewerSelectedPaths": [
+        [
+          "collection-region",
+          "action-group"
+        ],
+        [
+          "pagination"
+        ],
+        [
+          "states"
+        ]
+      ],
+      "primary": "collection-region"
+    },
+    {
+      "id": "listbox-trap",
+      "prompt": "Make our search dropdown show a title, description, open link and separate favorite button in each result.",
+      "expected": "Choice of result list/grid semantics with independently interactive descendants; avoid listbox options wrapping buttons/links.",
+      "avoid": "Automatically listbox because dropdown/search appears.",
+      "reviewerSelectedPaths": [
+        [
+          "search-results",
+          "collection-region",
+          "card-row"
+        ]
+      ],
+      "primary": "search-results"
+    },
+    {
+      "id": "combo-select-only",
+      "prompt": "Choose one country from a collapsed picker; typing is not required and its current value must remain visible.",
+      "expected": "Native select/select-only combobox alternative depending context; value selection not command menu.",
+      "avoid": "Claiming every combobox requires editable text.",
+      "reviewerSelectedPaths": [
+        [
+          "choice"
+        ],
+        [
+          "search-filter"
+        ]
+      ],
+      "primary": "choice"
+    },
+    {
+      "id": "tabs-navigation",
+      "prompt": "The top tabs are actually links to separate pages, with URLs, back history and open-in-new-tab behavior.",
+      "expected": "Navigation link styling and current-page state.",
+      "avoid": "ARIA tablist solely because visual label is tabs.",
+      "reviewerSelectedPaths": [
+        [
+          "navigation",
+          "button-link"
+        ]
+      ],
+      "primary": "navigation"
+    },
+    {
+      "id": "tabs-latency",
+      "prompt": "The details page has actual tab panels but every arrow key waits on a slow network request.",
+      "expected": "Tabs with activation strategy/latency decision, loading and state persistence; manual activation or preload as alternatives.",
+      "avoid": "Always activate on focus.",
+      "reviewerSelectedPaths": [
+        [
+          "tabs",
+          "feedback"
+        ]
+      ],
+      "primary": "tabs"
+    },
+    {
+      "id": "wizard-tasklist",
+      "prompt": "Applicants complete six independent sections over several days and choose the order themselves.",
+      "expected": "Resumable non-linear task collection with accurate status and review/submit; task list instead of forced wizard.",
+      "avoid": "A mandatory next/previous stepper solely due long form.",
+      "reviewerSelectedPaths": [
+        [
+          "task-hub"
+        ],
+        [
+          "states"
+        ]
+      ],
+      "primary": "task-hub"
+    },
+    {
+      "id": "wizard-dependent",
+      "prompt": "Configure a resource in three dependent steps, preserve prior values when returning, then review before creation.",
+      "expected": "Linear multistep form, dependency invalidation, back preservation, check answers and final commitment.",
+      "avoid": "Nonlinear task list without dependency treatment.",
+      "reviewerSelectedPaths": [
+        [
+          "wizard",
+          "form-section",
+          "field"
+        ],
+        [
+          "receipt"
+        ]
+      ],
+      "primary": "wizard"
+    },
+    {
+      "id": "settings-persistence",
+      "prompt": "People cannot tell whether changing notification settings takes effect immediately or needs Save.",
+      "expected": "Settings persistence/commitment model, pending failure states and undo/recovery where appropriate.",
+      "avoid": "Only switch appearance or always-on autosave assumption.",
+      "reviewerSelectedPaths": [
+        [
+          "settings",
+          "choice"
+        ],
+        [
+          "states"
+        ]
+      ],
+      "primary": "settings"
+    },
+    {
+      "id": "receipt",
+      "prompt": "After filing the application, users need proof and need to know what happens next. The toast disappears too quickly.",
+      "expected": "Durable confirmation/receipt, reference, next steps and return behavior.",
+      "avoid": "Merely increase toast timeout.",
+      "reviewerSelectedPaths": [
+        [
+          "receipt",
+          "feedback"
+        ]
+      ],
+      "primary": "receipt"
+    },
+    {
+      "id": "async-partial",
+      "prompt": "A CSV import runs for twenty minutes and sometimes only half the rows succeed. People leave the page and come back.",
+      "expected": "Long-running job status, resumable navigation, partial outcomes, retry scope/idempotent intent, logs/download error details; specialist fallback if unsupported.",
+      "avoid": "Indefinite spinner or treating partial completion as full success.",
+      "reviewerSelectedPaths": [
+        [
+          "feedback",
+          "progress"
+        ],
+        [
+          "states"
+        ]
+      ],
+      "primary": "feedback"
+    },
+    {
+      "id": "message-vs-queue",
+      "prompt": "This inbox holds approval requests, not chat messages. Some requests expire and some are already handled by another reviewer.",
+      "expected": "Queue/actionable records with concurrent state, expiry and resolution; messaging only if actual conversation exists.",
+      "avoid": "Chronological bubble chat based on inbox noun.",
+      "reviewerSelectedPaths": [
+        [
+          "monitoring",
+          "collection-region"
+        ],
+        [
+          "record-detail",
+          "detail-region"
+        ],
+        [
+          "states"
+        ]
+      ],
+      "primary": "monitoring"
+    },
+    {
+      "id": "date-time",
+      "prompt": "Build an appointment scheduler across time zones with unavailable slots and a daylight-saving transition.",
+      "expected": "Scheduling/time specialist route, date/time primitives and availability, confirmation and change/cancel flow.",
+      "avoid": "Generic calendar grid without zone and ambiguity handling.",
+      "reviewerSelectedPaths": [
+        [
+          "specialist"
+        ],
+        [
+          "input"
+        ],
+        [
+          "states"
+        ]
+      ],
+      "primary": "specialist"
+    },
+    {
+      "id": "maps-fallback",
+      "prompt": "Design turn-by-turn navigation with live location, rerouting and offline maps.",
+      "expected": "Spatial/navigation specialist or clearly unsupported-domain fallback; relevant platform and state considerations.",
+      "avoid": "Confidently treat as site navigation/menu or generic collection.",
+      "reviewerSelectedPaths": [
+        [
+          "specialist",
+          "platform-access"
+        ]
+      ],
+      "primary": "specialist"
+    },
+    {
+      "id": "primitive-color",
+      "prompt": "Only adjust this warning text color so it meets contrast on the existing surface while preserving the palette.",
+      "expected": "Color role and contrast primitives, actual background evidence and measured pair verification.",
+      "avoid": "Full visual rebrand or universal palette normalization.",
+      "reviewerSelectedPaths": [
+        [
+          "color"
+        ]
+      ],
+      "primary": "color"
+    },
+    {
+      "id": "ambiguous-word",
+      "prompt": "Make the menu better.",
+      "expected": "Admit ambiguity among navigation, commands and value selection; inspect existing context or ask targeted discriminator while doing independent useful review.",
+      "avoid": "High-confidence arbitrary route and reading every module.",
+      "reviewerSelectedPaths": [
+        [
+          "navigation"
+        ],
+        [
+          "frame"
+        ]
+      ],
+      "primary": "navigation"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+[
+  {
+    "id": "govuk",
+    "error": "locator.getAttribute: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Start now', exact: true })\u001b[22m\n"
+  },
+  {
+    "id": "berkshire",
+    "start": "https://www.berkshirehathaway.com/",
+    "final": "https://www.berkshirehathaway.com/reports.html",
+    "probe": "Opened annual-report directory without downloading/submitting.",
+    "links": [
+      "Click here to find out more.",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "arngren",
+    "start": "https://arngren.net/",
+    "final": "https://arngren.net/sykkel.html",
+    "probe": "Opened bicycle category from visible left navigation; no order.",
+    "initial": {
+      "mode": "BackCompat",
+      "scroller": "body",
+      "scrollWidth": 3495,
+      "viewport": 390
+    },
+    "title": "elsykkel, el-sykkel, elektrisk sykkel, elscooter, elektrisk scooter",
+    "text": "Sammenleggbar elsykkel\n( Se under )\nkr. 8.998,-\n\n1-Gear elsykkel\n( Se under )\nkr. 6.998,-\n\nElektrisk Unisex-Sykkel EcoRide (250 w med Lithium-ion batteri)\nDetter er en bra sports el-sykkel, som kan brukes like bra\nmed eller uten motoren innkoblet.  ( Leveres med Punkteringssikre-dekk ).\nUten motoren innkoblet fungerer den som en vanlig Offroad-sykkel,\nog på grunn av det meget lette Lithium batteriet og aluminiums-rammen,\ner vekten ikke mye hÃ¸yere enn en vanlig sykkel.\nDu kobler bare inn motoren når du ønsker en hvil,\neller i bratte oppover-bakker.\nVirker både med Pedal-fremdrift og gasshåndtaket-fremdrift på styret.\nSlik fungerer det :\nMan kan enkelt forklarer det slik at du tramper uten motstand.\nForestill deg at du sitter på en mosjonssykkel med den laveste belsastningen.\nGasshåndtak-fremdriften virker opp til 6 km/t. Pedal opptil 25 km/t.\n- DC BÃ¸rstelÃ¸s elektro-Motor (1 st.) : 36Vdc / 250 watt (96% virkningsgrad)\nMotoren er montert inni navet på hjulet bak.\nDet gir meget stillegå"
+  },
+  {
+    "id": "stripe",
+    "start": "https://stripe.com/",
+    "final": "https://stripe.com/",
+    "probe": "Inspected accessible button names before choosing menu interaction.",
+    "buttons": [
+      {
+        "text": "",
+        "aria": "Dismiss announcement"
+      },
+      {
+        "text": "",
+        "aria": "Toggle navigation menu"
+      },
+      {
+        "text": "Accept and optimize payments globally—online and in person",
+        "aria": null
+      },
+      {
+        "text": "Enable any billing model\nPro Plan\nBilled monthly\nTokens\n$0.01 per 1,000 units\nUsage meter\nTokens used in the last 30 days\n2,010,569,010",
+        "aria": null
+      },
+      {
+        "text": "Monetize through agentic commerce",
+        "aria": null
+      },
+      {
+        "text": "Create a card issuing program",
+        "aria": null
+      },
+      {
+        "text": "Access borderless money movement with stablecoins and crypto",
+        "aria": null
+      },
+      {
+        "text": "Embed payments in your platform",
+        "aria": null
+      },
+      {
+        "text": "Hertz unifies commerce with Stripe.",
+        "aria": null
+      },
+      {
+        "text": "URBN consolidates $5 billion in online and in-store revenue onto Stripe.",
+        "aria": null
+      },
+      {
+        "text": "Instacart powers online grocery delivery with Stripe.",
+        "aria": null
+      },
+      {
+        "text": "Le Monde improves local and international payments with Stripe.",
+        "aria": null
+      }
+    ]
+  }
+]

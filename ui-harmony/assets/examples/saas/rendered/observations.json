@@ -1,0 +1,215 @@
+{
+  "kind": "authored calibration fixtures, not independent user validation",
+  "cases": [
+    {
+      "variant": "restrained",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "restrained-1440.png",
+      "facts": {
+        "overflow": 0,
+        "rowsInInitialViewport": 4,
+        "headingSize": "24px",
+        "bodyColor": "rgb(32, 35, 41)",
+        "rowBackground": "rgba(0, 0, 0, 0)",
+        "rowRadius": "0px"
+      },
+      "taskProbe": {
+        "opened": true,
+        "focused": true,
+        "text": "Restore webhook delivery — Review the task history and next step."
+      }
+    },
+    {
+      "variant": "restrained",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "restrained-390.png",
+      "facts": {
+        "overflow": 0,
+        "rowsInInitialViewport": 4,
+        "headingSize": "24px",
+        "bodyColor": "rgb(32, 35, 41)",
+        "rowBackground": "rgba(0, 0, 0, 0)",
+        "rowRadius": "0px"
+      },
+      "taskProbe": {
+        "opened": true,
+        "focused": true,
+        "text": "Restore webhook delivery — Review the task history and next step."
+      }
+    },
+    {
+      "variant": "warm",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "warm-1440.png",
+      "facts": {
+        "overflow": 0,
+        "rowsInInitialViewport": 4,
+        "headingSize": "24px",
+        "bodyColor": "rgb(52, 45, 37)",
+        "rowBackground": "rgba(0, 0, 0, 0)",
+        "rowRadius": "0px"
+      },
+      "taskProbe": {
+        "opened": true,
+        "focused": true,
+        "text": "Restore webhook delivery — Review the task history and next step."
+      }
+    },
+    {
+      "variant": "warm",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "warm-390.png",
+      "facts": {
+        "overflow": 0,
+        "rowsInInitialViewport": 4,
+        "headingSize": "24px",
+        "bodyColor": "rgb(52, 45, 37)",
+        "rowBackground": "rgba(0, 0, 0, 0)",
+        "rowRadius": "0px"
+      },
+      "taskProbe": {
+        "opened": true,
+        "focused": true,
+        "text": "Restore webhook delivery — Review the task history and next step."
+      }
+    },
+    {
+      "variant": "ornate",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "ornate-1440.png",
+      "facts": {
+        "overflow": 0,
+        "rowsInInitialViewport": 4,
+        "headingSize": "42px",
+        "bodyColor": "rgb(32, 35, 41)",
+        "rowBackground": "rgb(255, 255, 255)",
+        "rowRadius": "24px"
+      },
+      "taskProbe": {
+        "opened": true,
+        "focused": true,
+        "text": "Restore webhook delivery — Review the task history and next step."
+      }
+    },
+    {
+      "variant": "ornate",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "ornate-390.png",
+      "facts": {
+        "overflow": 0,
+        "rowsInInitialViewport": 4,
+        "headingSize": "30px",
+        "bodyColor": "rgb(32, 35, 41)",
+        "rowBackground": "rgb(255, 255, 255)",
+        "rowRadius": "24px"
+      },
+      "taskProbe": {
+        "opened": true,
+        "focused": true,
+        "text": "Restore webhook delivery — Review the task history and next step."
+      }
+    },
+    {
+      "variant": "sparse",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "sparse-1440.png",
+      "facts": {
+        "overflow": 0,
+        "rowsInInitialViewport": 3,
+        "headingSize": "42px",
+        "bodyColor": "rgb(32, 35, 41)",
+        "rowBackground": "rgba(0, 0, 0, 0)",
+        "rowRadius": "0px"
+      },
+      "taskProbe": {
+        "opened": true,
+        "focused": true,
+        "text": "Restore webhook delivery — Review the task history and next step."
+      }
+    },
+    {
+      "variant": "sparse",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "sparse-390.png",
+      "facts": {
+        "overflow": 0,
+        "rowsInInitialViewport": 4,
+        "headingSize": "30px",
+        "bodyColor": "rgb(32, 35, 41)",
+        "rowBackground": "rgba(0, 0, 0, 0)",
+        "rowRadius": "0px"
+      },
+      "taskProbe": {
+        "opened": true,
+        "focused": true,
+        "text": "Restore webhook delivery — Review the task history and next step."
+      }
+    },
+    {
+      "variant": "faint",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "faint-1440.png",
+      "facts": {
+        "overflow": 0,
+        "rowsInInitialViewport": 4,
+        "headingSize": "18px",
+        "bodyColor": "rgb(170, 170, 170)",
+        "rowBackground": "rgba(0, 0, 0, 0)",
+        "rowRadius": "0px"
+      },
+      "taskProbe": {
+        "opened": true,
+        "focused": true,
+        "text": "Restore webhook delivery — Review the task history and next step."
+      }
+    },
+    {
+      "variant": "faint",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "faint-390.png",
+      "facts": {
+        "overflow": 0,
+        "rowsInInitialViewport": 4,
+        "headingSize": "18px",
+        "bodyColor": "rgb(170, 170, 170)",
+        "rowBackground": "rgba(0, 0, 0, 0)",
+        "rowRadius": "0px"
+      },
+      "taskProbe": {
+        "opened": true,
+        "focused": true,
+        "text": "Restore webhook delivery — Review the task history and next step."
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "status": "partial",
+  "task": "Find late orders and act on them.",
+  "audience": "Dispatchers scanning a shipment queue.",
+  "scope": "Synthetic dashboard calibration example: screenshot at 390 by 844 CSS pixels, resting state. This is not a real user study.",
+  "identityToPreserve": "Compact tabular comparison, restrained olive accents and stable row structure.",
+  "strengths": [
+    "Aligned compact rows support exact comparison; neutral surfaces and restrained color avoid competing with data."
+  ],
+  "scenarios": [
+    {
+      "id": "phone-rest",
+      "status": "tested",
+      "evidence": "assets/examples/dashboard-phone.png"
+    },
+    {
+      "id": "late-order-task",
+      "status": "untested",
+      "evidence": "No representative dispatcher observed completing the task."
+    }
+  ],
+  "dimensions": {
+    "taskHierarchy": {
+      "rating": 1,
+      "reason": "The initial phone view excludes the status column, although finding late shipments is the declared priority.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png \u2014 table visible region shows order/customer before status"
+      ],
+      "tradeoff": "Keeping all columns in a local scroller preserves exact-value comparison; reordering fields may make desktop and phone scan order differ."
+    },
+    "groupingRhythm": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "typography": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "colorSurfaces": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "componentLanguage": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "compositionCharacter": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "contentMeaning": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "interactionState": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    },
+    "adaptation": {
+      "rating": null,
+      "reason": "",
+      "evidence": [],
+      "tradeoff": ""
+    }
+  },
+  "accessibilityGates": [],
+  "findings": [
+    {
+      "id": "phone-status-priority",
+      "dimension": "taskHierarchy",
+      "severity": "moderate",
+      "confidence": "medium",
+      "location": "390 CSS px phone view, order table in resting state",
+      "observation": "The status column is outside the initial viewport. The table is locally scrollable and generates no page-overflow finding.",
+      "intendedRelationship": "Order identity and delay status should be visible together to support finding late orders.",
+      "consequence": "Inference: dispatchers may need to discover and scroll the table before identifying late rows. No user task timing was measured.",
+      "proposal": "Place status next to order ID on narrow screens, or expose a visible late-orders filter; compare the alternatives with realistic mixed-status data.",
+      "preserve": "Compact rows, tabular comparison and the restrained color language.",
+      "alternative": "Retain the column order if the actual primary task is customer lookup and users have a clear status filter outside this captured region.",
+      "verification": "At 320 and 390 CSS px, locate late orders without guessing that a hidden column exists; verify keyboard access and desktop comparison.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png"
+      ],
+      "provenance": "semantic-judgment"
+    }
+  ],
+  "unknowns": [
+    "Task completion and keyboard scrolling were not tested.",
+    "Aesthetic judgments are reviewer interpretations, not participant responses."
+  ]
+}

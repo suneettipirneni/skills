@@ -1,0 +1,38 @@
+[
+  {
+    "id": "govuk",
+    "firstTab": {
+      "tag": "A",
+      "text": "Skip to main content",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 40,
+        "top": 0,
+        "right": 390,
+        "bottom": 40,
+        "left": 0
+      }
+    },
+    "afterSkipHash": "#content",
+    "start": {
+      "text": "Start now",
+      "href": "https://www.passport.service.gov.uk/filter",
+      "role": "button"
+    },
+    "note": "No application started/submitted."
+  },
+  {
+    "id": "stripe",
+    "opened": "true",
+    "closed": "false",
+    "focus": {
+      "tag": "BUTTON",
+      "id": "",
+      "text": "",
+      "aria": "Toggle navigation menu"
+    },
+    "note": "Keyboard-opened menu and Escape closure; no signup."
+  }
+]

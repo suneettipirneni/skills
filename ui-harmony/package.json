@@ -1,0 +1,19 @@
+{
+  "name": "ui-harmony-tools",
+  "private": true,
+  "version": "2.2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test scripts/tests/*.test.mjs",
+    "test:browser": "node scripts/tests/browser.mjs",
+    "test:resilience": "node scripts/tests/resilience-browser.mjs",
+    "test:realworld": "node scripts/tests/realworld-browser.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.65.1",
+    "@axe-core/playwright": "4.14.0"
+  }
+}

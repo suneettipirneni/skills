@@ -1,0 +1,145 @@
+{
+  "profile": "modern-saas",
+  "rubricVersion": 1,
+  "candidate": "faint",
+  "reviewer": "main-agent visual inspection 2026-11-15",
+  "scope": "Initial work-queue composition at two widths and activation of the overdue task only; other controls are mocked.",
+  "context": {
+    "task": "Locate and open the overdue task",
+    "audience": "Operations users; no participant research",
+    "route": "/work-queue",
+    "surface": "product",
+    "fixture": "northstar-four-tasks-v1",
+    "viewport": "1440x1000 and 390x844 CSS px",
+    "theme": "light",
+    "state": "rest plus scoped task activation",
+    "evidenceMode": "rendered"
+  },
+  "criteria": {
+    "quietHierarchy": {
+      "rating": 1,
+      "reason": "Heading, actions and content all have similarly weak emphasis; the primary action no longer stands apart.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Restore a clear action treatment and distinct readable type roles.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "surfaceRestraint": {
+      "rating": 2,
+      "reason": "Nearly invisible row boundaries leave weaker grouping than the restrained version.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Use visible grouping cues where they carry meaning; do not remove every separator.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "typography": {
+      "rating": 1,
+      "reason": "Small low-contrast labels create a fragile reading texture; the compact heading alone does not establish useful hierarchy.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Restore readable text roles and inspect contrast before adjusting density.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "densityRhythm": {
+      "rating": 3,
+      "reason": "Four closely spaced records remain grouped and fit; this density alone does not validate their readability.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Keep comparison proximity while restoring readable control sizing.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "componentPrecision": {
+      "rating": 2,
+      "reason": "Consistent controls are present, but 22px visual button heights and faint treatments weaken their appearance as actions.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Restore clear control treatments and verify actual hit-area requirements and exceptions.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "purposefulColor": {
+      "rating": 1,
+      "reason": "The Overdue distinction and primary-action contrast disappear into nearly uniform gray.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Restore semantic color and an unmistakable primary treatment without tinting all content.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    },
+    "productCharacter": {
+      "rating": 2,
+      "reason": "The faded brand and content lose the deliberate neutral character of the clearer candidate.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint-1440.png",
+        "assets/examples/saas/rendered/faint-390.png",
+        "assets/examples/saas/rendered/observations.json: variant=faint"
+      ],
+      "confidence": "medium",
+      "tradeoff": "This is reviewer interpretation of one authored queue, not participant preference or a rule for other screen idioms.",
+      "nextChange": "Restore readable identity and domain text; no decorative addition is required.",
+      "preserve": "The four task identities, written statuses and working task-detail activation."
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "pass",
+      "reason": "Only the scoped overdue-row activation was probed; programmatic focus plus Enter opened the matching task. Discovery by users was not tested.",
+      "evidence": [
+        "assets/examples/saas/rendered/observations.json: faint taskProbe at both widths"
+      ]
+    },
+    "legibility": {
+      "status": "fail",
+      "reason": "Body/task text #aaa on white has calculated sRGB contrast about 2.32:1; normal-sized task labels are visibly faint.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint.html: body.faint color and white body background",
+        "assets/examples/saas/rendered/observations.json: faint bodyColor",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ]
+    },
+    "interaction": {
+      "status": "unknown",
+      "reason": "Task-row Enter activation and detail focus passed; navigation, toolbar and New task are nonfunctional mock controls, so this is not an approved working app.",
+      "evidence": [
+        "assets/examples/saas/rendered/faint.html",
+        "assets/examples/saas/rendered/observations.json"
+      ]
+    },
+    "adaptation": {
+      "status": "unknown",
+      "reason": "Two widths have no root overflow; phone hides owner/due/sidebar and long content was not stress-tested. Full information availability remains unverified.",
+      "evidence": [
+        "assets/examples/saas/rendered/observations.json",
+        "assets/examples/saas/rendered/faint-390.png"
+      ]
+    }
+  }
+}

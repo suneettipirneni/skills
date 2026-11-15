@@ -1,0 +1,127 @@
+{
+  "profile": "modern-saas",
+  "rubricVersion": 1,
+  "candidate": "Dispatch phone calibration screen",
+  "reviewer": "Independent adversarial reviewer",
+  "scope": "390 by 844 CSS pixel resting screenshot; visible first viewport only",
+  "context": {
+    "task": "Find late orders and act on them",
+    "route": "Dispatch dashboard",
+    "surface": "product",
+    "fixture": "Five visible shipments and three totals",
+    "viewport": "390x844 CSS px",
+    "theme": "light",
+    "state": "resting first viewport",
+    "evidenceMode": "screenshot",
+    "audience": "Dispatchers scanning a shipment queue"
+  },
+  "criteria": {
+    "quietHierarchy": {
+      "rating": 2,
+      "reason": "The content is orderly, but the large filled Export report control and heading lead the initial view while shipment delay status is absent from the visible table.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png — header, export control and table columns"
+      ],
+      "confidence": "medium",
+      "tradeoff": "Export may be frequent; its actual frequency is unknown.",
+      "nextChange": "Prioritize a visible late-status field or filter beside order identity; consider quieter export treatment only after confirming task priority.",
+      "preserve": "Visible totals and clear shipment identity"
+    },
+    "surfaceRestraint": {
+      "rating": 3,
+      "reason": "One bounded table and restrained row dividers express grouping without a separate floating card around every shipment.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png — table shell and row dividers"
+      ],
+      "confidence": "medium",
+      "tradeoff": "Removing more dividers could weaken exact row comparison.",
+      "nextChange": "No containment change is justified by this still; retain the table boundary.",
+      "preserve": "Flat shared table plane"
+    },
+    "typography": {
+      "rating": 3,
+      "reason": "Clearly distinct heading, section label, column labels and data roles create readable hierarchy at the displayed size; heading wraps coherently.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png — heading, table header and body"
+      ],
+      "confidence": "medium",
+      "tradeoff": "Actual font size and contrast were not measured, and text growth was not exercised.",
+      "nextChange": "Verify the same hierarchy with enlarged text before changing type scale.",
+      "preserve": "Readable destination labels and strong section label"
+    },
+    "densityRhythm": {
+      "rating": 3,
+      "reason": "Five aligned rows and closely grouped metrics give useful scanning density; spacing separates summary from detail.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png — summary metrics and five shipment rows"
+      ],
+      "confidence": "medium",
+      "tradeoff": "The blank lower viewport alone does not prove wasted space; adding decorative panels would not help.",
+      "nextChange": "Recheck grouping with a longer queue and long destination names; do not fill empty space merely for appearance.",
+      "preserve": "Compact row comparison and breathing room around major groups"
+    },
+    "componentPrecision": {
+      "rating": 3,
+      "reason": "The table, metric rules and restrained corner treatment appear related and aligned in the visible state.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png — metric rules, table frame and export control"
+      ],
+      "confidence": "medium",
+      "tradeoff": "One still cannot establish focus, selected and error-state coherence.",
+      "nextChange": "Inspect focus and selected-row states in the browser before assigning a refined-state rating.",
+      "preserve": "Consistent dividers and aligned column headings"
+    },
+    "purposefulColor": {
+      "rating": 3,
+      "reason": "A quiet pale base and dark green accent provide a restrained working palette; no competing decorative gradients appear.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png — background, metric rules and export button"
+      ],
+      "confidence": "medium",
+      "tradeoff": "Shipment state colors are not visible, so the state palette remains unreviewed outside this scope.",
+      "nextChange": "When exposing delay state, retain a textual status label and use color semantically.",
+      "preserve": "Restrained warm palette and readable-looking data"
+    },
+    "productCharacter": {
+      "rating": 3,
+      "reason": "Dispatch vocabulary, carrier names, East Coast scope and update timing ground the neutral interface in operational work.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png — eyebrow, table contents and footer"
+      ],
+      "confidence": "medium",
+      "tradeoff": "Brand ownership cannot be established from this fixture.",
+      "nextChange": "No added illustration or logo novelty is justified; retain concrete domain language.",
+      "preserve": "Product-specific terms and operational timestamp"
+    }
+  },
+  "gates": {
+    "task": {
+      "status": "unknown",
+      "reason": "Delay status is not in the visible columns, but hidden columns, filtering and task completion were not tested. This is a specific priority concern, not proof that the whole task is impossible.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png — Order, Destination and Carrier are the visible columns"
+      ]
+    },
+    "legibility": {
+      "status": "unknown",
+      "reason": "The still supports visual inspection, but actual text/state contrast and applicable accessibility checks were not measured.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png — screenshot only; no computed styles"
+      ]
+    },
+    "interaction": {
+      "status": "unknown",
+      "reason": "Keyboard, focus, horizontal scrolling, filtering and assignment were not exercised.",
+      "evidence": [
+        "No behavioral evidence in this scoped review"
+      ]
+    },
+    "adaptation": {
+      "status": "unknown",
+      "reason": "Only one viewport and resting fixture were inspected; text growth and other widths are untested.",
+      "evidence": [
+        "assets/examples/dashboard-phone.png — only 390x844 resting capture"
+      ]
+    }
+  }
+}
