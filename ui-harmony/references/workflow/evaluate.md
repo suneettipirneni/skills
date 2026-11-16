@@ -39,3 +39,5 @@ Exit with evidence-backed findings, preserved strengths, remaining uncertainty a
 ## Test the selected state on narrow screens
 
 Selecting a row must expose a usable editor or detail view, not leave it beyond an unseen long list. Verify its destination and keyboard focus together. If the idiom becomes a dedicated detail view, provide a clear return that preserves the relevant query, list position and selected item; preserve drafts when the task requires it. Place supporting readiness/checklist regions after the work they summarize, or provide a compact route to them. Test actual long records and error states, not only the initial overview. A page with no horizontal overflow can still fail this workflow.
+
+When a generated revision looks better but may have regressed, use [agent prompting](agent-prompting.md) to target the observed relationship and retain the best verified candidate. When evaluating the instructions themselves, use [generation evaluation](../generation-evaluation.md); distinguish a structural validator pass from observed agent behavior.

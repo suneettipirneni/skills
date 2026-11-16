@@ -46,7 +46,11 @@ Read [design-review.md](references/design-review.md) for composition and semanti
 
 ## Create and develop a direction
 
+For broad design work, use the [composition decisions](references/workflow/compose.md#make-the-direction-concrete) to turn the intended experience into a visible hierarchy, useful density and a coherent interaction. Commit to a direction with a clear reason; keep it open to contrary evidence. Distinguish an interface that is merely consistent from one whose proportions, content and behavior are deliberately composed. Express character through the product's own material and task, without requiring novelty or decoration.
+
 For new interfaces and broad polish requests, follow the [anchor generation path](references/preferences/untitled-ui.md#a-generation-path-that-reaches-beyond-a-clean-draft): state the intended experience, study task-relevant references, explore unresolved visual choices even when the screen idiom is fixed, develop a complete state/interaction, and refine the rendered result. Use meaningful content and coordinated component families. For React, consult [headless primitives](references/foundations/headless-react.md): recommend Base UI for new interaction-heavy work, or retain the project’s existing suitable primitives. Retain the host product identity. A high style-fit score or absence of defects does not establish visual craft.
+
+For generation, reference implementation, broad polish, or an unproductive agent iteration, use [agent prompting](references/workflow/agent-prompting.md): turn the available context into a compact working brief, assign roles to references, preserve the chosen direction, and request evidence-backed corrections. Infer the brief rather than requiring the user to supply a prompt template. Keep actual interaction checks separate from visual preference; retain the best verified candidate when later iterations regress. The [generation research](references/generation-research.md) explains where vendor advice and benchmark findings apply—and where they do not.
 
 For a narrow defect, use the repair loop below without requiring an art-direction exercise.
 

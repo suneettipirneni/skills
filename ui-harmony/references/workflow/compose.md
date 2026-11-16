@@ -6,15 +6,49 @@ Layer: **workflow** · Route: `compose`
 
 **Avoid when:** Polishing a structure already known to fail the task.
 
-## Decision and composition
+## Make the direction concrete
 
 Choose the template by dominant task, then only the organisms, molecules and atoms needed. Use existing system roles first. Design the whole and the parts together; a beautiful button cannot rescue a misleading priority order.
 
-Establish attention order, grouping, density and dominant alignment. Name intentional differences: urgent state, primary action, editorial interruption, brand expression. Tokens encode repeated decisions after their role is understood; do not force every value onto a scale prematurely.
+Form a short design thesis linking experience to composition: “An artwork-led collection: imagery carries recognition, names anchor scanning, and capture controls stay quiet until needed.” Then identify the choices that make it visible: image-to-text proportion, stable identity track, separation of metadata, and discoverable action states across input modes. “Clean, premium, modern” is not a sufficient thesis. This is a working decision, not extra marketing copy to put in the interface.
+
+For an established product, develop its strongest existing relationship. For a new product, derive character from its subject, language, imagery and recurring operation. Expressive typography or dramatic contrast may be appropriate to an editorial surface; precise columns and immediate feedback may supply the character of an operations tool. Do not invent a signature flourish merely to satisfy a distinctiveness requirement.
+
+## Compose attention, space and content together
+
+| Decision | Work to do | Inspect the consequence |
+| --- | --- | --- |
+| Attention | Establish entry point, next useful information and relevant action within each decision group. Reduce competing signals before adding emphasis. | The main task remains clear when a warning, selection or expanded detail appears. A global rule of one primary button per screen cannot resolve local action scope. |
+| Proportion | Allocate space by reading, comparison, editing or image-recognition needs. Set meaningful alignment tracks. | Long identity text, units and actual imagery fit without being sacrificed to equal-width columns or decorative symmetry. |
+| Rhythm | Distinguish within-object, between-object and between-section spacing. Let density change where the task changes. | A dense list can sit beside a more spacious editor without losing their relationship. Repeated tasks do not require excessive scrolling. |
+| Emphasis | Coordinate type, color, enclosure and position so they reinforce roles. | Status, selection and primary action remain distinguishable; every label does not demand its own badge or container. |
+| Restraint | Remove a cue only after identifying what carries its meaning afterward. | Less framing still leaves groups and controls discoverable. More whitespace does not detach labels from their values. |
+
+Treat these as connected choices. If a layout feels weak, identify the dominant cause and change that relationship first. Increasing radius, blur, shadow and font size together can obscure which change helped. Once the relationship works, propagate the decision through equivalent components. Tokens encode repeated decisions after their role is understood; do not force every value onto a scale prematurely.
+
+Use typical content to establish the intended rhythm, then stretch it with awkward content. Typeset the actual words: deliberate wraps, column alignment, value/unit relationships and image crops are design work. A manually balanced title that breaks with localization or dynamic content needs a resilient rule, not an invisible overflow patch. Follow [quiet content](../foundations/quiet-content.md) when removing redundant language.
+
+## Design the experience between frames
+
+Choose a consequential interaction and follow **intent → response → commitment → recovery → continuation**. At each transition, decide what stays visible, what changes, where focus goes and how the person knows the outcome. Keep object identity and action scope understandable as the layout changes.
+
+For example, assigning an owner may change the record's position in a filtered queue. Decide how confirmation and the next useful task remain available when the row disappears. An attractive success toast alone does not settle that behavior. Reuse established product semantics; do not silently alter persistence or introduce optimistic success without a credible failure path.
+
+Evaluate immediate response separately from completion: a pressed or pending state can acknowledge input while work continues. Preserve input and control geometry when useful; avoid moving a target under the pointer or forcing a person to wait for decorative animation. For frequent actions, try repeated, interrupted and reversed use. Motion earns its place by communicating a transition or the intended character, and must preserve meaning under reduced motion. A static concept can specify these choices but cannot verify them.
 
 ## Behavior and adaptation
 
 Compose loading, empty, error and permission cases alongside the happy path. Inspect narrow layout and large text early. Responsive changes may alter the idiom, such as detail panel becoming a dedicated page.
+
+Make adaptation a priority decision: which relationships must remain adjacent, which supporting content can move, and what access replaces a collapsed region? Recheck the reading and focus order after recomposition. Do not treat hiding content or stacking desktop panels as sufficient responsive design. In an existing app, preserve learned locations unless a demonstrated constraint warrants changing them.
+
+## Finish at three scales
+
+- **Whole composition:** inspect mass, dominant alignment, content width and pacing. Does the screen express the intended task and character, or merely fill a grid?
+- **Working scale:** read actual text and complete the chosen task at normal display size. Do identity, status, action scope and recovery remain clear without an explanation from the designer?
+- **Detail:** compare the relevant component family in its real states: optical weight, baselines, edge treatment, focus, loading replacements and awkward wraps. Magnification helps diagnosis; accept the result at normal scale too.
+
+Move between these scales when necessary. Do not polish every icon while the content model is still wrong. Once the composition works, stop redesigning it to chase a new visual idea and resolve the remaining local craft gap.
 
 ## Evidence and repair
 
@@ -23,6 +57,8 @@ For scoped repairs, exit when representative content/states explain themselves, 
 **Worked decision:** A vivid editorial heading has intentional tight tracking; only the word boundary is unclear. Increase that boundary rather than replacing the typeface or applying a global spacing reset.
 
 **Source boundary:** [Brad Frost, Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/) supports concurrent whole/part thinking. This catalog’s route boundaries are an applied synthesis, not Frost’s prescribed taxonomy.
+
+The design thesis, decision table and review scales are this skill's practitioner synthesis, not experimentally validated rules. [Linear's redesign account](https://linear.app/now/how-we-redesigned-the-linear-ui) informs whole-view and state stress checks; [Rauno Freiberg's interaction observations](https://rauno.me/craft/interaction-design) inform continuity and interruption. Neither source establishes a universal layout, aesthetic or timing prescription. See the [existing source ledger](../preferences/modern-saas-research.md) for scope and limits.
 
 ## Related context
 
@@ -34,5 +70,3 @@ For scoped repairs, exit when representative content/states explain themselves, 
 [Resilient composition and CSS ownership](../foundations/resilient-css.md) applies Andy Bell’s CUBE CSS and browser-oriented design principles when content, containers or overrides expose fragile rules.
 
 For React generation, [headless primitives](../foundations/headless-react.md) can supply complex control behavior while the application owns its visual family. Recommend Base UI for a new suitable project; retain established primitives where appropriate.
-
-Run the [quiet-content pass](../foundations/quiet-content.md) on working states: remove repeated explanations and decorative framing, then recheck task context, truthful feedback and recovery.

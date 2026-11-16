@@ -65,6 +65,12 @@ Example: “In the mobile shipment view, status is outside the initial 390px vie
 
 ## Repair and comparison
 
+For a broad design review, distinguish **task failure**, **unresolved craft**, and **taste alternative**. A layout can function yet have weak proportion or competing emphasis; explain that gap as a design judgment without inventing user harm to increase severity. Conversely, a different font or composition is not an improvement merely because the reviewer prefers it.
+
+Identify the most consequential unresolved design relationship and develop it before listing marginal tweaks. A useful critique includes a strength to preserve, the observed conflict, the proposed resolution and its tradeoff. For example: “The aligned totals make comparison easy, but equally prominent status pills interrupt that column. Reduce routine status emphasis while retaining a clear exception cue; verify selected and warning rows.” Treat this as an illustrative judgment, not measured evidence about the current artifact.
+
+Use the [three composition scales](workflow/compose.md#finish-at-three-scales) when a broad pass needs a craft judgment. Consider what worsened as well as what improved: useful density, recognizable identity, interaction continuity, responsive priority or maintenance complexity. No mandatory quota of findings, novelty or iterations is needed. “No consequential change warranted” is a valid conclusion with evidence.
+
 Group findings by cause. Fix the owning component/token and inspect affected siblings. Compare equivalent route, dataset, state, dimensions, theme, preference and browser. A vanished selector might mean deleted content or a changed DOM, not a fix. A different dataset can reduce issue counts without improving design.
 
 After each meaningful repair answer: did the intended relationship improve; did task-critical information remain available; what distinctive quality survived; what tradeoff changed? Run targeted checks and stop when the scoped outcome is met. If two plausible directions remain, show the concrete alternatives and their consequences instead of repeatedly adjusting values until a subjective score rises.

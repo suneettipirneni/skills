@@ -12,6 +12,10 @@ Generate two or three materially different approaches only where a decision is u
 
 For each option record task fit, what is visible, effort and context switching, accessibility implications, content extremes, identity to preserve and hardest unresolved assumption. Select the smallest prototype that can challenge that assumption.
 
+Give each plausible direction a concrete organizing idea rather than interchangeable style adjectives. For a research workspace, “evidence beside the selected claim” and “a continuous argument with expandable evidence” expose a real choice about context and reading. A sparse, underdeveloped strawman is not a fair alternative to a finished candidate. Hold content, state and fidelity sufficiently constant to judge the decision.
+
+Make a recommendation once the tradeoff is clear. Explain which observed constraint it serves and what it gives up; do not pass every reversible design choice back to the user. If both candidates fail, revisit the framing instead of averaging them into a compromise. Carry the selected direction into [composition](compose.md#make-the-direction-concrete).
+
 ## Behavior and adaptation
 
 Compare with representative data. A perfect empty wireframe hides row actions, long labels and contradictory states. Diverge again when the evidence shows that the original framing was wrong.

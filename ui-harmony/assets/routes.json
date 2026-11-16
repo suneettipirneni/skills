@@ -31,6 +31,38 @@
         {
           "id": "evaluate",
           "when": "An existing task failure needs observation"
+        },
+        {
+          "id": "agent-prompting",
+          "when": "Translate the task and evidence into generation or repair instructions"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "agent-prompting",
+      "layer": "workflow",
+      "title": "Prompt UI generation and evidence-backed iteration",
+      "file": "references/workflow/agent-prompting.md",
+      "useWhen": "Generating a UI, interpreting a visual reference, planning broad polish, or correcting an unproductive agent iteration.",
+      "avoidWhen": "Adding a briefing ceremony to a known one-control defect.",
+      "alternatives": [],
+      "related": [
+        {
+          "id": "frame",
+          "when": "A consequential user or scope decision is unresolved"
+        },
+        {
+          "id": "explore",
+          "when": "The architecture or composition has a meaningful alternative"
+        },
+        {
+          "id": "compose",
+          "when": "Implement the chosen direction and its state transitions"
+        },
+        {
+          "id": "evaluate",
+          "when": "Verify the artifact and decide whether to retain the revision"
         }
       ],
       "children": []
@@ -83,6 +115,10 @@
         {
           "id": "untitled-ui",
           "when": "Develop the preferred SaaS visual direction and concrete component finish"
+        },
+        {
+          "id": "agent-prompting",
+          "when": "Translate the task and evidence into generation or repair instructions"
         }
       ],
       "children": []
@@ -115,6 +151,10 @@
         {
           "id": "untitled-ui",
           "when": "Develop the preferred SaaS visual direction and concrete component finish"
+        },
+        {
+          "id": "agent-prompting",
+          "when": "Translate the task and evidence into generation or repair instructions"
         }
       ],
       "children": []
@@ -147,6 +187,10 @@
         {
           "id": "modern-saas",
           "when": "Apply or score the user's preferred visual direction"
+        },
+        {
+          "id": "agent-prompting",
+          "when": "Translate the task and evidence into generation or repair instructions"
         }
       ],
       "children": []
@@ -1867,6 +1911,10 @@
         {
           "id": "specialist",
           "when": "Domain mechanics such as media exceed catalog coverage"
+        },
+        {
+          "id": "agent-prompting",
+          "when": "Translate the task and evidence into generation or repair instructions"
         }
       ],
       "children": []

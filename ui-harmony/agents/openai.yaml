@@ -1,4 +1,4 @@
 interface:
   display_name: "UI Harmony"
   short_description: "Modern SaaS design, critique and validation"
-  default_prompt: "Use $ui-harmony to choose the right screen and component idioms, favor modern SaaS minimalism, preserve useful product identity, and design or refine this interface with measured and semantic evidence."
+  default_prompt: "Use $ui-harmony to turn this UI task into a focused brief, preserve product identity, choose task-appropriate idioms and a considered modern SaaS direction where suitable, and verify the generated or refined interface with rendered and interaction evidence."

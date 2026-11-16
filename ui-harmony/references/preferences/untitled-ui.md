@@ -54,6 +54,8 @@ Make this decision trace concrete before choosing the screen: **domain relations
 
 Do not make every brief a renamed analytics dashboard or team table. Develop the task-specific composition and interaction first, then apply the reference’s level of finish to its primitives. When comparing with the anchor, explain intentional architectural differences and compare corresponding relationships/states rather than overall pixel similarity.
 
+For agent execution, pair this aesthetic direction with [agent prompting](../workflow/agent-prompting.md). Describe the task, reference relationships and preserved constraints rather than copying a vendor's entire aesthetic prompt.
+
 ## A generation path that reaches beyond a clean draft
 
 Use this for broad creation or polish, proportionally to the unresolved decisions. Keep the existing repair loop for narrow fixes.

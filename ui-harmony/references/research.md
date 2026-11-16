@@ -101,3 +101,7 @@ See [real-world-evaluation.md](real-world-evaluation.md) for source-backed recep
 ## Modern SaaS preference research
 
 The [focused research synthesis](preferences/modern-saas-research.md) adds product-team accounts from Linear and Intercom, Geist/Radix/Atlassian role systems, Schoger/Wathan visual techniques, Bell/Pickering composition, Moran/Fessenden counterevidence and Freiberg/Kowalski interaction craft. The [preference rubric](preferences/style-scoring.md) makes the user's requested direction explicit without presenting its weights as empirical findings.
+
+## Agent prompting and UI generation research
+
+The [generation research ledger](generation-research.md) compares primary vendor guidance with Design2Code, Sketch2Code and 1D-Bench, including conflicting results and task/model limits. Its synthesis informs [agent prompting](workflow/agent-prompting.md). The [generation evaluation cases](generation-evaluation.md) support behavioral testing of instruction changes; they are not evidence that such testing has already occurred.

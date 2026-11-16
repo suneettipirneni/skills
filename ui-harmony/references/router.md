@@ -19,6 +19,7 @@ The deterministic tool validates IDs, paths, reference integrity and declared pl
 | --- | --- | --- |
 | Unclear new product or requested solution | `frame` | Establish the job; do not invent research |
 | Information architecture or task order | `structure` | Dependencies versus independent work |
+| Prompt UI generation or targeted iteration | `agent-prompting` | Working brief, reference roles, preserved constraints and observable feedback |
 | Choose architecture or visual direction | `explore` | Compare meaningful task/interaction/composition alternatives on representative content |
 | Develop this user’s SaaS aesthetic | `modern-saas` → `untitled-ui` | Concrete screen/component references and finished restraint; task route still owns the idiom |
 | Implement coherent visual relationships | `compose` | Existing identity and real states |

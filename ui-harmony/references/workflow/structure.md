@@ -12,6 +12,8 @@ Map what people need to know and change, then distinguish objects, operations an
 
 Use a task flow with entry/exit, dependencies, alternate paths, recovery and saved state. Add a small content model with real example objects and terminology. Choose sequential steps only when dependencies justify ordering; choose a hub when people can work independently across sessions.
 
+Look for mental bookkeeping: values people must remember across screens, scope they must infer, or state they must reconstruct after returning. Bring decision inputs together where practical. Judge steps by effort and consequence, not click count alone; a deliberate review can help an irreversible commitment, while a confirmation on every harmless edit can obstruct repeated work. These are task hypotheses to inspect, not claims of observed user performance.
+
 ## Behavior and adaptation
 
 Name commitment boundaries: immediate change, draft, explicit save, transaction submission. Record return behavior, deep links and permission differences. Resolve ambiguous terms such as “active”, “done”, “selected” with domain meaning.

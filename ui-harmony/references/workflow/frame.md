@@ -29,3 +29,5 @@ Exit when there is enough context to choose the next experiment or repair. Recor
 - [Model tasks, information and commitments](structure.md) — Object relationships or journey are uncertain
 - [Explore meaningful alternatives](explore.md) — The problem is clear but solution is uncertain
 - [Prototype, inspect and learn](evaluate.md) — An existing task failure needs observation
+
+For UI-generating agents, [agent prompting](agent-prompting.md) turns this brief into a bounded implementation request without making the user fill in a template.
