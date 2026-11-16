@@ -24,7 +24,31 @@ It defaults to modern SaaS minimalism: restrained surfaces, clear typography, us
 
 ## Install in Codex
 
-Clone this repository, then link the skill into your Codex skills directory:
+Use the [skills CLI](https://github.com/vercel-labs/skills), which requires Node.js 22.20 or later. To make UI Harmony available across your Codex projects:
+
+```sh
+npx skills add suneettipirneni/skills --skill ui-harmony --agent codex --global
+```
+
+For a project-only installation, run this from that project's root:
+
+```sh
+npx skills add suneettipirneni/skills --skill ui-harmony --agent codex
+```
+
+`--skill ui-harmony` selects this skill, `--agent codex` targets Codex, and `--global` selects user-wide installation. Omit `--agent codex` to choose other supported agents interactively. Invoke the installed skill with `$ui-harmony`.
+
+To inspect the available skills without installing:
+
+```sh
+npx skills add suneettipirneni/skills --list
+```
+
+The CLI installs the skill folder. Clone this repository to also get the bespoke apps and their review evidence; the validation commands below assume a repository checkout. Browser audit dependencies still need the separate setup in the [tool guide](ui-harmony/references/tools.md).
+
+### Manual installation from a checkout
+
+Alternatively, clone this repository and link the skill into your Codex skills directory:
 
 ```sh
 git clone https://github.com/suneettipirneni/skills.git "$HOME/skills"
