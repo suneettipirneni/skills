@@ -1,0 +1,16 @@
+{
+  "reactApps": [
+    "switchyard",
+    "crate",
+    "daymark",
+    "gloss",
+    "index-app",
+    "seating",
+    "proof"
+  ],
+  "isolatedInstall": "npm ci --ignore-scripts --no-audit --no-fund",
+  "build": "npm run build",
+  "result": "passed",
+  "plainApp": "traverse: node --check app.js passed",
+  "note": "Workflow evidence was collected from development previews; isolated production builds checked separately."
+}

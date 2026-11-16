@@ -1,0 +1,129 @@
+- complementary:
+  - text: seating. F
+  - strong: Field Notes
+  - text: Event workspace WORKSPACE
+  - navigation:
+    - button "Seating plan 6"
+    - button "Guest list 35"
+    - button "Activity"
+  - text: Need a hand? Plan at your own pace. JL
+  - strong: Jamie Laurent
+  - text: Event host
+- main:
+  - text: Events The Field Notes Supper
+  - strong: Seating plan
+  - button "Export"
+  - button "Save plan"
+  - text: PRIVATE EVENT / SATURDAY, SEPTEMBER 19, 2026
+  - heading "Seating plan" [level=1]
+  - paragraph: Give everyone a place at the table.
+  - text: SEPTEMBER
+  - strong: "19"
+  - text: SAT 2026
+  - strong:
+    - text: "24"
+    - emphasis: / 35
+  - text: Guests seated
+  - strong: "11"
+  - text: Still to seat
+  - strong: "6"
+  - text: Tables in plan 69% seated THE ROOM
+  - heading "Tables & seats 6" [level=2]
+  - paragraph: Select a table to see its guests and available seats.
+  - text: Available Seated
+  - button "Table 01 The garden 7 / 8 By the terrace":
+    - strong: Table 01
+    - text: The garden 7 / 8 By the terrace
+  - button "Table 02 The orchard 5 / 8 Near the windows":
+    - strong: Table 02
+    - text: The orchard 5 / 8 Near the windows
+  - button "Table 03 The meadow 4 / 6 Near the windows":
+    - strong: Table 03
+    - text: The meadow 4 / 6 Near the windows
+  - button "Table 04 The greenhouse 4 / 8 By the terrace":
+    - strong: Table 04
+    - text: The greenhouse 4 / 8 By the terrace
+  - button "Table 05 The grove 4 / 6 Near the entrance":
+    - strong: Table 05
+    - text: The grove 4 / 6 Near the entrance
+  - button "Table 06 The conservatory 0 / 8 Step-free access":
+    - strong: Table 06
+    - text: The conservatory 0 / 8 Step-free access
+  - text: DINNER SERVICE · 6:30 PM SELECTED TABLE
+  - heading "Table 01 · The garden" [level=2]
+  - paragraph: By the terrace • 8 seats
+  - button "Edit selected table"
+  - strong: Seat assignments
+  - text: 1 available 01 Amelia Bennett The Bennetts
+  - button "Unassign Amelia Bennett"
+  - text: 02 Oliver Bennett The Bennetts
+  - button "Unassign Oliver Bennett"
+  - text: 03 Sophie Bennett The Bennetts
+  - button "Unassign Sophie Bennett"
+  - text: 04 Henry Bennett The Bennetts
+  - button "Unassign Henry Bennett"
+  - text: 05 Vivian Chen The Chens
+  - button "Unassign Vivian Chen"
+  - text: 06 Daniel Chen The Chens
+  - button "Unassign Daniel Chen"
+  - text: 07 Margaret Chen The Chens
+  - button "Unassign Margaret Chen"
+  - text: 08 Available seat GUEST DIRECTORY
+  - heading "Find a party" [level=3]
+  - text: 35 guests
+  - textbox "Search guests or parties"
+  - button "All guests"
+  - button "Unassigned"
+  - button "Access needs"
+  - button "B The Bennetts Family · 4 guests · Table 01":
+    - text: B
+    - strong: The Bennetts
+    - text: Family · 4 guests · Table 01
+  - button "C The Chens Family · 3 guests · Table 01":
+    - text: C
+    - strong: The Chens
+    - text: Family · 3 guests · Table 01
+  - button "W The Williams family Family · 5 guests · Table 02":
+    - text: W
+    - strong: The Williams family
+    - text: Family · 5 guests · Table 02
+  - button "P The Patels Family · 4 guests · Table 03":
+    - text: P
+    - strong: The Patels
+    - text: Family · 4 guests · Table 03
+  - button "M Maya & friends Friends · 3 guests · Unassigned":
+    - text: M
+    - strong: Maya & friends
+    - text: Friends · 3 guests · Unassigned
+  - button "G The Garcias Family · 4 guests · Table 04":
+    - text: G
+    - strong: The Garcias
+    - text: Family · 4 guests · Table 04
+  - button "F Friends of the host Friends · 4 guests · Table 05":
+    - text: F
+    - strong: Friends of the host
+    - text: Friends · 4 guests · Table 05
+  - button "A The Andersons Couple · 2 guests · Unassigned":
+    - text: A
+    - strong: The Andersons
+    - text: Couple · 2 guests · Unassigned
+  - button "S Studio friends Friends · 4 guests · Unassigned":
+    - text: S
+    - strong: Studio friends
+    - text: Friends · 4 guests · Unassigned
+  - button "M The Martins Couple · 2 guests · Unassigned":
+    - text: M
+    - strong: The Martins
+    - text: Couple · 2 guests · Unassigned
+  - text: PARTY DETAILS
+  - heading "The Chens" [level=3]
+  - text: 3 guests
+  - paragraph: Step-free access for Margaret
+  - text: Vivian Chen
+  - button "Seated here" [disabled]
+  - text: Daniel Chen
+  - button "Seated here" [disabled]
+  - text: Margaret Chen
+  - button "Seated here" [disabled]
+  - button "Party seated here" [disabled]
+  - paragraph: Moving a guest removes them from their current table.

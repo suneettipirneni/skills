@@ -29,3 +29,9 @@ Compare optical center and stroke weight at actual display size, not just SVG vi
 - [Shape, stroke and layering language](../foundations/shape.md) — Maintain compatible strokes and geometry
 - [Color roles, contrast and meaningful variation](../foundations/color.md) — Contrast meaningful visuals
 - [Meaning, structure and accessible interaction](../foundations/semantics.md) — Provide appropriate alternatives
+
+## Compound glyphs and painted clearance
+
+For a number inside an arrow, a badge on an icon or another compound symbol, inspect the complete mark at its actual display size before examining enlarged pixels. Prefer a coherent symbol with shared coordinates over unrelated absolutely positioned text and icon boxes. Preserve number legibility and stroke compatibility; mirroring a direction must not mirror its numeral. Keep the hit target and focus ring independent of the glyph’s optical bounds.
+
+Check painted clearance, clipping, authored safe regions and contextual centering at relevant device pixel ratios. Fractional coordinates are not inherently defects; a global integer-snapping rule can damage curves, text and responsive layouts. Use [detail audit](../detail-audit.md) for explicit geometric and isolated-paint contracts. Review original-size crops manually: passing a gap threshold does not prove a tiny numeral remains readable, and SVG geometric bounds are not painted or perceptual bounds. Unsupported or incomplete paint capture must remain unverified.

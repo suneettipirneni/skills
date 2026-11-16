@@ -12,3 +12,8 @@ audit-output/
 
 /examples/ui-harmony/*/dist/
 /examples/ui-harmony/*/verification-output/
+
+/examples/ui-harmony/downstream/**/dist/
+/examples/ui-harmony/downstream/**/.vite/
+
+**/.vite-cache/

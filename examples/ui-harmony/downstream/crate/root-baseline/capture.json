@@ -1,0 +1,76 @@
+[
+  {
+    "url": "http://localhost:4322/",
+    "title": "Crate — Exhibition packing",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-11-16T01:20:35.567Z",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "width": 1440,
+    "rootScroll": 1440,
+    "fonts": "loaded",
+    "mainText": "EXHIBITIONS / ON COMMON GROUND / COLLECTION\n PACKING IN PROGRESS · OUTGOING\nWorks for travel\n\nSelect works from the collection and prepare each one for its case.\n\nReview cases\n3 of 4 works ready\n1 wor",
+    "heading": [
+      {
+        "text": "On CommonGround",
+        "size": "19px",
+        "lineHeight": "23.94px"
+      },
+      {
+        "text": "Works for travel",
+        "size": "31px",
+        "lineHeight": "37.2px"
+      },
+      {
+        "text": "Collection 13",
+        "size": "16px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Notes on a Distant Shore, No. 4",
+        "size": "16px",
+        "lineHeight": "20.8px"
+      }
+    ]
+  },
+  {
+    "url": "http://localhost:4322/",
+    "title": "Crate — Exhibition packing",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "capturedAt": "2026-11-16T01:20:36.789Z",
+    "errors": [],
+    "width": 390,
+    "rootScroll": 390,
+    "fonts": "loaded",
+    "mainText": "Works 4\nCases 2\nManifest\nEXHIBITIONS / ON COMMON GROUND / COLLECTION\n PACKING IN PROGRESS · OUTGOING\nWorks for travel\n\nSelect works from the collection and prepare each one for its case.\n\nReview cases",
+    "heading": [
+      {
+        "text": "On CommonGround",
+        "size": "19px",
+        "lineHeight": "23.94px"
+      },
+      {
+        "text": "Works for travel",
+        "size": "26px",
+        "lineHeight": "31.2px"
+      },
+      {
+        "text": "Collection 13",
+        "size": "16px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Notes on a Distant Shore, No. 4",
+        "size": "16px",
+        "lineHeight": "20.8px"
+      }
+    ]
+  }
+]

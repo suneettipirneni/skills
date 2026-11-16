@@ -98,3 +98,9 @@ No unsupported aria-label-on-div incomplete remains after the role fixes. Manual
 This record describes the historical temporary evaluation workspace. Third-party reference screenshots and generator-specific helper scripts are not redistributed. Original app screenshots and independent checks are retained in `../evidence/`; portable verification scripts are one directory above this app.
 
 Packaging verification: the root pinned dependencies to the exact versions used in the inspected generation workspace (React/React DOM19.3.1, Vite7.3.8, Lucide0.468.0) and generated a lockfile for repeatable installation. This changed package metadata only.
+
+## Compound-icon correction
+
+The user identified the ten-second numeral colliding with its circular arrow. Replaced separately positioned text and icon boxes with one SVG coordinate system and a vector numeral; only the arc mirrors for the forward action. The glyph uses a 28px display within the existing control. Actual-size review distinguishes the numeral and arrow. Arc geometry derives from Lucide; its notice is retained in THIRD-PARTY-NOTICES.txt.
+
+The final diagnostic reproduces all eight original contract failures across two controls and two DPRs. Three revised component/DPR captures satisfy the clearance, center and safe-region contracts. Phone-forward remains unverified: four pixels change between original/restored isolation captures despite no active animation being observed. No claim of complete pixel approval is made; see ../downstream/adversarial/cue-tool-motion/report.html. Existing transport, notes, export and recovery checks pass 42 assertions with zero axe violations in four scoped states (one incomplete axe check per state remains manual). The verification script now waits up to two seconds for the existing asynchronous composer focus instead of asserting immediately. Earlier failed diagnostic attempts are retained.

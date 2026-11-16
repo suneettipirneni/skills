@@ -1,0 +1,38 @@
+- banner:
+  - strong: daymark
+  - button "Spaces & equipment"
+  - button "Activity 0"
+- main:
+  - text: STUDIO PLANNER / NOVEMBER 2026
+  - heading "Studio schedule" [level=1]
+  - paragraph: Rooms and shared equipment for November 16–22.
+  - button "New booking"
+  - text: THE WEEK AHEAD 01 / 01
+  - heading "November 16–22 2026" [level=2]
+  - text: New York time · EST
+  - strong: Week at a glance
+  - text: Filter by room
+  - combobox "Filter by room":
+    - option "All rooms" [selected]
+    - option "Studio A"
+    - option "Studio B"
+    - option "Daylight Room"
+  - button "Mon 16 •2 sessions" [pressed]
+  - button "Tue 17 •1 session"
+  - button "Wed 18 •2 sessions"
+  - button "Thu 19 •1 session"
+  - button "Fri 20 •1 session"
+  - button "Sat 21 •1 session"
+  - button "Sun 22 0 sessions"
+  - text: Studio A Studio B Daylight Room Studio hours 8 AM–6 PM DAILY AGENDA
+  - heading "Monday, Nov 16" [level=3]
+  - text: 2 bookings
+  - button "9:00 AM to 11:30 AM Portrait session Maya Chen · Studio A Profoto light kit":
+    - text: 9:00 AM to 11:30 AM
+    - strong: Portrait session
+    - text: Maya Chen · Studio A Profoto light kit
+  - button "1:00 PM to 4:00 PM Ceramics campaign Noah Williams · Daylight Room Backdrop kit":
+    - text: 1:00 PM to 4:00 PM
+    - strong: Ceramics campaign
+    - text: Noah Williams · Daylight Room Backdrop kit
+  - text: DAYMARK ✳ STUDIO PLANNER Fictional studio · Saved on this device

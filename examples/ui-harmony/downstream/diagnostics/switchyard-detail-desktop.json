@@ -1,0 +1,41 @@
+{
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "dpr": 1
+    }
+  ],
+  "components": [
+    {
+      "name": "version-pair",
+      "selector": ".diff",
+      "parts": {
+        "previous": {
+          "selector": "div:first-child code",
+          "measure": "text"
+        },
+        "connector": {
+          "selector": "svg"
+        },
+        "candidate": {
+          "selector": "div:last-child code",
+          "measure": "text"
+        }
+      },
+      "checks": [
+        {
+          "kind": "between",
+          "a": "previous",
+          "b": "connector",
+          "c": "candidate",
+          "axis": "x",
+          "minGap": 12,
+          "tolerance": 2,
+          "rationale": "The arrow connects the actual previous/candidate values; its two local gaps should read as one compact pair."
+        }
+      ]
+    }
+  ]
+}

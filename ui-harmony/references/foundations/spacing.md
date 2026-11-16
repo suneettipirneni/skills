@@ -27,3 +27,9 @@ Measure scoped gaps and alignment against justified local contracts. Example: an
 ## Flexible implementation
 
 [Resilient composition and CSS ownership](../foundations/resilient-css.md) applies Andy Bell’s CUBE CSS and browser-oriented design principles when content, containers or overrides expose fragile rules.
+
+## Paired values and connectors
+
+For a before → after or source → destination relationship, inspect the space between the **visible value groups and connector**, not just equal grid tracks. A `1fr auto 1fr` layout with left-aligned short values can leave a large void before the arrow and a small gap after it. Choose a content-driven cluster when the pair is one reading unit, or keep independent aligned columns when cross-row comparison requires them. Do not force symmetry across unrelated columns.
+
+Measure both signed gaps and their difference with a local tolerance and rationale. A reproduced release-detail defect measured 165.6px before its arrow and 15px after; a content-sized arrangement made both 15px. These are example measurements, not preferred global spacing tokens. Inspect labels as well as values; longer text must wrap or adapt without colliding. At narrow widths, a deliberate vertical pair needs its own y-axis contract instead of reusing the desktop x-axis contract. The [detail audit](../detail-audit.md) supports explicit `between` relationships; bounds alone cannot establish optical balance.

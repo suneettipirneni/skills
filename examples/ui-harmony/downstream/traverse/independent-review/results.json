@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "missing outcome blocked",
+    "saved outcome survives reload",
+    "issue filter empty recovery available",
+    "incomplete walkthrough blocked",
+    "phone draft note and outcome retained",
+    "phone check recorded",
+    "complete fixture commits",
+    "reopening retains checks",
+    "storage failure does not break navigation",
+    "storage failure status truthful",
+    "320px no document overflow"
+  ],
+  "errors": [],
+  "axeDesktop": [],
+  "axePhone": []
+}

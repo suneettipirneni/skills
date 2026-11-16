@@ -1,0 +1,30 @@
+[
+  {
+    "app": "crate",
+    "searchY": 1274.296875,
+    "selection": {
+      "y": 5.96875,
+      "title": "Blue Hour (After the Rain)",
+      "focused": "work-main"
+    },
+    "manifest": "crate.\nOn Common Ground\n Saved locally\nCG\nWorks 5\nCases 2\nManifest\nEXHIBITIONS / ON COMMON GROUND / MANIFEST\n OUTGOING EXHIBITION\nManifest review\n\nOne final look at the works and their packing readiness.\n\nOUTGOING PACKING MANIFEST\nOn Common Ground\n\nMeridian Arts Center · New York, NY\n\nDRAFT\nLOCAL COPY\nWORKS\n5\nCASES USED\n2\nREADY TO PACK\n4 / 5\nWorks in this manifest\n5 TOTAL\nA Study in Quiet Forms\nMara Ellison · 91 × 76 × 4 cm\nReady\nThe Space Between Two Gardens\nNoah Vale · 122 × 91 × 6 cm\nReady\nNotes on a Distant Shore, No. 4\nInez Park · 64 × 49 × 3 cm\nNeeds attention\nThings We Carried Through the Winter\nAda Okafor · 48 × 35 × 32 cm\nReady\nBlue Hour (After the Rain)\nElias Rowan · 152 × 122 × 5 cm\nReady\nA few things to finish\n\n1 work needs an assigned case and all packing checks completed.\n\nNotes on a Distant Shore, No. 4\n1 packing check remaining\nCreate local manifest\n\nThis is a local summary for planning. No shipment will be arranged.\n\nManifest history\n\nLocal snapshots preserve the case plan at the time of creation.\n\n0 SAVED\n\nNo snapshots yet. Complete preflight and create a local manifest to save one here.\n\nBack to cases"
+  },
+  {
+    "app": "daymark",
+    "conflict": "Studio A is already booked 9:00 AM–11:30 AM by Maya Chen. Choose another time or resource.",
+    "created": "Booking added to the schedule.",
+    "undo": "Booking restored."
+  },
+  {
+    "app": "gloss",
+    "invalidDisabled": true,
+    "approval": "Translation approved.",
+    "rtl": "rtl",
+    "draftPersists": "اختبار {count}"
+  },
+  {
+    "app": "switchyard",
+    "saved": "Evidence saved locally",
+    "persisted": "Checked rollback in staging"
+  }
+]

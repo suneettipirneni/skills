@@ -16,6 +16,9 @@ It defaults to modern SaaS minimalism: restrained surfaces, clear typography, us
 - [Generation evidence and limitations](ui-harmony/references/preferences/react-generation-validation.md)
 - [Research and sources](ui-harmony/references/research.md)
 - [Scoring and comparison](ui-harmony/references/preferences/style-scoring.md)
+- [Quiet-content checks](ui-harmony/references/foundations/quiet-content.md)
+- [Pixel and paired-spacing diagnostics](ui-harmony/references/detail-audit.md)
+- [Eight additional bespoke apps and screenshots](examples/ui-harmony/downstream/README.md)
 - [Tool setup and usage](ui-harmony/references/tools.md)
 - [Rendered calibration and adversarial validation](ui-harmony/references/preferences/modern-saas-validation.md)
 

@@ -50,3 +50,5 @@ Andy Bell's [resilient composition](../foundations/resilient-css.md) remains fou
 Prefer typography and hierarchy refinements, removing redundant containment, normalizing genuinely equivalent controls and clarifying color roles. Do not optimize by removing necessary content, lowering text contrast, replacing familiar labels with icons or hiding task-critical controls. A blank white page is not a high-scoring product surface.
 
 The highest useful improvement is often a relationship: align object identity with its status, reduce toolbar competition, remove a redundant card layer, or keep help with its field. State the observed condition, the intended relationship, the proposed numerical target if justified, what must survive, and the recheck. Report style fit separately from task/accessibility findings.
+
+Use [quiet content and purposeful subtraction](../foundations/quiet-content.md) to inspect repeated headings, obvious instructions, slogans and redundant badges. Quietness comes from fewer competing signals, not reduced legibility or a thin feature set.

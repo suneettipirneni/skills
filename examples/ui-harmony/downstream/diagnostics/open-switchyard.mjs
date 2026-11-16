@@ -1,0 +1,1 @@
+export default async ({page})=>{await page.locator('.change-row').first().click();await page.locator('.diff').waitFor({state:'visible'});await page.evaluate(()=>Promise.all(document.getAnimations().map(a=>a.finished.catch(()=>{}))));};

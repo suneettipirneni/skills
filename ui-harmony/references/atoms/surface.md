@@ -31,3 +31,5 @@ Measure radius/border/shadow drift only among comparable roles. Inspect whether 
 - [Shape, stroke and layering language](../foundations/shape.md) — Relate radius and elevation roles
 - [Color roles, contrast and meaningful variation](../foundations/color.md) — Use surfaces and contrast deliberately
 - [Relationship-owned spacing and layout](../foundations/spacing.md) — Prefer clear relationships over redundant boxes
+
+- [Quiet content and purposeful subtraction](../foundations/quiet-content.md) — Reduce competing framing before weakening contrast

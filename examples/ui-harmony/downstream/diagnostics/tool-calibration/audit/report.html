@@ -1,0 +1,1074 @@
+<!doctype html><meta charset="utf-8"><title>Component detail diagnostics</title><style>body{font:14px/1.5 system-ui;margin:32px;color:#222}article{border-top:1px solid #ccc;padding:24px 0}.zoom{image-rendering:pixelated;max-width:100%;object-fit:contain;object-position:left}pre{white-space:pre-wrap}img{border:1px solid #ddd}</style><h1>Component detail diagnostics</h1><p>{&quot;components&quot;:28,&quot;checks&quot;:12,&quot;failedContracts&quot;:2,&quot;unverified&quot;:18,&quot;status&quot;:&quot;incomplete&quot;}</p><p>Contract agreement is not an optical-quality verdict. Review actual-size crops and limits.</p><article><h2>desktop-1x · settling #0</h2><p>Actual CSS display size</p><img src="desktop-1x-settling-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-settling-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 31,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 31,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 0,
+        &quot;minimumClearanceCssPx&quot;: null,
+        &quot;clearanceAtLeastCssPx&quot;: 2,
+        &quot;closestPaintCssPx&quot;: null,
+        &quot;aPaintPixels&quot;: 400,
+        &quot;bPaintPixels&quot;: 400
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 2
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.&quot;
+    }
+  ]
+}</pre></article><article><h2>desktop-1x · settled-state #0</h2><p>Actual CSS display size</p><img src="desktop-1x-settled-state-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-settled-state-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 31,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 31,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;axis&quot;: &quot;x&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;gap&quot;: 90
+      },
+      &quot;expected&quot;: {
+        &quot;minimum&quot;: 2,
+        &quot;tolerance&quot;: 0.5,
+        &quot;axis&quot;: &quot;x&quot;
+      }
+    }
+  ]
+}</pre></article><article><h2>desktop-1x · separate #0</h2><p>Actual CSS display size</p><img src="desktop-1x-separate-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-separate-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 88,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 88,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 0,
+        &quot;minimumClearanceCssPx&quot;: null,
+        &quot;clearanceAtLeastCssPx&quot;: 2,
+        &quot;closestPaintCssPx&quot;: null,
+        &quot;aPaintPixels&quot;: 400,
+        &quot;bPaintPixels&quot;: 400
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 2
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.&quot;
+    }
+  ]
+}</pre></article><article><h2>desktop-1x · collision #0</h2><p>Actual CSS display size</p><img src="desktop-1x-collision-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-collision-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 145,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 41,
+        &quot;y&quot;: 145,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 200,
+        &quot;minimumClearanceCssPx&quot;: 0,
+        &quot;clearanceAtLeastCssPx&quot;: null,
+        &quot;closestPaintCssPx&quot;: {
+          &quot;a&quot;: {
+            &quot;x&quot;: 34,
+            &quot;y&quot;: 34
+          },
+          &quot;b&quot;: {
+            &quot;x&quot;: 34,
+            &quot;y&quot;: 34
+          }
+        },
+        &quot;aPaintPixels&quot;: 400,
+        &quot;bPaintPixels&quot;: 400
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 2
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.&quot;
+    }
+  ]
+}</pre></article><article><h2>desktop-1x · override #0</h2><p>Actual CSS display size</p><img src="desktop-1x-override-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-override-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 202,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 202,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:2:167)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>desktop-1x · overflow #0</h2><p>Actual CSS display size</p><img src="desktop-1x-overflow-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-overflow-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 259,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 259,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:14:148)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>desktop-1x · pseudo #0</h2><p>Actual CSS display size</p><img src="desktop-1x-pseudo-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-pseudo-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 316,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 316,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:10:137)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>desktop-1x · shadow #0</h2><p>Actual CSS display size</p><img src="desktop-1x-shadow-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-shadow-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 373,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 373,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Filters, blending or shadows need manual paint review\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:9:133)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>desktop-1x · hidden #0</h2><p>Actual CSS display size</p><img src="desktop-1x-hidden-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-hidden-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {},
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Part not rendered\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:3:76)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>desktop-1x · zero-pseudo #0</h2><p>Actual CSS display size</p><img src="desktop-1x-zero-pseudo-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-zero-pseudo-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 487,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 487,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:10:137)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>desktop-1x · ancestor-filter #0</h2><p>Actual CSS display size</p><img src="desktop-1x-ancestor-filter-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-ancestor-filter-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 544,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 544,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Ancestor filters or blending need manual paint review\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:4:88)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>desktop-1x · ambiguous #0</h2><p>Actual CSS display size</p><img src="desktop-1x-ambiguous-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-ambiguous-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {},
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;a must match exactly one part within root&quot;
+}</pre></article><article><h2>desktop-1x · restore-success #0</h2><p>Actual CSS display size</p><img src="desktop-1x-restore-success-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-restore-success-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 88,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 88,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;axis&quot;: &quot;x&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;gap&quot;: 90
+      },
+      &quot;expected&quot;: {
+        &quot;minimum&quot;: 2,
+        &quot;tolerance&quot;: 0.5,
+        &quot;axis&quot;: &quot;x&quot;
+      }
+    }
+  ]
+}</pre></article><article><h2>desktop-1x · restore-failure #0</h2><p>Actual CSS display size</p><img src="desktop-1x-restore-failure-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-restore-failure-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 202,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 202,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;axis&quot;: &quot;x&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;gap&quot;: 90
+      },
+      &quot;expected&quot;: {
+        &quot;minimum&quot;: 2,
+        &quot;tolerance&quot;: 0.5,
+        &quot;axis&quot;: &quot;x&quot;
+      }
+    }
+  ]
+}</pre></article><article><h2>phone-2x · settling #0</h2><p>Actual CSS display size</p><img src="phone-2x-settling-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-settling-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 31,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 31,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 0,
+        &quot;minimumClearanceCssPx&quot;: null,
+        &quot;clearanceAtLeastCssPx&quot;: 2,
+        &quot;closestPaintCssPx&quot;: null,
+        &quot;aPaintPixels&quot;: 1600,
+        &quot;bPaintPixels&quot;: 1600
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 2
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.&quot;
+    }
+  ]
+}</pre></article><article><h2>phone-2x · settled-state #0</h2><p>Actual CSS display size</p><img src="phone-2x-settled-state-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-settled-state-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 31,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 31,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;axis&quot;: &quot;x&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;gap&quot;: 90
+      },
+      &quot;expected&quot;: {
+        &quot;minimum&quot;: 2,
+        &quot;tolerance&quot;: 0.5,
+        &quot;axis&quot;: &quot;x&quot;
+      }
+    }
+  ]
+}</pre></article><article><h2>phone-2x · separate #0</h2><p>Actual CSS display size</p><img src="phone-2x-separate-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-separate-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 88,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 88,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 0,
+        &quot;minimumClearanceCssPx&quot;: null,
+        &quot;clearanceAtLeastCssPx&quot;: 2,
+        &quot;closestPaintCssPx&quot;: null,
+        &quot;aPaintPixels&quot;: 1600,
+        &quot;bPaintPixels&quot;: 1600
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 2
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.&quot;
+    }
+  ]
+}</pre></article><article><h2>phone-2x · collision #0</h2><p>Actual CSS display size</p><img src="phone-2x-collision-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-collision-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 145,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 41,
+        &quot;y&quot;: 145,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 800,
+        &quot;minimumClearanceCssPx&quot;: 0,
+        &quot;clearanceAtLeastCssPx&quot;: null,
+        &quot;closestPaintCssPx&quot;: {
+          &quot;a&quot;: {
+            &quot;x&quot;: 34.5,
+            &quot;y&quot;: 34.5
+          },
+          &quot;b&quot;: {
+            &quot;x&quot;: 34.5,
+            &quot;y&quot;: 34.5
+          }
+        },
+        &quot;aPaintPixels&quot;: 1600,
+        &quot;bPaintPixels&quot;: 1600
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 2
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.&quot;
+    }
+  ]
+}</pre></article><article><h2>phone-2x · override #0</h2><p>Actual CSS display size</p><img src="phone-2x-override-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-override-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 202,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 202,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:2:167)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>phone-2x · overflow #0</h2><p>Actual CSS display size</p><img src="phone-2x-overflow-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-overflow-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 259,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 259,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:14:148)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>phone-2x · pseudo #0</h2><p>Actual CSS display size</p><img src="phone-2x-pseudo-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-pseudo-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 316,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 316,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:10:137)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>phone-2x · shadow #0</h2><p>Actual CSS display size</p><img src="phone-2x-shadow-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-shadow-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 373,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 373,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Filters, blending or shadows need manual paint review\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:9:133)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>phone-2x · hidden #0</h2><p>Actual CSS display size</p><img src="phone-2x-hidden-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-hidden-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {},
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Part not rendered\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:3:76)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>phone-2x · zero-pseudo #0</h2><p>Actual CSS display size</p><img src="phone-2x-zero-pseudo-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-zero-pseudo-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 487,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 487,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:10:137)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>phone-2x · ancestor-filter #0</h2><p>Actual CSS display size</p><img src="phone-2x-ancestor-filter-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-ancestor-filter-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 544,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 544,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Ancestor filters or blending need manual paint review\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:4:88)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>phone-2x · ambiguous #0</h2><p>Actual CSS display size</p><img src="phone-2x-ambiguous-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-ambiguous-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {},
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;a must match exactly one part within root&quot;
+}</pre></article><article><h2>phone-2x · restore-success #0</h2><p>Actual CSS display size</p><img src="phone-2x-restore-success-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-restore-success-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 88,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 88,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;axis&quot;: &quot;x&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;gap&quot;: 90
+      },
+      &quot;expected&quot;: {
+        &quot;minimum&quot;: 2,
+        &quot;tolerance&quot;: 0.5,
+        &quot;axis&quot;: &quot;x&quot;
+      }
+    }
+  ]
+}</pre></article><article><h2>phone-2x · restore-failure #0</h2><p>Actual CSS display size</p><img src="phone-2x-restore-failure-0.png" width="170" height="50" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-restore-failure-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 31,
+        &quot;y&quot;: 202,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 141,
+        &quot;y&quot;: 202,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;gap&quot;,
+      &quot;a&quot;: &quot;a&quot;,
+      &quot;b&quot;: &quot;b&quot;,
+      &quot;axis&quot;: &quot;x&quot;,
+      &quot;minGap&quot;: 2,
+      &quot;rationale&quot;: &quot;The selected two parts must remain separated in this compact fixture.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;gap&quot;: 90
+      },
+      &quot;expected&quot;: {
+        &quot;minimum&quot;: 2,
+        &quot;tolerance&quot;: 0.5,
+        &quot;axis&quot;: &quot;x&quot;
+      }
+    }
+  ]
+}</pre></article><h2>Coverage and limits</h2><pre>{
+  &quot;errors&quot;: [
+    {
+      &quot;viewport&quot;: &quot;desktop-1x&quot;,
+      &quot;component&quot;: &quot;override&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:2:167)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;desktop-1x&quot;,
+      &quot;component&quot;: &quot;overflow&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:14:148)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;desktop-1x&quot;,
+      &quot;component&quot;: &quot;pseudo&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:10:137)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;desktop-1x&quot;,
+      &quot;component&quot;: &quot;shadow&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Filters, blending or shadows need manual paint review\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:9:133)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;desktop-1x&quot;,
+      &quot;component&quot;: &quot;hidden&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Part not rendered\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:3:76)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;desktop-1x&quot;,
+      &quot;component&quot;: &quot;zero-pseudo&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:10:137)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;desktop-1x&quot;,
+      &quot;component&quot;: &quot;ancestor-filter&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Ancestor filters or blending need manual paint review\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:4:88)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;desktop-1x&quot;,
+      &quot;component&quot;: &quot;ambiguous&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;a must match exactly one part within root&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;desktop-1x&quot;,
+      &quot;component&quot;: &quot;missing&quot;,
+      &quot;error&quot;: &quot;Expected 1..20 roots, found 0&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;phone-2x&quot;,
+      &quot;component&quot;: &quot;override&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:2:167)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;phone-2x&quot;,
+      &quot;component&quot;: &quot;overflow&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:14:148)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;phone-2x&quot;,
+      &quot;component&quot;: &quot;pseudo&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:10:137)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;phone-2x&quot;,
+      &quot;component&quot;: &quot;shadow&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Filters, blending or shadows need manual paint review\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:9:133)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;phone-2x&quot;,
+      &quot;component&quot;: &quot;hidden&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Part not rendered\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:3:76)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;phone-2x&quot;,
+      &quot;component&quot;: &quot;zero-pseudo&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:10:137)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;phone-2x&quot;,
+      &quot;component&quot;: &quot;ancestor-filter&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Ancestor filters or blending need manual paint review\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:4:88)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;phone-2x&quot;,
+      &quot;component&quot;: &quot;ambiguous&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;a must match exactly one part within root&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;phone-2x&quot;,
+      &quot;component&quot;: &quot;missing&quot;,
+      &quot;error&quot;: &quot;Expected 1..20 roots, found 0&quot;
+    }
+  ],
+  &quot;limits&quot;: [
+    &quot;Authored contracts do not establish good visual design.&quot;,
+    &quot;Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.&quot;,
+    &quot;Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.&quot;,
+    &quot;No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence.&quot;
+  ]
+}</pre>

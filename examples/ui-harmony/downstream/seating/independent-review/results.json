@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "capacity conflict blocks move",
+    "moving party updates actual occupancy",
+    "unsaved status visible",
+    "saved assignment survives reload",
+    "export includes assigned guest and access note",
+    "phone capacity error remains visible",
+    "phone assignment persisted",
+    "invalid capacity prevented",
+    "save failure retains dirty state",
+    "320px no document overflow"
+  ],
+  "errors": [],
+  "axeDesktop": [],
+  "axePhone": []
+}

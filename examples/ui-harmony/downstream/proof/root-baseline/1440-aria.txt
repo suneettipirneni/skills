@@ -1,0 +1,60 @@
+- complementary:
+  - text: p.
+  - strong: proof
+  - text: EDITORIAL WORKSPACE WORKSPACE
+  - button "Workspace options"
+  - text: Stories 4 IN REVIEW 4
+  - navigation "Stories":
+    - button "01 The quiet work of keeping a city cool 1 open comment"
+    - button "02 A second life for the neighborhood cinema 1 open comment"
+    - button "03 What we learn from things made to last 0 open comments"
+    - button "04 The garden at the end of the bus line 0 open comments"
+  - text: E Editorial desk Independent review
+- banner:
+  - text: Stories The quiet work of keeping a city cool Saved
+  - button "Edit details"
+  - button "Mark ready" [disabled]
+- main:
+  - text: FIELD NOTES IN REVIEW
+  - heading "The quiet work of keeping a city cool" [level=1]
+  - paragraph: As summers grow hotter, a network of ordinary places is becoming essential infrastructure.
+  - text: MC Maya Chen November 12, 2026
+  - emphasis: ·
+  - text: 8 min read
+  - button "Edit details"
+  - paragraph: On the first very hot morning of June, the doors of the Mercer Street library opened half an hour early. By ten, every chair near an outlet was occupied. A man slept over an unfolded newspaper; a mother helped her daughter find a book about sharks. The building did not announce itself as emergency infrastructure. It simply offered a room where a person could stay.
+  - button "Comment on paragraph 1"
+  - paragraph: That distinction matters to Elena Ruiz, who coordinates the neighborhood’s heat response. Official cooling centers are important, she says, but a place is only useful if people know it, trust it and can reach it without arranging their day around a bus transfer. The library has those advantages because it has spent years being useful for other reasons.
+  - button "Comment on paragraph 2"
+  - heading "A map of shade" [level=2]
+  - paragraph: "The city’s new heat map began with satellite imagery and ended with people walking the streets. Volunteers recorded the blocks where trees cast shade at three in the afternoon, the fountains that worked, and the benches that had disappeared. Their notes revealed a geography that temperature readings alone could not: a cool route could be broken by one exposed crossing."
+  - button "Comment on paragraph 4"
+  - paragraph: The resulting plan is modest by design. A row of young trees will take years to mature, so the city is also adding awnings at bus stops and extending hours at community rooms. None is a complete answer. Together they give residents more choices on the days when the heat makes even a short errand consequential.
+  - button "Comment on paragraph 5"
+  - paragraph: Maintenance is part of the plan, too. A fountain without a working tap is a symbol of care rather than care itself. The public works team now checks water points before each forecast heat wave, and a small fund pays neighborhood groups to report problems before they become permanent.
+  - button "Comment on paragraph 6"
+  - paragraph: "Inside the library, the air is cool enough that the windows fog slightly at their edges. Ruiz points out a handwritten sign beside the door: water is available at the desk. It is a small instruction, easy to miss, and precisely the sort of detail that turns a public building into a refuge."
+  - button "Comment on paragraph 7"
+  - text: ◆
+- complementary:
+  - text: EDITORIAL DESK
+  - heading "Review" [level=2]
+  - text: 1 open
+  - button "Comments"
+  - button "History"
+  - heading "Comments" [level=3]
+  - paragraph: Discuss this story, paragraph by paragraph.
+  - combobox "Filter comments":
+    - option "Open" [selected]
+    - option "All"
+    - option "Resolved"
+  - text: E Editorial desk Nov 13
+  - button "Resolve"
+  - paragraph: Could we specify when the street-level walk took place?
+  - button "¶ The city’s new heat map began with satellite imagery and ended w…"
+  - text: ADD A COMMENT
+  - paragraph: Choose a paragraph in the story to add a comment.
+  - textbox "Comment":
+    - /placeholder: Write a comment…
+  - text: No paragraph selected
+  - button "Add comment" [disabled]

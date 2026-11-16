@@ -1,0 +1,101 @@
+- complementary "Workspace navigation":
+  - strong: switchyard
+  - text: RELEASE WORKSPACE N Northstar Production workspace WORKSPACE
+  - navigation "Main navigation":
+    - text: Release review 01
+    - button "Review history"
+  - text: Local workspace Changes stay in this browser AR Alex Rivera Release reviewer
+- main:
+  - text: Release review / Candidate 2025.04.18 Local review AR
+  - heading "Review the release" [level=1]
+  - text: Review in progress
+  - region "Manifest comparison": CURRENT MANIFEST release-2025.04.11 Deployed · Apr 11, 2025 CANDIDATE MANIFEST release-2025.04.18 Created · Apr 18, 2025 at 09:42 UTC COMPARISON 27 changes detected
+  - heading "Changes to review 27" [level=2]
+  - text: 3 high risk 10 need evidence Search changes
+  - textbox "Search changes":
+    - /placeholder: Search changes...
+  - text: Filter changes
+  - combobox "Filter changes":
+    - option "All changes" [selected]
+    - option "Service"
+    - option "Configuration"
+    - option "Dependency"
+    - option "High"
+    - option "Medium"
+    - option "Low"
+    - option "Needs evidence"
+  - text: CHANGE RISK VERSION / VALUE
+  - button "checkout-api Service · Image updated · Needs evidence High v2.18.4 v2.19.0":
+    - text: checkout-api Service · Image updated
+    - emphasis: · Needs evidence
+    - text: High v2.18.4 v2.19.0
+  - button "payment-routing / retry_policy Configuration · Value changed · Needs evidence High 3 attempts 5 attempts":
+    - text: payment-routing / retry_policy Configuration · Value changed
+    - emphasis: · Needs evidence
+    - text: High 3 attempts 5 attempts
+  - button "@switchyard/payment-gateway-sdk Dependency · Major version · Needs evidence High 4.8.2 5.0.0":
+    - text: "@switchyard/payment-gateway-sdk Dependency · Major version"
+    - emphasis: · Needs evidence
+    - text: High 4.8.2 5.0.0
+  - button "inventory-worker Service · Image updated Medium v1.32.1 v1.33.0"
+  - button "feature_flags / express_checkout Configuration · Flag enabled · Needs evidence Medium false true":
+    - text: feature_flags / express_checkout Configuration · Flag enabled
+    - emphasis: · Needs evidence
+    - text: Medium false true
+  - button "order-orchestrator Service · Image updated Medium v3.6.0 v3.7.1"
+  - button "postgresql-client Dependency · Minor version Medium 8.11.3 8.12.0"
+  - button "order-orchestrator / reconciliation_window_seconds Configuration · Value changed · Needs evidence Medium 300 600":
+    - text: order-orchestrator / reconciliation_window_seconds Configuration · Value changed
+    - emphasis: · Needs evidence
+    - text: Medium 300 600
+  - button "catalog-read-api Service · Image updated Low v4.12.1 v4.12.2"
+  - button "@opentelemetry/instrumentation-http Dependency · Patch version Low 0.52.0 0.52.1"
+  - button "inventory-worker / batch_size Configuration · Value changed · Needs evidence Medium 100 250":
+    - text: inventory-worker / batch_size Configuration · Value changed
+    - emphasis: · Needs evidence
+    - text: Medium 100 250
+  - button "notification-dispatcher Service · Image updated Low v2.4.8 v2.4.9"
+  - button "undici Dependency · Patch version Low 6.19.2 6.19.8"
+  - button "checkout-api / request_timeout_ms Configuration · Value changed · Needs evidence Medium 5000 8000":
+    - text: checkout-api / request_timeout_ms Configuration · Value changed
+    - emphasis: · Needs evidence
+    - text: Medium 5000 8000
+  - button "fraud-signal-consumer Service · Image updated Medium v1.9.0 v1.10.0"
+  - button "@aws-sdk/client-sqs Dependency · Minor version Low 3.621.0 3.637.0"
+  - button "catalog-read-api / cache_ttl_seconds Configuration · Value changed Low 120 90"
+  - button "shipping-rate-adapter Service · Image updated Low v5.3.0 v5.3.1"
+  - button "zod Dependency · Patch version Low 3.23.8 3.23.9"
+  - button "fraud-signal-consumer / sampling_rate Configuration · Value changed · Needs evidence Medium 0.10 0.25":
+    - text: fraud-signal-consumer / sampling_rate Configuration · Value changed
+    - emphasis: · Needs evidence
+    - text: Medium 0.10 0.25
+  - button "customer-profile-service Service · Image updated Low v2.11.0 v2.11.1"
+  - button "pino Dependency · Minor version Low 9.3.1 9.4.0"
+  - button "notification-dispatcher / delivery_backoff_seconds Configuration · Value changed Low 30 45"
+  - button "tax-calculation-adapter Service · Image updated · Needs evidence Medium v3.2.0 v3.3.0":
+    - text: tax-calculation-adapter Service · Image updated
+    - emphasis: · Needs evidence
+    - text: Medium v3.2.0 v3.3.0
+  - button "@switchyard/manifest-schema Dependency · Minor version Low 2.6.0 2.7.0"
+  - button "checkout-api / reconciliation_endpoint Configuration · Value changed · Needs evidence Medium https://payments.internal.example.com/v1/reconciliation https://payments.internal.example.com/v2/reconciliation-and-settlement":
+    - text: checkout-api / reconciliation_endpoint Configuration · Value changed
+    - emphasis: · Needs evidence
+    - text: Medium https://payments.internal.example.com/v1/reconciliation https://payments.internal.example.com/v2/reconciliation-and-settlement
+  - button "shipping-rate-adapter / carrier_fallback_enabled Configuration · Flag enabled Low false true"
+  - text: Showing 27 of 27 changes Manifest comparison · read only
+  - complementary "Review checklist":
+    - heading "Review checklist" [level=2]
+    - text: REVIEW PROGRESS 0 of 3 complete
+    - checkbox "High-risk changes and their impact reviewed Inspect the high-risk items in the diff."
+    - text: High-risk changes and their impact reviewed Inspect the high-risk items in the diff.
+    - checkbox "Configuration changes checked against rollout plan Confirm flags, timeouts, and operational settings."
+    - text: Configuration changes checked against rollout plan Confirm flags, timeouts, and operational settings.
+    - checkbox "Rollback path and supporting evidence confirmed Make sure the release can be safely reversed."
+    - text: Rollback path and supporting evidence confirmed Make sure the release can be safely reversed. ! 10 changes need evidence
+    - paragraph: Review the flagged changes and confirm supporting evidence is available.
+    - button "View changes"
+    - text: REVIEW DECISION
+    - paragraph: Complete all required checks to unlock the decision.
+    - button "Record decision" [disabled]
+    - button "View review history"
+  - text: SWITCHYARD / RELEASE REVIEW Comparison generated from two example manifests

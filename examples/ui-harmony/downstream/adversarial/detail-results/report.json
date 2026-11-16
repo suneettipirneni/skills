@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "url": "file:///private/tmp/ui-harmony-downstream/adversarial/detail-fixture.html",
+  "createdAt": "2026-11-16T01:39:38.048Z",
+  "config": {
+    "viewports": [
+      {
+        "name": "one",
+        "width": 800,
+        "height": 600,
+        "dpr": 1
+      }
+    ],
+    "components": [
+      {
+        "name": "visible-child",
+        "selector": "#visible-child",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "Disjoint component subtrees should have at least 2px paint clearance."
+          }
+        ]
+      },
+      {
+        "name": "outside",
+        "selector": "#outside",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "Disjoint component subtrees should have at least 2px paint clearance."
+          }
+        ]
+      }
+    ]
+  },
+  "cases": [
+    {
+      "viewport": {
+        "name": "one",
+        "width": 800,
+        "height": 600,
+        "dpr": 1
+      },
+      "component": "visible-child",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 51,
+            "y": 61,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 161,
+            "y": 61,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "a",
+          "b": "b",
+          "minGap": 2,
+          "rationale": "Disjoint component subtrees should have at least 2px paint clearance.",
+          "status": "measured",
+          "pass": true,
+          "observed": {
+            "overlapPixels": 0,
+            "minimumClearanceCssPx": null,
+            "clearanceAtLeastCssPx": 2,
+            "closestPaintCssPx": null,
+            "aPaintPixels": 400,
+            "bPaintPixels": 400
+          },
+          "expected": {
+            "minimumClearanceCssPx": 2
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        }
+      ],
+      "screenshot": "one-visible-child-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 70
+      }
+    },
+    {
+      "viewport": {
+        "name": "one",
+        "width": 800,
+        "height": 600,
+        "dpr": 1
+      },
+      "component": "outside",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 51,
+            "y": 163,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 161,
+            "y": 163,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "a",
+          "b": "b",
+          "minGap": 2,
+          "rationale": "Disjoint component subtrees should have at least 2px paint clearance.",
+          "status": "measured",
+          "pass": true,
+          "observed": {
+            "overlapPixels": 0,
+            "minimumClearanceCssPx": null,
+            "clearanceAtLeastCssPx": 2,
+            "closestPaintCssPx": null,
+            "aPaintPixels": 400,
+            "bPaintPixels": 400
+          },
+          "expected": {
+            "minimumClearanceCssPx": 2
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        }
+      ],
+      "screenshot": "one-outside-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 70
+      }
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Authored contracts do not establish good visual design.",
+    "Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.",
+    "Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.",
+    "No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence."
+  ],
+  "browser": "157.0.8103.51",
+  "summary": {
+    "components": 2,
+    "checks": 2,
+    "failedContracts": 0,
+    "unverified": 0,
+    "status": "captured"
+  }
+}

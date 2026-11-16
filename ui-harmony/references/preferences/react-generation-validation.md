@@ -50,3 +50,7 @@ Style-fit weights remain unchanged. Craft is a narrative judgment with evidence 
 Root visual inspection and the independent adversary accepted both final outputs within the inspected states: coherent reading/working hierarchies, task-specific composition, coordinated controls, readable secondary roles and corrected mobile context transitions. This is an expert craft judgment, not an automated beauty result.
 
 These examples provide evidence that fresh conversations using the skill, realistic domain content and its review loop can produce considered bespoke React interfaces. They do not prove that every first draft will meet the target or that the new guidance outperforms the previous version under a controlled comparison. Local storage, fictional data and limited fixed content make these prototypes reviewable; production concurrency, security, persistence and broader user research remain outside this demonstration.
+
+## Additional downstream studies
+
+[Eight further Terra high builds](../../../examples/ui-harmony/downstream/README.md) exercise release review, packing, scheduling, localization, import, field inspection, seating and editorial workflows. Their baseline failures informed quiet-content, phone focus/return and detail-diagnostic guidance. The report distinguishes initial generation from reviewer corrections, includes screenshots and independent probes, and retains unresolved pixel evidence. Shared visual styling limits any claim of aesthetic breadth.

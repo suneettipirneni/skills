@@ -1,0 +1,51 @@
+{
+  "viewports": [
+    {
+      "name": "desktop-1x",
+      "width": 1440,
+      "height": 1000,
+      "dpr": 1
+    },
+    {
+      "name": "phone-2x",
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    }
+  ],
+  "components": [
+    {
+      "name": "seek-controls",
+      "selector": ".transport > .icon-button",
+      "minCount": 2,
+      "maxCount": 2,
+      "parts": {
+        "arc": {
+          "selector": "svg"
+        },
+        "number": {
+          "selector": ".ten",
+          "measure": "text"
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "arc",
+          "b": "number",
+          "minGap": 1,
+          "rationale": "The ten-second numeral must remain visually distinct from the circular arrow stroke."
+        },
+        {
+          "kind": "center",
+          "a": "number",
+          "b": "arc",
+          "offsetX": 0,
+          "offsetY": 1,
+          "tolerance": 1,
+          "rationale": "The numeral belongs inside the circular symbol rather than on its lower edge."
+        }
+      ]
+    }
+  ]
+}

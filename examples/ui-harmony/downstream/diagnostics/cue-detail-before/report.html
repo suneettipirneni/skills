@@ -1,0 +1,281 @@
+<!doctype html><meta charset="utf-8"><title>Component detail diagnostics</title><style>body{font:14px/1.5 system-ui;margin:32px;color:#222}article{border-top:1px solid #ccc;padding:24px 0}.zoom{image-rendering:pixelated;max-width:100%;object-fit:contain;object-position:left}pre{white-space:pre-wrap}img{border:1px solid #ddd}</style><h1>Component detail diagnostics</h1><p>{&quot;components&quot;:4,&quot;checks&quot;:8,&quot;failedContracts&quot;:8,&quot;unverified&quot;:0,&quot;status&quot;:&quot;captured&quot;}</p><p>Contract agreement is not an optical-quality verdict. Review actual-size crops and limits.</p><article><h2>desktop-1x · seek-controls #0</h2><p>Actual CSS display size</p><img src="desktop-1x-seek-controls-0.png" width="40" height="44" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-seek-controls-0.png" width="320" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;arc&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 160,
+        &quot;y&quot;: 281,
+        &quot;width&quot;: 18,
+        &quot;height&quot;: 18
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;number&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 165,
+        &quot;y&quot;: 288,
+        &quot;width&quot;: 6.984375,
+        &quot;height&quot;: 9
+      },
+      &quot;mode&quot;: &quot;text&quot;,
+      &quot;font&quot;: &quot;7px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;DOM text-fragment rectangle, not glyph ink.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;arc&quot;,
+      &quot;b&quot;: &quot;number&quot;,
+      &quot;minGap&quot;: 1,
+      &quot;rationale&quot;: &quot;The ten-second numeral must remain visually distinct from the circular arrow stroke.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 0,
+        &quot;minimumClearanceCssPx&quot;: 0,
+        &quot;clearanceAtLeastCssPx&quot;: null,
+        &quot;aPaintPixels&quot;: 93,
+        &quot;bPaintPixels&quot;: 25
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 1
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Not perceptual centering or a universal optical verdict.&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;center&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;arc&quot;,
+      &quot;offsetX&quot;: 0,
+      &quot;offsetY&quot;: 1,
+      &quot;tolerance&quot;: 1,
+      &quot;rationale&quot;: &quot;The numeral belongs inside the circular symbol rather than on its lower edge.&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;deltaX&quot;: -0.5078125,
+        &quot;deltaY&quot;: 1.5
+      },
+      &quot;expected&quot;: {
+        &quot;offsetX&quot;: 0,
+        &quot;offsetY&quot;: 1,
+        &quot;tolerance&quot;: 1
+      }
+    }
+  ]
+}</pre></article><article><h2>desktop-1x · seek-controls #1</h2><p>Actual CSS display size</p><img src="desktop-1x-seek-controls-1.png" width="40" height="44" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-seek-controls-1.png" width="320" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;arc&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 254,
+        &quot;y&quot;: 281,
+        &quot;width&quot;: 18,
+        &quot;height&quot;: 18
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;number&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 259,
+        &quot;y&quot;: 288,
+        &quot;width&quot;: 6.984375,
+        &quot;height&quot;: 9
+      },
+      &quot;mode&quot;: &quot;text&quot;,
+      &quot;font&quot;: &quot;7px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;DOM text-fragment rectangle, not glyph ink.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;arc&quot;,
+      &quot;b&quot;: &quot;number&quot;,
+      &quot;minGap&quot;: 1,
+      &quot;rationale&quot;: &quot;The ten-second numeral must remain visually distinct from the circular arrow stroke.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 0,
+        &quot;minimumClearanceCssPx&quot;: 0,
+        &quot;clearanceAtLeastCssPx&quot;: null,
+        &quot;aPaintPixels&quot;: 94,
+        &quot;bPaintPixels&quot;: 25
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 1
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Not perceptual centering or a universal optical verdict.&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;center&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;arc&quot;,
+      &quot;offsetX&quot;: 0,
+      &quot;offsetY&quot;: 1,
+      &quot;tolerance&quot;: 1,
+      &quot;rationale&quot;: &quot;The numeral belongs inside the circular symbol rather than on its lower edge.&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;deltaX&quot;: -0.5078125,
+        &quot;deltaY&quot;: 1.5
+      },
+      &quot;expected&quot;: {
+        &quot;offsetX&quot;: 0,
+        &quot;offsetY&quot;: 1,
+        &quot;tolerance&quot;: 1
+      }
+    }
+  ]
+}</pre></article><article><h2>phone-2x · seek-controls #0</h2><p>Actual CSS display size</p><img src="phone-2x-seek-controls-0.png" width="38" height="44" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-seek-controls-0.png" width="304" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;arc&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 43,
+        &quot;y&quot;: 266.5,
+        &quot;width&quot;: 18,
+        &quot;height&quot;: 18
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;number&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 47,
+        &quot;y&quot;: 273.5,
+        &quot;width&quot;: 6.984375,
+        &quot;height&quot;: 9
+      },
+      &quot;mode&quot;: &quot;text&quot;,
+      &quot;font&quot;: &quot;7px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;DOM text-fragment rectangle, not glyph ink.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;arc&quot;,
+      &quot;b&quot;: &quot;number&quot;,
+      &quot;minGap&quot;: 1,
+      &quot;rationale&quot;: &quot;The ten-second numeral must remain visually distinct from the circular arrow stroke.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 1,
+        &quot;minimumClearanceCssPx&quot;: 0,
+        &quot;clearanceAtLeastCssPx&quot;: null,
+        &quot;aPaintPixels&quot;: 307,
+        &quot;bPaintPixels&quot;: 85
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 1
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Not perceptual centering or a universal optical verdict.&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;center&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;arc&quot;,
+      &quot;offsetX&quot;: 0,
+      &quot;offsetY&quot;: 1,
+      &quot;tolerance&quot;: 1,
+      &quot;rationale&quot;: &quot;The numeral belongs inside the circular symbol rather than on its lower edge.&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;deltaX&quot;: -1.5078125,
+        &quot;deltaY&quot;: 1.5
+      },
+      &quot;expected&quot;: {
+        &quot;offsetX&quot;: 0,
+        &quot;offsetY&quot;: 1,
+        &quot;tolerance&quot;: 1
+      }
+    }
+  ]
+}</pre></article><article><h2>phone-2x · seek-controls #1</h2><p>Actual CSS display size</p><img src="phone-2x-seek-controls-1.png" width="38" height="44" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-seek-controls-1.png" width="304" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;arc&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 118,
+        &quot;y&quot;: 266.5,
+        &quot;width&quot;: 18,
+        &quot;height&quot;: 18
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;number&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 122,
+        &quot;y&quot;: 273.5,
+        &quot;width&quot;: 6.984375,
+        &quot;height&quot;: 9
+      },
+      &quot;mode&quot;: &quot;text&quot;,
+      &quot;font&quot;: &quot;7px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;DOM text-fragment rectangle, not glyph ink.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;arc&quot;,
+      &quot;b&quot;: &quot;number&quot;,
+      &quot;minGap&quot;: 1,
+      &quot;rationale&quot;: &quot;The ten-second numeral must remain visually distinct from the circular arrow stroke.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 1,
+        &quot;minimumClearanceCssPx&quot;: 0,
+        &quot;clearanceAtLeastCssPx&quot;: null,
+        &quot;aPaintPixels&quot;: 306,
+        &quot;bPaintPixels&quot;: 85
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 1
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Not perceptual centering or a universal optical verdict.&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;center&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;arc&quot;,
+      &quot;offsetX&quot;: 0,
+      &quot;offsetY&quot;: 1,
+      &quot;tolerance&quot;: 1,
+      &quot;rationale&quot;: &quot;The numeral belongs inside the circular symbol rather than on its lower edge.&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;deltaX&quot;: -1.5078125,
+        &quot;deltaY&quot;: 1.5
+      },
+      &quot;expected&quot;: {
+        &quot;offsetX&quot;: 0,
+        &quot;offsetY&quot;: 1,
+        &quot;tolerance&quot;: 1
+      }
+    }
+  ]
+}</pre></article><h2>Coverage and limits</h2><pre>{
+  &quot;errors&quot;: [],
+  &quot;limits&quot;: [
+    &quot;Authored contracts do not establish good visual design.&quot;,
+    &quot;Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.&quot;,
+    &quot;Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.&quot;,
+    &quot;No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence.&quot;
+  ]
+}</pre>

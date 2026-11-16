@@ -1,0 +1,68 @@
+{
+  "viewports": [
+    {
+      "name": "desktop-1x",
+      "width": 1440,
+      "height": 1000,
+      "dpr": 1
+    },
+    {
+      "name": "phone-2x",
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    }
+  ],
+  "components": [
+    {
+      "name": "seek-controls",
+      "selector": ".transport > .icon-button",
+      "minCount": 2,
+      "maxCount": 2,
+      "parts": {
+        "frame": {
+          "selector": "svg"
+        },
+        "arc": {
+          "selector": "[data-detail=arc]",
+          "measure": "svg"
+        },
+        "number": {
+          "selector": "[data-detail=number]",
+          "measure": "svg"
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "arc",
+          "b": "number",
+          "minGap": 1,
+          "rationale": "The ten-second numeral must remain visually distinct from the circular arrow stroke."
+        },
+        {
+          "kind": "center",
+          "a": "number",
+          "b": "frame",
+          "offsetX": 0.17500000000000002,
+          "offsetY": 2.3333333333333335,
+          "tolerance": 0.5,
+          "rationale": "The vector numeral is centered in its own 24-unit symbol with a documented local optical offset."
+        },
+        {
+          "kind": "inside",
+          "a": "number",
+          "b": "frame",
+          "region": {
+            "x": 0.2916666666666667,
+            "y": 0.375,
+            "width": 0.4583333333333333,
+            "height": 0.4166666666666667
+          },
+          "tolerance": 0.25,
+          "rationale": "Keep numeral geometry in the designed inner window; the raster clearance separately checks actual stroke paint."
+        }
+      ]
+    }
+  ]
+}

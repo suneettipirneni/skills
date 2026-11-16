@@ -1,0 +1,141 @@
+- banner:
+  - img
+  - text: crate. EXHIBITION WORKSPACE
+  - strong:
+    - text: On Common Ground
+    - img
+  - text: Saved locally CG
+- complementary "Exhibition navigation":
+  - text: OUTGOING EXHIBITION
+  - heading "On Common Ground" [level=2]
+  - paragraph: Meridian Arts Center New York, NY
+  - text: PACKING WORKFLOW
+  - navigation "Packing workflow":
+    - button "Works 4":
+      - img
+      - text: Works 4
+    - button "Cases 2":
+      - img
+      - text: Cases 2
+    - button "Manifest":
+      - img
+      - text: Manifest
+  - text: CRATE / COLLECTIONS TOOL
+- main:
+  - text: EXHIBITIONS / ON COMMON GROUND / COLLECTION PACKING IN PROGRESS · OUTGOING
+  - heading "Works for travel" [level=1]
+  - paragraph: Select works from the collection and prepare each one for its case.
+  - button "Review cases":
+    - text: Review cases
+    - img
+  - img
+  - strong: 3 of 4 works ready
+  - text: 1 work needs attention before the manifest
+  - button "View manifest":
+    - text: View manifest
+    - img
+  - heading "Collection 13" [level=2]
+  - img
+  - text: 4 selected
+  - img
+  - text: Search works
+  - textbox "Search works":
+    - /placeholder: Search title or artist...
+  - text: Filter works
+  - combobox "Filter works":
+    - option "All works" [selected]
+    - option "Selected works"
+  - text: WORK / ARTIST DIMENSIONS STATUS
+  - button "A Study in Quiet Forms Mara Ellison, 2021 91 × 76 × 4 cm Ready":
+    - strong: A Study in Quiet Forms
+    - text: Mara Ellison, 2021 91 × 76 × 4 cm Ready
+  - button "Remove A Study in Quiet Forms from packing list":
+    - img
+  - button "The Space Between Two Gardens Noah Vale, 2019 122 × 91 × 6 cm Ready":
+    - strong: The Space Between Two Gardens
+    - text: Noah Vale, 2019 122 × 91 × 6 cm Ready
+  - button "Remove The Space Between Two Gardens from packing list":
+    - img
+  - button "Notes on a Distant Shore, No. 4 Inez Park, 2022 64 × 49 × 3 cm In progress":
+    - strong: Notes on a Distant Shore, No. 4
+    - text: Inez Park, 2022 64 × 49 × 3 cm In progress
+  - button "Remove Notes on a Distant Shore, No. 4 from packing list":
+    - img
+  - button "Things We Carried Through the Winter Ada Okafor, 2020 48 × 35 × 32 cm Ready":
+    - strong: Things We Carried Through the Winter
+    - text: Ada Okafor, 2020 48 × 35 × 32 cm Ready
+  - button "Remove Things We Carried Through the Winter from packing list":
+    - img
+  - button "Blue Hour (After the Rain) Elias Rowan, 2018 152 × 122 × 5 cm Not selected":
+    - strong: Blue Hour (After the Rain)
+    - text: Elias Rowan, 2018 152 × 122 × 5 cm Not selected
+  - button "Add Blue Hour (After the Rain) to packing list":
+    - img
+  - button "An Arrangement for Three Voices Sora Bell, 2023 108 × 84 × 4 cm Not selected":
+    - strong: An Arrangement for Three Voices
+    - text: Sora Bell, 2023 108 × 84 × 4 cm Not selected
+  - button "Add An Arrangement for Three Voices to packing list":
+    - img
+  - button "Small Monument to an Ordinary Afternoon Milo Chen, 2021 37 × 26 × 22 cm Not selected":
+    - strong: Small Monument to an Ordinary Afternoon
+    - text: Milo Chen, 2021 37 × 26 × 22 cm Not selected
+  - button "Add Small Monument to an Ordinary Afternoon to packing list":
+    - img
+  - 'button "Field Notes: A River Changes Course Freya Moss, 2017 72 × 58 × 3 cm Not selected"':
+    - strong: "Field Notes: A River Changes Course"
+    - text: Freya Moss, 2017 72 × 58 × 3 cm Not selected
+  - 'button "Add Field Notes: A River Changes Course to packing list"':
+    - img
+  - button "The Long Way Home Amara Lewis, 2024 183 × 137 × 5 cm Not selected":
+    - strong: The Long Way Home
+    - text: Amara Lewis, 2024 183 × 137 × 5 cm Not selected
+  - button "Add The Long Way Home to packing list":
+    - img
+  - button "A Room for Remembering Julian Reed, 2020 82 × 61 × 14 cm Not selected":
+    - strong: A Room for Remembering
+    - text: Julian Reed, 2020 82 × 61 × 14 cm Not selected
+  - button "Add A Room for Remembering to packing list":
+    - img
+  - button "Cloud Atlas for a Small City Mina Torres, 2022 56 × 71 × 3 cm Not selected":
+    - strong: Cloud Atlas for a Small City
+    - text: Mina Torres, 2022 56 × 71 × 3 cm Not selected
+  - button "Add Cloud Atlas for a Small City to packing list":
+    - img
+  - button "Held in the Light Theo James, 2019 44 × 30 × 28 cm Not selected":
+    - strong: Held in the Light
+    - text: Theo James, 2019 44 × 30 × 28 cm Not selected
+  - button "Add Held in the Light to packing list":
+    - img
+  - button "Another Kind of Horizon Lina Moreau, 2023 102 × 81 × 4 cm Not selected":
+    - strong: Another Kind of Horizon
+    - text: Lina Moreau, 2023 102 × 81 × 4 cm Not selected
+  - button "Add Another Kind of Horizon to packing list":
+    - img
+  - complementary "Work details":
+    - text: "WORK DETAILS #03"
+    - heading "Notes on a Distant Shore, No. 4" [level=2]
+    - paragraph: Inez Park · 2022
+    - button "Selected":
+      - img
+      - text: Selected
+    - text: MEDIUM
+    - strong: Ink and pastel on paper
+    - text: DIMENSIONS
+    - strong: 64 × 49 × 3 cm
+    - heading "Handling notes" [level=3]
+    - paragraph: Keep flat until secured in its travel frame.
+    - heading "Condition REVIEWED" [level=3]
+    - paragraph: Stable; paper slightly undulates.
+    - text: Assigned case
+    - combobox "Assigned case":
+      - option "Choose a case"
+      - option "Case A — Framed works"
+      - option "Case B — Mixed objects" [selected]
+    - heading "Packing checks" [level=3]
+    - text: 2 / 3
+    - checkbox "Condition reviewed" [checked]
+    - text: Condition reviewed
+    - checkbox "Protective wrapping complete" [checked]
+    - text: Protective wrapping complete
+    - checkbox "Secured for travel"
+    - text: Secured for travel

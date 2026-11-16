@@ -1,0 +1,66 @@
+[
+  {
+    "url": "http://127.0.0.1:4324/",
+    "title": "Gloss — Localization review",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-11-16T01:28:20.936Z",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "width": 1440,
+    "rootScroll": 1440,
+    "fonts": "loaded",
+    "mainText": "Studio North / Stillday / Strings\n●  LOCAL WORKSPACE\nMC\n✳\nSTILLDAY\n/\nLOCALIZATION\nStrings\n\nEvery word, ready for the world.\n\nReview language\n🇩🇪   German (de-DE)\n🇸🇦   Arabic (ar)\nGERMAN REVIEW\n8 / ",
+    "heading": [
+      {
+        "text": "Strings",
+        "size": "30px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "String library 36",
+        "size": "16px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "welcome.title",
+        "size": "16px",
+        "lineHeight": "normal"
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:4324/",
+    "title": "Gloss — Localization review",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "capturedAt": "2026-11-16T01:28:22.077Z",
+    "errors": [],
+    "width": 390,
+    "rootScroll": 390,
+    "fonts": "loaded",
+    "mainText": "Studio North / Stillday / Strings\n✳\nSTILLDAY\n/\nLOCALIZATION\nStrings\n\nEvery word, ready for the world.\n\nReview language\n🇩🇪   German (de-DE)\n🇸🇦   Arabic (ar)\nGERMAN REVIEW\n8 / 36 approved\nView relea",
+    "heading": [
+      {
+        "text": "Strings",
+        "size": "30px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "String library 36",
+        "size": "16px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "welcome.title",
+        "size": "16px",
+        "lineHeight": "normal"
+      }
+    ]
+  }
+]

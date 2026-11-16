@@ -1,0 +1,5 @@
+{
+  "checkFocus": true,
+  "issueCancelReturnsFocus": true,
+  "tableSwitchCancelsOldDraft": true
+}

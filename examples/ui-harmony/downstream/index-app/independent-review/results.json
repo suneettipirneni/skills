@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "sample has 3 invalid rows",
+    "row corrections survive reload",
+    "import receipt states 7 imported",
+    "record detail retains identifier",
+    "undo preserves 3 seed records",
+    "phone no-match state",
+    "phone search recovery",
+    "CSV preserves quoted newline",
+    "phone draft survives reload",
+    "storage failure visible and edit retained",
+    "320px no document overflow"
+  ],
+  "errors": [],
+  "axeDesktop": [],
+  "axePhone": []
+}

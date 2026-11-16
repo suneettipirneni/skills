@@ -1,0 +1,1524 @@
+{
+  "schemaVersion": 1,
+  "url": "file:///private/tmp/ui-harmony-downstream/adversarial/browser-regression-final/fixture.html",
+  "createdAt": "2026-11-16T01:49:31.298Z",
+  "config": {
+    "viewports": [
+      {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      }
+    ],
+    "components": [
+      {
+        "name": "separate",
+        "selector": "#separate",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "collision",
+        "selector": "#collision",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "override",
+        "selector": "#override",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "overflow",
+        "selector": "#overflow",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "pseudo",
+        "selector": "#pseudo",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "shadow",
+        "selector": "#shadow",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "hidden",
+        "selector": "#hidden",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "zero-pseudo",
+        "selector": "#zero-pseudo",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "ancestor-filter",
+        "selector": "#ancestor-filter",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "ambiguous",
+        "selector": "#ambiguous",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "missing",
+        "selector": "#missing",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "restore-success",
+        "selector": "#separate[data-restored=\"true\"]",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "gap",
+            "a": "a",
+            "b": "b",
+            "axis": "x",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      },
+      {
+        "name": "restore-failure",
+        "selector": "#override[data-restored=\"true\"]",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "gap",
+            "a": "a",
+            "b": "b",
+            "axis": "x",
+            "minGap": 2,
+            "rationale": "The selected two parts must remain separated in this compact fixture."
+          }
+        ]
+      }
+    ]
+  },
+  "cases": [
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "separate",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 31,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 31,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "a",
+          "b": "b",
+          "minGap": 2,
+          "rationale": "The selected two parts must remain separated in this compact fixture.",
+          "status": "measured",
+          "pass": true,
+          "observed": {
+            "overlapPixels": 0,
+            "minimumClearanceCssPx": null,
+            "clearanceAtLeastCssPx": 2,
+            "closestPaintCssPx": null,
+            "aPaintPixels": 400,
+            "bPaintPixels": 400
+          },
+          "expected": {
+            "minimumClearanceCssPx": 2
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        }
+      ],
+      "screenshot": "desktop-1x-separate-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      }
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "collision",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 88,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 41,
+            "y": 88,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "a",
+          "b": "b",
+          "minGap": 2,
+          "rationale": "The selected two parts must remain separated in this compact fixture.",
+          "status": "measured",
+          "pass": false,
+          "observed": {
+            "overlapPixels": 200,
+            "minimumClearanceCssPx": 0,
+            "clearanceAtLeastCssPx": null,
+            "closestPaintCssPx": {
+              "a": {
+                "x": 34,
+                "y": 34
+              },
+              "b": {
+                "x": 34,
+                "y": 34
+              }
+            },
+            "aPaintPixels": 400,
+            "bPaintPixels": 400
+          },
+          "expected": {
+            "minimumClearanceCssPx": 2
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        }
+      ],
+      "screenshot": "desktop-1x-collision-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      }
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "override",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 145,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 145,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "desktop-1x-override-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:2:167)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "overflow",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 202,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 202,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "desktop-1x-overflow-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:14:148)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "pseudo",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 259,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 259,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "desktop-1x-pseudo-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), <anonymous>:10:137)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "shadow",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 316,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 316,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "desktop-1x-shadow-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Filters, blending or shadows need manual paint review\n    at eval (eval at evaluate (:370:30), <anonymous>:9:133)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "hidden",
+      "index": 0,
+      "parts": {},
+      "checks": [],
+      "screenshot": "desktop-1x-hidden-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Part not rendered\n    at eval (eval at evaluate (:370:30), <anonymous>:3:76)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "zero-pseudo",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 430,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 430,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "desktop-1x-zero-pseudo-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), <anonymous>:10:137)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "ancestor-filter",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 487,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 487,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "desktop-1x-ancestor-filter-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Ancestor filters or blending need manual paint review\n    at eval (eval at evaluate (:370:30), <anonymous>:4:88)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "ambiguous",
+      "index": 0,
+      "parts": {},
+      "checks": [],
+      "screenshot": "desktop-1x-ambiguous-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "a must match exactly one part within root"
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "restore-success",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 31,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 31,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "gap",
+          "a": "a",
+          "b": "b",
+          "axis": "x",
+          "minGap": 2,
+          "rationale": "The selected two parts must remain separated in this compact fixture.",
+          "pass": true,
+          "observed": {
+            "gap": 90
+          },
+          "expected": {
+            "minimum": 2,
+            "tolerance": 0.5,
+            "axis": "x"
+          }
+        }
+      ],
+      "screenshot": "desktop-1x-restore-success-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      }
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 800,
+        "height": 800,
+        "dpr": 1
+      },
+      "component": "restore-failure",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 145,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 145,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "gap",
+          "a": "a",
+          "b": "b",
+          "axis": "x",
+          "minGap": 2,
+          "rationale": "The selected two parts must remain separated in this compact fixture.",
+          "pass": true,
+          "observed": {
+            "gap": 90
+          },
+          "expected": {
+            "minimum": 2,
+            "tolerance": 0.5,
+            "axis": "x"
+          }
+        }
+      ],
+      "screenshot": "desktop-1x-restore-failure-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      }
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "separate",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 31,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 31,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "a",
+          "b": "b",
+          "minGap": 2,
+          "rationale": "The selected two parts must remain separated in this compact fixture.",
+          "status": "measured",
+          "pass": true,
+          "observed": {
+            "overlapPixels": 0,
+            "minimumClearanceCssPx": null,
+            "clearanceAtLeastCssPx": 2,
+            "closestPaintCssPx": null,
+            "aPaintPixels": 1600,
+            "bPaintPixels": 1600
+          },
+          "expected": {
+            "minimumClearanceCssPx": 2
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        }
+      ],
+      "screenshot": "phone-2x-separate-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      }
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "collision",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 88,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 41,
+            "y": 88,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "a",
+          "b": "b",
+          "minGap": 2,
+          "rationale": "The selected two parts must remain separated in this compact fixture.",
+          "status": "measured",
+          "pass": false,
+          "observed": {
+            "overlapPixels": 800,
+            "minimumClearanceCssPx": 0,
+            "clearanceAtLeastCssPx": null,
+            "closestPaintCssPx": {
+              "a": {
+                "x": 34.5,
+                "y": 34.5
+              },
+              "b": {
+                "x": 34.5,
+                "y": 34.5
+              }
+            },
+            "aPaintPixels": 1600,
+            "bPaintPixels": 1600
+          },
+          "expected": {
+            "minimumClearanceCssPx": 2
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        }
+      ],
+      "screenshot": "phone-2x-collision-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      }
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "override",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 145,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 145,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "phone-2x-override-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:2:167)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "overflow",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 202,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 202,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "phone-2x-overflow-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:14:148)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "pseudo",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 259,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 259,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "phone-2x-pseudo-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), <anonymous>:10:137)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "shadow",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 316,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 316,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "phone-2x-shadow-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Filters, blending or shadows need manual paint review\n    at eval (eval at evaluate (:370:30), <anonymous>:9:133)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "hidden",
+      "index": 0,
+      "parts": {},
+      "checks": [],
+      "screenshot": "phone-2x-hidden-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Part not rendered\n    at eval (eval at evaluate (:370:30), <anonymous>:3:76)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "zero-pseudo",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 430,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 430,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "phone-2x-zero-pseudo-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), <anonymous>:10:137)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "ancestor-filter",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 487,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 487,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "phone-2x-ancestor-filter-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "locator.evaluate: Error: Ancestor filters or blending need manual paint review\n    at eval (eval at evaluate (:370:30), <anonymous>:4:88)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "ambiguous",
+      "index": 0,
+      "parts": {},
+      "checks": [],
+      "screenshot": "phone-2x-ambiguous-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      },
+      "error": "a must match exactly one part within root"
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "restore-success",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 31,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 31,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "gap",
+          "a": "a",
+          "b": "b",
+          "axis": "x",
+          "minGap": 2,
+          "rationale": "The selected two parts must remain separated in this compact fixture.",
+          "pass": true,
+          "observed": {
+            "gap": 90
+          },
+          "expected": {
+            "minimum": 2,
+            "tolerance": 0.5,
+            "axis": "x"
+          }
+        }
+      ],
+      "screenshot": "phone-2x-restore-success-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      }
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "restore-failure",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 31,
+            "y": 145,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 141,
+            "y": 145,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "gap",
+          "a": "a",
+          "b": "b",
+          "axis": "x",
+          "minGap": 2,
+          "rationale": "The selected two parts must remain separated in this compact fixture.",
+          "pass": true,
+          "observed": {
+            "gap": 90
+          },
+          "expected": {
+            "minimum": 2,
+            "tolerance": 0.5,
+            "axis": "x"
+          }
+        }
+      ],
+      "screenshot": "phone-2x-restore-failure-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 50
+      }
+    }
+  ],
+  "errors": [
+    {
+      "viewport": "desktop-1x",
+      "component": "override",
+      "index": 0,
+      "error": "locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:2:167)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "desktop-1x",
+      "component": "overflow",
+      "index": 0,
+      "error": "locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:14:148)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "desktop-1x",
+      "component": "pseudo",
+      "index": 0,
+      "error": "locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), <anonymous>:10:137)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "desktop-1x",
+      "component": "shadow",
+      "index": 0,
+      "error": "locator.evaluate: Error: Filters, blending or shadows need manual paint review\n    at eval (eval at evaluate (:370:30), <anonymous>:9:133)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "desktop-1x",
+      "component": "hidden",
+      "index": 0,
+      "error": "locator.evaluate: Error: Part not rendered\n    at eval (eval at evaluate (:370:30), <anonymous>:3:76)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "desktop-1x",
+      "component": "zero-pseudo",
+      "index": 0,
+      "error": "locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), <anonymous>:10:137)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "desktop-1x",
+      "component": "ancestor-filter",
+      "index": 0,
+      "error": "locator.evaluate: Error: Ancestor filters or blending need manual paint review\n    at eval (eval at evaluate (:370:30), <anonymous>:4:88)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "desktop-1x",
+      "component": "ambiguous",
+      "index": 0,
+      "error": "a must match exactly one part within root"
+    },
+    {
+      "viewport": "desktop-1x",
+      "component": "missing",
+      "error": "Expected 1..20 roots, found 0"
+    },
+    {
+      "viewport": "phone-2x",
+      "component": "override",
+      "index": 0,
+      "error": "locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:2:167)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "phone-2x",
+      "component": "overflow",
+      "index": 0,
+      "error": "locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:14:148)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "phone-2x",
+      "component": "pseudo",
+      "index": 0,
+      "error": "locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), <anonymous>:10:137)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "phone-2x",
+      "component": "shadow",
+      "index": 0,
+      "error": "locator.evaluate: Error: Filters, blending or shadows need manual paint review\n    at eval (eval at evaluate (:370:30), <anonymous>:9:133)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "phone-2x",
+      "component": "hidden",
+      "index": 0,
+      "error": "locator.evaluate: Error: Part not rendered\n    at eval (eval at evaluate (:370:30), <anonymous>:3:76)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "phone-2x",
+      "component": "zero-pseudo",
+      "index": 0,
+      "error": "locator.evaluate: Error: Generated pseudo-element paint needs manual review or an explicit element\n    at eval (eval at evaluate (:370:30), <anonymous>:10:137)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "phone-2x",
+      "component": "ancestor-filter",
+      "index": 0,
+      "error": "locator.evaluate: Error: Ancestor filters or blending need manual paint review\n    at eval (eval at evaluate (:370:30), <anonymous>:4:88)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "phone-2x",
+      "component": "ambiguous",
+      "index": 0,
+      "error": "a must match exactly one part within root"
+    },
+    {
+      "viewport": "phone-2x",
+      "component": "missing",
+      "error": "Expected 1..20 roots, found 0"
+    }
+  ],
+  "limits": [
+    "Authored contracts do not establish good visual design.",
+    "Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.",
+    "Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.",
+    "No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence."
+  ],
+  "browser": "157.0.8103.51",
+  "summary": {
+    "components": 24,
+    "checks": 8,
+    "failedContracts": 2,
+    "unverified": 18,
+    "status": "incomplete"
+  }
+}

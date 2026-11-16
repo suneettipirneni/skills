@@ -1,0 +1,66 @@
+[
+  {
+    "url": "http://localhost:4332/",
+    "title": "Proof — Editorial workspace",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-11-16T01:37:06.191Z",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "width": 1440,
+    "rootScroll": 1440,
+    "fonts": "loaded",
+    "mainText": "FIELD NOTES\nIN REVIEW\nThe quiet work of keeping a city cool\n\nAs summers grow hotter, a network of ordinary places is becoming essential infrastructure.\n\nMC\nMaya Chen\nNovember 12, 2026 · 8 min read\nEdi",
+    "heading": [
+      {
+        "text": "The quiet work of keeping a city cool",
+        "size": "49px",
+        "lineHeight": "51.45px"
+      },
+      {
+        "text": "A map of shade",
+        "size": "27px",
+        "lineHeight": "32.4px"
+      },
+      {
+        "text": "Review",
+        "size": "19px",
+        "lineHeight": "normal"
+      }
+    ]
+  },
+  {
+    "url": "http://localhost:4332/",
+    "title": "Proof — Editorial workspace",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "capturedAt": "2026-11-16T01:37:07.251Z",
+    "errors": [],
+    "width": 390,
+    "rootScroll": 390,
+    "fonts": "loaded",
+    "mainText": "FIELD NOTES\nIN REVIEW\nThe quiet work of keeping a city cool\n\nAs summers grow hotter, a network of ordinary places is becoming essential infrastructure.\n\nMC\nMaya Chen\nNovember 12, 2026 · 8 min read\n\nOn",
+    "heading": [
+      {
+        "text": "The quiet work of keeping a city cool",
+        "size": "39px",
+        "lineHeight": "40.95px"
+      },
+      {
+        "text": "A map of shade",
+        "size": "27px",
+        "lineHeight": "32.4px"
+      },
+      {
+        "text": "Review",
+        "size": "19px",
+        "lineHeight": "normal"
+      }
+    ]
+  }
+]

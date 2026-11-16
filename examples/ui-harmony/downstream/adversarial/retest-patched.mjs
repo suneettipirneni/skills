@@ -1,0 +1,3 @@
+import fs from 'node:fs/promises';import {runDetailAudit} from '../../../../ui-harmony/scripts/detail-audit.mjs';import {inkGap} from '../../../../ui-harmony/scripts/lib/detail.mjs';
+const config={viewports:[{name:'one',width:800,height:600,dpr:1}],components:['visible-child','outside'].map(name=>({name,selector:'#'+name,parts:{a:{selector:'.a'},b:{selector:'.b'}},checks:[{kind:'ink-gap',a:'a',b:'b',minGap:2,rationale:'Check all selected component paint.'}]}))};
+const out=await fs.mkdtemp('./adversarial/retest-');await fs.rmdir(out);let r=await runDetailAudit({url:'file://./adversarial/detail-fixture.html',out,config});console.log(JSON.stringify({out,summary:r.summary,errors:r.errors}));

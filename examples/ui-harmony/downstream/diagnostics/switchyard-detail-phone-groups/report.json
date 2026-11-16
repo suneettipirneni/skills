@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "url": "http://127.0.0.1:4321/",
+  "createdAt": "2026-11-16T01:50:38.061Z",
+  "config": {
+    "viewports": [
+      {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      }
+    ],
+    "components": [
+      {
+        "name": "version-pair",
+        "selector": ".diff",
+        "parts": {
+          "previous": {
+            "selector": "div:first-child"
+          },
+          "connector": {
+            "selector": "svg"
+          },
+          "candidate": {
+            "selector": "div:last-child"
+          }
+        },
+        "checks": [
+          {
+            "kind": "between",
+            "a": "previous",
+            "b": "connector",
+            "c": "candidate",
+            "axis": "y",
+            "minGap": 12,
+            "tolerance": 2,
+            "rationale": "The phone comparison stacks labeled value groups. Measure from each full group, including its label, to the arrow; measuring only code wrongly counts the candidate label as whitespace."
+          }
+        ]
+      }
+    ]
+  },
+  "cases": [
+    {
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "version-pair",
+      "index": 0,
+      "parts": {
+        "previous": {
+          "rect": {
+            "x": 61,
+            "y": 265.59375,
+            "width": 268,
+            "height": 38
+          },
+          "mode": "box",
+          "font": "14px \"DM Sans\", sans-serif",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "connector": {
+          "rect": {
+            "x": 64,
+            "y": 318.59375,
+            "width": 16,
+            "height": 16
+          },
+          "mode": "box",
+          "font": "14px \"DM Sans\", sans-serif",
+          "transform": "matrix(0, 1, -1, 0, 0, 0)",
+          "note": "CSS border box, not optical mass."
+        },
+        "candidate": {
+          "rect": {
+            "x": 61,
+            "y": 349.59375,
+            "width": 268,
+            "height": 38
+          },
+          "mode": "box",
+          "font": "14px \"DM Sans\", sans-serif",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [
+        {
+          "kind": "between",
+          "a": "previous",
+          "b": "connector",
+          "c": "candidate",
+          "axis": "y",
+          "minGap": 12,
+          "tolerance": 2,
+          "rationale": "The phone comparison stacks labeled value groups. Measure from each full group, including its label, to the arrow; measuring only code wrongly counts the candidate label as whitespace.",
+          "pass": true,
+          "observed": {
+            "beforeGap": 15,
+            "afterGap": 15,
+            "imbalance": 0
+          },
+          "expected": {
+            "minimumGap": 12,
+            "maximumImbalance": 2,
+            "axis": "y"
+          },
+          "note": "Use only when the connector belongs between this actual content pair; equal grid tracks may serve a different task."
+        }
+      ],
+      "screenshot": "phone-version-pair-0.png",
+      "cssSize": {
+        "width": 308,
+        "height": 162
+      }
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Authored contracts do not establish good visual design.",
+    "Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.",
+    "Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.",
+    "No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence."
+  ],
+  "browser": "157.0.8103.51",
+  "summary": {
+    "components": 1,
+    "checks": 1,
+    "failedContracts": 0,
+    "unverified": 0,
+    "status": "captured"
+  }
+}

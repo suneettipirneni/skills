@@ -1,0 +1,66 @@
+[
+  {
+    "url": "http://localhost:4321/",
+    "title": "Switchyard — release review",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-11-16T01:20:37.115Z",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "width": 1440,
+    "rootScroll": 1440,
+    "fonts": "loaded",
+    "mainText": "Release review / Candidate 2025.04.18\nLocal review\nAR\nRELEASE REVIEW\n/\nCANDIDATE 01\nReview the release\n\nCompare the candidate manifest with the current release before recording a decision.\n\nReview in ",
+    "heading": [
+      {
+        "text": "Review the release",
+        "size": "27px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Changes to review 26",
+        "size": "18px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Review checklist",
+        "size": "18px",
+        "lineHeight": "normal"
+      }
+    ]
+  },
+  {
+    "url": "http://localhost:4321/",
+    "title": "Switchyard — release review",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "capturedAt": "2026-11-16T01:20:38.258Z",
+    "errors": [],
+    "width": 390,
+    "rootScroll": 390,
+    "fonts": "loaded",
+    "mainText": "Release review / Candidate 2025.04.18\nAR\nRELEASE REVIEW\n/\nCANDIDATE 01\nReview the release\n\nCompare the candidate manifest with the current release before recording a decision.\n\nReview in progress\nCURR",
+    "heading": [
+      {
+        "text": "Review the release",
+        "size": "27px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Changes to review 26",
+        "size": "17px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Review checklist",
+        "size": "18px",
+        "lineHeight": "normal"
+      }
+    ]
+  }
+]

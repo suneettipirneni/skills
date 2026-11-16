@@ -28,3 +28,5 @@ Inspect copy and hierarchy semantically; measure line boxes and clipping with re
 
 - [Type roles, rhythm and optical clarity](../foundations/typography.md) — Assign role-based styles
 - [Meaning, structure and accessible interaction](../foundations/semantics.md) — Keep structure and accessible names meaningful
+
+- [Quiet content and purposeful subtraction](../foundations/quiet-content.md) — Remove semantic repetition while retaining labels, constraints and recovery

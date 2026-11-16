@@ -1,0 +1,56 @@
+[
+  {
+    "url": "http://localhost:4323/",
+    "title": "Daymark — Studio bookings",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-11-16T01:19:21.512Z",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "width": 1440,
+    "rootScroll": 1440,
+    "fonts": "loaded",
+    "mainText": "STUDIO SCHEDULE\n/\nNOVEMBER 2026\nMake room for good work.\n\nPlan your sessions, spaces, and equipment in one place.\n\nNew booking\nTHE WEEK AHEAD 01 / 01\nNovember 16–22 2026\nNew York time · EST\nWeek at a ",
+    "heading": [
+      {
+        "text": "Make room for good work.",
+        "size": "42px",
+        "lineHeight": "48.3px"
+      },
+      {
+        "text": "November 16–22 2026",
+        "size": "23px",
+        "lineHeight": "normal"
+      }
+    ]
+  },
+  {
+    "url": "http://localhost:4323/",
+    "title": "Daymark — Studio bookings",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "capturedAt": "2026-11-16T01:19:22.601Z",
+    "errors": [],
+    "width": 390,
+    "rootScroll": 390,
+    "fonts": "loaded",
+    "mainText": "STUDIO SCHEDULE\n/\nNOVEMBER 2026\nMake room for good work.\n\nPlan your sessions, spaces, and equipment in one place.\n\nNew booking\nTHE WEEK AHEAD 01 / 01\nNovember 16–22 2026\nNew York time · EST\nWeek at a ",
+    "heading": [
+      {
+        "text": "Make room for good work.",
+        "size": "31px",
+        "lineHeight": "35.65px"
+      },
+      {
+        "text": "November 16–22 2026",
+        "size": "20px",
+        "lineHeight": "normal"
+      }
+    ]
+  }
+]

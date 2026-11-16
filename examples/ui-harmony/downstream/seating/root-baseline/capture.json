@@ -1,0 +1,66 @@
+[
+  {
+    "url": "http://localhost:4331/",
+    "title": "Seating — The Field Notes Supper",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-11-16T01:34:31.577Z",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "width": 1440,
+    "rootScroll": 1440,
+    "fonts": "loaded",
+    "mainText": "Events\nThe Field Notes Supper\nSeating plan\nExport\nSave plan\nPRIVATE EVENT\n/\nSATURDAY, SEPTEMBER 19, 2026\nSeating plan\n\nGive everyone a place at the table.\n\nSEPTEMBER\n19\nSAT 2026\n24 / 35\nGuests seated\n",
+    "heading": [
+      {
+        "text": "Seating plan",
+        "size": "34px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Tables & seats 6",
+        "size": "17px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Table 01 · The garden",
+        "size": "17px",
+        "lineHeight": "normal"
+      }
+    ]
+  },
+  {
+    "url": "http://localhost:4331/",
+    "title": "Seating — The Field Notes Supper",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "capturedAt": "2026-11-16T01:34:32.663Z",
+    "errors": [],
+    "width": 390,
+    "rootScroll": 390,
+    "fonts": "loaded",
+    "mainText": "Seating plan\nExport\nSave plan\nPRIVATE EVENT\n/\nSATURDAY, SEPTEMBER 19, 2026\nSeating plan\n\nGive everyone a place at the table.\n\n24 / 35\nGuests seated\n11\nStill to seat\n6\nTables in plan\nTables & seats\nGue",
+    "heading": [
+      {
+        "text": "Seating plan",
+        "size": "30px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Tables & seats 6",
+        "size": "17px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Table 01 · The garden",
+        "size": "17px",
+        "lineHeight": "normal"
+      }
+    ]
+  }
+]

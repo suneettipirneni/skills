@@ -1,0 +1,56 @@
+[
+  {
+    "url": "http://localhost:4325/",
+    "title": "Index — Archive workspace",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-11-16T01:30:48.407Z",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "width": 1440,
+    "rootScroll": 1440,
+    "fonts": "loaded",
+    "mainText": "Workspace\nImport records\nSaved locally\nCOLLECTION TOOLS\nIMPORT\nImport records\n\nBring your archive together, one collection at a time.\n\nINDEX / 01\n01\nChoose file\n02\nMap columns\n03\nReview & import\n01 / ",
+    "heading": [
+      {
+        "text": "Import records",
+        "size": "38px",
+        "lineHeight": "42.56px"
+      },
+      {
+        "text": "Start with a file",
+        "size": "19px",
+        "lineHeight": "normal"
+      }
+    ]
+  },
+  {
+    "url": "http://localhost:4325/",
+    "title": "Index — Archive workspace",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "capturedAt": "2026-11-16T01:30:49.557Z",
+    "errors": [],
+    "width": 390,
+    "rootScroll": 390,
+    "fonts": "loaded",
+    "mainText": "Workspace\nImport records\nSaved locally\nCOLLECTION TOOLS\nIMPORT\nImport records\n\nBring your archive together, one collection at a time.\n\n01\nChoose file\n02\nMap columns\n03\nReview & import\n01 / SOURCE\nStar",
+    "heading": [
+      {
+        "text": "Import records",
+        "size": "33px",
+        "lineHeight": "36.96px"
+      },
+      {
+        "text": "Start with a file",
+        "size": "19px",
+        "lineHeight": "normal"
+      }
+    ]
+  }
+]

@@ -34,3 +34,5 @@ For scoped repairs, exit when representative content/states explain themselves, 
 [Resilient composition and CSS ownership](../foundations/resilient-css.md) applies Andy Bell’s CUBE CSS and browser-oriented design principles when content, containers or overrides expose fragile rules.
 
 For React generation, [headless primitives](../foundations/headless-react.md) can supply complex control behavior while the application owns its visual family. Recommend Base UI for a new suitable project; retain established primitives where appropriate.
+
+Run the [quiet-content pass](../foundations/quiet-content.md) on working states: remove repeated explanations and decorative framing, then recheck task context, truthful feedback and recovery.

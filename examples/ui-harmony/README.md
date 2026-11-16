@@ -1,4 +1,4 @@
-# Bespoke React generation examples
+# Bespoke interface generation examples
 
 These original local prototypes were generated in separate fresh-context conversations using UI Harmony and then refined through independent task, visual and adversarial review. They demonstrate transfer of interface craft to different domain workflows. They do not copy an existing product screen.
 
@@ -28,3 +28,7 @@ node verify-cue.mjs
 Outputs go to each app's ignored `verification-output` directory. `OUT` overrides the output directory; `TARGET_URL` overrides the target origin. Tests create fictional records in fresh isolated browser contexts. They do not use a personal browser profile. The original review artifacts and before/final captures are under `evidence`. Generator-specific review histories are in each app's EVALUATION.md; paths there identify the historical evaluation workspace. Third-party reference captures are deliberately excluded.
 
 Read the skill's React generation validation report for acceptance criteria, observed failures, corrections and limits. Passing these scripts is not a universal accessibility, usability or aesthetic certification.
+
+## Eight additional workflow studies
+
+[Switchyard, Crate, Daymark, Gloss, Index, Traverse, Seating and Proof](downstream/README.md) add fresh-context Terra high builds, deeper task states, quieter-content revisions and adversarial diagnostics. [Open their screenshot gallery](downstream/gallery.html). Traverse also exercises plain HTML/CSS/JavaScript.

@@ -1,0 +1,157 @@
+[
+  {
+    "app": "crate",
+    "at": "2026-11-16T01:56:07.054Z",
+    "checks": [
+      {
+        "name": "selected work visible and focused",
+        "pass": true,
+        "evidence": {
+          "active": true,
+          "text": "Cloud Atlas for a Small City",
+          "y": 408
+        }
+      },
+      {
+        "name": "Back restores query, scroll and focused row",
+        "pass": true,
+        "evidence": {
+          "before": 689,
+          "after": {
+            "active": true,
+            "y": 588.59375,
+            "bottom": 662.96875,
+            "scroll": 689
+          }
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "app": "gloss",
+    "at": "2026-11-16T01:56:07.843Z",
+    "checks": [
+      {
+        "name": "selected editor visible with focus in detail",
+        "pass": true,
+        "evidence": {
+          "detail": {
+            "y": 127,
+            "title": "task.empty_body",
+            "focus": "back-to-list"
+          },
+          "input": {
+            "x": 33,
+            "y": 574.171875,
+            "width": 324,
+            "height": 112
+          }
+        }
+      },
+      {
+        "name": "Back retains search/filter and returns visible row focus",
+        "pass": true,
+        "evidence": {
+          "before": {
+            "window": 125,
+            "list": 60
+          },
+          "after": {
+            "active": true,
+            "y": 753,
+            "bottom": 818,
+            "window": 125,
+            "list": 60
+          }
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "app": "switchyard",
+    "at": "2026-11-16T01:56:08.694Z",
+    "checks": [
+      {
+        "name": "phone diff precedes checklist",
+        "pass": true,
+        "evidence": {
+          "diff": 485,
+          "checklist": 3137
+        }
+      },
+      {
+        "name": "phone comparison gaps are15/15",
+        "pass": true,
+        "evidence": {
+          "axis": "y",
+          "before": 15,
+          "after": 15,
+          "client": 298,
+          "scroll": 298
+        }
+      },
+      {
+        "name": "long value stress wraps without horizontal overflow",
+        "pass": true,
+        "evidence": {
+          "client": 298,
+          "scroll": 298,
+          "values": [
+            {
+              "width": 268,
+              "scroll": 268,
+              "height": 48,
+              "fragments": 3
+            },
+            {
+              "width": 268,
+              "scroll": 268,
+              "height": 48,
+              "fragments": 3
+            }
+          ]
+        }
+      },
+      {
+        "name": "desktop comparison gaps are15/15",
+        "pass": true,
+        "evidence": {
+          "axis": "x",
+          "before": 15,
+          "after": 15,
+          "client": 478,
+          "scroll": 478
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "app": "daymark",
+    "at": "2026-11-16T01:56:09.510Z",
+    "checks": [
+      {
+        "name": "quiet schedule preserves timezone and hours",
+        "pass": true,
+        "evidence": {
+          "heading": "Studio schedule",
+          "timezone": "New York time · EST",
+          "hours": "Studio hours 8 AM–6 PM"
+        }
+      },
+      {
+        "name": "conflict explains resource and occupied time",
+        "pass": true,
+        "evidence": "Studio A is already booked 9:00 AM–11:30 AM by Maya Chen. Choose another time or resource."
+      },
+      {
+        "name": "changing available room recovers without losing entered session",
+        "pass": true,
+        "evidence": "Booking added to the schedule."
+      }
+    ],
+    "errors": []
+  }
+]

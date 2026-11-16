@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "url": "http://127.0.0.1:4330/",
+  "createdAt": "2026-11-16T01:49:45.592Z",
+  "config": {
+    "viewports": [
+      {
+        "name": "desktop-1x",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      }
+    ],
+    "components": [
+      {
+        "name": "seek-controls",
+        "selector": ".transport > .icon-button",
+        "minCount": 2,
+        "maxCount": 2,
+        "parts": {
+          "frame": {
+            "selector": "svg"
+          },
+          "arc": {
+            "selector": "[data-detail=arc]",
+            "measure": "svg"
+          },
+          "number": {
+            "selector": "[data-detail=number]",
+            "measure": "svg"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "arc",
+            "b": "number",
+            "minGap": 1,
+            "rationale": "The ten-second numeral must remain visually distinct from the circular arrow stroke."
+          },
+          {
+            "kind": "center",
+            "a": "number",
+            "b": "frame",
+            "offsetX": 0.17500000000000002,
+            "offsetY": 2.3333333333333335,
+            "tolerance": 0.5,
+            "rationale": "The vector numeral is centered in its own 24-unit symbol with a documented local optical offset."
+          },
+          {
+            "kind": "inside",
+            "a": "number",
+            "b": "frame",
+            "region": {
+              "x": 0.2916666666666667,
+              "y": 0.375,
+              "width": 0.4583333333333333,
+              "height": 0.4166666666666667
+            },
+            "tolerance": 0.25,
+            "rationale": "Keep numeral geometry in the designed inner window; the raster clearance separately checks actual stroke paint."
+          }
+        ]
+      }
+    ]
+  },
+  "cases": [
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "component": "seek-controls",
+      "index": 0,
+      "parts": {
+        "frame": {
+          "rect": {
+            "x": 159,
+            "y": 276,
+            "width": 28,
+            "height": 28
+          },
+          "mode": "box",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "arc": {
+          "rect": {
+            "x": 162.5,
+            "y": 279.5,
+            "width": 21,
+            "height": 21
+          },
+          "mode": "svg",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "none",
+          "note": "Transformed SVG geometric bounds; stroke/filter ink not included."
+        },
+        "number": {
+          "rect": {
+            "x": 169.14999977747598,
+            "y": 288.8333333333333,
+            "width": 8.050000667572021,
+            "height": 7
+          },
+          "mode": "svg",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "none",
+          "note": "Transformed SVG geometric bounds; stroke/filter ink not included."
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "arc",
+          "b": "number",
+          "minGap": 1,
+          "rationale": "The ten-second numeral must remain visually distinct from the circular arrow stroke.",
+          "status": "measured",
+          "pass": true,
+          "observed": {
+            "overlapPixels": 0,
+            "minimumClearanceCssPx": 1,
+            "clearanceAtLeastCssPx": null,
+            "closestPaintCssPx": {
+              "a": {
+                "x": 19,
+                "y": 18
+              },
+              "b": {
+                "x": 20,
+                "y": 20
+              }
+            },
+            "aPaintPixels": 196,
+            "bPaintPixels": 59
+          },
+          "expected": {
+            "minimumClearanceCssPx": 1
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        },
+        {
+          "kind": "center",
+          "a": "number",
+          "b": "frame",
+          "offsetX": 0.17500000000000002,
+          "offsetY": 2.3333333333333335,
+          "tolerance": 0.5,
+          "rationale": "The vector numeral is centered in its own 24-unit symbol with a documented local optical offset.",
+          "pass": true,
+          "observed": {
+            "deltaX": 1.1126199409017268e-7,
+            "deltaY": -1.9095836023552692e-14
+          },
+          "expected": {
+            "offsetX": 0.17500000000000002,
+            "offsetY": 2.3333333333333335,
+            "tolerance": 0.5
+          }
+        },
+        {
+          "kind": "inside",
+          "a": "number",
+          "b": "frame",
+          "region": {
+            "x": 0.2916666666666667,
+            "y": 0.375,
+            "width": 0.4583333333333333,
+            "height": 0.4166666666666667
+          },
+          "tolerance": 0.25,
+          "rationale": "Keep numeral geometry in the designed inner window; the raster clearance separately checks actual stroke paint.",
+          "pass": true,
+          "observed": {
+            "clearance": {
+              "left": 1.9833331108093262,
+              "top": 2.3333333333333144,
+              "right": 2.799999554951995,
+              "bottom": 2.3333333333333712
+            }
+          },
+          "expected": {
+            "safeRect": {
+              "x": 167.16666666666666,
+              "y": 286.5,
+              "width": 12.833333333333332,
+              "height": 11.666666666666668
+            },
+            "tolerance": 0.25
+          }
+        }
+      ],
+      "screenshot": "desktop-1x-seek-controls-0.png",
+      "cssSize": {
+        "width": 48,
+        "height": 44
+      }
+    },
+    {
+      "viewport": {
+        "name": "desktop-1x",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "component": "seek-controls",
+      "index": 1,
+      "parts": {
+        "frame": {
+          "rect": {
+            "x": 261,
+            "y": 276,
+            "width": 28,
+            "height": 28
+          },
+          "mode": "box",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "arc": {
+          "rect": {
+            "x": 264.5,
+            "y": 279.5,
+            "width": 21,
+            "height": 21
+          },
+          "mode": "svg",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "matrix(-1, 0, 0, 1, 24, 0)",
+          "note": "Transformed SVG geometric bounds; stroke/filter ink not included."
+        },
+        "number": {
+          "rect": {
+            "x": 271.149999777476,
+            "y": 288.8333333333333,
+            "width": 8.050000667572021,
+            "height": 7
+          },
+          "mode": "svg",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "none",
+          "note": "Transformed SVG geometric bounds; stroke/filter ink not included."
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "arc",
+          "b": "number",
+          "minGap": 1,
+          "rationale": "The ten-second numeral must remain visually distinct from the circular arrow stroke.",
+          "status": "measured",
+          "pass": true,
+          "observed": {
+            "overlapPixels": 0,
+            "minimumClearanceCssPx": 1,
+            "clearanceAtLeastCssPx": null,
+            "closestPaintCssPx": {
+              "a": {
+                "x": 29,
+                "y": 29
+              },
+              "b": {
+                "x": 28,
+                "y": 27
+              }
+            },
+            "aPaintPixels": 193,
+            "bPaintPixels": 59
+          },
+          "expected": {
+            "minimumClearanceCssPx": 1
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        },
+        {
+          "kind": "center",
+          "a": "number",
+          "b": "frame",
+          "offsetX": 0.17500000000000002,
+          "offsetY": 2.3333333333333335,
+          "tolerance": 0.5,
+          "rationale": "The vector numeral is centered in its own 24-unit symbol with a documented local optical offset.",
+          "pass": true,
+          "observed": {
+            "deltaX": 1.1126202251188211e-7,
+            "deltaY": -1.9095836023552692e-14
+          },
+          "expected": {
+            "offsetX": 0.17500000000000002,
+            "offsetY": 2.3333333333333335,
+            "tolerance": 0.5
+          }
+        },
+        {
+          "kind": "inside",
+          "a": "number",
+          "b": "frame",
+          "region": {
+            "x": 0.2916666666666667,
+            "y": 0.375,
+            "width": 0.4583333333333333,
+            "height": 0.4166666666666667
+          },
+          "tolerance": 0.25,
+          "rationale": "Keep numeral geometry in the designed inner window; the raster clearance separately checks actual stroke paint.",
+          "pass": true,
+          "observed": {
+            "clearance": {
+              "left": 1.9833331108093262,
+              "top": 2.3333333333333144,
+              "right": 2.7999995549519667,
+              "bottom": 2.3333333333333712
+            }
+          },
+          "expected": {
+            "safeRect": {
+              "x": 269.1666666666667,
+              "y": 286.5,
+              "width": 12.833333333333332,
+              "height": 11.666666666666668
+            },
+            "tolerance": 0.25
+          }
+        }
+      ],
+      "screenshot": "desktop-1x-seek-controls-1.png",
+      "cssSize": {
+        "width": 48,
+        "height": 44
+      }
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "seek-controls",
+      "index": 0,
+      "parts": {
+        "frame": {
+          "rect": {
+            "x": 43,
+            "y": 261.5,
+            "width": 28,
+            "height": 28
+          },
+          "mode": "box",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "arc": {
+          "rect": {
+            "x": 46.5,
+            "y": 265,
+            "width": 21,
+            "height": 21
+          },
+          "mode": "svg",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "none",
+          "note": "Transformed SVG geometric bounds; stroke/filter ink not included."
+        },
+        "number": {
+          "rect": {
+            "x": 53.149999777476,
+            "y": 274.3333333333333,
+            "width": 8.050000667572021,
+            "height": 7
+          },
+          "mode": "svg",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "none",
+          "note": "Transformed SVG geometric bounds; stroke/filter ink not included."
+        }
+      },
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "arc",
+          "b": "number",
+          "minGap": 1,
+          "rationale": "The ten-second numeral must remain visually distinct from the circular arrow stroke.",
+          "status": "measured",
+          "pass": true,
+          "observed": {
+            "overlapPixels": 0,
+            "minimumClearanceCssPx": 1.4142135623730951,
+            "clearanceAtLeastCssPx": null,
+            "closestPaintCssPx": {
+              "a": {
+                "x": 29,
+                "y": 30.5
+              },
+              "b": {
+                "x": 27.5,
+                "y": 29
+              }
+            },
+            "aPaintPixels": 654,
+            "bPaintPixels": 183
+          },
+          "expected": {
+            "minimumClearanceCssPx": 1
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        },
+        {
+          "kind": "center",
+          "a": "number",
+          "b": "frame",
+          "offsetX": 0.17500000000000002,
+          "offsetY": 2.3333333333333335,
+          "tolerance": 0.5,
+          "rationale": "The vector numeral is centered in its own 24-unit symbol with a documented local optical offset.",
+          "pass": true,
+          "observed": {
+            "deltaX": 1.1126200830102739e-7,
+            "deltaY": -1.9095836023552692e-14
+          },
+          "expected": {
+            "offsetX": 0.17500000000000002,
+            "offsetY": 2.3333333333333335,
+            "tolerance": 0.5
+          }
+        },
+        {
+          "kind": "inside",
+          "a": "number",
+          "b": "frame",
+          "region": {
+            "x": 0.2916666666666667,
+            "y": 0.375,
+            "width": 0.4583333333333333,
+            "height": 0.4166666666666667
+          },
+          "tolerance": 0.25,
+          "rationale": "Keep numeral geometry in the designed inner window; the raster clearance separately checks actual stroke paint.",
+          "pass": true,
+          "observed": {
+            "clearance": {
+              "left": 1.9833331108093262,
+              "top": 2.3333333333333144,
+              "right": 2.799999554951981,
+              "bottom": 2.3333333333333712
+            }
+          },
+          "expected": {
+            "safeRect": {
+              "x": 51.16666666666667,
+              "y": 272,
+              "width": 12.833333333333332,
+              "height": 11.666666666666668
+            },
+            "tolerance": 0.25
+          }
+        }
+      ],
+      "screenshot": "phone-2x-seek-controls-0.png",
+      "cssSize": {
+        "width": 48,
+        "height": 44
+      }
+    },
+    {
+      "viewport": {
+        "name": "phone-2x",
+        "width": 390,
+        "height": 844,
+        "dpr": 2
+      },
+      "component": "seek-controls",
+      "index": 1,
+      "parts": {
+        "frame": {
+          "rect": {
+            "x": 128,
+            "y": 261.5,
+            "width": 28,
+            "height": 28
+          },
+          "mode": "box",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "arc": {
+          "rect": {
+            "x": 131.5,
+            "y": 265,
+            "width": 21,
+            "height": 21
+          },
+          "mode": "svg",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "matrix(-1, 0, 0, 1, 24, 0)",
+          "note": "Transformed SVG geometric bounds; stroke/filter ink not included."
+        },
+        "number": {
+          "rect": {
+            "x": 138.14999977747598,
+            "y": 274.3333333333333,
+            "width": 8.050000667572021,
+            "height": 7
+          },
+          "mode": "svg",
+          "font": "16px \"DM Sans\", -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "transform": "none",
+          "note": "Transformed SVG geometric bounds; stroke/filter ink not included."
+        }
+      },
+      "checks": [],
+      "screenshot": "phone-2x-seek-controls-1.png",
+      "cssSize": {
+        "width": 48,
+        "height": 44
+      },
+      "error": "Component paint changed at 4 pixels during isolation; inspect original/restored crops and capture a stable state"
+    }
+  ],
+  "errors": [
+    {
+      "viewport": "phone-2x",
+      "component": "seek-controls",
+      "index": 1,
+      "error": "Component paint changed at 4 pixels during isolation; inspect original/restored crops and capture a stable state"
+    }
+  ],
+  "limits": [
+    "Authored contracts do not establish good visual design.",
+    "Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.",
+    "Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.",
+    "No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence."
+  ],
+  "browser": "157.0.8103.51",
+  "summary": {
+    "components": 4,
+    "checks": 9,
+    "failedContracts": 0,
+    "unverified": 1,
+    "status": "incomplete"
+  }
+}

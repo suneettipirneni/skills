@@ -136,3 +136,9 @@ Use the [Untitled UI anchor](preferences/untitled-ui.md) for semantic craft feed
 ## Modern SaaS preference scoring
 
 Use [style scoring](preferences/style-scoring.md) for the user's preferred visual direction. `scripts/style-score.mjs` validates evidence-backed manual ratings, calculates the configured weighted fit, preserves functional gates and refuses mismatched comparisons. `scripts/review.mjs` accepts optional `styleReview`. This is separate from automated browser findings. Start from [the template](../assets/style-review-template.json).
+
+## Small details and paired spacing
+
+Use [detail audit](detail-audit.md) when a compound icon collides, a glyph appears displaced, or a connector attaches to the wrong value. It captures actual-size and enlarged evidence and tests explicitly authored local relationships; it is separate from a general accessibility or optical-quality verdict.
+
+For redundant text and overly busy framing, use the [quiet-content semantic review](foundations/quiet-content.md). Counts and repeated strings can identify candidates, but cannot determine whether a label, warning or explanation is unnecessary.

@@ -1,0 +1,38 @@
+- complementary:
+  - strong: index
+  - text: ARCHIVE WORKSPACE
+  - navigation "Main navigation":
+    - button "Import records":
+      - img
+      - text: Import records
+    - button "Catalog 3":
+      - img
+      - text: Catalog 3
+    - button "Import history":
+      - img
+      - text: Import history
+- main:
+  - text: Workspace
+  - img
+  - strong: Import records
+  - status: Local workspace
+  - heading "Import records" [level=1]
+  - button "01 Choose file":
+    - text: 01 Choose file
+    - img
+  - button "02 Map columns" [disabled]:
+    - text: 02 Map columns
+    - img
+  - button "03 Review & import" [disabled]
+  - heading "Start with a file" [level=2]
+  - paragraph: Choose a CSV export from your existing catalog.
+  - button "Choose a CSV file or drag a file here to get started CSV files only · No file leaves this device":
+    - img
+    - strong: Choose a CSV file
+    - text: or drag a file here to get started CSV files only · No file leaves this device
+  - img
+  - text: Just exploring?
+  - paragraph: Try a sample collection with seven archive records.
+  - button "Use sample":
+    - text: Use sample
+    - img

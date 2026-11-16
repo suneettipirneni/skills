@@ -1,0 +1,94 @@
+- complementary:
+  - text: ✳ traverse GALLERY OPERATIONS WORKSPACE N
+  - strong: Northline Gallery
+  - text: Opening walkthrough ⌄
+  - navigation "Main navigation":
+    - button "☷ Walkthrough 0/30"
+    - button "◉ Issues 0"
+    - button "✓ Review & history"
+  - text: NG
+  - strong: Opening team
+  - text: Saved on this device
+- banner: Northline Gallery / Opening walkthrough Saved locally NG
+- main:
+  - text: OPENING WALKTHROUGH / IN PROGRESS
+  - heading "A thoughtful opening, from the first step." [level=1]:
+    - text: A thoughtful opening,
+    - emphasis: from the first step.
+  - paragraph: Make one final pass through the gallery before welcoming visitors.
+  - button "Review walkthrough ↗"
+  - strong: 0 of 30 checks recorded
+  - text: 30 remaining THE ROUTE
+  - heading "Walkthrough rooms" [level=2]
+  - text: "06"
+  - paragraph: Choose a room to start or pick up where you left off.
+  - button "01 Arrival & entrance 0 of 5 checked ›":
+    - text: "01"
+    - strong: Arrival & entrance
+    - text: 0 of 5 checked ›
+  - button "02 Gallery 01 0 of 5 checked ›":
+    - text: "02"
+    - strong: Gallery 01
+    - text: 0 of 5 checked ›
+  - button "03 Gallery 02 0 of 5 checked ›":
+    - text: "03"
+    - strong: Gallery 02
+    - text: 0 of 5 checked ›
+  - button "04 Project studio 0 of 5 checked ›":
+    - text: "04"
+    - strong: Project studio
+    - text: 0 of 5 checked ›
+  - button "05 Visitor facilities 0 of 5 checked ›":
+    - text: "05"
+    - strong: Visitor facilities
+    - text: 0 of 5 checked ›
+  - button "06 Safety & closing loop 0 of 5 checked ›":
+    - text: "06"
+    - strong: Safety & closing loop
+    - text: 0 of 5 checked ›
+  - text: ◌
+  - strong: Work at your own pace
+  - text: Your progress stays on this device. ROOM 01 · Street level · Front of house
+  - heading "Arrival & entrance" [level=2]
+  - paragraph: The first impression begins before the doors open. Check the approach, entry and welcome point as a visitor would experience them.
+  - strong: 0/5
+  - text: CHECKED
+  - heading "Room checks" [level=3]
+  - paragraph: Select a check to record what you found.
+  - text: 5 CHECKS
+  - button "01 Approach is clear Not yet checked ›":
+    - text: "01"
+    - strong: Approach is clear
+    - text: Not yet checked ›
+  - button "02 Entrance signage is in place Not yet checked ›":
+    - text: "02"
+    - strong: Entrance signage is in place
+    - text: Not yet checked ›
+  - button "03 Doors and access Not yet checked ›":
+    - text: "03"
+    - strong: Doors and access
+    - text: Not yet checked ›
+  - button "04 Welcome desk is ready Not yet checked ›":
+    - text: "04"
+    - strong: Welcome desk is ready
+    - text: Not yet checked ›
+  - button "05 Visitor flow is intuitive Not yet checked ›":
+    - text: "05"
+    - strong: Visitor flow is intuitive
+    - text: Not yet checked ›
+  - text: CHECK 01 / 5 REQUIRED
+  - heading "Approach is clear" [level=3]
+  - paragraph: Walk the full route from the pavement to the entrance. Remove trip hazards, loose packaging and anything that narrows the accessible path.
+  - group "What did you find?":
+    - text: What did you find?
+    - radio "✓ Pass"
+    - text: ✓ Pass
+    - radio "! Issue"
+    - text: "! Issue"
+    - radio "– N/A"
+    - text: – N/A Note OPTIONAL
+    - textbox "Note OPTIONAL":
+      - /placeholder: Add context for the next person...
+    - paragraph: Notes stay with this check on this device.
+    - alert
+    - button "Save check →"

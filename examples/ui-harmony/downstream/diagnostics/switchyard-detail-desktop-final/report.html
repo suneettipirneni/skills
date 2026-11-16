@@ -1,0 +1,72 @@
+<!doctype html><meta charset="utf-8"><title>Component detail diagnostics</title><style>body{font:14px/1.5 system-ui;margin:32px;color:#222}article{border-top:1px solid #ccc;padding:24px 0}.zoom{image-rendering:pixelated;max-width:100%;object-fit:contain;object-position:left}pre{white-space:pre-wrap}img{border:1px solid #ddd}</style><h1>Component detail diagnostics</h1><p>{&quot;components&quot;:1,&quot;checks&quot;:1,&quot;failedContracts&quot;:0,&quot;unverified&quot;:0,&quot;status&quot;:&quot;captured&quot;}</p><p>Contract agreement is not an optical-quality verdict. Review actual-size crops and limits.</p><article><h2>desktop · version-pair #0</h2><p>Actual CSS display size</p><img src="desktop-version-pair-0.png" width="488" height="78" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-version-pair-0.png" width="3904" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;previous&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 496,
+        &quot;y&quot;: 416.125,
+        &quot;width&quot;: 50.40625,
+        &quot;height&quot;: 16
+      },
+      &quot;mode&quot;: &quot;text&quot;,
+      &quot;font&quot;: &quot;12px \&quot;DM Mono\&quot;&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;DOM text-fragment rectangle, not glyph ink.&quot;
+    },
+    &quot;connector&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 561.40625,
+        &quot;y&quot;: 405.125,
+        &quot;width&quot;: 16,
+        &quot;height&quot;: 16
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;14px \&quot;DM Sans\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;candidate&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 592.40625,
+        &quot;y&quot;: 416.125,
+        &quot;width&quot;: 50.40625,
+        &quot;height&quot;: 16
+      },
+      &quot;mode&quot;: &quot;text&quot;,
+      &quot;font&quot;: &quot;12px \&quot;DM Mono\&quot;&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;DOM text-fragment rectangle, not glyph ink.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;between&quot;,
+      &quot;a&quot;: &quot;previous&quot;,
+      &quot;b&quot;: &quot;connector&quot;,
+      &quot;c&quot;: &quot;candidate&quot;,
+      &quot;axis&quot;: &quot;x&quot;,
+      &quot;minGap&quot;: 12,
+      &quot;tolerance&quot;: 2,
+      &quot;rationale&quot;: &quot;The arrow connects the actual previous/candidate values; its two local gaps should read as one compact pair.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;beforeGap&quot;: 15,
+        &quot;afterGap&quot;: 15,
+        &quot;imbalance&quot;: 0
+      },
+      &quot;expected&quot;: {
+        &quot;minimumGap&quot;: 12,
+        &quot;maximumImbalance&quot;: 2,
+        &quot;axis&quot;: &quot;x&quot;
+      },
+      &quot;note&quot;: &quot;Use only when the connector belongs between this actual content pair; equal grid tracks may serve a different task.&quot;
+    }
+  ]
+}</pre></article><h2>Coverage and limits</h2><pre>{
+  &quot;errors&quot;: [],
+  &quot;limits&quot;: [
+    &quot;Authored contracts do not establish good visual design.&quot;,
+    &quot;Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.&quot;,
+    &quot;Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.&quot;,
+    &quot;No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence.&quot;
+  ]
+}</pre>

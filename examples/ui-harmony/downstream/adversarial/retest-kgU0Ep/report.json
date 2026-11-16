@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "url": "file:///private/tmp/ui-harmony-downstream/adversarial/detail-fixture.html",
+  "createdAt": "2026-11-16T01:46:19.195Z",
+  "config": {
+    "viewports": [
+      {
+        "name": "one",
+        "width": 800,
+        "height": 600,
+        "dpr": 1
+      }
+    ],
+    "components": [
+      {
+        "name": "visible-child",
+        "selector": "#visible-child",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "Check all selected component paint."
+          }
+        ]
+      },
+      {
+        "name": "outside",
+        "selector": "#outside",
+        "parts": {
+          "a": {
+            "selector": ".a"
+          },
+          "b": {
+            "selector": ".b"
+          }
+        },
+        "checks": [
+          {
+            "kind": "ink-gap",
+            "a": "a",
+            "b": "b",
+            "minGap": 2,
+            "rationale": "Check all selected component paint."
+          }
+        ]
+      }
+    ]
+  },
+  "cases": [
+    {
+      "viewport": {
+        "name": "one",
+        "width": 800,
+        "height": 600,
+        "dpr": 1
+      },
+      "component": "visible-child",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 51,
+            "y": 61,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 161,
+            "y": 61,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "one-visible-child-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 70
+      },
+      "error": "locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:2:167)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": {
+        "name": "one",
+        "width": 800,
+        "height": 600,
+        "dpr": 1
+      },
+      "component": "outside",
+      "index": 0,
+      "parts": {
+        "a": {
+          "rect": {
+            "x": 51,
+            "y": 163,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "b": {
+          "rect": {
+            "x": 161,
+            "y": 163,
+            "width": 20,
+            "height": 20
+          },
+          "mode": "box",
+          "font": "16px Times",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        }
+      },
+      "checks": [],
+      "screenshot": "one-outside-0.png",
+      "cssSize": {
+        "width": 170,
+        "height": 70
+      },
+      "error": "locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:6:148)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    }
+  ],
+  "errors": [
+    {
+      "viewport": "one",
+      "component": "visible-child",
+      "index": 0,
+      "error": "locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:2:167)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "viewport": "one",
+      "component": "outside",
+      "index": 0,
+      "error": "locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), <anonymous>:6:148)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    }
+  ],
+  "limits": [
+    "Authored contracts do not establish good visual design.",
+    "Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.",
+    "Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.",
+    "No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence."
+  ],
+  "browser": "157.0.8103.51",
+  "summary": {
+    "components": 2,
+    "checks": 0,
+    "failedContracts": 0,
+    "unverified": 2,
+    "status": "incomplete"
+  }
+}

@@ -1,0 +1,493 @@
+<!doctype html><meta charset="utf-8"><title>Component detail diagnostics</title><style>body{font:14px/1.5 system-ui;margin:32px;color:#222}article{border-top:1px solid #ccc;padding:24px 0}.zoom{image-rendering:pixelated;max-width:100%;object-fit:contain;object-position:left}pre{white-space:pre-wrap}img{border:1px solid #ddd}</style><h1>Component detail diagnostics</h1><p>{&quot;components&quot;:4,&quot;checks&quot;:12,&quot;failedContracts&quot;:1,&quot;unverified&quot;:0,&quot;status&quot;:&quot;captured&quot;}</p><p>Contract agreement is not an optical-quality verdict. Review actual-size crops and limits.</p><article><h2>desktop-1x · seek-controls #0</h2><p>Actual CSS display size</p><img src="desktop-1x-seek-controls-0.png" width="44" height="44" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-seek-controls-0.png" width="352" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;frame&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 159,
+        &quot;y&quot;: 278,
+        &quot;width&quot;: 24,
+        &quot;height&quot;: 24
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;arc&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 162,
+        &quot;y&quot;: 281,
+        &quot;width&quot;: 18,
+        &quot;height&quot;: 18
+      },
+      &quot;mode&quot;: &quot;svg&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;Transformed SVG geometric bounds; stroke/filter ink not included.&quot;
+    },
+    &quot;number&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 167.69999980926514,
+        &quot;y&quot;: 288.5,
+        &quot;width&quot;: 6.90000057220459,
+        &quot;height&quot;: 5
+      },
+      &quot;mode&quot;: &quot;svg&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;Transformed SVG geometric bounds; stroke/filter ink not included.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;arc&quot;,
+      &quot;b&quot;: &quot;number&quot;,
+      &quot;minGap&quot;: 1,
+      &quot;rationale&quot;: &quot;The ten-second numeral must remain visually distinct from the circular arrow stroke.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 0,
+        &quot;minimumClearanceCssPx&quot;: 1,
+        &quot;clearanceAtLeastCssPx&quot;: null,
+        &quot;closestPaintCssPx&quot;: {
+          &quot;a&quot;: {
+            &quot;x&quot;: 17,
+            &quot;y&quot;: 18
+          },
+          &quot;b&quot;: {
+            &quot;x&quot;: 18,
+            &quot;y&quot;: 20
+          }
+        },
+        &quot;aPaintPixels&quot;: 145,
+        &quot;bPaintPixels&quot;: 42
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 1
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;center&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;frame&quot;,
+      &quot;offsetX&quot;: 0.15,
+      &quot;offsetY&quot;: 1,
+      &quot;tolerance&quot;: 0.5,
+      &quot;rationale&quot;: &quot;The vector numeral is centered in its own 24-unit symbol with a documented local optical offset.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;deltaX&quot;: 9.536743164617612e-8,
+        &quot;deltaY&quot;: 0
+      },
+      &quot;expected&quot;: {
+        &quot;offsetX&quot;: 0.15,
+        &quot;offsetY&quot;: 1,
+        &quot;tolerance&quot;: 0.5
+      }
+    },
+    {
+      &quot;kind&quot;: &quot;inside&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;frame&quot;,
+      &quot;region&quot;: {
+        &quot;x&quot;: 0.2916666666666667,
+        &quot;y&quot;: 0.375,
+        &quot;width&quot;: 0.4583333333333333,
+        &quot;height&quot;: 0.3333333333333333
+      },
+      &quot;tolerance&quot;: 0.25,
+      &quot;rationale&quot;: &quot;Keep numeral geometry in the designed inner window; the raster clearance separately checks actual stroke paint.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;clearance&quot;: {
+          &quot;left&quot;: 1.6999998092651367,
+          &quot;top&quot;: 1.5,
+          &quot;right&quot;: 2.3999996185302734,
+          &quot;bottom&quot;: 1.5
+        }
+      },
+      &quot;expected&quot;: {
+        &quot;safeRect&quot;: {
+          &quot;x&quot;: 166,
+          &quot;y&quot;: 287,
+          &quot;width&quot;: 11,
+          &quot;height&quot;: 8
+        },
+        &quot;tolerance&quot;: 0.25
+      }
+    }
+  ]
+}</pre></article><article><h2>desktop-1x · seek-controls #1</h2><p>Actual CSS display size</p><img src="desktop-1x-seek-controls-1.png" width="44" height="44" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="desktop-1x-seek-controls-1.png" width="352" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;frame&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 257,
+        &quot;y&quot;: 278,
+        &quot;width&quot;: 24,
+        &quot;height&quot;: 24
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;arc&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 260,
+        &quot;y&quot;: 281,
+        &quot;width&quot;: 18,
+        &quot;height&quot;: 18
+      },
+      &quot;mode&quot;: &quot;svg&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;matrix(-1, 0, 0, 1, 24, 0)&quot;,
+      &quot;note&quot;: &quot;Transformed SVG geometric bounds; stroke/filter ink not included.&quot;
+    },
+    &quot;number&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 265.69999980926514,
+        &quot;y&quot;: 288.5,
+        &quot;width&quot;: 6.90000057220459,
+        &quot;height&quot;: 5
+      },
+      &quot;mode&quot;: &quot;svg&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;Transformed SVG geometric bounds; stroke/filter ink not included.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;arc&quot;,
+      &quot;b&quot;: &quot;number&quot;,
+      &quot;minGap&quot;: 1,
+      &quot;rationale&quot;: &quot;The ten-second numeral must remain visually distinct from the circular arrow stroke.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: false,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 0,
+        &quot;minimumClearanceCssPx&quot;: 0,
+        &quot;clearanceAtLeastCssPx&quot;: null,
+        &quot;closestPaintCssPx&quot;: {
+          &quot;a&quot;: {
+            &quot;x&quot;: 25,
+            &quot;y&quot;: 18
+          },
+          &quot;b&quot;: {
+            &quot;x&quot;: 24,
+            &quot;y&quot;: 19
+          }
+        },
+        &quot;aPaintPixels&quot;: 144,
+        &quot;bPaintPixels&quot;: 42
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 1
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;center&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;frame&quot;,
+      &quot;offsetX&quot;: 0.15,
+      &quot;offsetY&quot;: 1,
+      &quot;tolerance&quot;: 0.5,
+      &quot;rationale&quot;: &quot;The vector numeral is centered in its own 24-unit symbol with a documented local optical offset.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;deltaX&quot;: 9.536743164617612e-8,
+        &quot;deltaY&quot;: 0
+      },
+      &quot;expected&quot;: {
+        &quot;offsetX&quot;: 0.15,
+        &quot;offsetY&quot;: 1,
+        &quot;tolerance&quot;: 0.5
+      }
+    },
+    {
+      &quot;kind&quot;: &quot;inside&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;frame&quot;,
+      &quot;region&quot;: {
+        &quot;x&quot;: 0.2916666666666667,
+        &quot;y&quot;: 0.375,
+        &quot;width&quot;: 0.4583333333333333,
+        &quot;height&quot;: 0.3333333333333333
+      },
+      &quot;tolerance&quot;: 0.25,
+      &quot;rationale&quot;: &quot;Keep numeral geometry in the designed inner window; the raster clearance separately checks actual stroke paint.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;clearance&quot;: {
+          &quot;left&quot;: 1.6999998092651367,
+          &quot;top&quot;: 1.5,
+          &quot;right&quot;: 2.3999996185302734,
+          &quot;bottom&quot;: 1.5
+        }
+      },
+      &quot;expected&quot;: {
+        &quot;safeRect&quot;: {
+          &quot;x&quot;: 264,
+          &quot;y&quot;: 287,
+          &quot;width&quot;: 11,
+          &quot;height&quot;: 8
+        },
+        &quot;tolerance&quot;: 0.25
+      }
+    }
+  ]
+}</pre></article><article><h2>phone-2x · seek-controls #0</h2><p>Actual CSS display size</p><img src="phone-2x-seek-controls-0.png" width="44" height="44" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-seek-controls-0.png" width="352" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;frame&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 43,
+        &quot;y&quot;: 263.5,
+        &quot;width&quot;: 24,
+        &quot;height&quot;: 24
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;arc&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 46,
+        &quot;y&quot;: 266.5,
+        &quot;width&quot;: 18,
+        &quot;height&quot;: 18
+      },
+      &quot;mode&quot;: &quot;svg&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;Transformed SVG geometric bounds; stroke/filter ink not included.&quot;
+    },
+    &quot;number&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 51.69999980926514,
+        &quot;y&quot;: 274,
+        &quot;width&quot;: 6.90000057220459,
+        &quot;height&quot;: 5
+      },
+      &quot;mode&quot;: &quot;svg&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;Transformed SVG geometric bounds; stroke/filter ink not included.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;arc&quot;,
+      &quot;b&quot;: &quot;number&quot;,
+      &quot;minGap&quot;: 1,
+      &quot;rationale&quot;: &quot;The ten-second numeral must remain visually distinct from the circular arrow stroke.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 0,
+        &quot;minimumClearanceCssPx&quot;: 1.118033988749895,
+        &quot;clearanceAtLeastCssPx&quot;: null,
+        &quot;closestPaintCssPx&quot;: {
+          &quot;a&quot;: {
+            &quot;x&quot;: 18,
+            &quot;y&quot;: 19.5
+          },
+          &quot;b&quot;: {
+            &quot;x&quot;: 19,
+            &quot;y&quot;: 21
+          }
+        },
+        &quot;aPaintPixels&quot;: 494,
+        &quot;bPaintPixels&quot;: 137
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 1
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;center&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;frame&quot;,
+      &quot;offsetX&quot;: 0.15,
+      &quot;offsetY&quot;: 1,
+      &quot;tolerance&quot;: 0.5,
+      &quot;rationale&quot;: &quot;The vector numeral is centered in its own 24-unit symbol with a documented local optical offset.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;deltaX&quot;: 9.536743164617612e-8,
+        &quot;deltaY&quot;: 0
+      },
+      &quot;expected&quot;: {
+        &quot;offsetX&quot;: 0.15,
+        &quot;offsetY&quot;: 1,
+        &quot;tolerance&quot;: 0.5
+      }
+    },
+    {
+      &quot;kind&quot;: &quot;inside&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;frame&quot;,
+      &quot;region&quot;: {
+        &quot;x&quot;: 0.2916666666666667,
+        &quot;y&quot;: 0.375,
+        &quot;width&quot;: 0.4583333333333333,
+        &quot;height&quot;: 0.3333333333333333
+      },
+      &quot;tolerance&quot;: 0.25,
+      &quot;rationale&quot;: &quot;Keep numeral geometry in the designed inner window; the raster clearance separately checks actual stroke paint.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;clearance&quot;: {
+          &quot;left&quot;: 1.6999998092651367,
+          &quot;top&quot;: 1.5,
+          &quot;right&quot;: 2.3999996185302734,
+          &quot;bottom&quot;: 1.5
+        }
+      },
+      &quot;expected&quot;: {
+        &quot;safeRect&quot;: {
+          &quot;x&quot;: 50,
+          &quot;y&quot;: 272.5,
+          &quot;width&quot;: 11,
+          &quot;height&quot;: 8
+        },
+        &quot;tolerance&quot;: 0.25
+      }
+    }
+  ]
+}</pre></article><article><h2>phone-2x · seek-controls #1</h2><p>Actual CSS display size</p><img src="phone-2x-seek-controls-1.png" width="44" height="44" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="phone-2x-seek-controls-1.png" width="352" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;frame&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 124,
+        &quot;y&quot;: 263.5,
+        &quot;width&quot;: 24,
+        &quot;height&quot;: 24
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;arc&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 127,
+        &quot;y&quot;: 266.5,
+        &quot;width&quot;: 18,
+        &quot;height&quot;: 18
+      },
+      &quot;mode&quot;: &quot;svg&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;matrix(-1, 0, 0, 1, 24, 0)&quot;,
+      &quot;note&quot;: &quot;Transformed SVG geometric bounds; stroke/filter ink not included.&quot;
+    },
+    &quot;number&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 132.69999980926514,
+        &quot;y&quot;: 274,
+        &quot;width&quot;: 6.90000057220459,
+        &quot;height&quot;: 5
+      },
+      &quot;mode&quot;: &quot;svg&quot;,
+      &quot;font&quot;: &quot;16px \&quot;DM Sans\&quot;, -apple-system, \&quot;system-ui\&quot;, \&quot;Segoe UI\&quot;, sans-serif&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;Transformed SVG geometric bounds; stroke/filter ink not included.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;ink-gap&quot;,
+      &quot;a&quot;: &quot;arc&quot;,
+      &quot;b&quot;: &quot;number&quot;,
+      &quot;minGap&quot;: 1,
+      &quot;rationale&quot;: &quot;The ten-second numeral must remain visually distinct from the circular arrow stroke.&quot;,
+      &quot;status&quot;: &quot;measured&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;overlapPixels&quot;: 0,
+        &quot;minimumClearanceCssPx&quot;: 1,
+        &quot;clearanceAtLeastCssPx&quot;: null,
+        &quot;closestPaintCssPx&quot;: {
+          &quot;a&quot;: {
+            &quot;x&quot;: 25.5,
+            &quot;y&quot;: 19.5
+          },
+          &quot;b&quot;: {
+            &quot;x&quot;: 25,
+            &quot;y&quot;: 21
+          }
+        },
+        &quot;aPaintPixels&quot;: 494,
+        &quot;bPaintPixels&quot;: 137
+      },
+      &quot;expected&quot;: {
+        &quot;minimumClearanceCssPx&quot;: 1
+      },
+      &quot;note&quot;: &quot;Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.&quot;
+    },
+    {
+      &quot;kind&quot;: &quot;center&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;frame&quot;,
+      &quot;offsetX&quot;: 0.15,
+      &quot;offsetY&quot;: 1,
+      &quot;tolerance&quot;: 0.5,
+      &quot;rationale&quot;: &quot;The vector numeral is centered in its own 24-unit symbol with a documented local optical offset.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;deltaX&quot;: 9.536743164617612e-8,
+        &quot;deltaY&quot;: 0
+      },
+      &quot;expected&quot;: {
+        &quot;offsetX&quot;: 0.15,
+        &quot;offsetY&quot;: 1,
+        &quot;tolerance&quot;: 0.5
+      }
+    },
+    {
+      &quot;kind&quot;: &quot;inside&quot;,
+      &quot;a&quot;: &quot;number&quot;,
+      &quot;b&quot;: &quot;frame&quot;,
+      &quot;region&quot;: {
+        &quot;x&quot;: 0.2916666666666667,
+        &quot;y&quot;: 0.375,
+        &quot;width&quot;: 0.4583333333333333,
+        &quot;height&quot;: 0.3333333333333333
+      },
+      &quot;tolerance&quot;: 0.25,
+      &quot;rationale&quot;: &quot;Keep numeral geometry in the designed inner window; the raster clearance separately checks actual stroke paint.&quot;,
+      &quot;pass&quot;: true,
+      &quot;observed&quot;: {
+        &quot;clearance&quot;: {
+          &quot;left&quot;: 1.6999998092651367,
+          &quot;top&quot;: 1.5,
+          &quot;right&quot;: 2.3999996185302734,
+          &quot;bottom&quot;: 1.5
+        }
+      },
+      &quot;expected&quot;: {
+        &quot;safeRect&quot;: {
+          &quot;x&quot;: 131,
+          &quot;y&quot;: 272.5,
+          &quot;width&quot;: 11,
+          &quot;height&quot;: 8
+        },
+        &quot;tolerance&quot;: 0.25
+      }
+    }
+  ]
+}</pre></article><h2>Coverage and limits</h2><pre>{
+  &quot;errors&quot;: [],
+  &quot;limits&quot;: [
+    &quot;Authored contracts do not establish good visual design.&quot;,
+    &quot;Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.&quot;,
+    &quot;Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.&quot;,
+    &quot;No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence.&quot;
+  ]
+}</pre>

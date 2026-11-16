@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "edit Escape returns focus",
+    "comment creates a blocker",
+    "title and comments persist",
+    "readiness commits after blockers resolved",
+    "reopening clears readiness",
+    "phone paragraph targets composer",
+    "phone comment draft and anchor restored",
+    "phone source focuses original paragraph",
+    "phone history retains comment event",
+    "320px no document overflow"
+  ],
+  "errors": [],
+  "axeDesktop": [],
+  "axePhone": []
+}

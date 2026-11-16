@@ -1,0 +1,54 @@
+- complementary:
+  - strong: index
+  - text: ARCHIVE WORKSPACE
+  - navigation "Main navigation":
+    - button "Import records":
+      - img
+      - text: Import records
+    - button "Catalog 3":
+      - img
+      - text: Catalog 3
+    - button "Import history":
+      - img
+      - text: Import history
+- main:
+  - text: Workspace
+  - img
+  - strong: Import records
+  - text: Saved locally
+  - img
+  - text: COLLECTION TOOLS IMPORT
+  - heading "Import records" [level=1]
+  - paragraph: Bring your archive together, one collection at a time.
+  - button "01 Choose file":
+    - text: 01 Choose file
+    - img
+  - button "02 Map columns" [disabled]:
+    - text: 02 Map columns
+    - img
+  - button "03 Review & import" [disabled]
+  - text: 01 / SOURCE
+  - heading "Start with a file" [level=2]
+  - paragraph: Choose a CSV export from your existing catalog. You can review and adjust everything before importing.
+  - button "Choose a CSV file or drag a file here to get started CSV files only · Stored on this device":
+    - img
+    - strong: Choose a CSV file
+    - text: or drag a file here to get started CSV files only · Stored on this device
+  - img
+  - text: Just exploring?
+  - paragraph: Try a sample collection with seven archive records.
+  - button "Use sample":
+    - text: Use sample
+    - img
+  - complementary:
+    - text: BEFORE YOU BEGIN ✳
+    - heading "A little preparation goes a long way." [level=3]
+    - paragraph: We'll help you match your columns and catch anything that needs attention.
+    - text: "01"
+    - paragraph: Include a header row Column names help us find the right fields.
+    - text: "02"
+    - paragraph: Give each record an ID Identifiers and titles are required.
+    - text: "03"
+    - paragraph: Review before adding Only valid records will enter your catalog.
+    - text: A MORE CONSIDERED ARCHIVE ↗
+  - text: INDEX A PLACE FOR WHAT MATTERS

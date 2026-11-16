@@ -1,0 +1,64 @@
+[
+  {
+    "url": "http://127.0.0.1:4324/",
+    "title": "Gloss — Localization review",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-11-16T01:58:38.229Z",
+    "errors": [],
+    "width": 1440,
+    "rootScroll": 1440,
+    "fonts": "loaded",
+    "mainText": "Studio North / Stillday / Strings\n●  LOCAL WORKSPACE\nMC\nStrings\nReview language\n🇩🇪   German (de-DE)\n🇸🇦   Arabic (ar)\nGERMAN REVIEW\n8 / 36 approved\nView release review ↗\nString library 36\n↕   Key o",
+    "heading": [
+      {
+        "text": "Strings",
+        "size": "30px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "String library 36",
+        "size": "16px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "welcome.title",
+        "size": "16px",
+        "lineHeight": "normal"
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:4324/",
+    "title": "Gloss — Localization review",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "capturedAt": "2026-11-16T01:58:39.322Z",
+    "errors": [],
+    "width": 390,
+    "rootScroll": 390,
+    "fonts": "loaded",
+    "mainText": "Studio North / Stillday / Strings\nStrings\nReview language\n🇩🇪   German (de-DE)\n🇸🇦   Arabic (ar)\nGERMAN REVIEW\n8 / 36 approved\nView release review ↗\nString library 36\n↕   Key order\nAll 36\nPending 28",
+    "heading": [
+      {
+        "text": "Strings",
+        "size": "30px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "String library 36",
+        "size": "16px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "welcome.title",
+        "size": "16px",
+        "lineHeight": "normal"
+      }
+    ]
+  }
+]

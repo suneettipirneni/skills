@@ -1,0 +1,39 @@
+{
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    }
+  ],
+  "components": [
+    {
+      "name": "version-pair",
+      "selector": ".diff",
+      "parts": {
+        "previous": {
+          "selector": "div:first-child"
+        },
+        "connector": {
+          "selector": "svg"
+        },
+        "candidate": {
+          "selector": "div:last-child"
+        }
+      },
+      "checks": [
+        {
+          "kind": "between",
+          "a": "previous",
+          "b": "connector",
+          "c": "candidate",
+          "axis": "y",
+          "minGap": 12,
+          "tolerance": 2,
+          "rationale": "The phone comparison stacks labeled value groups. Measure from each full group, including its label, to the arrow; measuring only code wrongly counts the candidate label as whitespace."
+        }
+      ]
+    }
+  ]
+}

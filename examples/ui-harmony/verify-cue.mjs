@@ -19,6 +19,7 @@ try{for(const width of [1440,390]){
  await page.getByRole('slider',{name:'Seek episode',exact:true}).focus();await page.keyboard.press('ArrowLeft');
  check(await page.locator('audio').evaluate(e=>e.currentTime<36.547),`${width} keyboard seek`);
  await page.locator('.add-note').click();
+ await page.waitForFunction(()=>document.activeElement?.id==='note-input',{},{timeout:2000});
  check(await page.getByRole('textbox',{name:'Leave a note'}).evaluate(e=>e===document.activeElement),`${width} composer focus`);
  const stamp=await page.locator('.draft-time').innerText();await page.getByRole('textbox',{name:'Leave a note'}).fill('Root review: preserve the closing thought.');
  await page.getByRole('button',{name:'Forward 10 seconds'}).click();

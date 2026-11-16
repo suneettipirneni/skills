@@ -1,0 +1,72 @@
+{
+  "index-app": {
+    "checks": [
+      "sample has 3 invalid rows",
+      "row corrections survive reload",
+      "import receipt states 7 imported",
+      "record detail retains identifier",
+      "undo preserves 3 seed records",
+      "phone no-match state",
+      "phone search recovery",
+      "CSV preserves quoted newline",
+      "phone draft survives reload",
+      "storage failure visible and edit retained",
+      "320px no document overflow"
+    ],
+    "errors": [],
+    "axeDesktop": [],
+    "axePhone": []
+  },
+  "traverse": {
+    "checks": [
+      "missing outcome blocked",
+      "saved outcome survives reload",
+      "issue filter empty recovery available",
+      "incomplete walkthrough blocked",
+      "phone draft note and outcome retained",
+      "phone check recorded",
+      "complete fixture commits",
+      "reopening retains checks",
+      "storage failure does not break navigation",
+      "storage failure status truthful",
+      "320px no document overflow"
+    ],
+    "errors": [],
+    "axeDesktop": [],
+    "axePhone": []
+  },
+  "seating": {
+    "checks": [
+      "capacity conflict blocks move",
+      "moving party updates actual occupancy",
+      "unsaved status visible",
+      "saved assignment survives reload",
+      "export includes assigned guest and access note",
+      "phone capacity error remains visible",
+      "phone assignment persisted",
+      "invalid capacity prevented",
+      "save failure retains dirty state",
+      "320px no document overflow"
+    ],
+    "errors": [],
+    "axeDesktop": [],
+    "axePhone": []
+  },
+  "proof": {
+    "checks": [
+      "edit Escape returns focus",
+      "comment creates a blocker",
+      "title and comments persist",
+      "readiness commits after blockers resolved",
+      "reopening clears readiness",
+      "phone paragraph targets composer",
+      "phone comment draft and anchor restored",
+      "phone source focuses original paragraph",
+      "phone history retains comment event",
+      "320px no document overflow"
+    ],
+    "errors": [],
+    "axeDesktop": [],
+    "axePhone": []
+  }
+}

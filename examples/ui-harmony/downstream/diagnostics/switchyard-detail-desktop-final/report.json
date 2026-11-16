@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "url": "http://127.0.0.1:4321/",
+  "createdAt": "2026-11-16T01:50:01.507Z",
+  "config": {
+    "viewports": [
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      }
+    ],
+    "components": [
+      {
+        "name": "version-pair",
+        "selector": ".diff",
+        "parts": {
+          "previous": {
+            "selector": "div:first-child code",
+            "measure": "text"
+          },
+          "connector": {
+            "selector": "svg"
+          },
+          "candidate": {
+            "selector": "div:last-child code",
+            "measure": "text"
+          }
+        },
+        "checks": [
+          {
+            "kind": "between",
+            "a": "previous",
+            "b": "connector",
+            "c": "candidate",
+            "axis": "x",
+            "minGap": 12,
+            "tolerance": 2,
+            "rationale": "The arrow connects the actual previous/candidate values; its two local gaps should read as one compact pair."
+          }
+        ]
+      }
+    ]
+  },
+  "cases": [
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "dpr": 1
+      },
+      "component": "version-pair",
+      "index": 0,
+      "parts": {
+        "previous": {
+          "rect": {
+            "x": 496,
+            "y": 416.125,
+            "width": 50.40625,
+            "height": 16
+          },
+          "mode": "text",
+          "font": "12px \"DM Mono\"",
+          "transform": "none",
+          "note": "DOM text-fragment rectangle, not glyph ink."
+        },
+        "connector": {
+          "rect": {
+            "x": 561.40625,
+            "y": 405.125,
+            "width": 16,
+            "height": 16
+          },
+          "mode": "box",
+          "font": "14px \"DM Sans\", sans-serif",
+          "transform": "none",
+          "note": "CSS border box, not optical mass."
+        },
+        "candidate": {
+          "rect": {
+            "x": 592.40625,
+            "y": 416.125,
+            "width": 50.40625,
+            "height": 16
+          },
+          "mode": "text",
+          "font": "12px \"DM Mono\"",
+          "transform": "none",
+          "note": "DOM text-fragment rectangle, not glyph ink."
+        }
+      },
+      "checks": [
+        {
+          "kind": "between",
+          "a": "previous",
+          "b": "connector",
+          "c": "candidate",
+          "axis": "x",
+          "minGap": 12,
+          "tolerance": 2,
+          "rationale": "The arrow connects the actual previous/candidate values; its two local gaps should read as one compact pair.",
+          "pass": true,
+          "observed": {
+            "beforeGap": 15,
+            "afterGap": 15,
+            "imbalance": 0
+          },
+          "expected": {
+            "minimumGap": 12,
+            "maximumImbalance": 2,
+            "axis": "x"
+          },
+          "note": "Use only when the connector belongs between this actual content pair; equal grid tracks may serve a different task."
+        }
+      ],
+      "screenshot": "desktop-version-pair-0.png",
+      "cssSize": {
+        "width": 488,
+        "height": 78
+      }
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Authored contracts do not establish good visual design.",
+    "Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.",
+    "Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.",
+    "No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence."
+  ],
+  "browser": "157.0.8103.51",
+  "summary": {
+    "components": 1,
+    "checks": 1,
+    "failedContracts": 0,
+    "unverified": 0,
+    "status": "captured"
+  }
+}

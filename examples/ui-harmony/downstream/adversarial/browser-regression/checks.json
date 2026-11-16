@@ -1,0 +1,11 @@
+{
+  "assertions": 26,
+  "summary": {
+    "components": 20,
+    "checks": 8,
+    "failedContracts": 2,
+    "unverified": 14,
+    "status": "incomplete"
+  },
+  "scope": "Compact local fixtures; no global optical or accessibility verdict."
+}

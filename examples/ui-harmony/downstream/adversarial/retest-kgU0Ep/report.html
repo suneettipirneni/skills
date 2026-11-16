@@ -1,0 +1,80 @@
+<!doctype html><meta charset="utf-8"><title>Component detail diagnostics</title><style>body{font:14px/1.5 system-ui;margin:32px;color:#222}article{border-top:1px solid #ccc;padding:24px 0}.zoom{image-rendering:pixelated;max-width:100%;object-fit:contain;object-position:left}pre{white-space:pre-wrap}img{border:1px solid #ddd}</style><h1>Component detail diagnostics</h1><p>{&quot;components&quot;:2,&quot;checks&quot;:0,&quot;failedContracts&quot;:0,&quot;unverified&quot;:2,&quot;status&quot;:&quot;incomplete&quot;}</p><p>Contract agreement is not an optical-quality verdict. Review actual-size crops and limits.</p><article><h2>one · visible-child #0</h2><p>Actual CSS display size</p><img src="one-visible-child-0.png" width="170" height="70" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="one-visible-child-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 51,
+        &quot;y&quot;: 61,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 161,
+        &quot;y&quot;: 61,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:2:167)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><article><h2>one · outside #0</h2><p>Actual CSS display size</p><img src="one-outside-0.png" width="170" height="70" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="one-outside-0.png" width="1360" alt="Enlarged component"><pre>{
+  &quot;parts&quot;: {
+    &quot;a&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 51,
+        &quot;y&quot;: 163,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;b&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 161,
+        &quot;y&quot;: 163,
+        &quot;width&quot;: 20,
+        &quot;height&quot;: 20
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [],
+  &quot;error&quot;: &quot;locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:6:148)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+}</pre></article><h2>Coverage and limits</h2><pre>{
+  &quot;errors&quot;: [
+    {
+      &quot;viewport&quot;: &quot;one&quot;,
+      &quot;component&quot;: &quot;visible-child&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Hidden part retains visible descendants; isolation is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:2:167)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    },
+    {
+      &quot;viewport&quot;: &quot;one&quot;,
+      &quot;component&quot;: &quot;outside&quot;,
+      &quot;index&quot;: 0,
+      &quot;error&quot;: &quot;locator.evaluate: Error: Part or descendant protrudes beyond crop; paint coverage is incomplete\n    at eval (eval at evaluate (:370:30), &lt;anonymous&gt;:6:148)\n    at UtilityScript.evaluate (&lt;anonymous&gt;:372:16)\n    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&quot;
+    }
+  ],
+  &quot;limits&quot;: [
+    &quot;Authored contracts do not establish good visual design.&quot;,
+    &quot;Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.&quot;,
+    &quot;Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.&quot;,
+    &quot;No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence.&quot;
+  ]
+}</pre>

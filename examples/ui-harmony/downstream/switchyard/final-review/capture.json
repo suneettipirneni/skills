@@ -1,0 +1,64 @@
+[
+  {
+    "url": "http://127.0.0.1:4321/",
+    "title": "Switchyard — release review",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-11-16T01:58:37.321Z",
+    "errors": [],
+    "width": 1440,
+    "rootScroll": 1440,
+    "fonts": "loaded",
+    "mainText": "Release review / Candidate 2025.04.18\nLocal review\nAR\nReview the release\nReview in progress\nCURRENT MANIFEST\nrelease-2025.04.11\nDeployed · Apr 11, 2025\nCANDIDATE MANIFEST\nrelease-2025.04.18\nCreated · ",
+    "heading": [
+      {
+        "text": "Review the release",
+        "size": "27px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Changes to review 27",
+        "size": "18px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Review checklist",
+        "size": "18px",
+        "lineHeight": "normal"
+      }
+    ]
+  },
+  {
+    "url": "http://127.0.0.1:4321/",
+    "title": "Switchyard — release review",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "capturedAt": "2026-11-16T01:58:38.697Z",
+    "errors": [],
+    "width": 390,
+    "rootScroll": 390,
+    "fonts": "loaded",
+    "mainText": "Release review / Candidate 2025.04.18\nAR\nReview the release\nReview in progress\nCURRENT MANIFEST\nrelease-2025.04.11\nDeployed · Apr 11, 2025\nCANDIDATE MANIFEST\nrelease-2025.04.18\nCreated · Apr 18, 2025 ",
+    "heading": [
+      {
+        "text": "Review the release",
+        "size": "27px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Changes to review 27",
+        "size": "17px",
+        "lineHeight": "normal"
+      },
+      {
+        "text": "Review checklist",
+        "size": "18px",
+        "lineHeight": "normal"
+      }
+    ]
+  }
+]

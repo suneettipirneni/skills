@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><style>
+@keyframes settle{from{background:#eee}to{background:white}}#settling{animation:settle .4s forwards}body{margin:20px;background:white}.control{position:relative;width:160px;height:40px;margin-bottom:15px;border:1px solid #bbb}.part{position:absolute;top:10px;width:20px;height:20px;background:black}.a{left:10px}.b{left:120px}
+#collision .b{left:20px}.paint{position:absolute;top:0;width:10px;height:10px;background:red}#override .paint{visibility:visible}.a .paint{left:50px}.b .paint{left:-60px}#overflow .paint{top:70px}
+#pseudo .a::before{content:'';position:absolute;width:5px;height:5px;background:red}#shadow .a{box-shadow:2px 0 4px red}#hidden .a{display:none}#zero-pseudo .zero{display:block;width:0;height:0}#zero-pseudo .zero::before{content:"";position:absolute;visibility:visible;width:10px;height:10px;background:red}#ancestor-filter{filter:drop-shadow(40px 0 red)}
+</style>
+<div class="control" id="settling"><span class="part a"></span><span class="part b"></span></div>
+<div class="control" id="separate"><span class="part a" style="color: blue;"></span><span class="part b"></span></div>
+<div class="control" id="collision"><span class="part a"></span><span class="part b"></span></div>
+<div class="control" id="override"><span class="part a" style="color: blue;"><span class="paint"></span></span><span class="part b"><span class="paint"></span></span></div>
+<div class="control" id="overflow"><span class="part a"><span class="paint"></span></span><span class="part b"><span class="paint"></span></span></div>
+<div class="control" id="pseudo"><span class="part a"></span><span class="part b"></span></div>
+<div class="control" id="shadow"><span class="part a"></span><span class="part b"></span></div>
+<div class="control" id="hidden"><span class="part a"></span><span class="part b"></span></div>
+<div class="control" id="zero-pseudo"><span class="part a"><i class="zero"></i></span><span class="part b"></span></div>
+<div class="control" id="ancestor-filter"><span class="part a"></span><span class="part b"></span></div>
+<div class="control" id="ambiguous"><span class="part a"></span><span class="part a"></span><span class="part b"></span></div>
+<script>for(const id of ['separate','override']){const root=document.getElementById(id);const update=()=>root.dataset.restored=String(root.querySelector('.a').getAttribute('style')==='color: blue;'&&root.querySelector('.b').getAttribute('style')===null);update();new MutationObserver(update).observe(root,{subtree:true,attributes:true,attributeFilter:['style']})}</script>

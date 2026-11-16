@@ -35,3 +35,7 @@ Exit with evidence-backed findings, preserved strengths, remaining uncertainty a
 [Kara Pernice’s prototype guidance](https://www.nngroup.com/articles/ux-prototype-hi-lo-fidelity/) distinguishes visual, interaction and content fidelity. A rough interactive prototype can test branching/recovery; realistic content can test hierarchy before final styling; a polished still cannot establish keyboard or persistence behavior. Select the fidelity needed for the uncertainty rather than requiring every task to progress through a fixed fidelity ladder.
 
 [Reference calibration](../conditions/reference-calibration.md) tests the critique against praised, criticized and disputed designs without treating reputation as ground truth.
+
+## Test the selected state on narrow screens
+
+Selecting a row must expose a usable editor or detail view, not leave it beyond an unseen long list. Verify its destination and keyboard focus together. If the idiom becomes a dedicated detail view, provide a clear return that preserves the relevant query, list position and selected item; preserve drafts when the task requires it. Place supporting readiness/checklist regions after the work they summarize, or provide a compact route to them. Test actual long records and error states, not only the initial overview. A page with no horizontal overflow can still fail this workflow.

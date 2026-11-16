@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "components": 2,
+    "checks": 2,
+    "failedContracts": 0,
+    "unverified": 0,
+    "status": "captured"
+  },
+  "checks": [
+    {
+      "component": "visible-child",
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "a",
+          "b": "b",
+          "minGap": 2,
+          "rationale": "Disjoint component subtrees should have at least 2px paint clearance.",
+          "status": "measured",
+          "pass": true,
+          "observed": {
+            "overlapPixels": 0,
+            "minimumClearanceCssPx": null,
+            "clearanceAtLeastCssPx": 2,
+            "closestPaintCssPx": null,
+            "aPaintPixels": 400,
+            "bPaintPixels": 400
+          },
+          "expected": {
+            "minimumClearanceCssPx": 2
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        }
+      ]
+    },
+    {
+      "component": "outside",
+      "checks": [
+        {
+          "kind": "ink-gap",
+          "a": "a",
+          "b": "b",
+          "minGap": 2,
+          "rationale": "Disjoint component subtrees should have at least 2px paint clearance.",
+          "status": "measured",
+          "pass": true,
+          "observed": {
+            "overlapPixels": 0,
+            "minimumClearanceCssPx": null,
+            "clearanceAtLeastCssPx": 2,
+            "closestPaintCssPx": null,
+            "aPaintPixels": 400,
+            "bPaintPixels": 400
+          },
+          "expected": {
+            "minimumClearanceCssPx": 2
+          },
+          "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+        }
+      ]
+    }
+  ],
+  "diagonal": {
+    "status": "measured",
+    "pass": true,
+    "observed": {
+      "overlapPixels": 0,
+      "minimumClearanceCssPx": 0.41421356237309515,
+      "clearanceAtLeastCssPx": null,
+      "closestPaintCssPx": {
+        "a": {
+          "x": 0,
+          "y": 0
+        },
+        "b": {
+          "x": 1,
+          "y": 1
+        }
+      },
+      "aPaintPixels": 1,
+      "bPaintPixels": 1
+    },
+    "expected": {
+      "minimumClearanceCssPx": 0.3
+    },
+    "note": "Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict."
+  },
+  "invalid": [
+    {
+      "value": null,
+      "error": "Cannot read properties of null (reading 'kind')"
+    },
+    {
+      "error": "Cannot read properties of undefined (reading 'kind')"
+    },
+    {
+      "value": 3,
+      "error": "Unknown check kind"
+    },
+    {
+      "value": "oops",
+      "error": "Unknown check kind"
+    }
+  ]
+}

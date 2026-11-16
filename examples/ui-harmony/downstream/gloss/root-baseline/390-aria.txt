@@ -1,0 +1,79 @@
+- complementary:
+  - text: g ✳
+  - strong: gloss
+  - button "▤ Strings"
+  - button "◉ Release review"
+- main:
+  - text: Studio North /
+  - strong: Stillday
+  - text: / Strings ✳ STILLDAY / LOCALIZATION
+  - heading "Strings" [level=1]
+  - paragraph: Every word, ready for the world.
+  - text: Review language
+  - combobox "Review language":
+    - option "🇩🇪 German (de-DE)" [selected]
+    - option "🇸🇦 Arabic (ar)"
+  - text: GERMAN REVIEW
+  - strong: 8 / 36 approved
+  - button "View release review ↗"
+  - heading "String library 36" [level=2]
+  - paragraph: Review translations and their context.
+  - text: ↕ Key order
+  - group "Filter strings":
+    - button "All 36"
+    - button "Pending 28"
+    - button "Needs attention 1"
+    - button "Approved 8"
+  - text: ⌕
+  - textbox "Search strings":
+    - /placeholder: Search keys or copy...
+  - text: STRING / SOURCE STATUS
+  - 'button "welcome.title Welcome back, {name} Approved"'
+  - button "welcome.subtitle Your day, a little more in focus. Pending"
+  - button "nav.today Today Pending"
+  - button "nav.upcoming Upcoming Pending"
+  - button "nav.inbox Inbox Pending"
+  - button "task.create Create a task Approved"
+  - button "task.placeholder What would you like to get done? Pending"
+  - 'button "task.completed {count} tasks completed Invalid"'
+  - button "task.due_today Due today Pending"
+  - 'button "task.overdue Overdue by {count} days Pending"'
+  - 'button "task.delete_confirm Delete “{name}”? This can’t be undone. Approved"'
+  - button "task.empty_title A little room to breathe Pending"
+  - button "task.empty_body You’re all caught up. Add something when you’re ready, or enjoy the quiet for a moment. Pending"
+  - button "project.new New project Pending"
+  - 'button "project.members {count} members Pending"'
+  - button "project.invite Invite people Approved"
+  - 'button "project.invite_sent Invitation sent to {email} Pending"'
+  - button "project.archive Archive project Pending"
+  - button "project.archive_info Archived projects are hidden from your workspace, but you can restore them at any time from settings. Pending"
+  - button "search.label Search everything Pending"
+  - 'button "search.no_results No results for “{query}” Approved"'
+  - button "search.try_again Try a different search or check your spelling. Pending"
+  - button "settings.title Settings Pending"
+  - button "settings.language Language Pending"
+  - button "settings.timezone Time zone Pending"
+  - button "settings.notifications Notifications Approved"
+  - button "settings.digest Send me a weekly digest of what changed in my projects. Pending"
+  - button "common.save Save changes Pending"
+  - button "common.cancel Cancel Pending"
+  - button "common.retry Try again Pending"
+  - button "error.offline You’re offline. Your changes will sync when you reconnect. Approved"
+  - button "error.generic Something went wrong. Please try again in a moment. Pending"
+  - button "onboarding.team Make space for your best work, together. Pending"
+  - button "onboarding.next Continue Pending"
+  - button "reminder.tomorrow Remind me tomorrow Pending"
+  - 'button "reminder.at_time Reminder at {time} Approved"'
+  - text: STRING DETAILS / Home
+  - heading "welcome.title" [level=2]
+  - text: Approved
+  - button "Translation"
+  - button "History 1"
+  - text: "Source text ENGLISH · EN-US Welcome back, {name} ⓘ Context"
+  - paragraph: Greeting shown at the top of the home screen.
+  - text: Translation GERMAN · DE-DE
+  - textbox "Translation": "Schön, dass du wieder da bist, {name}"
+  - text: "Required: {name} 37 characters"
+  - button "Save draft" [disabled]
+  - button "✓ Approve translation"
+  - status

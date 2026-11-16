@@ -1,0 +1,40 @@
+- main:
+  - strong: Seating plan
+  - button "Export"
+  - button "Save plan"
+  - text: PRIVATE EVENT / SATURDAY, SEPTEMBER 19, 2026
+  - heading "Seating plan" [level=1]
+  - paragraph: Give everyone a place at the table.
+  - strong:
+    - text: "24"
+    - emphasis: / 35
+  - text: Guests seated
+  - strong: "11"
+  - text: Still to seat
+  - strong: "6"
+  - text: Tables in plan
+  - button "Tables & seats"
+  - button "Guests & parties"
+  - text: THE ROOM
+  - heading "Tables & seats 6" [level=2]
+  - paragraph: Select a table to see its guests and available seats.
+  - text: Available Seated
+  - button "Table 01 The garden 7 / 8 By the terrace":
+    - strong: Table 01
+    - text: The garden 7 / 8 By the terrace
+  - button "Table 02 The orchard 5 / 8 Near the windows":
+    - strong: Table 02
+    - text: The orchard 5 / 8 Near the windows
+  - button "Table 03 The meadow 4 / 6 Near the windows":
+    - strong: Table 03
+    - text: The meadow 4 / 6 Near the windows
+  - button "Table 04 The greenhouse 4 / 8 By the terrace":
+    - strong: Table 04
+    - text: The greenhouse 4 / 8 By the terrace
+  - button "Table 05 The grove 4 / 6 Near the entrance":
+    - strong: Table 05
+    - text: The grove 4 / 6 Near the entrance
+  - button "Table 06 The conservatory 0 / 8 Step-free access":
+    - strong: Table 06
+    - text: The conservatory 0 / 8 Step-free access
+  - text: DINNER SERVICE · 6:30 PM
