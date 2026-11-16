@@ -1,0 +1,148 @@
+[
+  {
+    "width": 1440,
+    "input": {
+      "x": 163,
+      "y": 566.5,
+      "width": 679.25,
+      "height": 19
+    },
+    "wrapper": {
+      "x": 128,
+      "y": 558,
+      "width": 778,
+      "height": 36
+    },
+    "paddingFocus": false,
+    "centerFocus": true,
+    "spacing": {
+      "input": {
+        "x": 163,
+        "y": 566.5,
+        "width": 647.25,
+        "height": 19,
+        "top": 566.5,
+        "right": 810.25,
+        "bottom": 585.5,
+        "left": 163
+      },
+      "nearest": [
+        {
+          "text": "01Opening0:00",
+          "rect": {
+            "x": 129,
+            "y": 445,
+            "width": 393.328125,
+            "height": 42,
+            "top": 445,
+            "right": 522.328125,
+            "bottom": 487,
+            "left": 129
+          },
+          "distance": 89
+        },
+        {
+          "text": "02The working draft0:19",
+          "rect": {
+            "x": 522.328125,
+            "y": 445,
+            "width": 394.34375,
+            "height": 42,
+            "top": 445,
+            "right": 916.671875,
+            "bottom": 487,
+            "left": 522.328125
+          },
+          "distance": 95.89428103263313
+        },
+        {
+          "text": "Seek episode",
+          "rect": {
+            "x": 153,
+            "y": 325,
+            "width": 1134,
+            "height": 88,
+            "top": 325,
+            "right": 1287,
+            "bottom": 413,
+            "left": 153
+          },
+          "distance": 163
+        }
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "input": {
+      "x": 55,
+      "y": 541,
+      "width": 253.609375,
+      "height": 17
+    },
+    "wrapper": {
+      "x": 20,
+      "y": 530,
+      "width": 350,
+      "height": 39
+    },
+    "paddingFocus": false,
+    "centerFocus": true,
+    "spacing": {
+      "input": {
+        "x": 55,
+        "y": 542.5,
+        "width": 224.21875,
+        "height": 18,
+        "top": 542.5,
+        "right": 279.21875,
+        "bottom": 560.5,
+        "left": 55
+      },
+      "nearest": [
+        {
+          "text": "Feedback 2",
+          "rect": {
+            "x": 104.234375,
+            "y": 468,
+            "width": 85.25,
+            "height": 43,
+            "top": 468,
+            "right": 189.484375,
+            "bottom": 511,
+            "left": 104.234375
+          },
+          "distance": 40.5
+        },
+        {
+          "text": "Transcript",
+          "rect": {
+            "x": 20,
+            "y": 468,
+            "width": 64.234375,
+            "height": 43,
+            "top": 468,
+            "right": 84.234375,
+            "bottom": 511,
+            "left": 20
+          },
+          "distance": 92.2416154726271
+        },
+        {
+          "text": "02The working draft0:19",
+          "rect": {
+            "x": 125.953125,
+            "y": 398,
+            "width": 137.09375,
+            "height": 47,
+            "top": 398,
+            "right": 263.046875,
+            "bottom": 445,
+            "left": 125.953125
+          },
+          "distance": 106.5
+        }
+      ]
+    }
+  }
+]

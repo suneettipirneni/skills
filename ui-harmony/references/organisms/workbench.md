@@ -14,11 +14,11 @@ Include object identity, current mode/selection, tools, working surface, optiona
 
 ## Behavior and adaptation
 
-Focus must travel to and from panels predictably. Drag operations need accessible alternatives. Inspectors can become focused views on compact screens. Preserve selection through panel toggles and avoid intercepting unrelated/global shortcuts while typing; preserve intentional editor formatting shortcuts.
+Focus must travel to and from panels predictably. Drag operations need accessible alternatives. Inspectors can become focused views on compact screens. If an operation acts on an object hidden in another view, retain enough target identity to verify the action. Keep repeated switching reachable after scrolling through real content; do not force a return to the top for every edit. Label counts by what they count when objects and related items coexist. Preserve selection through panel toggles and avoid intercepting unrelated/global shortcuts while typing; preserve intentional editor formatting shortcuts.
 
 ## Evidence and repair
 
-Test repeated operations, undo/redo, resizing and keyboard-only editing. Record effective working area after panels and task completion friction; do not set a universal inspector ratio.
+Test repeated operations, undo/redo, resizing and keyboard-only editing. Use at least two selectable objects when target identity matters: a single populated example can conceal actions applied to the wrong context. Check that undo cannot silently reverse unrelated edits or an intervening save. Record effective working area after panels and task completion friction; do not set a universal inspector ratio.
 
 **Worked decision:** A formatting toolbar acts on the current text selection; clicking it must not erase that selection or silently target another object.
 

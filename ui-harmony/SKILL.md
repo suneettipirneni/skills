@@ -9,7 +9,7 @@ Make the interface feel considered: clear relationships, purposeful contrast, ap
 
 ## Apply the preferred visual direction
 
-For new designs and substantial refinements, load [modern SaaS minimalism](references/preferences/modern-saas.md). It routes the preference from screen idioms down to primitives. A later brief overrides it; a scoped repair retains the surrounding identity. Prefer calm working surfaces over decorative card walls, without sacrificing labels, readability, meaningful color or useful density.
+For new designs and substantial refinements, load [modern SaaS minimalism](references/preferences/modern-saas.md) and its primary aesthetic anchor, [Untitled UI](references/preferences/untitled-ui.md). The target is carefully finished composition, typography, controls and states; familiar neutral forms can be excellent. Study specific screens and component relationships rather than imitating a brand name. It routes the preference from screen idioms down to primitives. A later brief overrides it; a scoped repair retains the surrounding identity. Prefer calm working surfaces over decorative card walls, without sacrificing labels, readability, meaningful color or useful density.
 
 For scored reviews, use the [weighted preference rubric](references/preferences/style-scoring.md) and `scripts/style-score.mjs`. Report **modern SaaS style fit / 100** with its evidence and blocked/provisional/eligible status, separately from task and accessibility findings. Do not treat element counts or a famous reference brand as a score.
 
@@ -44,6 +44,12 @@ Read [design-review.md](references/design-review.md) for composition and semanti
 
 **Native:** Use native inspection and platform conventions; apply the same semantic review. Measure in platform units and test large text, safe areas, actual input modalities, and state changes. Bundled DOM scripts do not audit SwiftUI, canvas, or native accessibility trees. Do not convert Apple points, Android dp, or screenshot pixels into CSS pixels without evidence.
 
+## Create and develop a direction
+
+For new interfaces and broad polish requests, follow the [anchor generation path](references/preferences/untitled-ui.md#a-generation-path-that-reaches-beyond-a-clean-draft): state the intended experience, study task-relevant references, explore unresolved visual choices even when the screen idiom is fixed, develop a complete state/interaction, and refine the rendered result. Use meaningful content and coordinated component families. For React, consult [headless primitives](references/foundations/headless-react.md): recommend Base UI for new interaction-heavy work, or retain the project’s existing suitable primitives. Retain the host product identity. A high style-fit score or absence of defects does not establish visual craft.
+
+For a narrow defect, use the repair loop below without requiring an art-direction exercise.
+
 ## Review and improve
 
 1. **Capture a baseline.** Record route, state, viewport, theme, content fixture, input mode, and loading readiness. Include representative content, not only ideal short strings. Preserve strengths explicitly.
@@ -74,4 +80,4 @@ Include location/state, observed and target values with units when measured, thr
 
 The configured modern SaaS preference score is allowed with its stated scope and evidence limits. Never produce a universal “design quality: 93/100,” predicted conversion gain, inferred eye-tracking result, or validated usability claim from static inspection. Report numerical facts, anchored qualitative judgments, coverage, and remaining uncertainty separately. The optional structured review template and validator require evidence fields; they cannot verify the evidence or validate the judgment itself.
 
-Use [tools.md](references/tools.md) for setup, outputs, limitations, comparison, and CI semantics. A finished review states what was verified and what remains untested. When implementing, stop once the requested defects are resolved and scoped regression checks pass; do not endlessly normalize intentional differences.
+Use [tools.md](references/tools.md) for setup, outputs, limitations, comparison, and CI semantics. A finished review states what was verified and what remains untested. For narrow repairs, stop once requested defects are resolved and scoped regression checks pass. For broad creation or refinement, also show the chosen visual direction and evidence of a considered composition, relevant component states and responsive treatment; disclose unresolved craft or behavior. Do not endlessly normalize intentional differences.

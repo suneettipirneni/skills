@@ -1,0 +1,150 @@
+{
+  "checks": [
+    {
+      "label": "1440 no overflow",
+      "pass": true
+    },
+    {
+      "label": "1440 evidence axe",
+      "pass": true
+    },
+    {
+      "label": "1440 source context",
+      "pass": true
+    },
+    {
+      "label": "1440 source focus return",
+      "pass": true
+    },
+    {
+      "label": "1440 empty state",
+      "pass": true
+    },
+    {
+      "label": "1440 theme filter",
+      "pass": true
+    },
+    {
+      "label": "1440 link count",
+      "pass": true
+    },
+    {
+      "label": "1440 persistence",
+      "pass": true
+    },
+    {
+      "label": "1440 revision retained",
+      "pass": true
+    },
+    {
+      "label": "1440 finding axe",
+      "pass": true
+    },
+    {
+      "label": "1440 empty title focus",
+      "pass": true
+    },
+    {
+      "label": "1440 new finding links isolated",
+      "pass": true
+    },
+    {
+      "label": "1440 original finding preserved",
+      "pass": true
+    },
+    {
+      "label": "390 no overflow",
+      "pass": true
+    },
+    {
+      "label": "390 evidence axe",
+      "pass": true
+    },
+    {
+      "label": "390 source context",
+      "pass": true
+    },
+    {
+      "label": "390 source focus return",
+      "pass": true
+    },
+    {
+      "label": "390 empty state",
+      "pass": true
+    },
+    {
+      "label": "390 theme filter",
+      "pass": true
+    },
+    {
+      "label": "390 link count",
+      "pass": true
+    },
+    {
+      "label": "390 persistence",
+      "pass": true
+    },
+    {
+      "label": "390 revision retained",
+      "pass": true
+    },
+    {
+      "label": "390 finding axe",
+      "pass": true
+    },
+    {
+      "label": "390 empty title focus",
+      "pass": true
+    },
+    {
+      "label": "390 linking target identity",
+      "pass": true
+    },
+    {
+      "label": "390 late excerpt edit focuses and reveals claim",
+      "pass": true
+    },
+    {
+      "label": "390 new finding links isolated",
+      "pass": true
+    },
+    {
+      "label": "390 original finding preserved",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "axe": [
+    {
+      "width": 1440,
+      "state": "evidence",
+      "violationCount": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "finding",
+      "violationCount": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 390,
+      "state": "evidence",
+      "violationCount": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 390,
+      "state": "finding",
+      "violationCount": 0,
+      "incompleteRules": []
+    }
+  ]
+}

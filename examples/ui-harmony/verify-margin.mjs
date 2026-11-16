@@ -1,0 +1,61 @@
+import { chromium } from '../../ui-harmony/node_modules/playwright/index.mjs';
+import AxeBuilder from '../../ui-harmony/node_modules/@axe-core/playwright/dist/index.mjs';
+import fs from 'node:fs/promises';
+const out=process.env.OUT||new URL('./margin/verification-output',import.meta.url).pathname;
+await fs.mkdir(out,{recursive:true});
+const browser=await chromium.launch({channel:'chrome',headless:true});
+const results={checks:[],axe:[],errors:[]};
+function check(value,label){results.checks.push({label,pass:!!value});if(!value)throw Error(label);}
+try{for(const width of [1440,390]){
+ const context=await browser.newContext({viewport:{width,height:width===390?844:1000}}); const page=await context.newPage();
+ page.on('pageerror',e=>results.errors.push(e.message));
+ await page.goto(process.env.TARGET_URL||'http://127.0.0.1:4314');await page.waitForTimeout(350);
+ const finding=async()=>{if(width===390)await page.getByRole('navigation',{name:'Workspace view'}).getByRole('button',{name:/^Finding/}).click()};
+ const evidence=async()=>{if(width===390)await page.getByRole('button',{name:/^Evidence/}).click()};
+ const axe=async state=>{const a=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();results.axe.push({width,state,violations:a.violations,incomplete:a.incomplete});check(a.violations.length===0,`${width} ${state} axe`)};
+ check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${width} no overflow`);
+ await axe('evidence');
+ await page.getByRole('button',{name:'Open source for Avery Chen'}).click();
+ check(await page.getByRole('dialog').getByText(/supplier update/).isVisible(),`${width} source context`);
+ await page.keyboard.press('Escape');
+ check(await page.getByRole('button',{name:'Open source for Avery Chen'}).evaluate(e=>e===document.activeElement),`${width} source focus return`);
+ await page.getByRole('textbox',{name:'Search excerpts'}).fill('no-such-excerpt-xyz');
+ check(await page.getByRole('heading',{name:'No excerpts match'}).isVisible(),`${width} empty state`);
+ await page.getByRole('button',{name:'Clear filters'}).click();
+ await page.getByRole('combobox',{name:'Filter by theme'}).selectOption('Recovery');
+ check(await page.locator('article.excerpt').count()===2,`${width} theme filter`);
+ await page.locator('article.excerpt').first().getByRole('button',{name:'Supports',exact:true}).click();
+ await finding();
+ check(await page.locator('.map-title').innerText().then(t=>t.includes('4 linked')),`${width} link count`);
+ await page.getByRole('textbox',{name:'Finding title',exact:true}).fill('Root validation finding');
+ await page.getByRole('button',{name:'Save finding',exact:true}).click();
+ await page.reload();await finding();
+ check(await page.getByRole('textbox',{name:'Finding title',exact:true}).inputValue()==='Root validation finding',`${width} persistence`);
+ await page.getByRole('button',{name:'Revision history'}).click();
+ check(await page.getByRole('dialog').getByText('A finished task is not a finished handoff',{exact:true}).isVisible(),`${width} revision retained`);
+ await page.keyboard.press('Escape');
+ await page.screenshot({path:`${out}/${width}-finding.png`});await axe('finding');
+ await page.getByRole('button',{name:/^Findings/}).click();await page.getByRole('button',{name:'New finding',exact:true}).click();
+ await page.getByRole('button',{name:'Save finding',exact:true}).click();
+ check(await page.getByRole('textbox',{name:'Finding title',exact:true}).evaluate(e=>document.activeElement===e),`${width} empty title focus`);
+ await page.getByRole('textbox',{name:'Finding title',exact:true}).fill('Second conclusion');
+ await page.getByRole('textbox',{name:'Your interpretation'}).fill('This is a test finding with a traceable source.');
+ await evidence();
+ await page.getByRole('combobox',{name:'Filter by theme'}).selectOption('All themes');
+ if(width===390){
+  await page.locator('article.excerpt').last().scrollIntoViewIfNeeded();
+  check(await page.locator('.mobile-target').innerText().then(t=>t.includes('Second conclusion')),`${width} linking target identity`);
+  await page.locator('.mobile-target').getByRole('button',{name:'Edit',exact:true}).click();
+  await page.waitForTimeout(250);
+  check(await page.getByRole('textbox',{name:'Finding title',exact:true}).evaluate(e=>{const r=e.getBoundingClientRect();return e===document.activeElement&&r.top>100&&r.bottom<innerHeight}),`${width} late excerpt edit focuses and reveals claim`);
+  await evidence();
+ }
+ await page.locator('article.excerpt').first().getByRole('button',{name:'Challenges',exact:true}).click();
+ await finding();
+ check(await page.locator('.map-title').innerText().then(t=>t.includes('1 linked')),`${width} new finding links isolated`);
+ await page.getByRole('button',{name:'Save finding',exact:true}).click();
+ await page.getByRole('button',{name:/^Findings/}).click();await page.getByRole('button',{name:/Root validation finding/}).click();
+ check(await page.locator('.map-title').innerText().then(t=>t.includes('4 linked')),`${width} original finding preserved`);
+ await context.close();
+}}catch(e){results.failure=e.stack;process.exitCode=1}finally{await fs.writeFile(`${out}/checks.json`,JSON.stringify(results,null,2));await browser.close();}
+console.log(JSON.stringify({checks:results.checks.length,failed:results.checks.filter(x=>!x.pass),errors:results.errors,axe:results.axe.map(x=>({width:x.width,state:x.state,violations:x.violations.length,incomplete:x.incomplete.length})),failure:results.failure}));

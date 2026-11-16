@@ -1,0 +1,1449 @@
+{
+  "checks": [
+    "1440 no root overflow",
+    "1440 chart labels not miniaturized",
+    "1440 September 2026 summary",
+    "1440 September 2026 movement reconciles",
+    "1440 September 2026 plan sum reconciles",
+    "1440 August 2026 summary",
+    "1440 August 2026 movement reconciles",
+    "1440 August 2026 plan sum reconciles",
+    "1440 October 2026 summary",
+    "1440 October 2026 movement reconciles",
+    "1440 October 2026 plan sum reconciles",
+    "1440 comparison removed",
+    "1440 daily values available",
+    "1440 filter/search",
+    "1440 detail heading",
+    "1440 search retained",
+    "1440 focus restored",
+    "1440 scroll restored",
+    "1440 clear empty state",
+    "1440 recovery restores records",
+    "390 no root overflow",
+    "390 chart labels not miniaturized",
+    "390 September 2026 summary",
+    "390 September 2026 movement reconciles",
+    "390 September 2026 plan sum reconciles",
+    "390 August 2026 summary",
+    "390 August 2026 movement reconciles",
+    "390 August 2026 plan sum reconciles",
+    "390 October 2026 summary",
+    "390 October 2026 movement reconciles",
+    "390 October 2026 plan sum reconciles",
+    "390 comparison removed",
+    "390 daily values available",
+    "390 filter/search",
+    "390 detail heading",
+    "390 search retained",
+    "390 focus restored",
+    "390 scroll restored",
+    "390 clear empty state",
+    "390 recovery restores records"
+  ],
+  "axe": [
+    {
+      "width": 1440,
+      "state": "overview",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"workspace-avatar\">S</span>",
+                      "target": [
+                        ".workspace-avatar"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"workspace-avatar\">S</span>",
+              "target": [
+                ".workspace-avatar"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgGradient",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<button class=\"button export\" aria-label=\"Export report\">",
+                      "target": [
+                        ".button"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined due to a background gradient"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<button class=\"button export\" aria-label=\"Export report\">",
+              "target": [
+                ".button"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 786 240\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 786 240\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"214\" text-anchor=\"end\">$30k</text>",
+              "target": [
+                "text[y=\"214\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"175\" text-anchor=\"end\">$35k</text>",
+              "target": [
+                "text[y=\"175\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"136\" text-anchor=\"end\">$40k</text>",
+              "target": [
+                "text[y=\"136\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"97\" text-anchor=\"end\">$45k</text>",
+              "target": [
+                "text[y=\"97\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"58\" text-anchor=\"end\">$50k</text>",
+              "target": [
+                "text[y=\"58\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "bgOverlap",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it is overlapped by another element"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"19\" text-anchor=\"end\">$55k</text>",
+              "target": [
+                "text[y=\"19\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 786 240\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 786 240\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"44\" y=\"236\" text-anchor=\"start\">Oct 1</text>",
+              "target": [
+                "text[x=\"44\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 786 240\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 786 240\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"214.33333333333334\" y=\"236\" text-anchor=\"middle\">Oct 8</text>",
+              "target": [
+                "text[x=\"214.33333333333334\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 786 240\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 786 240\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"384.6666666666667\" y=\"236\" text-anchor=\"middle\">Oct 15</text>",
+              "target": [
+                "text[x=\"384.6666666666667\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 786 240\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 786 240\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"555\" y=\"236\" text-anchor=\"middle\">Oct 22</text>",
+              "target": [
+                "text[x=\"555\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 786 240\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 786 240\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"774\" y=\"236\" text-anchor=\"end\">Oct 31</text>",
+              "target": [
+                "text[x=\"774\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#9b66d4",
+                    "bgColor": "#f2ebff",
+                    "contrastRatio": 3.45,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo layers\">L</span>",
+                      "target": [
+                        ".layers"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo layers\">L</span>",
+              "target": [
+                ".layers"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#3d8270",
+                    "bgColor": "#e7f4ef",
+                    "contrastRatio": 4.01,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo quotient\">Q</span>",
+                      "target": [
+                        ".quotient"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo quotient\">Q</span>",
+              "target": [
+                ".quotient"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#5c7ea2",
+                    "bgColor": "#e9eef7",
+                    "contrastRatio": 3.63,
+                    "fontSize": "15.0pt (20px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo sisyphus\">S</span>",
+                      "target": [
+                        ".sisyphus"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo sisyphus\">S</span>",
+              "target": [
+                ".sisyphus"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#b88e44",
+                    "bgColor": "#f9efdb",
+                    "contrastRatio": 2.63,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo capsule\">C</span>",
+                      "target": [
+                        ".capsule"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo capsule\">C</span>",
+              "target": [
+                ".capsule"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#547c71",
+                    "bgColor": "#edf1f0",
+                    "contrastRatio": 4.09,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo northstar\">N</span>",
+                      "target": [
+                        ".northstar"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo northstar\">N</span>",
+              "target": [
+                ".northstar"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#a77587",
+                    "bgColor": "#f3e8eb",
+                    "contrastRatio": 3.16,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo hourglass\">H</span>",
+                      "target": [
+                        ".hourglass"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo hourglass\">H</span>",
+              "target": [
+                ".hourglass"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "detail",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"workspace-avatar\">S</span>",
+                      "target": [
+                        ".workspace-avatar"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"workspace-avatar\">S</span>",
+              "target": [
+                ".workspace-avatar"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#b4a6be",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 2.29,
+                    "fontSize": "9.8pt (13px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<html lang=\"en\">",
+                      "target": [
+                        "html"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"dot-sep\">·</span>",
+              "target": [
+                ".dot-sep"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "overview",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 320 210\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 320 210\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"184\" text-anchor=\"end\">$30k</text>",
+              "target": [
+                "text[y=\"184\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 320 210\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 320 210\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"151\" text-anchor=\"end\">$35k</text>",
+              "target": [
+                "text[y=\"151\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 320 210\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 320 210\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"118\" text-anchor=\"end\">$40k</text>",
+              "target": [
+                "text[y=\"118\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 320 210\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 320 210\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"85\" text-anchor=\"end\">$45k</text>",
+              "target": [
+                "text[y=\"85\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 320 210\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 320 210\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"52\" text-anchor=\"end\">$50k</text>",
+              "target": [
+                "text[y=\"52\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 320 210\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 320 210\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"36\" y=\"19\" text-anchor=\"end\">$55k</text>",
+              "target": [
+                "text[y=\"19\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 320 210\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 320 210\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"44\" y=\"206\" text-anchor=\"start\">Oct 1</text>",
+              "target": [
+                "text[x=\"44\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 320 210\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 320 210\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"176\" y=\"206\" text-anchor=\"middle\">Oct 16</text>",
+              "target": [
+                "text[x=\"176\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "imgNode",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<svg viewBox=\"0 0 320 210\" role=\"img\" aria-label=\"Monthly recurring revenue increased from $43,000 to $48,240 in October 2026. Exact daily values are available with View data.\">",
+                      "target": [
+                        "svg[viewBox=\"0 0 320 210\"]"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because element contains an image node"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<text x=\"308\" y=\"206\" text-anchor=\"end\">Oct 31</text>",
+              "target": [
+                "text[x=\"308\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#9b66d4",
+                    "bgColor": "#f2ebff",
+                    "contrastRatio": 3.45,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo layers\">L</span>",
+                      "target": [
+                        ".layers"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo layers\">L</span>",
+              "target": [
+                ".layers"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#3d8270",
+                    "bgColor": "#e7f4ef",
+                    "contrastRatio": 4.01,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo quotient\">Q</span>",
+                      "target": [
+                        ".quotient"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo quotient\">Q</span>",
+              "target": [
+                ".quotient"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#5c7ea2",
+                    "bgColor": "#e9eef7",
+                    "contrastRatio": 3.63,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo sisyphus\">S</span>",
+                      "target": [
+                        ".sisyphus"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo sisyphus\">S</span>",
+              "target": [
+                ".sisyphus"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#b88e44",
+                    "bgColor": "#f9efdb",
+                    "contrastRatio": 2.63,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo capsule\">C</span>",
+                      "target": [
+                        ".capsule"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo capsule\">C</span>",
+              "target": [
+                ".capsule"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#547c71",
+                    "bgColor": "#edf1f0",
+                    "contrastRatio": 4.09,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo northstar\">N</span>",
+                      "target": [
+                        ".northstar"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo northstar\">N</span>",
+              "target": [
+                ".northstar"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            },
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#a77587",
+                    "bgColor": "#f3e8eb",
+                    "contrastRatio": 3.16,
+                    "fontSize": "12.8pt (17.0001px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<span class=\"company-logo hourglass\">H</span>",
+                      "target": [
+                        ".hourglass"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"company-logo hourglass\">H</span>",
+              "target": [
+                ".hourglass"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "detail",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#b4a6be",
+                    "bgColor": "#ffffff",
+                    "contrastRatio": 2.29,
+                    "fontSize": "8.2pt (10.9999px)",
+                    "fontWeight": "normal",
+                    "messageKey": "shortTextContent",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<html lang=\"en\">",
+                      "target": [
+                        "html"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element content is too short to determine if it is actual text content"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"dot-sep\">·</span>",
+              "target": [
+                ".dot-sep"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "chartText": [
+    {
+      "width": 1440,
+      "labels": [
+        {
+          "text": "$30k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "$35k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "$40k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "$45k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "$50k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "$55k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "Oct 1",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "Oct 8",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "Oct 15",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "Oct 22",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "Oct 31",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "labels": [
+        {
+          "text": "$30k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "$35k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "$40k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "$45k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "$50k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "$55k",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "Oct 1",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "Oct 16",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        },
+        {
+          "text": "Oct 31",
+          "cssFontPx": 10.9999,
+          "screenFontPx": 10.9999
+        }
+      ]
+    }
+  ],
+  "scope": "Independent local overview→period→source customer→detail→return and empty-state checks"
+}

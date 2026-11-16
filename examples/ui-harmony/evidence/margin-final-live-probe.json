@@ -1,0 +1,473 @@
+{
+  "colors": [
+    {
+      "width": 1440,
+      "entries": [
+        {
+          "role": "excerpt-number",
+          "text": "01",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "theme-label",
+          "text": "Ownership",
+          "color": "rgb(102, 113, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-time",
+          "text": "08:42",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "BLOCKQUOTE",
+          "text": "“The task is marked done, but I still don’t know who is holding the next step. So I send another message.”",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "STRONG",
+          "text": "Avery Chen",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "SPAN",
+          "text": "Operations lead",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-link",
+          "text": "Source ",
+          "color": "rgb(89, 103, 79)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "link-prompt",
+          "text": "Link to finding",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "excerpt-number",
+          "text": "03",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "theme-label",
+          "text": "Ownership",
+          "color": "rgb(102, 113, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-time",
+          "text": "06:28",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "BLOCKQUOTE",
+          "text": "“We don’t assign the next person until the morning check-in. For us, that conversation is the handoff.”",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "STRONG",
+          "text": "Morgan Ellis",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "SPAN",
+          "text": "Design lead",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-link",
+          "text": "Source ",
+          "color": "rgb(89, 103, 79)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "link-prompt",
+          "text": "Link to finding",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "excerpt-number",
+          "text": "05",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "theme-label",
+          "text": "Visibility",
+          "color": "rgb(102, 113, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-time",
+          "text": "10:51",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "BLOCKQUOTE",
+          "text": "“A green status can mean “my part is finished” or “the whole thing is finished.” Those are very different promises.”",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "STRONG",
+          "text": "Drew Okafor",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "SPAN",
+          "text": "Product manager",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-link",
+          "text": "Source ",
+          "color": "rgb(89, 103, 79)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "link-prompt",
+          "text": "Link to finding",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "entries": [
+        {
+          "role": "excerpt-number",
+          "text": "01",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "theme-label",
+          "text": "Ownership",
+          "color": "rgb(102, 113, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-time",
+          "text": "08:42",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "BLOCKQUOTE",
+          "text": "“The task is marked done, but I still don’t know who is holding the next step. So I send another message.”",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "STRONG",
+          "text": "Avery Chen",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "SPAN",
+          "text": "Operations lead",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-link",
+          "text": "Source ",
+          "color": "rgb(89, 103, 79)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "link-prompt",
+          "text": "Link to finding",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "excerpt-number",
+          "text": "03",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "theme-label",
+          "text": "Ownership",
+          "color": "rgb(102, 113, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-time",
+          "text": "06:28",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "BLOCKQUOTE",
+          "text": "“We don’t assign the next person until the morning check-in. For us, that conversation is the handoff.”",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "STRONG",
+          "text": "Morgan Ellis",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "SPAN",
+          "text": "Design lead",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-link",
+          "text": "Source ",
+          "color": "rgb(89, 103, 79)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "link-prompt",
+          "text": "Link to finding",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "excerpt-number",
+          "text": "05",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "theme-label",
+          "text": "Visibility",
+          "color": "rgb(102, 113, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-time",
+          "text": "10:51",
+          "color": "rgb(101, 114, 91)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "BLOCKQUOTE",
+          "text": "“A green status can mean “my part is finished” or “the whole thing is finished.” Those are very different promises.”",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "STRONG",
+          "text": "Drew Okafor",
+          "color": "rgb(38, 53, 47)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "SPAN",
+          "text": "Product manager",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "source-link",
+          "text": "Source ",
+          "color": "rgb(89, 103, 79)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "role": "link-prompt",
+          "text": "Link to finding",
+          "color": "rgb(107, 119, 95)",
+          "opacity": "1",
+          "bg": "rgba(0, 0, 0, 0)",
+          "gradient": "linear-gradient(90deg, rgba(247, 250, 244, 0), rgba(247, 250, 244, 0.667))",
+          "articleBg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    }
+  ],
+  "context": {
+    "targetLate": "LINKING TO\nRecovery depends on preserving the decision trail across handoffs\nEdit",
+    "targetBounds": {
+      "x": 20,
+      "y": 64,
+      "width": 350,
+      "height": 70.875
+    },
+    "afterEdit": {
+      "scrollY": 141,
+      "title": "Recovery depends on preserving the decision trail across handoffs",
+      "titleBounds": {
+        "x": 41,
+        "y": 370.171875,
+        "width": 308,
+        "height": 103.25,
+        "top": 370.171875,
+        "right": 349,
+        "bottom": 473.421875,
+        "left": 41
+      },
+      "linked": "Evidence behind this finding\n1 linked",
+      "active": "<textarea id=\"finding-title\" class=\"finding-title\" rows=\"2\" placeholder=\"What is the evidence telling you?\">Recovery depends on preserving the decision trail across handoffs</texta"
+    },
+    "originalTitle": "A finished task is not a finished handoff",
+    "originalLinks": "Evidence behind this finding\n3 linked"
+  }
+}

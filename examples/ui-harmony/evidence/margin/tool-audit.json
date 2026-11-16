@@ -1,0 +1,3155 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-16T00:55:31.208Z",
+  "url": "http://127.0.0.1:4314/",
+  "fixture": "margin-six-interviews-v1",
+  "config": {
+    "viewports": [
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "groups": [],
+    "separations": [],
+    "ignore": []
+  },
+  "setupHash": null,
+  "environment": {
+    "toolVersion": "2.2.0",
+    "node": "v24.22.3",
+    "platform": "darwin",
+    "channel": "chrome",
+    "browser": "157.0.8103.51"
+  },
+  "coverage": {
+    "plannedCases": 2,
+    "semanticReview": "not-performed",
+    "keyboard": "not-performed",
+    "realBrowserZoom": "not-performed",
+    "motionPlayback": "not-performed",
+    "states": "default",
+    "capturedCases": 2,
+    "geometryTruncated": false,
+    "unverifiedContracts": 0,
+    "automatedStatus": "captured",
+    "notes": [
+      "A clean capture is not a quality pass. Read all axe incomplete results.",
+      "Viewport width is not browser zoom; screenshots are not motion or usability tests.",
+      "Geometry and screenshots are sequential samples; capture a stable state with --ready/--setup.",
+      "Fresh contexts per viewport. No crawling, clicking, or form submission unless a setup hook explicitly does it."
+    ]
+  },
+  "cases": [
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "finalUrl": "http://127.0.0.1:4314/",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "motion": "no-preference",
+      "textSpacing": false,
+      "screenshot": "desktop-light-no-preference-default.png",
+      "viewportScreenshot": "desktop-light-no-preference-default-viewport.png",
+      "metrics": [],
+      "coverage": {
+        "visuallyHiddenCandidates": [
+          {
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(2) > div:nth-of-type(2) > label:nth-of-type(1)",
+            "focusable": false,
+            "clip": "rect(0px, 0px, 0px, 0px)",
+            "clipPath": "none",
+            "note": "CSS hiding pattern detected, intent unverified. Check semantics and focus reveal for focusable content."
+          }
+        ],
+        "totalDomElements": 328,
+        "renderedLightDomElements": 275,
+        "sampledElements": 275,
+        "truncated": false,
+        "iframeCount": 0,
+        "shadowHostCount": 0,
+        "canvasCount": 0,
+        "notes": [
+          "Geometry samples rendered light DOM only; not occlusion, text ink bounds, closed shadow trees, or iframe contents.",
+          "Offscreen rendered elements are included. Virtualized/unmounted content is absent.",
+          "Pseudo-elements, ancestor clipping and nested-inline text clipping need visual inspection."
+        ]
+      },
+      "consoleErrors": [],
+      "axeSummary": {
+        "version": "4.14.0",
+        "violationRules": 0,
+        "incompleteRules": 1,
+        "passedRules": 38,
+        "inapplicableRules": 53
+      }
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "finalUrl": "http://127.0.0.1:4314/",
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light",
+      "motion": "no-preference",
+      "textSpacing": false,
+      "screenshot": "phone-light-no-preference-default.png",
+      "viewportScreenshot": "phone-light-no-preference-default-viewport.png",
+      "metrics": [],
+      "coverage": {
+        "visuallyHiddenCandidates": [],
+        "totalDomElements": 328,
+        "renderedLightDomElements": 194,
+        "sampledElements": 194,
+        "truncated": false,
+        "iframeCount": 0,
+        "shadowHostCount": 0,
+        "canvasCount": 0,
+        "notes": [
+          "Geometry samples rendered light DOM only; not occlusion, text ink bounds, closed shadow trees, or iframe contents.",
+          "Offscreen rendered elements are included. Virtualized/unmounted content is absent.",
+          "Pseudo-elements, ancestor clipping and nested-inline text clipping need visual inspection."
+        ]
+      },
+      "consoleErrors": [],
+      "axeSummary": {
+        "version": "4.14.0",
+        "violationRules": 0,
+        "incompleteRules": 1,
+        "passedRules": 36,
+        "inapplicableRules": 55
+      }
+    }
+  ],
+  "findings": [
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "evidence": "desktop-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "visually-hidden-pattern",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(2) > div:nth-of-type(2) > label:nth-of-type(1)",
+      "rect": {
+        "left": 776.328125,
+        "right": 777.328125,
+        "top": 380.6875,
+        "bottom": 381.6875,
+        "width": 1,
+        "height": 1,
+        "centerX": 776.828125,
+        "centerY": 381.1875
+      },
+      "kind": "review",
+      "severity": "minor",
+      "observed": {
+        "focusable": false,
+        "clip": "rect(0px, 0px, 0px, 0px)",
+        "clipPath": "none"
+      },
+      "expected": "Intentional accessibility-only content or a control that reveals appropriately on focus",
+      "message": "A common visually-hidden CSS pattern is present; intent and focus behavior need review.",
+      "fix": "Preserve accessibility labels. Verify purpose; for focusable content, test focus reveal or its associated visible control and operation. Do not enlarge hidden text solely to satisfy visual geometry.",
+      "verification": "The content serves an intentional semantic purpose; focusable content or its associated control provides a reachable, visible, operable focus state.",
+      "id": "1af341d25985b0"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "evidence": "desktop-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "text-clipping",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1)",
+      "rect": {
+        "left": 822.34375,
+        "right": 1307,
+        "top": 811.6875,
+        "bottom": 828.484375,
+        "width": 484.65625,
+        "height": 16.796875,
+        "centerX": 1064.671875,
+        "centerY": 820.0859375
+      },
+      "kind": "review",
+      "severity": "major",
+      "observed": {
+        "x": true,
+        "y": false,
+        "overflowXCssPx": 83,
+        "overflowYCssPx": 0,
+        "textOverflow": "ellipsis",
+        "lineClamp": "none"
+      },
+      "expected": "All necessary text readable or a clear route to the full text",
+      "message": "A text-containing box clips overflow; truncation may be intentional.",
+      "fix": "Inspect the screenshot and expanded state. Allow wrapping or growth when essential text is lost; retain intentional previews when full content is reachable.",
+      "verification": "Longest realistic content and text-spacing override do not hide essential text.",
+      "id": "e75a607ec29f7b"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "evidence": "desktop-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "text-clipping",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3) > button:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1)",
+      "rect": {
+        "left": 822.34375,
+        "right": 1307,
+        "top": 866.484375,
+        "bottom": 883.28125,
+        "width": 484.65625,
+        "height": 16.796875,
+        "centerX": 1064.671875,
+        "centerY": 874.8828125
+      },
+      "kind": "review",
+      "severity": "major",
+      "observed": {
+        "x": true,
+        "y": false,
+        "overflowXCssPx": 134,
+        "overflowYCssPx": 0,
+        "textOverflow": "ellipsis",
+        "lineClamp": "none"
+      },
+      "expected": "All necessary text readable or a clear route to the full text",
+      "message": "A text-containing box clips overflow; truncation may be intentional.",
+      "fix": "Inspect the screenshot and expanded state. Allow wrapping or growth when essential text is lost; retain intentional previews when full content is reachable.",
+      "verification": "Longest realistic content and text-spacing override do not hide essential text.",
+      "id": "8be0d58e2540fd"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "evidence": "desktop-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "text-clipping",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1)",
+      "rect": {
+        "left": 822.34375,
+        "right": 1307,
+        "top": 960.28125,
+        "bottom": 977.078125,
+        "width": 484.65625,
+        "height": 16.796875,
+        "centerX": 1064.671875,
+        "centerY": 968.6796875
+      },
+      "kind": "review",
+      "severity": "major",
+      "observed": {
+        "x": true,
+        "y": false,
+        "overflowXCssPx": 69,
+        "overflowYCssPx": 0,
+        "textOverflow": "ellipsis",
+        "lineClamp": "none"
+      },
+      "expected": "All necessary text readable or a clear route to the full text",
+      "message": "A text-containing box clips overflow; truncation may be intentional.",
+      "fix": "Inspect the screenshot and expanded state. Allow wrapping or growth when essential text is lost; retain intentional previews when full content is reachable.",
+      "verification": "Longest realistic content and text-spacing override do not hide essential text.",
+      "id": "f17020687b938e"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .excerpt-meta > .excerpt-number\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "f7d84a2c10b87a"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .excerpt-meta > .theme-label\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "700e58da1f151c"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .excerpt-meta > .source-time\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "b466d7ce08bdd8"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > blockquote\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "f1e42bacac4b7a"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .person-line > div > strong\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "c271dccefb91f5"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .person-line > div > span\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "a6d5c9da886542"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Open source for Avery Chen\\\"]\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "93425a08cf89dc"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .excerpt-actions > .link-prompt\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "c70d429111fc11"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .excerpt-meta > .excerpt-number\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "30f69ee5a1c115"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .excerpt-meta > .theme-label\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "c6f25f9fb02add"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .excerpt-meta > .source-time\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "bfcfa6995ecb71"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > blockquote\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "ba1593c3a785f3"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .person-line > div > strong\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "a0b46b636d19b2"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .person-line > div > span\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "8460598d3790eb"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Open source for Morgan Ellis\\\"]\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "af385b8f3335c8"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .excerpt-actions > .link-prompt\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "ed84e0c73bcec0"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(4) > blockquote\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "3b218b23c04bd0"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(4) > .person-line > div > strong\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "132e8c7d07287c"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(4) > .person-line > div > span\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "8927bbe277738f"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Open source for Jamie Park\\\"]\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "0664024f1b6732"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(4) > .excerpt-actions > .link-prompt\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "11651d60394a9c"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .excerpt-meta > .excerpt-number\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "4bb6aee151a542"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .excerpt-meta > .theme-label\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "a41bd3f2987b7c"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .excerpt-meta > .source-time\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "883fe89fe13dac"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > blockquote\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "20290e52ac10dc"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .person-line > div > strong\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "abc5f026c31568"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .person-line > div > span\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "a55e1e6111cbf0"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Open source for Drew Okafor\\\"]\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "50e1edec9424ef"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .excerpt-actions > .link-prompt\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "f7cc28e2d26c6b"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(6) > .excerpt-meta > .excerpt-number\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "761fd8a3e8e62e"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(6) > .excerpt-meta > .theme-label\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "931845caa15cba"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(6) > .excerpt-meta > .source-time\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "ee590864a44983"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(6) > blockquote\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "45f2c41a55be75"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(6) > .person-line > div > strong\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "bc389a90660a60"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(6) > .person-line > div > span\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "eb7a63062f949f"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Open source for Taylor Brooks\\\"]\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "16b424417b7410"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"article:nth-child(6) > .excerpt-actions > .link-prompt\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it's partially obscured by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "elmPartiallyObscured",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "e69332bfcffab0"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .excerpt-meta > .excerpt-number\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "be37d6d480ca90"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .excerpt-meta > .theme-label\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "547ea650458b8c"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .excerpt-meta > .source-time\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "2068a55cf37748"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > blockquote\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "e77d27cd5e380d"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .person-line > div > strong\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "8ec46e448d90d5"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .person-line > div > span\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "2fa21f4d27c7d7"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Open source for Avery Chen\\\"]\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "aaf7514ea37973"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(1) > .excerpt-actions > .link-prompt\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "7.5pt (10px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "1129fef8b00b56"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .excerpt-meta > .excerpt-number\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "27fcc7b2cf034a"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .excerpt-meta > .theme-label\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "edb7523def7161"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .excerpt-meta > .source-time\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "e3d500e6c1a06f"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > blockquote\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "612e73899c4b42"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .person-line > div > strong\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "b047e66cdcd24c"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .person-line > div > span\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "955d46da8df4ce"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Open source for Morgan Ellis\\\"]\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "8fa32844875b9e"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(3) > .excerpt-actions > .link-prompt\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "7.5pt (10px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "09cdc3f2688aaa"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .excerpt-meta > .excerpt-number\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "7d8c2cde350063"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .excerpt-meta > .theme-label\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "8e7f3eda7e54fc"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .excerpt-meta > .source-time\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "ec797458ee6756"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > blockquote\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "784c85d324d38f"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .person-line > div > strong\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "f3497ce85d7d10"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .person-line > div > span\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "433f780c5f7211"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Open source for Drew Okafor\\\"]\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "4ad6d904d7dd6d"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".linked:nth-child(5) > .excerpt-actions > .link-prompt\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "7.5pt (10px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "3dcee4a38ce975"
+    }
+  ],
+  "errors": [],
+  "findingSummary": {
+    "byKind": {
+      "review": 65
+    },
+    "groups": [
+      {
+        "kind": "review",
+        "rule": "visually-hidden-pattern",
+        "standard": "unspecified",
+        "axeResult": null,
+        "count": 1,
+        "excepted": 0,
+        "cases": {
+          "desktop-light-no-preference-default": 1
+        },
+        "findingIds": [
+          "1af341d25985b0"
+        ],
+        "examples": [
+          {
+            "id": "1af341d25985b0",
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(2) > div:nth-of-type(2) > label:nth-of-type(1)"
+          }
+        ]
+      },
+      {
+        "kind": "review",
+        "rule": "text-clipping",
+        "standard": "unspecified",
+        "axeResult": null,
+        "count": 3,
+        "excepted": 0,
+        "cases": {
+          "desktop-light-no-preference-default": 3
+        },
+        "findingIds": [
+          "e75a607ec29f7b",
+          "8be0d58e2540fd",
+          "f17020687b938e"
+        ],
+        "examples": [
+          {
+            "id": "e75a607ec29f7b",
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1)"
+          },
+          {
+            "id": "8be0d58e2540fd",
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3) > button:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1)"
+          },
+          {
+            "id": "f17020687b938e",
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(3) > section:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(1)"
+          }
+        ]
+      },
+      {
+        "kind": "review",
+        "rule": "axe:color-contrast",
+        "standard": "wcag",
+        "axeResult": "incomplete",
+        "count": 61,
+        "excepted": 0,
+        "cases": {
+          "desktop-light-no-preference-default": 37,
+          "phone-light-no-preference-default": 24
+        },
+        "findingIds": [
+          "f7d84a2c10b87a",
+          "700e58da1f151c",
+          "b466d7ce08bdd8",
+          "f1e42bacac4b7a",
+          "c271dccefb91f5",
+          "a6d5c9da886542",
+          "93425a08cf89dc",
+          "c70d429111fc11",
+          "30f69ee5a1c115",
+          "c6f25f9fb02add",
+          "bfcfa6995ecb71",
+          "ba1593c3a785f3",
+          "a0b46b636d19b2",
+          "8460598d3790eb",
+          "af385b8f3335c8",
+          "ed84e0c73bcec0",
+          "3b218b23c04bd0",
+          "132e8c7d07287c",
+          "8927bbe277738f",
+          "0664024f1b6732",
+          "11651d60394a9c",
+          "4bb6aee151a542",
+          "a41bd3f2987b7c",
+          "883fe89fe13dac",
+          "20290e52ac10dc",
+          "abc5f026c31568",
+          "a55e1e6111cbf0",
+          "50e1edec9424ef",
+          "f7cc28e2d26c6b",
+          "761fd8a3e8e62e",
+          "931845caa15cba",
+          "ee590864a44983",
+          "45f2c41a55be75",
+          "bc389a90660a60",
+          "eb7a63062f949f",
+          "16b424417b7410",
+          "e69332bfcffab0",
+          "be37d6d480ca90",
+          "547ea650458b8c",
+          "2068a55cf37748",
+          "e77d27cd5e380d",
+          "8ec46e448d90d5",
+          "2fa21f4d27c7d7",
+          "aaf7514ea37973",
+          "1129fef8b00b56",
+          "27fcc7b2cf034a",
+          "edb7523def7161",
+          "e3d500e6c1a06f",
+          "612e73899c4b42",
+          "b047e66cdcd24c",
+          "955d46da8df4ce",
+          "8fa32844875b9e",
+          "09cdc3f2688aaa",
+          "7d8c2cde350063",
+          "8e7f3eda7e54fc",
+          "ec797458ee6756",
+          "784c85d324d38f",
+          "f3497ce85d7d10",
+          "433f780c5f7211",
+          "4ad6d904d7dd6d",
+          "3dcee4a38ce975"
+        ],
+        "examples": [
+          {
+            "id": "f7d84a2c10b87a",
+            "selector": "[\".linked:nth-child(1) > .excerpt-meta > .excerpt-number\"]"
+          },
+          {
+            "id": "700e58da1f151c",
+            "selector": "[\".linked:nth-child(1) > .excerpt-meta > .theme-label\"]"
+          },
+          {
+            "id": "b466d7ce08bdd8",
+            "selector": "[\".linked:nth-child(1) > .excerpt-meta > .source-time\"]"
+          }
+        ]
+      }
+    ],
+    "note": "Grouped occurrences, not distinct user problems or a design score. Incomplete axe checks, advisories and WCAG-tagged findings remain separate; inspect evidence and task context."
+  }
+}

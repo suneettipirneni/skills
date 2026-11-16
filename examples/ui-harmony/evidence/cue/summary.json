@@ -1,0 +1,208 @@
+{
+  "checks": [
+    {
+      "label": "1440 no overflow",
+      "pass": true
+    },
+    {
+      "label": "1440 actual audio duration",
+      "pass": true
+    },
+    {
+      "label": "1440 playback advances and pauses",
+      "pass": true
+    },
+    {
+      "label": "1440 playback rate",
+      "pass": true
+    },
+    {
+      "label": "1440 chapter seeks",
+      "pass": true
+    },
+    {
+      "label": "1440 keyboard seek",
+      "pass": true
+    },
+    {
+      "label": "1440 composer focus",
+      "pass": true
+    },
+    {
+      "label": "1440 draft time stays fixed",
+      "pass": true
+    },
+    {
+      "label": "1440 note added",
+      "pass": true
+    },
+    {
+      "label": "1440 saved note timestamp",
+      "pass": true
+    },
+    {
+      "label": "1440 resolved leaves open filter",
+      "pass": true
+    },
+    {
+      "label": "1440 resolved retained",
+      "pass": true
+    },
+    {
+      "label": "1440 reopened",
+      "pass": true
+    },
+    {
+      "label": "1440 feedback axe",
+      "pass": true
+    },
+    {
+      "label": "1440 draft recovery",
+      "pass": true
+    },
+    {
+      "label": "1440 note persists",
+      "pass": true
+    },
+    {
+      "label": "1440 export actual review",
+      "pass": true
+    },
+    {
+      "label": "1440 apparent search field hit area",
+      "pass": true
+    },
+    {
+      "label": "1440 search empty",
+      "pass": true
+    },
+    {
+      "label": "1440 search recovery",
+      "pass": true
+    },
+    {
+      "label": "1440 transcript axe",
+      "pass": true
+    },
+    {
+      "label": "390 no overflow",
+      "pass": true
+    },
+    {
+      "label": "390 actual audio duration",
+      "pass": true
+    },
+    {
+      "label": "390 playback advances and pauses",
+      "pass": true
+    },
+    {
+      "label": "390 playback rate",
+      "pass": true
+    },
+    {
+      "label": "390 chapter seeks",
+      "pass": true
+    },
+    {
+      "label": "390 keyboard seek",
+      "pass": true
+    },
+    {
+      "label": "390 composer focus",
+      "pass": true
+    },
+    {
+      "label": "390 draft time stays fixed",
+      "pass": true
+    },
+    {
+      "label": "390 note added",
+      "pass": true
+    },
+    {
+      "label": "390 saved note timestamp",
+      "pass": true
+    },
+    {
+      "label": "390 resolved leaves open filter",
+      "pass": true
+    },
+    {
+      "label": "390 resolved retained",
+      "pass": true
+    },
+    {
+      "label": "390 reopened",
+      "pass": true
+    },
+    {
+      "label": "390 feedback axe",
+      "pass": true
+    },
+    {
+      "label": "390 draft recovery",
+      "pass": true
+    },
+    {
+      "label": "390 note persists",
+      "pass": true
+    },
+    {
+      "label": "390 export actual review",
+      "pass": true
+    },
+    {
+      "label": "390 apparent search field hit area",
+      "pass": true
+    },
+    {
+      "label": "390 search empty",
+      "pass": true
+    },
+    {
+      "label": "390 search recovery",
+      "pass": true
+    },
+    {
+      "label": "390 transcript axe",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "axe": [
+    {
+      "width": 1440,
+      "state": "feedback",
+      "violationCount": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "transcript",
+      "violationCount": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 390,
+      "state": "feedback",
+      "violationCount": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 390,
+      "state": "transcript",
+      "violationCount": 0,
+      "incompleteRules": [
+        "color-contrast"
+      ]
+    }
+  ]
+}

@@ -18,7 +18,7 @@ Compose loading, empty, error and permission cases alongside the happy path. Ins
 
 ## Evidence and repair
 
-Exit when representative content and interaction states explain themselves, the primary task is visible, and local relationships can be tested. Audit optical alignment as well as rectangles. Keep identity strengths in the acceptance criteria.
+For scoped repairs, exit when representative content/states explain themselves, the primary task is visible and changed relationships are verified. For creation or broad polish, also substantiate the chosen visual direction: inspect the whole composition, refine its relevant component family and develop a consequential state transition where interaction is in scope. Use the [Untitled UI anchor](../preferences/untitled-ui.md) for this user’s SaaS aesthetic. A functioning scaffold or high preference score alone is insufficient evidence of craft. Audit optical alignment as well as rectangles, preserve identity strengths and disclose untested states.
 
 **Worked decision:** A vivid editorial heading has intentional tight tracking; only the word boundary is unclear. Increase that boundary rather than replacing the typeface or applying a global spacing reset.
 
@@ -32,3 +32,5 @@ Exit when representative content and interaction states explain themselves, the 
 ## Flexible implementation
 
 [Resilient composition and CSS ownership](../foundations/resilient-css.md) applies Andy Bell’s CUBE CSS and browser-oriented design principles when content, containers or overrides expose fragile rules.
+
+For React generation, [headless primitives](../foundations/headless-react.md) can supply complex control behavior while the application owns its visual family. Recommend Base UI for a new suitable project; retain established primitives where appropriate.

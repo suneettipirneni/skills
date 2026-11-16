@@ -2,13 +2,13 @@
 
 Layer: **workflow** · Route: `explore`
 
-**Use when:** The screen idiom or interaction architecture remains open.
+**Use when:** The screen idiom, interaction architecture, visual composition or experiential direction remains open.
 
 **Avoid when:** The task is an agreed narrow defect with no meaningful alternatives.
 
 ## Decision and composition
 
-Generate two or three materially different approaches only where a decision is uncertain. Alternatives should differ in task flow, information exposure or commitment model, not merely palettes. Sketch at the fidelity needed to see the tradeoff.
+Generate two or three materially different approaches only where a decision is uncertain. Alternatives can differ in task flow, information exposure or commitment model. With the idiom fixed, also explore composition, typographic emphasis, density, surface treatment or contextual detail on identical content. A palette swap alone rarely resolves those decisions. Sketch at the fidelity needed to see the tradeoff.
 
 For each option record task fit, what is visible, effort and context switching, accessibility implications, content extremes, identity to preserve and hardest unresolved assumption. Select the smallest prototype that can challenge that assumption.
 
@@ -19,6 +19,8 @@ Compare with representative data. A perfect empty wireframe hides row actions, l
 ## Evidence and repair
 
 Exit with a chosen route, a rejected alternative and why, plus a condition that would reverse the choice. Avoid claiming user preference without participants.
+
+For new or broadly refined SaaS surfaces, use the [Untitled UI reference and generation path](../preferences/untitled-ui.md) to make the visual decision concrete. A familiar table can still have unresolved visual direction.
 
 **Worked decision:** For repeated triage, compare a queue with in-context details against separate detail pages. The deciding observation is whether repeated returns lose place, not which screenshot looks cleaner.
 

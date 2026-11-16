@@ -9,3 +9,6 @@
 playwright-report/
 test-results/
 audit-output/
+
+/examples/ui-harmony/*/dist/
+/examples/ui-harmony/*/verification-output/

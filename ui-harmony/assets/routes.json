@@ -51,6 +51,14 @@
         {
           "id": "page-instance",
           "when": "Bind the chosen structure to concrete content"
+        },
+        {
+          "id": "workspace",
+          "when": "Repeated object work requires persistent context and scoped tools"
+        },
+        {
+          "id": "specialist",
+          "when": "Domain operations exceed the covered screen idioms"
         }
       ],
       "children": []
@@ -60,7 +68,7 @@
       "layer": "workflow",
       "title": "Explore meaningful alternatives",
       "file": "references/workflow/explore.md",
-      "useWhen": "The screen idiom or interaction architecture remains open.",
+      "useWhen": "The screen idiom, interaction architecture, visual composition or experiential direction remains open.",
       "avoidWhen": "The task is an agreed narrow defect with no meaningful alternatives.",
       "alternatives": [],
       "related": [
@@ -71,6 +79,10 @@
         {
           "id": "compose",
           "when": "Task structure is selected"
+        },
+        {
+          "id": "untitled-ui",
+          "when": "Develop the preferred SaaS visual direction and concrete component finish"
         }
       ],
       "children": []
@@ -99,6 +111,10 @@
         {
           "id": "modern-saas",
           "when": "Apply or score the user's preferred visual direction"
+        },
+        {
+          "id": "untitled-ui",
+          "when": "Develop the preferred SaaS visual direction and concrete component finish"
         }
       ],
       "children": []
@@ -1741,6 +1757,10 @@
       "alternatives": [],
       "related": [
         {
+          "id": "untitled-ui",
+          "when": "Develop the primary aesthetic anchor from screens to component finish"
+        },
+        {
           "id": "collection",
           "when": "Choose an efficient collection idiom"
         },
@@ -1763,6 +1783,90 @@
         {
           "id": "evaluate",
           "when": "Separate preference from task evidence"
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "untitled-ui",
+      "layer": "conditions",
+      "title": "Untitled UI aesthetic anchor and craft refinement",
+      "file": "references/preferences/untitled-ui.md",
+      "useWhen": "Create or broadly refine this user\u2019s SaaS interfaces, especially a coherent draft that still feels basic.",
+      "avoidWhen": "Another identity or brief determines the direction, or the task is an isolated defect.",
+      "alternatives": [],
+      "related": [
+        {
+          "id": "explore",
+          "when": "Resolve visual direction even with a fixed screen idiom"
+        },
+        {
+          "id": "compose",
+          "when": "Develop the whole and relevant component states"
+        },
+        {
+          "id": "settings",
+          "when": "Compose settings and form relationships"
+        },
+        {
+          "id": "collection",
+          "when": "Organize identity, metadata and actions"
+        },
+        {
+          "id": "analytics",
+          "when": "Compose measures and explanations"
+        },
+        {
+          "id": "record-detail",
+          "when": "Keep object context with supporting planes"
+        },
+        {
+          "id": "conversation",
+          "when": "Develop a scoped discussion region"
+        },
+        {
+          "id": "app-shell",
+          "when": "Coordinate navigation and responsive context"
+        },
+        {
+          "id": "button-link",
+          "when": "Refine control optical spacing and states"
+        },
+        {
+          "id": "field",
+          "when": "Compose labels, entry, hints and error"
+        },
+        {
+          "id": "surface",
+          "when": "Distinguish control material from floating layers"
+        },
+        {
+          "id": "typography",
+          "when": "Tune type roles rather than novelty"
+        },
+        {
+          "id": "resilient-css",
+          "when": "Preserve content-driven adaptation"
+        },
+        {
+          "id": "evaluate",
+          "when": "Verify craft and task evidence separately"
+        },
+        {
+          "id": "structure",
+          "when": "Derive bespoke architecture from domain relationships and commitments"
+        },
+        {
+          "id": "workspace",
+          "when": "Repeated work needs persistent object context"
+        },
+        {
+          "id": "workbench",
+          "when": "Coordinate the working surface and scoped controls"
+        },
+        {
+          "id": "specialist",
+          "when": "Domain mechanics such as media exceed catalog coverage"
         }
       ],
       "children": []

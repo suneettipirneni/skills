@@ -117,7 +117,7 @@ See [validation.md](validation.md) for the independent adversarial calibration, 
 
 ## Task and component routing
 
-See [router.md](router.md) for exact-ID route discovery, bounded read plans, plan validation and optional finding ownership. Route integrity does not validate design suitability. The 64-route catalog is dependency-free and supports entry at any level.
+See [router.md](router.md) for exact-ID route discovery, bounded read plans, plan validation and optional finding ownership. Route integrity does not validate design suitability. The 65-route catalog is dependency-free and supports entry at any level.
 
 `npm run test:resilience` adds five isolated captures of one component in different container widths with normal and grown/long text, plus an intentionally broken variant. This tests content adaptation at one viewport, not browser zoom or universal design quality. See the worked semantic counterexample in [validation.md](validation.md).
 
@@ -128,6 +128,10 @@ HTML reports group occurrences by rule, evidence kind, standard tags and axe res
 Geometry now uses `document.scrollingElement` for standards/quirks root extent. A null scroller uses a disclosed root/body fallback. It does not use maximum descendant bounds, which would mistake offscreen/local content for page overflow. Narrow CSS hiding patterns produce `visually-hidden-pattern` contextual reviews instead of ordinary visible-text clipping/target warnings. Their selectors and focusability remain available; intent and associated focus treatment need inspection. Inline target context is advisory metadata, not an automatic exception.
 
 Reports record `environment.toolVersion`; comparison rejects mismatched versions as well as the existing environment/config/fixture checks. A changed checker is not evidence of a repaired website. `npm run test:realworld` runs isolated regressions for the actual real-site failure modes; it makes no external requests. See [real-world-evaluation.md](real-world-evaluation.md).
+
+## Craft and reference studies
+
+Use the [Untitled UI anchor](preferences/untitled-ui.md) for semantic craft feedback alongside the existing browser outputs. The [live reference study](preferences/untitled-ui-evidence.md) records actual audit findings and their limits. Geometry can check a justified relationship; it cannot establish optical quality or pleasantness. Inspect the actual control wrapper and pseudo-elements: a bare input can have zero radius while its parent supplies the rounded material. Keep measured facts, manual craft judgments and functional evidence separate.
 
 ## Modern SaaS preference scoring
 

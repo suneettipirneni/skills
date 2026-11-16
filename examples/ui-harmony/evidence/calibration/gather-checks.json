@@ -1,0 +1,103 @@
+{
+  "checks": [
+    "1440 root fits",
+    "1440 search narrows",
+    "1440 team filter",
+    "1440 meaningful empty",
+    "1440 dialog opens from keyboard",
+    "1440 missing email explained",
+    "1440 duplicate prevented",
+    "1440 confirmation",
+    "1440 focus returns",
+    "1440 invited member appears",
+    "1440 undo removes invitation",
+    "1440 escape closes",
+    "390 root fits",
+    "390 search narrows",
+    "390 team filter",
+    "390 meaningful empty",
+    "390 dialog opens from keyboard",
+    "390 missing email explained",
+    "390 duplicate prevented",
+    "390 confirmation",
+    "390 focus returns",
+    "390 invited member appears",
+    "390 undo removes invitation",
+    "390 escape closes"
+  ],
+  "axe": [
+    {
+      "width": 1440,
+      "state": "directory",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 1440,
+      "state": "invite",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 390,
+      "state": "directory",
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "width": 390,
+      "state": "invite",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "contrastRatio": 0,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "normal",
+                    "messageKey": "elmPartiallyObscuring",
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Element's background color could not be determined because it partially overlaps other elements"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<p>View work in their assigned teams. Cannot make changes.</p>",
+              "target": [
+                ".role-explainer > div > p"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "scope": "Independent local-demo search/filter/invite validation/create/undo and keyboard checks"
+}

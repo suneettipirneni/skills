@@ -24,6 +24,12 @@ Interpret type scale and density by declared surface and region: an editorial ma
 
 Do not count one problem three times merely to increase its penalty. Locate its primary cause. A loud decorative badge normally belongs to purposeful color; lower hierarchy or surface restraint as well only if there is separately explained attention or containment evidence. A warning, selected item, chart or brand detail can score highly even with strong color. Deliberate neutral typography and domain-specific language can satisfy product character without a novel logo or extra flourish.
 
+## Style fit is not the craft acceptance criterion
+
+Keep this index unchanged when studying the [Untitled UI anchor](untitled-ui.md). A synthetic input with all non-character ratings at4 and generic character at2 produces98; the arithmetic is valid but does not prove excellence. Unknown gates still make that result provisional. Increasing novelty weight would not establish composition or interaction quality.
+
+For broad generation/refinement, add an evidence-backed craft verdict using the anchor guidance: developed, unresolved or unverified, with a concrete relationship and next change. Familiar neutral design can be fully developed. Inspect component material, optical spacing, whole-screen pacing, responsive recomposition and consequential states; do not penalize fine control shadows merely for existing. `weightedGap` is not an ordering of all craft opportunities. Keep these judgments separate from the score and retain the functional gates.
+
 ## Evidence contract
 
 Copy [style-review-template.json](../../assets/style-review-template.json). The tool does not look at screenshots and invent taste scores. A reviewer inspects the rendered design, states and context, then supplies:

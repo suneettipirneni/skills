@@ -14,7 +14,7 @@ Provide a question-oriented title, units, scale, legend or direct labels, releva
 
 ## Behavior and adaptation
 
-Provide useful values without hover-only access. Filter changes should expose their effect and maintain coherent scopes. Small layouts may use fewer annotations or a table alternative; never silently drop consequential data.
+Provide useful values without hover-only access. Filter changes should expose their effect and maintain coherent scopes. Small layouts may use fewer annotations or a table alternative; never silently drop consequential data. Recompute the plot for its actual container rather than scaling an entire desktop SVG, including its labels, into a small box. Inspect text at actual rendered size: a computed15px SVG label can appear near6px after a viewBox transform. Keep readable text and a useful plot area; adjust ticks, label placement or layout before shrinking type. A data table supplements visual legibility rather than excusing an unreadable plot.
 
 ## Evidence and repair
 

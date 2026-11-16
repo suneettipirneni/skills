@@ -10,6 +10,8 @@ Layer: **atoms** · Route: `surface`
 
 Choose the least ambiguous boundary for the relationship: space, divider, surface or elevation. Elevation can imply layering; a border can establish a record boundary. Neither should compete with actual modal/contextual layers.
 
+Ordinary controls may use subtle inset edges, fine shadows and highlights to communicate material and affordance. Distinguish that shallow treatment from overlay elevation; see the [Untitled UI anchor](../preferences/untitled-ui.md). Removing every shadow can erase intentional finish.
+
 Use consistent surface roles within the existing identity. Avoid double borders and nested cards that obscure which unit owns actions. Intentional emphasis may differ from neutral containers.
 
 ## Behavior and adaptation

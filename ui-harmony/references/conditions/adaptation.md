@@ -14,7 +14,7 @@ Build a compact scenario matrix from actual risk: narrow and wide layouts, long 
 
 ## Behavior and adaptation
 
-Check reflow, local versus page overflow, reading/focus order, sticky occlusion and retained context. A table may scroll locally while keeping task-critical identity/status visible; an inspector may become a page.
+Check reflow, local versus page overflow, reading/focus order, sticky occlusion and retained context. Zero horizontal overflow can conceal excessive text shrinking. Compare actual role readability across sizes, including transformed SVG labels; recompose filters, rows and annotations instead of reducing necessary labels to microtext. A table may scroll locally while keeping task-critical identity/status visible; an inspector may become a page.
 
 ## Evidence and repair
 

@@ -1,0 +1,740 @@
+[
+  {
+    "width": 1440,
+    "entries": [
+      {
+        "class": "",
+        "text": "SMALLHOURS",
+        "color": "rgb(36, 61, 50)",
+        "font": "21px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 139,
+          "y": 114,
+          "width": 79.28125,
+          "height": 45,
+          "top": 114,
+          "right": 218.28125,
+          "bottom": 159,
+          "left": 139
+        },
+        "layers": [
+          {
+            "class": "cover",
+            "bg": "rgb(219, 203, 166)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": ""
+      },
+      {
+        "class": "status",
+        "text": "In review",
+        "color": "rgb(69, 97, 81)",
+        "font": "11px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 256,
+          "y": 202,
+          "width": 56.5625,
+          "height": 14,
+          "top": 202,
+          "right": 312.5625,
+          "bottom": 216,
+          "left": 256
+        },
+        "layers": [
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": "status"
+      },
+      {
+        "class": "button secondary",
+        "text": " Export notes",
+        "color": "rgb(37, 43, 40)",
+        "font": "12px",
+        "bg": "rgb(255, 255, 255)",
+        "rect": {
+          "x": 1188.15625,
+          "y": 132.5,
+          "width": 123.84375,
+          "height": 36,
+          "top": 132.5,
+          "right": 1312,
+          "bottom": 168.5,
+          "left": 1188.15625
+        },
+        "layers": [
+          {
+            "class": "button secondary",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": "button secondary"
+      },
+      {
+        "class": "ten",
+        "text": "10",
+        "color": "rgb(93, 105, 97)",
+        "font": "7px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 165,
+          "y": 288,
+          "width": 6.984375,
+          "height": 9,
+          "top": 288,
+          "right": 171.984375,
+          "bottom": 297,
+          "left": 165
+        },
+        "layers": [
+          {
+            "class": "listening",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": "ten"
+      },
+      {
+        "class": "ten",
+        "text": "10",
+        "color": "rgb(93, 105, 97)",
+        "font": "7px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 259,
+          "y": 288,
+          "width": 6.984375,
+          "height": 9,
+          "top": 288,
+          "right": 265.984375,
+          "bottom": 297,
+          "left": 259
+        },
+        "layers": [
+          {
+            "class": "listening",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": "ten"
+      },
+      {
+        "class": "chapter-number",
+        "text": "03",
+        "color": "rgb(94, 107, 96)",
+        "font": "9px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 937.671875,
+          "y": 460,
+          "width": 11.484375,
+          "height": 12,
+          "top": 460,
+          "right": 949.15625,
+          "bottom": 472,
+          "left": 937.671875
+        },
+        "layers": [
+          {
+            "class": "active",
+            "bg": "rgb(237, 243, 235)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "chapter-nav",
+            "bg": "rgb(250, 251, 248)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "listening",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": "chapter-number"
+      },
+      {
+        "class": "",
+        "text": "Closing",
+        "color": "rgb(52, 84, 61)",
+        "font": "11px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 959.15625,
+          "y": 459,
+          "width": 37.484375,
+          "height": 14,
+          "top": 459,
+          "right": 996.640625,
+          "bottom": 473,
+          "left": 959.15625
+        },
+        "layers": [
+          {
+            "class": "active",
+            "bg": "rgb(237, 243, 235)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "chapter-nav",
+            "bg": "rgb(250, 251, 248)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "listening",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": ""
+      },
+      {
+        "class": "",
+        "text": "0:36",
+        "color": "rgb(94, 107, 96)",
+        "font": "10px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 1269.9375,
+          "y": 459.5,
+          "width": 21.0625,
+          "height": 13,
+          "top": 459.5,
+          "right": 1291,
+          "bottom": 472.5,
+          "left": 1269.9375
+        },
+        "layers": [
+          {
+            "class": "active",
+            "bg": "rgb(237, 243, 235)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "chapter-nav",
+            "bg": "rgb(250, 251, 248)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "listening",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": ""
+      },
+      {
+        "class": "",
+        "text": "2",
+        "color": "rgb(37, 79, 54)",
+        "font": "9px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 1021.484375,
+          "y": 566.5,
+          "width": 14,
+          "height": 12,
+          "top": 566.5,
+          "right": 1035.484375,
+          "bottom": 578.5,
+          "left": 1021.484375
+        },
+        "layers": [
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": ""
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "entries": [
+      {
+        "class": "",
+        "text": "SMALLHOURS",
+        "color": "rgb(36, 61, 50)",
+        "font": "17px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 29,
+          "y": 95,
+          "width": 63.21875,
+          "height": 41,
+          "top": 95,
+          "right": 92.21875,
+          "bottom": 136,
+          "left": 29
+        },
+        "layers": [
+          {
+            "class": "cover",
+            "bg": "rgb(219, 203, 166)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": ""
+      },
+      {
+        "class": "status",
+        "text": "In review",
+        "color": "rgb(69, 97, 81)",
+        "font": "9px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 106,
+          "y": 157,
+          "width": 48.46875,
+          "height": 12,
+          "top": 157,
+          "right": 154.46875,
+          "bottom": 169,
+          "left": 106
+        },
+        "layers": [
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": "status"
+      },
+      {
+        "class": "button secondary",
+        "text": " Export notes",
+        "color": "rgb(37, 43, 40)",
+        "font": "10px",
+        "bg": "rgb(255, 255, 255)",
+        "rect": {
+          "x": 20,
+          "y": 183,
+          "width": 111.53125,
+          "height": 34,
+          "top": 183,
+          "right": 131.53125,
+          "bottom": 217,
+          "left": 20
+        },
+        "layers": [
+          {
+            "class": "button secondary",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": "button secondary"
+      },
+      {
+        "class": "ten",
+        "text": "10",
+        "color": "rgb(93, 105, 97)",
+        "font": "7px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 47,
+          "y": 273.5,
+          "width": 6.984375,
+          "height": 9,
+          "top": 273.5,
+          "right": 53.984375,
+          "bottom": 282.5,
+          "left": 47
+        },
+        "layers": [
+          {
+            "class": "listening",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": "ten"
+      },
+      {
+        "class": "ten",
+        "text": "10",
+        "color": "rgb(93, 105, 97)",
+        "font": "7px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 122,
+          "y": 273.5,
+          "width": 6.984375,
+          "height": 9,
+          "top": 273.5,
+          "right": 128.984375,
+          "bottom": 282.5,
+          "left": 122
+        },
+        "layers": [
+          {
+            "class": "listening",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": "ten"
+      },
+      {
+        "class": "chapter-number",
+        "text": "03",
+        "color": "rgb(94, 107, 96)",
+        "font": "8px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 272.046875,
+          "y": 415.90625,
+          "width": 10.21875,
+          "height": 11.1875,
+          "top": 415.90625,
+          "right": 282.265625,
+          "bottom": 427.09375,
+          "left": 272.046875
+        },
+        "layers": [
+          {
+            "class": "active",
+            "bg": "rgb(237, 243, 235)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "chapter-nav",
+            "bg": "rgb(250, 251, 248)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "listening",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": "chapter-number"
+      },
+      {
+        "class": "",
+        "text": "Closing",
+        "color": "rgb(52, 84, 61)",
+        "font": "9px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 287.265625,
+          "y": 415.203125,
+          "width": 30.671875,
+          "height": 12.59375,
+          "top": 415.203125,
+          "right": 317.9375,
+          "bottom": 427.796875,
+          "left": 287.265625
+        },
+        "layers": [
+          {
+            "class": "active",
+            "bg": "rgb(237, 243, 235)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "chapter-nav",
+            "bg": "rgb(250, 251, 248)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "listening",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": ""
+      },
+      {
+        "class": "",
+        "text": "0:36",
+        "color": "rgb(94, 107, 96)",
+        "font": "10px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "layers": [
+          {
+            "class": "active",
+            "bg": "rgb(237, 243, 235)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "chapter-nav",
+            "bg": "rgb(250, 251, 248)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "listening",
+            "bg": "rgb(255, 255, 255)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": true,
+        "topHit": "app-header"
+      },
+      {
+        "class": "",
+        "text": "2",
+        "color": "rgb(41, 77, 53)",
+        "font": "10px",
+        "bg": "rgb(231, 237, 224)",
+        "rect": {
+          "x": 173.703125,
+          "y": 479.5,
+          "width": 15.78125,
+          "height": 17,
+          "top": 479.5,
+          "right": 189.484375,
+          "bottom": 496.5,
+          "left": 173.703125
+        },
+        "layers": [
+          {
+            "class": "",
+            "bg": "rgb(231, 237, 224)",
+            "image": "none",
+            "opacity": "1"
+          },
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": ""
+      },
+      {
+        "class": "",
+        "text": "2",
+        "color": "rgb(37, 79, 54)",
+        "font": "9px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "rect": {
+          "x": 69.484375,
+          "y": 538,
+          "width": 14,
+          "height": 12,
+          "top": 538,
+          "right": 83.484375,
+          "bottom": 550,
+          "left": 69.484375
+        },
+        "layers": [
+          {
+            "class": "",
+            "bg": "rgb(247, 248, 246)",
+            "image": "none",
+            "opacity": "1"
+          }
+        ],
+        "coveredAtCenter": false,
+        "topHit": ""
+      }
+    ],
+    "composer": {
+      "scrollY": 440,
+      "buttons": [
+        {
+          "class": "play",
+          "rect": {
+            "x": 70,
+            "y": -184,
+            "width": 39,
+            "height": 39,
+            "top": -184,
+            "right": 109,
+            "bottom": -145,
+            "left": 70
+          },
+          "inViewport": false
+        },
+        {
+          "class": "play",
+          "rect": {
+            "x": 20,
+            "y": 795,
+            "width": 37,
+            "height": 37,
+            "top": 795,
+            "right": 57,
+            "bottom": 832,
+            "left": 20
+          },
+          "inViewport": true
+        }
+      ],
+      "dock": {
+        "x": 0,
+        "y": 782,
+        "width": 390,
+        "height": 62,
+        "top": 782,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "form": {
+        "x": 20,
+        "y": 477,
+        "width": 350,
+        "height": 183,
+        "top": 477,
+        "right": 370,
+        "bottom": 660,
+        "left": 20
+      }
+    }
+  }
+]

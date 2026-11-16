@@ -10,6 +10,10 @@ It defaults to modern SaaS minimalism: restrained surfaces, clear typography, us
 
 - [Design workflow and entry point](ui-harmony/SKILL.md)
 - [Modern SaaS guidance](ui-harmony/references/preferences/modern-saas.md)
+- [Untitled UI craft anchor](ui-harmony/references/preferences/untitled-ui.md)
+- [Headless React foundations](ui-harmony/references/foundations/headless-react.md)
+- [Bespoke React examples and verification](examples/ui-harmony/README.md)
+- [Generation evidence and limitations](ui-harmony/references/preferences/react-generation-validation.md)
 - [Research and sources](ui-harmony/references/research.md)
 - [Scoring and comparison](ui-harmony/references/preferences/style-scoring.md)
 - [Tool setup and usage](ui-harmony/references/tools.md)
@@ -42,4 +46,4 @@ For browser audits, install the pinned dependencies and a browser as described i
 
 ## Research and examples
 
-Source articles are linked and summarized in the reference ledgers. Public-site screenshots are included as evidence for limited design critiques; they are not templates or claims of endorsement. Third-party names, screenshots and referenced material retain their respective ownership. Synthetic interface examples illustrate the tools and are not complete production applications.
+Source articles are linked and summarized in the reference ledgers. Public-site screenshots are included as evidence for limited design critiques; they are not templates or claims of endorsement. Third-party names, screenshots and referenced material retain their respective ownership. Synthetic calibration fixtures illustrate the tools. The bespoke React examples implement complete local review workflows with fictional content; they are prototypes, not production applications.

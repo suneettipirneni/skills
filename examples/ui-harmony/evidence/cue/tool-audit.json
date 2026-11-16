@@ -1,0 +1,1019 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-16T01:01:57.533Z",
+  "url": "http://127.0.0.1:4313/",
+  "fixture": "cue-synthetic-episode-v1",
+  "config": {
+    "viewports": [
+      {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "groups": [],
+    "separations": [],
+    "ignore": []
+  },
+  "setupHash": null,
+  "environment": {
+    "toolVersion": "2.2.0",
+    "node": "v24.22.3",
+    "platform": "darwin",
+    "channel": "chrome",
+    "browser": "157.0.8103.51"
+  },
+  "coverage": {
+    "plannedCases": 2,
+    "semanticReview": "not-performed",
+    "keyboard": "not-performed",
+    "realBrowserZoom": "not-performed",
+    "motionPlayback": "not-performed",
+    "states": "default",
+    "capturedCases": 2,
+    "geometryTruncated": false,
+    "unverifiedContracts": 0,
+    "automatedStatus": "captured",
+    "notes": [
+      "A clean capture is not a quality pass. Read all axe incomplete results.",
+      "Viewport width is not browser zoom; screenshots are not motion or usability tests.",
+      "Geometry and screenshots are sequential samples; capture a stable state with --ready/--setup.",
+      "Fresh contexts per viewport. No crawling, clicking, or form submission unless a setup hook explicitly does it."
+    ]
+  },
+  "cases": [
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "finalUrl": "http://127.0.0.1:4313/",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "motion": "no-preference",
+      "textSpacing": false,
+      "screenshot": "desktop-light-no-preference-default.png",
+      "viewportScreenshot": "desktop-light-no-preference-default-viewport.png",
+      "metrics": [],
+      "coverage": {
+        "visuallyHiddenCandidates": [
+          {
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(1) > span:nth-of-type(1)",
+            "focusable": false,
+            "clip": "rect(0px, 0px, 0px, 0px)",
+            "clipPath": "none",
+            "note": "CSS hiding pattern detected, intent unverified. Check semantics and focus reveal for focusable content."
+          },
+          {
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(2) > span:nth-of-type(1)",
+            "focusable": false,
+            "clip": "rect(0px, 0px, 0px, 0px)",
+            "clipPath": "none",
+            "note": "CSS hiding pattern detected, intent unverified. Check semantics and focus reveal for focusable content."
+          },
+          {
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > aside:nth-of-type(1) > form:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(1) > span:nth-of-type(1)",
+            "focusable": false,
+            "clip": "rect(0px, 0px, 0px, 0px)",
+            "clipPath": "none",
+            "note": "CSS hiding pattern detected, intent unverified. Check semantics and focus reveal for focusable content."
+          }
+        ],
+        "totalDomElements": 462,
+        "renderedLightDomElements": 426,
+        "sampledElements": 426,
+        "truncated": false,
+        "iframeCount": 0,
+        "shadowHostCount": 0,
+        "canvasCount": 0,
+        "notes": [
+          "Geometry samples rendered light DOM only; not occlusion, text ink bounds, closed shadow trees, or iframe contents.",
+          "Offscreen rendered elements are included. Virtualized/unmounted content is absent.",
+          "Pseudo-elements, ancestor clipping and nested-inline text clipping need visual inspection."
+        ]
+      },
+      "consoleErrors": [],
+      "axeSummary": {
+        "version": "4.14.0",
+        "violationRules": 0,
+        "incompleteRules": 1,
+        "passedRules": 41,
+        "inapplicableRules": 50
+      }
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "finalUrl": "http://127.0.0.1:4313/",
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light",
+      "motion": "no-preference",
+      "textSpacing": false,
+      "screenshot": "phone-light-no-preference-default.png",
+      "viewportScreenshot": "phone-light-no-preference-default-viewport.png",
+      "metrics": [],
+      "coverage": {
+        "visuallyHiddenCandidates": [
+          {
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(1) > span:nth-of-type(1)",
+            "focusable": false,
+            "clip": "rect(0px, 0px, 0px, 0px)",
+            "clipPath": "none",
+            "note": "CSS hiding pattern detected, intent unverified. Check semantics and focus reveal for focusable content."
+          },
+          {
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1)",
+            "focusable": false,
+            "clip": "rect(0px, 0px, 0px, 0px)",
+            "clipPath": "none",
+            "note": "CSS hiding pattern detected, intent unverified. Check semantics and focus reveal for focusable content."
+          }
+        ],
+        "totalDomElements": 462,
+        "renderedLightDomElements": 360,
+        "sampledElements": 360,
+        "truncated": false,
+        "iframeCount": 0,
+        "shadowHostCount": 0,
+        "canvasCount": 0,
+        "notes": [
+          "Geometry samples rendered light DOM only; not occlusion, text ink bounds, closed shadow trees, or iframe contents.",
+          "Offscreen rendered elements are included. Virtualized/unmounted content is absent.",
+          "Pseudo-elements, ancestor clipping and nested-inline text clipping need visual inspection."
+        ]
+      },
+      "consoleErrors": [],
+      "axeSummary": {
+        "version": "4.14.0",
+        "violationRules": 0,
+        "incompleteRules": 1,
+        "passedRules": 41,
+        "inapplicableRules": 50
+      }
+    }
+  ],
+  "findings": [
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "evidence": "desktop-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "visually-hidden-pattern",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(1) > span:nth-of-type(1)",
+      "rect": {
+        "left": 982.21875,
+        "right": 983.21875,
+        "top": 273,
+        "bottom": 274,
+        "width": 1,
+        "height": 1,
+        "centerX": 982.71875,
+        "centerY": 273.5
+      },
+      "kind": "review",
+      "severity": "minor",
+      "observed": {
+        "focusable": false,
+        "clip": "rect(0px, 0px, 0px, 0px)",
+        "clipPath": "none"
+      },
+      "expected": "Intentional accessibility-only content or a control that reveals appropriately on focus",
+      "message": "A common visually-hidden CSS pattern is present; intent and focus behavior need review.",
+      "fix": "Preserve accessibility labels. Verify purpose; for focusable content, test focus reveal or its associated visible control and operation. Do not enlarge hidden text solely to satisfy visual geometry.",
+      "verification": "The content serves an intentional semantic purpose; focusable content or its associated control provides a reachable, visible, operable focus state.",
+      "id": "a7b460fb0c3932"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "evidence": "desktop-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "visually-hidden-pattern",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(2) > span:nth-of-type(1)",
+      "rect": {
+        "left": 1075.21875,
+        "right": 1076.21875,
+        "top": 289.5,
+        "bottom": 290.5,
+        "width": 1,
+        "height": 1,
+        "centerX": 1075.71875,
+        "centerY": 290
+      },
+      "kind": "review",
+      "severity": "minor",
+      "observed": {
+        "focusable": false,
+        "clip": "rect(0px, 0px, 0px, 0px)",
+        "clipPath": "none"
+      },
+      "expected": "Intentional accessibility-only content or a control that reveals appropriately on focus",
+      "message": "A common visually-hidden CSS pattern is present; intent and focus behavior need review.",
+      "fix": "Preserve accessibility labels. Verify purpose; for focusable content, test focus reveal or its associated visible control and operation. Do not enlarge hidden text solely to satisfy visual geometry.",
+      "verification": "The content serves an intentional semantic purpose; focusable content or its associated control provides a reachable, visible, operable focus state.",
+      "id": "4317032b2ce299"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "evidence": "desktop-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "small-target-candidate",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(2) > input:nth-of-type(1)",
+      "rect": {
+        "left": 163,
+        "right": 842.25,
+        "top": 566.5,
+        "bottom": 585.5,
+        "width": 679.25,
+        "height": 19,
+        "centerX": 502.625,
+        "centerY": 576
+      },
+      "kind": "review",
+      "severity": "moderate",
+      "observed": {
+        "widthCssPx": 679.25,
+        "heightCssPx": 19,
+        "context": {
+          "display": "block",
+          "inlineTextCandidate": false,
+          "clientRectCount": 1
+        }
+      },
+      "expected": "24 × 24 CSS px or an applicable WCAG 2.5.8 exception",
+      "message": "Small target bounding box; not a conformance verdict.",
+      "fix": "Inspect the actual hit area and spacing, inline/equivalent/user-agent/essential exceptions. Enlarge the clickable area if needed without enlarging the icon.",
+      "verification": "Actual target geometry or an applicable exception is documented.",
+      "id": "5f24adb9516356"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "evidence": "desktop-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "visually-hidden-pattern",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > aside:nth-of-type(1) > form:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(1) > span:nth-of-type(1)",
+      "rect": {
+        "left": 986,
+        "right": 987,
+        "top": 1047,
+        "bottom": 1048,
+        "width": 1,
+        "height": 1,
+        "centerX": 986.5,
+        "centerY": 1047.5
+      },
+      "kind": "review",
+      "severity": "minor",
+      "observed": {
+        "focusable": false,
+        "clip": "rect(0px, 0px, 0px, 0px)",
+        "clipPath": "none"
+      },
+      "expected": "Intentional accessibility-only content or a control that reveals appropriately on focus",
+      "message": "A common visually-hidden CSS pattern is present; intent and focus behavior need review.",
+      "fix": "Preserve accessibility labels. Verify purpose; for focusable content, test focus reveal or its associated visible control and operation. Do not enlarge hidden text solely to satisfy visual geometry.",
+      "verification": "The content serves an intentional semantic purpose; focusable content or its associated control provides a reachable, visible, operable focus state.",
+      "id": "8f16a7299aeb05"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Back 10 seconds\\\"] > .ten\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because element contains an image node",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "5.3pt (7px)",
+              "fontWeight": "normal",
+              "messageKey": "imgNode",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "9912cab74b026b"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Forward 10 seconds\\\"] > .ten\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because element contains an image node",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "5.3pt (7px)",
+              "fontWeight": "normal",
+              "messageKey": "imgNode",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "22a63185038508"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".active > .chapter-number\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a pseudo element",
+            "data": {
+              "fontSize": "6.8pt (9px)",
+              "fontWeight": "normal",
+              "messageKey": "pseudoContent",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "7bef88a7ca5871"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".active > span:nth-child(2)\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a pseudo element",
+            "data": {
+              "fontSize": "8.3pt (11px)",
+              "fontWeight": "normal",
+              "messageKey": "pseudoContent",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "1984657c162a62"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".active > time\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a pseudo element",
+            "data": {
+              "fontSize": "7.5pt (10px)",
+              "fontWeight": "normal",
+              "messageKey": "pseudoContent",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "fcee38899b32b4"
+    },
+    {
+      "caseId": "desktop-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".filters > button:nth-child(1) > span\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a pseudo element",
+            "data": {
+              "fontSize": "6.8pt (9px)",
+              "fontWeight": "normal",
+              "messageKey": "pseudoContent",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "desktop-light-no-preference-default.png",
+      "id": "54fe06ab62ab4d"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "evidence": "phone-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "visually-hidden-pattern",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(1) > span:nth-of-type(1)",
+      "rect": {
+        "left": 245,
+        "right": 246,
+        "top": 260,
+        "bottom": 261,
+        "width": 1,
+        "height": 1,
+        "centerX": 245.5,
+        "centerY": 260.5
+      },
+      "kind": "review",
+      "severity": "minor",
+      "observed": {
+        "focusable": false,
+        "clip": "rect(0px, 0px, 0px, 0px)",
+        "clipPath": "none"
+      },
+      "expected": "Intentional accessibility-only content or a control that reveals appropriately on focus",
+      "message": "A common visually-hidden CSS pattern is present; intent and focus behavior need review.",
+      "fix": "Preserve accessibility labels. Verify purpose; for focusable content, test focus reveal or its associated visible control and operation. Do not enlarge hidden text solely to satisfy visual geometry.",
+      "verification": "The content serves an intentional semantic purpose; focusable content or its associated control provides a reachable, visible, operable focus state.",
+      "id": "f2d1df08f903b5"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "evidence": "phone-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "visually-hidden-pattern",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(1)",
+      "rect": {
+        "left": 19,
+        "right": 20,
+        "top": 531,
+        "bottom": 532,
+        "width": 1,
+        "height": 1,
+        "centerX": 19.5,
+        "centerY": 531.5
+      },
+      "kind": "review",
+      "severity": "minor",
+      "observed": {
+        "focusable": false,
+        "clip": "rect(0px, 0px, 0px, 0px)",
+        "clipPath": "none"
+      },
+      "expected": "Intentional accessibility-only content or a control that reveals appropriately on focus",
+      "message": "A common visually-hidden CSS pattern is present; intent and focus behavior need review.",
+      "fix": "Preserve accessibility labels. Verify purpose; for focusable content, test focus reveal or its associated visible control and operation. Do not enlarge hidden text solely to satisfy visual geometry.",
+      "verification": "The content serves an intentional semantic purpose; focusable content or its associated control provides a reachable, visible, operable focus state.",
+      "id": "1decd65c9673a7"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "evidence": "phone-light-no-preference-default.png",
+      "confidence": "medium",
+      "rule": "small-target-candidate",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(2) > input:nth-of-type(1)",
+      "rect": {
+        "left": 55,
+        "right": 311.21875,
+        "top": 542.5,
+        "bottom": 560.5,
+        "width": 256.21875,
+        "height": 18,
+        "centerX": 183.109375,
+        "centerY": 551.5
+      },
+      "kind": "review",
+      "severity": "moderate",
+      "observed": {
+        "widthCssPx": 256.22,
+        "heightCssPx": 18,
+        "context": {
+          "display": "block",
+          "inlineTextCandidate": false,
+          "clientRectCount": 1
+        }
+      },
+      "expected": "24 × 24 CSS px or an applicable WCAG 2.5.8 exception",
+      "message": "Small target bounding box; not a conformance verdict.",
+      "fix": "Inspect the actual hit area and spacing, inline/equivalent/user-agent/essential exceptions. Enlarge the clickable area if needed without enlarging the icon.",
+      "verification": "Actual target geometry or an applicable exception is documented.",
+      "id": "7b7624bd0daea6"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".cover > span\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it partially overlaps other elements",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.8pt (17px)",
+              "fontWeight": "bold",
+              "messageKey": "elmPartiallyObscuring",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "bdf1a05c85581c"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".status\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because it is overlapped by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "6.8pt (9px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "3ce8e3aa6e362a"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Back 10 seconds\\\"] > .ten\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because element contains an image node",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "5.3pt (7px)",
+              "fontWeight": "normal",
+              "messageKey": "imgNode",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "6862c39e6b2bce"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\"button[aria-label=\\\"Forward 10 seconds\\\"] > .ten\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined because element contains an image node",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "5.3pt (7px)",
+              "fontWeight": "normal",
+              "messageKey": "imgNode",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "4d00b3c2905396"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".active > .chapter-number\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a pseudo element",
+            "data": {
+              "fontSize": "6.0pt (8px)",
+              "fontWeight": "normal",
+              "messageKey": "pseudoContent",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "7e870a5f020e18"
+    },
+    {
+      "caseId": "phone-light-no-preference-default",
+      "rule": "axe:color-contrast",
+      "selector": "[\".active > span:nth-child(2)\"]",
+      "kind": "review",
+      "standard": "wcag",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "axeResult": "incomplete",
+      "confidence": "low",
+      "severity": "moderate",
+      "message": "Elements must meet minimum color contrast ratio thresholds",
+      "observed": {
+        "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element",
+        "checks": [
+          {
+            "id": "color-contrast",
+            "message": "Element's background color could not be determined due to a pseudo element",
+            "data": {
+              "fontSize": "6.8pt (9px)",
+              "fontWeight": "normal",
+              "messageKey": "pseudoContent",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ]
+      },
+      "expected": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "fix": "Resolve this indeterminate result manually using the rule documentation.",
+      "verification": "Re-run the same state and manually confirm the relevant accessibility behavior.",
+      "source": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=playwright",
+      "evidence": "phone-light-no-preference-default.png",
+      "id": "b9dda5889d1592"
+    }
+  ],
+  "errors": [],
+  "findingSummary": {
+    "byKind": {
+      "review": 19
+    },
+    "groups": [
+      {
+        "kind": "review",
+        "rule": "visually-hidden-pattern",
+        "standard": "unspecified",
+        "axeResult": null,
+        "count": 5,
+        "excepted": 0,
+        "cases": {
+          "desktop-light-no-preference-default": 3,
+          "phone-light-no-preference-default": 2
+        },
+        "findingIds": [
+          "a7b460fb0c3932",
+          "4317032b2ce299",
+          "8f16a7299aeb05",
+          "f2d1df08f903b5",
+          "1decd65c9673a7"
+        ],
+        "examples": [
+          {
+            "id": "a7b460fb0c3932",
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(1) > span:nth-of-type(1)"
+          },
+          {
+            "id": "4317032b2ce299",
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(2) > span:nth-of-type(1)"
+          },
+          {
+            "id": "8f16a7299aeb05",
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > aside:nth-of-type(1) > form:nth-of-type(1) > div:nth-of-type(2) > label:nth-of-type(1) > span:nth-of-type(1)"
+          }
+        ]
+      },
+      {
+        "kind": "review",
+        "rule": "small-target-candidate",
+        "standard": "unspecified",
+        "axeResult": null,
+        "count": 2,
+        "excepted": 0,
+        "cases": {
+          "desktop-light-no-preference-default": 1,
+          "phone-light-no-preference-default": 1
+        },
+        "findingIds": [
+          "5f24adb9516356",
+          "7b7624bd0daea6"
+        ],
+        "examples": [
+          {
+            "id": "5f24adb9516356",
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(2) > input:nth-of-type(1)"
+          },
+          {
+            "id": "7b7624bd0daea6",
+            "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > section:nth-of-type(1) > div:nth-of-type(2) > input:nth-of-type(1)"
+          }
+        ]
+      },
+      {
+        "kind": "review",
+        "rule": "axe:color-contrast",
+        "standard": "wcag",
+        "axeResult": "incomplete",
+        "count": 12,
+        "excepted": 0,
+        "cases": {
+          "desktop-light-no-preference-default": 6,
+          "phone-light-no-preference-default": 6
+        },
+        "findingIds": [
+          "9912cab74b026b",
+          "22a63185038508",
+          "7bef88a7ca5871",
+          "1984657c162a62",
+          "fcee38899b32b4",
+          "54fe06ab62ab4d",
+          "bdf1a05c85581c",
+          "3ce8e3aa6e362a",
+          "6862c39e6b2bce",
+          "4d00b3c2905396",
+          "7e870a5f020e18",
+          "b9dda5889d1592"
+        ],
+        "examples": [
+          {
+            "id": "9912cab74b026b",
+            "selector": "[\"button[aria-label=\\\"Back 10 seconds\\\"] > .ten\"]"
+          },
+          {
+            "id": "22a63185038508",
+            "selector": "[\"button[aria-label=\\\"Forward 10 seconds\\\"] > .ten\"]"
+          },
+          {
+            "id": "7bef88a7ca5871",
+            "selector": "[\".active > .chapter-number\"]"
+          }
+        ]
+      }
+    ],
+    "note": "Grouped occurrences, not distinct user problems or a design score. Incomplete axe checks, advisories and WCAG-tagged findings remain separate; inspect evidence and task context."
+  }
+}

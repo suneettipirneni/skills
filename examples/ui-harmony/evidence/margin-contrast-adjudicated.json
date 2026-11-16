@@ -1,0 +1,354 @@
+[
+  {
+    "width": 1440,
+    "role": "excerpt-number",
+    "foreground": [
+      101,
+      114,
+      91
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 4.934116908503183
+  },
+  {
+    "width": 1440,
+    "role": "theme-label",
+    "foreground": [
+      102,
+      113,
+      95
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 4.957122452255184
+  },
+  {
+    "width": 1440,
+    "role": "source-time",
+    "foreground": [
+      101,
+      114,
+      91
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 4.934116908503183
+  },
+  {
+    "width": 1440,
+    "role": "BLOCKQUOTE",
+    "foreground": [
+      38,
+      53,
+      47
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 12.424674047528933
+  },
+  {
+    "width": 1440,
+    "role": "STRONG",
+    "foreground": [
+      38,
+      53,
+      47
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 12.424674047528933
+  },
+  {
+    "width": 1440,
+    "role": "SPAN",
+    "foreground": [
+      107,
+      119,
+      95
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 4.580080090426199
+  },
+  {
+    "width": 1440,
+    "role": "source-link",
+    "foreground": [
+      89,
+      103,
+      79
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 5.832986621699473
+  },
+  {
+    "width": 1440,
+    "role": "link-prompt",
+    "foreground": [
+      107,
+      119,
+      95
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 4.580080090426199
+  },
+  {
+    "width": 390,
+    "role": "excerpt-number",
+    "foreground": [
+      101,
+      114,
+      91
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 4.934116908503183
+  },
+  {
+    "width": 390,
+    "role": "theme-label",
+    "foreground": [
+      102,
+      113,
+      95
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 4.957122452255184
+  },
+  {
+    "width": 390,
+    "role": "source-time",
+    "foreground": [
+      101,
+      114,
+      91
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 4.934116908503183
+  },
+  {
+    "width": 390,
+    "role": "BLOCKQUOTE",
+    "foreground": [
+      38,
+      53,
+      47
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 12.424674047528933
+  },
+  {
+    "width": 390,
+    "role": "STRONG",
+    "foreground": [
+      38,
+      53,
+      47
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 12.424674047528933
+  },
+  {
+    "width": 390,
+    "role": "SPAN",
+    "foreground": [
+      107,
+      119,
+      95
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 4.580080090426199
+  },
+  {
+    "width": 390,
+    "role": "source-link",
+    "foreground": [
+      89,
+      103,
+      79
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 5.832986621699473
+  },
+  {
+    "width": 390,
+    "role": "link-prompt",
+    "foreground": [
+      107,
+      119,
+      95
+    ],
+    "backgroundEndpoints": [
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        249.664,
+        251.665,
+        247.663
+      ]
+    ],
+    "minimum": 4.580080090426199
+  }
+]
