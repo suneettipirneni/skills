@@ -29,3 +29,5 @@ Measure actual hit area separately from visible icon dimensions. Apply WCAG targ
 - [Color roles, contrast and meaningful variation](../foundations/color.md) — Contrast and state roles
 - [Relationship-owned spacing and layout](../foundations/spacing.md) — Optical padding and target relationships
 - [Meaning, structure and accessible interaction](../foundations/semantics.md) — Correct names and roles
+
+For an apparently off-center control, review the button frame, complete content group and glyph separately using [optical alignment](../foundations/optical-alignment.md). Preserve hit geometry and focus treatment when adjusting visible paint.

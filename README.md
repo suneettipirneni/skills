@@ -17,6 +17,8 @@ It defaults to modern SaaS minimalism: restrained surfaces, clear typography, us
 - [Research and sources](ui-harmony/references/research.md)
 - [Scoring and comparison](ui-harmony/references/preferences/style-scoring.md)
 - [Quiet-content checks](ui-harmony/references/foundations/quiet-content.md)
+- [Physical placement and optical alignment](ui-harmony/references/foundations/optical-alignment.md)
+- [Optical verification and judgment tools](ui-harmony/references/optical-workflow.md)
 - [Pixel and paired-spacing diagnostics](ui-harmony/references/detail-audit.md)
 - [Eight additional bespoke apps and screenshots](examples/ui-harmony/downstream/README.md)
 - [Tool setup and usage](ui-harmony/references/tools.md)

@@ -1,0 +1,10 @@
+{
+  "status": "reviewed",
+  "problems": [],
+  "failedContracts": [],
+  "changes": [],
+  "reviewRequired": false,
+  "reviewer": "Codex visual review, 2026-11-16",
+  "diagnostics": 2,
+  "note": "Reviewed means authored placement contracts and recorded human judgments are complete for this capture. The validator cannot establish the truth or quality of a human judgment; this is not an automatic optical approval."
+}

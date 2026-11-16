@@ -1,7 +1,7 @@
 {
   "name": "ui-harmony-tools",
   "private": true,
-  "version": "2.3.0",
+  "version": "2.4.0",
   "type": "module",
   "engines": {
     "node": ">=20"
@@ -11,7 +11,8 @@
     "test:browser": "node scripts/tests/browser.mjs",
     "test:resilience": "node scripts/tests/resilience-browser.mjs",
     "test:realworld": "node scripts/tests/realworld-browser.mjs",
-    "test:detail": "node scripts/tests/detail-browser.mjs"
+    "test:detail": "node scripts/tests/detail-browser.mjs",
+    "test:optical": "node scripts/tests/paint-balance-browser.mjs"
   },
   "dependencies": {
     "@axe-core/playwright": "4.14.0",

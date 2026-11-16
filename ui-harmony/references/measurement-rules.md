@@ -51,3 +51,7 @@ Use observable semantic evidence: the same icon means two actions; three competi
 [Document.scrollingElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollingElement) can be the body in quirks mode and can be null. A root-only width test misses some older documents. Keep page extent distinct from legitimate local scrolling and offscreen content.
 
 The [axe region rule](https://dequeuniversity.com/rules/axe/4.14/region) is a Deque best-practice rule and also has RGAA mapping; it is not a WCAG criterion merely because axe reports it. Reports retain actual tags and classify WCAG-level results separately from advisories. This tool does not certify conformance to every tagged external standard. Visually-hidden CSS patterns and inline link contexts likewise require applicability review, not automatic visual normalization.
+
+## Optical measurements
+
+Read [physical and optical alignment](foundations/optical-alignment.md) before using raster statistics as feedback. The [optical workflow](optical-workflow.md) reports geometric edges/insets, visible ink bounds, binary coverage centroids and threshold sensitivity. These are descriptive measurements; none is a universal perceptual target. The review gate binds decisions to exact evidence and retains incomplete cases.

@@ -43,3 +43,20 @@ test('malformed checks and inherited part names fail with useful errors',()=>{
  for(const value of [null,undefined,3,'oops']){const c=config();c.components[0].checks=[value];assert.throws(()=>validateDetailConfig(c),/Each check must be an object/)}
  const c=config();c.components[0].checks[0].a='constructor';assert.throws(()=>validateDetailConfig(c),/valid distinct parts/);
 });
+
+test('edge alignment preserves fractional right edges and authored offsets',()=>{
+ const q={kind:'edge-align',a:'a',b:'b',edge:'right',offset:.25,tolerance:.01,rationale:'Align these right edges with the intentional quarter pixel offset.'};
+ const p={a:rect(8.25,4,12,9),b:rect(0,0,20,20)};const r=geometryCheck(q,p);assert.equal(r.pass,true);assert.equal(r.observed.delta,.25);
+ assert.equal(geometryCheck({...q,offset:0},p).pass,false);
+ assert.equal(geometryCheck({...q,edge:'left',referenceEdge:'right',offset:-11.75},p).pass,true);
+ const c=config();c.components[0].checks=[{...q,a:'arc',b:'label'}];assert.doesNotThrow(()=>validateDetailConfig(c));
+ for(const patch of [{referenceEdge:'top'},{edge:'baseline'},{offset:Infinity},{minGap:1}]){const bad=structuredClone(c);Object.assign(bad.components[0].checks[0],patch);assert.throws(()=>validateDetailConfig(bad))}
+});
+test('one-sided insets retain intentional opposite gaps and negative overhang',()=>{
+ const q={kind:'insets',a:'a',b:'b',insets:{left:8},tolerance:.1,rationale:'Keep the group start inset while allowing the authored remaining space.'};
+ const p={a:rect(8,3,10,9),b:rect(0,0,100,20)};const r=geometryCheck(q,p);assert.equal(r.pass,true);assert.equal(r.observed.clearance.right,82);assert.deepEqual(r.observed.deltas,{left:0});
+ assert.equal(geometryCheck({...q,insets:{left:-2,top:3}},{a:rect(-2,3,12,9),b:p.b}).pass,true);
+ assert.equal(geometryCheck({...q,insets:{right:8}},p).pass,false);
+ const c=config();c.components[0].checks=[{...q,a:'arc',b:'label'}];assert.doesNotThrow(()=>validateDetailConfig(c));
+ for(const insets of [{},null,{left:NaN},{bottom:Infinity},{left:8,start:2}]){const bad=structuredClone(c);bad.components[0].checks[0].insets=insets;assert.throws(()=>validateDetailConfig(bad))}
+});

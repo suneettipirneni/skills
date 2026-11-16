@@ -105,3 +105,7 @@ The [focused research synthesis](preferences/modern-saas-research.md) adds produ
 ## Agent prompting and UI generation research
 
 The [generation research ledger](generation-research.md) compares primary vendor guidance with Design2Code, Sketch2Code and 1D-Bench, including conflicting results and task/model limits. Its synthesis informs [agent prompting](workflow/agent-prompting.md). The [generation evaluation cases](generation-evaluation.md) support behavioral testing of instruction changes; they are not evidence that such testing has already occurred.
+
+## Optical alignment and physical placement
+
+The [optical-alignment reference](foundations/optical-alignment.md#primary-sources-and-limits) connects Apple’s symbol/baseline and badge guidance, IBM icon construction, Google’s optical-size axes, Mark Boulton’s hanging punctuation and Monotype’s overshoot guidance to scoped UI checks. It distinguishes platform-specific craft decisions from the skill’s descriptive raster tooling and human judgment.

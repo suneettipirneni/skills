@@ -1,0 +1,252 @@
+<!doctype html><meta charset="utf-8"><title>Component detail diagnostics</title><style>body{font:14px/1.5 system-ui;margin:32px;color:#222}article{border-top:1px solid #ccc;padding:24px 0}.zoom{image-rendering:pixelated;max-width:100%;object-fit:contain;object-position:left}pre{white-space:pre-wrap}img{border:1px solid #ddd}.balance-pair{display:flex;align-items:start;gap:24px;overflow:auto}.balance-pair figure{margin:0;flex:none}.balance-pair img,.balance-pair object{display:block;box-sizing:content-box}.balance-pair figcaption{margin-bottom:8px}</style><h1>Component detail diagnostics</h1><p>{&quot;components&quot;:1,&quot;checks&quot;:1,&quot;completedContracts&quot;:0,&quot;passedContracts&quot;:0,&quot;failedContracts&quot;:0,&quot;diagnosticReports&quot;:1,&quot;reviewRequired&quot;:1,&quot;unverified&quot;:0,&quot;status&quot;:&quot;review-needed&quot;}</p><p>Contract agreement is not an optical-quality verdict. Review actual-size crops and limits.</p><article><h2>one · square #0</h2><p>Actual CSS display size</p><img src="one-square-0.png" width="72" height="72" alt="Component at actual CSS size"><p>8× raster enlargement (inspection aid)</p><img class="zoom" src="one-square-0.png" width="576" alt="Enlarged component"><h3>Paint-balance: ink relative to frame — review required</h3><div class="balance-pair"><figure><figcaption>Untouched natural-size crop</figcaption><img src="one-square-0-0-original.png" width="72" height="72" alt="Untouched original component"></figure><figure><figcaption>Annotated at threshold 8</figcaption><object type="image/svg+xml" data="one-square-0-0-balance.svg" width="72" height="72" aria-label="Measurement overlay"></object></figure></div><p>Blue + / dashed frame: reference center and bounds. Magenta □ / bounds: paint-bounds center. Orange ●: binary coverage centroid. None is an optical center or a recommended offset.</p><pre>{
+  &quot;parts&quot;: {
+    &quot;ink&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 40,
+        &quot;y&quot;: 40,
+        &quot;width&quot;: 32,
+        &quot;height&quot;: 32
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    },
+    &quot;frame&quot;: {
+      &quot;rect&quot;: {
+        &quot;x&quot;: 24,
+        &quot;y&quot;: 24,
+        &quot;width&quot;: 64,
+        &quot;height&quot;: 64
+      },
+      &quot;mode&quot;: &quot;box&quot;,
+      &quot;font&quot;: &quot;16px Times&quot;,
+      &quot;transform&quot;: &quot;none&quot;,
+      &quot;note&quot;: &quot;CSS border box, not optical mass.&quot;
+    }
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;kind&quot;: &quot;paint-balance&quot;,
+      &quot;a&quot;: &quot;ink&quot;,
+      &quot;b&quot;: &quot;frame&quot;,
+      &quot;rationale&quot;: &quot;Measure the declared one-pixel placement intervention; no optical-quality target.&quot;,
+      &quot;threshold&quot;: 8,
+      &quot;status&quot;: &quot;review-needed&quot;,
+      &quot;reviewRequired&quot;: true,
+      &quot;observed&quot;: {
+        &quot;threshold&quot;: 8,
+        &quot;referenceBoundsCssPx&quot;: {
+          &quot;x&quot;: 24,
+          &quot;y&quot;: 24,
+          &quot;width&quot;: 64,
+          &quot;height&quot;: 64
+        },
+        &quot;referenceCenterCssPx&quot;: {
+          &quot;x&quot;: 56,
+          &quot;y&quot;: 56
+        },
+        &quot;inkBoundsCssPx&quot;: {
+          &quot;x&quot;: 40,
+          &quot;y&quot;: 40,
+          &quot;width&quot;: 32,
+          &quot;height&quot;: 32
+        },
+        &quot;boundsCenterCssPx&quot;: {
+          &quot;x&quot;: 56,
+          &quot;y&quot;: 56
+        },
+        &quot;boundsCenterOffsetCssPx&quot;: {
+          &quot;x&quot;: 0,
+          &quot;y&quot;: 0
+        },
+        &quot;coverageCentroidCssPx&quot;: {
+          &quot;x&quot;: 56,
+          &quot;y&quot;: 56
+        },
+        &quot;coverageCentroidOffsetCssPx&quot;: {
+          &quot;x&quot;: 0,
+          &quot;y&quot;: 0
+        },
+        &quot;signedInsetsCssPx&quot;: {
+          &quot;left&quot;: 16,
+          &quot;top&quot;: 16,
+          &quot;right&quot;: 16,
+          &quot;bottom&quot;: 16
+        },
+        &quot;paintedAreaCssPx2&quot;: 1024,
+        &quot;paintPixels&quot;: 1024
+      },
+      &quot;note&quot;: &quot;Binary thresholded visible paint contribution. Bounds center and equal-area pixel-cell coverage centroid are descriptive statistics, not a perceptual center, preferred offset, or automatic CSS correction.&quot;,
+      &quot;sensitivity&quot;: {
+        &quot;samples&quot;: [
+          {
+            &quot;factor&quot;: 0.5,
+            &quot;threshold&quot;: 4,
+            &quot;status&quot;: &quot;review-needed&quot;,
+            &quot;reviewRequired&quot;: true,
+            &quot;observed&quot;: {
+              &quot;threshold&quot;: 4,
+              &quot;referenceBoundsCssPx&quot;: {
+                &quot;x&quot;: 24,
+                &quot;y&quot;: 24,
+                &quot;width&quot;: 64,
+                &quot;height&quot;: 64
+              },
+              &quot;referenceCenterCssPx&quot;: {
+                &quot;x&quot;: 56,
+                &quot;y&quot;: 56
+              },
+              &quot;inkBoundsCssPx&quot;: {
+                &quot;x&quot;: 40,
+                &quot;y&quot;: 40,
+                &quot;width&quot;: 32,
+                &quot;height&quot;: 32
+              },
+              &quot;boundsCenterCssPx&quot;: {
+                &quot;x&quot;: 56,
+                &quot;y&quot;: 56
+              },
+              &quot;boundsCenterOffsetCssPx&quot;: {
+                &quot;x&quot;: 0,
+                &quot;y&quot;: 0
+              },
+              &quot;coverageCentroidCssPx&quot;: {
+                &quot;x&quot;: 56,
+                &quot;y&quot;: 56
+              },
+              &quot;coverageCentroidOffsetCssPx&quot;: {
+                &quot;x&quot;: 0,
+                &quot;y&quot;: 0
+              },
+              &quot;signedInsetsCssPx&quot;: {
+                &quot;left&quot;: 16,
+                &quot;top&quot;: 16,
+                &quot;right&quot;: 16,
+                &quot;bottom&quot;: 16
+              },
+              &quot;paintedAreaCssPx2&quot;: 1024,
+              &quot;paintPixels&quot;: 1024
+            },
+            &quot;note&quot;: &quot;Binary thresholded visible paint contribution. Bounds center and equal-area pixel-cell coverage centroid are descriptive statistics, not a perceptual center, preferred offset, or automatic CSS correction.&quot;
+          },
+          {
+            &quot;factor&quot;: 1,
+            &quot;threshold&quot;: 8,
+            &quot;status&quot;: &quot;review-needed&quot;,
+            &quot;reviewRequired&quot;: true,
+            &quot;observed&quot;: {
+              &quot;threshold&quot;: 8,
+              &quot;referenceBoundsCssPx&quot;: {
+                &quot;x&quot;: 24,
+                &quot;y&quot;: 24,
+                &quot;width&quot;: 64,
+                &quot;height&quot;: 64
+              },
+              &quot;referenceCenterCssPx&quot;: {
+                &quot;x&quot;: 56,
+                &quot;y&quot;: 56
+              },
+              &quot;inkBoundsCssPx&quot;: {
+                &quot;x&quot;: 40,
+                &quot;y&quot;: 40,
+                &quot;width&quot;: 32,
+                &quot;height&quot;: 32
+              },
+              &quot;boundsCenterCssPx&quot;: {
+                &quot;x&quot;: 56,
+                &quot;y&quot;: 56
+              },
+              &quot;boundsCenterOffsetCssPx&quot;: {
+                &quot;x&quot;: 0,
+                &quot;y&quot;: 0
+              },
+              &quot;coverageCentroidCssPx&quot;: {
+                &quot;x&quot;: 56,
+                &quot;y&quot;: 56
+              },
+              &quot;coverageCentroidOffsetCssPx&quot;: {
+                &quot;x&quot;: 0,
+                &quot;y&quot;: 0
+              },
+              &quot;signedInsetsCssPx&quot;: {
+                &quot;left&quot;: 16,
+                &quot;top&quot;: 16,
+                &quot;right&quot;: 16,
+                &quot;bottom&quot;: 16
+              },
+              &quot;paintedAreaCssPx2&quot;: 1024,
+              &quot;paintPixels&quot;: 1024
+            },
+            &quot;note&quot;: &quot;Binary thresholded visible paint contribution. Bounds center and equal-area pixel-cell coverage centroid are descriptive statistics, not a perceptual center, preferred offset, or automatic CSS correction.&quot;
+          },
+          {
+            &quot;factor&quot;: 2,
+            &quot;threshold&quot;: 16,
+            &quot;status&quot;: &quot;review-needed&quot;,
+            &quot;reviewRequired&quot;: true,
+            &quot;observed&quot;: {
+              &quot;threshold&quot;: 16,
+              &quot;referenceBoundsCssPx&quot;: {
+                &quot;x&quot;: 24,
+                &quot;y&quot;: 24,
+                &quot;width&quot;: 64,
+                &quot;height&quot;: 64
+              },
+              &quot;referenceCenterCssPx&quot;: {
+                &quot;x&quot;: 56,
+                &quot;y&quot;: 56
+              },
+              &quot;inkBoundsCssPx&quot;: {
+                &quot;x&quot;: 40,
+                &quot;y&quot;: 40,
+                &quot;width&quot;: 32,
+                &quot;height&quot;: 32
+              },
+              &quot;boundsCenterCssPx&quot;: {
+                &quot;x&quot;: 56,
+                &quot;y&quot;: 56
+              },
+              &quot;boundsCenterOffsetCssPx&quot;: {
+                &quot;x&quot;: 0,
+                &quot;y&quot;: 0
+              },
+              &quot;coverageCentroidCssPx&quot;: {
+                &quot;x&quot;: 56,
+                &quot;y&quot;: 56
+              },
+              &quot;coverageCentroidOffsetCssPx&quot;: {
+                &quot;x&quot;: 0,
+                &quot;y&quot;: 0
+              },
+              &quot;signedInsetsCssPx&quot;: {
+                &quot;left&quot;: 16,
+                &quot;top&quot;: 16,
+                &quot;right&quot;: 16,
+                &quot;bottom&quot;: 16
+              },
+              &quot;paintedAreaCssPx2&quot;: 1024,
+              &quot;paintPixels&quot;: 1024
+            },
+            &quot;note&quot;: &quot;Binary thresholded visible paint contribution. Bounds center and equal-area pixel-cell coverage centroid are descriptive statistics, not a perceptual center, preferred offset, or automatic CSS correction.&quot;
+          }
+        ],
+        &quot;measurementVariation&quot;: false,
+        &quot;note&quot;: &quot;Half/double sensitivity uses rounded thresholds clamped to 1..255. Variation flags a changed binary paint set, not poor optical balance.&quot;
+      },
+      &quot;artifacts&quot;: {
+        &quot;original&quot;: &quot;one-square-0-0-original.png&quot;,
+        &quot;overlay&quot;: &quot;one-square-0-0-balance.svg&quot;
+      }
+    }
+  ]
+}</pre></article><h2>Coverage and limits</h2><pre>{
+  &quot;errors&quot;: [],
+  &quot;limits&quot;: [
+    &quot;Authored contracts do not establish good visual design.&quot;,
+    &quot;Paint isolation temporarily changes inline visibility and restores it; pseudo-elements, filters, blending and dynamic state require inspection.&quot;,
+    &quot;Raster measurements depend on browser, font, DPR and threshold. Integer coordinates are not required; do not snap all values to whole pixels.&quot;,
+    &quot;Paint balance measures thresholded visible contribution, not unoccluded alpha or optical mass. Reference regions are authored frames, not inferred perceptual targets.&quot;,
+    &quot;No global collision, occlusion, accessibility or beauty guarantee. Inspect natural-size crops before enlarged raster evidence.&quot;
+  ]
+}</pre>

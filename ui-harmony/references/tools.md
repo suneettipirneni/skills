@@ -142,3 +142,7 @@ Use [style scoring](preferences/style-scoring.md) for the user's preferred visua
 Use [detail audit](detail-audit.md) when a compound icon collides, a glyph appears displaced, or a connector attaches to the wrong value. It captures actual-size and enlarged evidence and tests explicitly authored local relationships; it is separate from a general accessibility or optical-quality verdict.
 
 For redundant text and overly busy framing, use the [quiet-content semantic review](foundations/quiet-content.md). Counts and repeated strings can identify candidates, but cannot determine whether a label, warning or explanation is unnecessary.
+
+## Physical placement and optical judgment
+
+The [optical workflow](optical-workflow.md) adds `edge-align`, `insets` and review-only `paint-balance` diagnostics to the detail audit, plus `optical-compare.mjs` and `optical-review.mjs`. It separates numerical verification from explicit human judgment; an incomplete or merely captured profile cannot become automatic optical approval.

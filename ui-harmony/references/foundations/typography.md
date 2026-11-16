@@ -27,3 +27,5 @@ Report rendered font/line-height/measure with units and context. Target ranges a
 ## Flexible implementation
 
 [Resilient composition and CSS ownership](../foundations/resilient-css.md) applies Andy Bell’s CUBE CSS and browser-oriented design principles when content, containers or overrides expose fragile rules.
+
+[Optical alignment](optical-alignment.md) covers baseline versus ink bounds, icon–text pairs, deliberate overshoot, punctuation edges, optical size and wrapped/localized labels. Do not use a text run’s pixel centroid as its baseline.

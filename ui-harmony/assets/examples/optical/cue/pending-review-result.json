@@ -1,0 +1,15 @@
+{
+  "status": "incomplete",
+  "problems": [
+    "Named reviewer required",
+    "Context judgment needs decision, evidence, rationale and action when changes are required",
+    "Incomplete judgment: desktop-1x/cue-play/0/1",
+    "Incomplete judgment: phone-2x/cue-play/0/1"
+  ],
+  "failedContracts": [],
+  "changes": [],
+  "reviewRequired": true,
+  "reviewer": "",
+  "diagnostics": 2,
+  "note": "Reviewed means authored placement contracts and recorded human judgments are complete for this capture. The validator cannot establish the truth or quality of a human judgment; this is not an automatic optical approval."
+}

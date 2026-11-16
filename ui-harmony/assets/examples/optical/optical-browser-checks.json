@@ -1,0 +1,25 @@
+{
+  "assertions": 157,
+  "summary": {
+    "components": 48,
+    "checks": 46,
+    "completedContracts": 0,
+    "passedContracts": 0,
+    "failedContracts": 0,
+    "diagnosticReports": 14,
+    "reviewRequired": 46,
+    "unverified": 36,
+    "status": "incomplete"
+  },
+  "reviewOnlySummary": {
+    "components": 1,
+    "checks": 1,
+    "completedContracts": 0,
+    "passedContracts": 0,
+    "failedContracts": 0,
+    "diagnosticReports": 1,
+    "reviewRequired": 1,
+    "unverified": 0,
+    "status": "review-needed"
+  }
+}

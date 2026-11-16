@@ -1,0 +1,260 @@
+{
+  "checks": 9,
+  "asymmetric": {
+    "status": "review-needed",
+    "reviewRequired": true,
+    "observed": {
+      "referenceBoundsCssPx": {
+        "x": 0,
+        "y": 0,
+        "width": 8,
+        "height": 8
+      },
+      "referenceCenterCssPx": {
+        "x": 4,
+        "y": 4
+      },
+      "inkBoundsCssPx": {
+        "x": 1,
+        "y": 1,
+        "width": 6,
+        "height": 6
+      },
+      "boundsCenterCssPx": {
+        "x": 4,
+        "y": 4
+      },
+      "boundsCenterOffsetCssPx": {
+        "x": 0,
+        "y": 0
+      },
+      "coverageCentroidCssPx": {
+        "x": 2.8076923076923075,
+        "y": 3.269230769230769
+      },
+      "coverageCentroidOffsetCssPx": {
+        "x": -1.1923076923076925,
+        "y": -0.7307692307692308
+      },
+      "signedInsetsCssPx": {
+        "left": 1,
+        "top": 1,
+        "right": 1,
+        "bottom": 1
+      },
+      "paintedAreaCssPx2": 13,
+      "paintPixels": 13
+    },
+    "note": "Binary thresholded visible paint contribution. Bounds center and equal-area pixel-cell coverage centroid are descriptive statistics, not a perceptual center, preferred offset, or automatic CSS correction."
+  },
+  "sensitivity": {
+    "threshold": 8,
+    "status": "review-needed",
+    "reviewRequired": true,
+    "observed": {
+      "threshold": 8,
+      "referenceBoundsCssPx": {
+        "x": 0,
+        "y": 0,
+        "width": 8,
+        "height": 8
+      },
+      "referenceCenterCssPx": {
+        "x": 4,
+        "y": 4
+      },
+      "inkBoundsCssPx": {
+        "x": 1,
+        "y": 1,
+        "width": 3,
+        "height": 4
+      },
+      "boundsCenterCssPx": {
+        "x": 2.5,
+        "y": 3
+      },
+      "boundsCenterOffsetCssPx": {
+        "x": -1.5,
+        "y": -1
+      },
+      "coverageCentroidCssPx": {
+        "x": 2.5,
+        "y": 3
+      },
+      "coverageCentroidOffsetCssPx": {
+        "x": -1.5,
+        "y": -1
+      },
+      "signedInsetsCssPx": {
+        "left": 1,
+        "top": 1,
+        "right": 4,
+        "bottom": 3
+      },
+      "paintedAreaCssPx2": 12,
+      "paintPixels": 12
+    },
+    "note": "Binary thresholded visible paint contribution. Bounds center and equal-area pixel-cell coverage centroid are descriptive statistics, not a perceptual center, preferred offset, or automatic CSS correction.",
+    "sensitivity": {
+      "samples": [
+        {
+          "factor": 0.5,
+          "threshold": 4,
+          "status": "review-needed",
+          "reviewRequired": true,
+          "observed": {
+            "threshold": 4,
+            "referenceBoundsCssPx": {
+              "x": 0,
+              "y": 0,
+              "width": 8,
+              "height": 8
+            },
+            "referenceCenterCssPx": {
+              "x": 4,
+              "y": 4
+            },
+            "inkBoundsCssPx": {
+              "x": 1,
+              "y": 0,
+              "width": 7,
+              "height": 8
+            },
+            "boundsCenterCssPx": {
+              "x": 4.5,
+              "y": 4
+            },
+            "boundsCenterOffsetCssPx": {
+              "x": 0.5,
+              "y": 0
+            },
+            "coverageCentroidCssPx": {
+              "x": 4.5,
+              "y": 3.4
+            },
+            "coverageCentroidOffsetCssPx": {
+              "x": 0.5,
+              "y": -0.6000000000000001
+            },
+            "signedInsetsCssPx": {
+              "left": 1,
+              "top": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "paintedAreaCssPx2": 20,
+            "paintPixels": 20
+          },
+          "note": "Binary thresholded visible paint contribution. Bounds center and equal-area pixel-cell coverage centroid are descriptive statistics, not a perceptual center, preferred offset, or automatic CSS correction."
+        },
+        {
+          "factor": 1,
+          "threshold": 8,
+          "status": "review-needed",
+          "reviewRequired": true,
+          "observed": {
+            "threshold": 8,
+            "referenceBoundsCssPx": {
+              "x": 0,
+              "y": 0,
+              "width": 8,
+              "height": 8
+            },
+            "referenceCenterCssPx": {
+              "x": 4,
+              "y": 4
+            },
+            "inkBoundsCssPx": {
+              "x": 1,
+              "y": 1,
+              "width": 3,
+              "height": 4
+            },
+            "boundsCenterCssPx": {
+              "x": 2.5,
+              "y": 3
+            },
+            "boundsCenterOffsetCssPx": {
+              "x": -1.5,
+              "y": -1
+            },
+            "coverageCentroidCssPx": {
+              "x": 2.5,
+              "y": 3
+            },
+            "coverageCentroidOffsetCssPx": {
+              "x": -1.5,
+              "y": -1
+            },
+            "signedInsetsCssPx": {
+              "left": 1,
+              "top": 1,
+              "right": 4,
+              "bottom": 3
+            },
+            "paintedAreaCssPx2": 12,
+            "paintPixels": 12
+          },
+          "note": "Binary thresholded visible paint contribution. Bounds center and equal-area pixel-cell coverage centroid are descriptive statistics, not a perceptual center, preferred offset, or automatic CSS correction."
+        },
+        {
+          "factor": 2,
+          "threshold": 16,
+          "status": "review-needed",
+          "reviewRequired": true,
+          "observed": {
+            "threshold": 16,
+            "referenceBoundsCssPx": {
+              "x": 0,
+              "y": 0,
+              "width": 8,
+              "height": 8
+            },
+            "referenceCenterCssPx": {
+              "x": 4,
+              "y": 4
+            },
+            "inkBoundsCssPx": {
+              "x": 1,
+              "y": 1,
+              "width": 3,
+              "height": 4
+            },
+            "boundsCenterCssPx": {
+              "x": 2.5,
+              "y": 3
+            },
+            "boundsCenterOffsetCssPx": {
+              "x": -1.5,
+              "y": -1
+            },
+            "coverageCentroidCssPx": {
+              "x": 2.5,
+              "y": 3
+            },
+            "coverageCentroidOffsetCssPx": {
+              "x": -1.5,
+              "y": -1
+            },
+            "signedInsetsCssPx": {
+              "left": 1,
+              "top": 1,
+              "right": 4,
+              "bottom": 3
+            },
+            "paintedAreaCssPx2": 12,
+            "paintPixels": 12
+          },
+          "note": "Binary thresholded visible paint contribution. Bounds center and equal-area pixel-cell coverage centroid are descriptive statistics, not a perceptual center, preferred offset, or automatic CSS correction."
+        }
+      ],
+      "measurementVariation": true,
+      "note": "Half/double sensitivity uses rounded thresholds clamped to 1..255. Variation flags a changed binary paint set, not poor optical balance."
+    }
+  },
+  "empty": {
+    "status": "unverified",
+    "reviewRequired": true,
+    "reason": "No paint cells exceeded this threshold; no balance statistics are available."
+  }
+}

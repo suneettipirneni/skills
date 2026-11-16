@@ -1,0 +1,20 @@
+{
+  "comparable": false,
+  "reasons": [
+    "Missing or changed url",
+    "Missing or changed config",
+    "Missing or changed finalURLs",
+    "Missing or changed environment.toolVersion",
+    "Missing or changed environment.ready",
+    "Missing or changed environment.fixture",
+    "Missing or changed environment.state",
+    "Diagnostic identities changed"
+  ],
+  "changes": [],
+  "declaredInterventions": {
+    "fontChange": null,
+    "frameChange": null
+  },
+  "reviewRequired": true,
+  "note": "Deltas are after minus before, not improvement scores or suggested corrections. Matching labels cannot prove identical actual fonts, assets, content, theme or intended state. Inspect natural-size context."
+}

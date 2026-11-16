@@ -1,0 +1,308 @@
+{
+  "summary": {
+    "components": 20,
+    "checks": 20,
+    "completedContracts": 0,
+    "passedContracts": 0,
+    "failedContracts": 0,
+    "diagnosticReports": 12,
+    "reviewRequired": 20,
+    "unverified": 8,
+    "status": "incomplete"
+  },
+  "checks": [
+    {
+      "name": "one/square remains review-only",
+      "pass": true
+    },
+    {
+      "name": "one/triangle remains review-only",
+      "pass": true
+    },
+    {
+      "name": "one/circle remains review-only",
+      "pass": true
+    },
+    {
+      "name": "one/badge remains review-only",
+      "pass": false,
+      "evidence": "Component paint changed at 15 pixels during isolation; inspect original/restored crops and capture a stable state"
+    },
+    {
+      "name": "one/threshold remains review-only",
+      "pass": true
+    },
+    {
+      "name": "one/hollow remains review-only",
+      "pass": true
+    },
+    {
+      "name": "one/fractional remains review-only",
+      "pass": false,
+      "evidence": "Component paint changed at 138 pixels during isolation; inspect original/restored crops and capture a stable state"
+    },
+    {
+      "name": "one/badge-base remains review-only",
+      "pass": false,
+      "evidence": "Component paint changed at 15 pixels during isolation; inspect original/restored crops and capture a stable state"
+    },
+    {
+      "name": "one triangle exposes distinct centers",
+      "pass": true,
+      "evidence": {
+        "threshold": 8,
+        "referenceBoundsCssPx": {
+          "x": 208,
+          "y": 24,
+          "width": 64,
+          "height": 64
+        },
+        "referenceCenterCssPx": {
+          "x": 240,
+          "y": 56
+        },
+        "inkBoundsCssPx": {
+          "x": 224,
+          "y": 36,
+          "width": 32,
+          "height": 40
+        },
+        "boundsCenterCssPx": {
+          "x": 240,
+          "y": 56
+        },
+        "boundsCenterOffsetCssPx": {
+          "x": 0,
+          "y": 0
+        },
+        "coverageCentroidCssPx": {
+          "x": 234.9011976047904,
+          "y": 56.07185628742515
+        },
+        "coverageCentroidOffsetCssPx": {
+          "x": -5.098802395209589,
+          "y": 0.07185628742514893
+        },
+        "signedInsetsCssPx": {
+          "left": 16,
+          "top": 12,
+          "right": 16,
+          "bottom": 12
+        },
+        "paintedAreaCssPx2": 668,
+        "paintPixels": 668
+      }
+    },
+    {
+      "name": "one light satellite sensitivity",
+      "pass": true,
+      "evidence": [
+        {
+          "threshold": 4,
+          "count": 1056,
+          "offset": {
+            "x": 4.954545454545453,
+            "y": 0
+          }
+        },
+        {
+          "threshold": 8,
+          "count": 576,
+          "offset": {
+            "x": -8,
+            "y": 0
+          }
+        },
+        {
+          "threshold": 16,
+          "count": 576,
+          "offset": {
+            "x": -8,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "one clipped shape not silently measured",
+      "pass": true,
+      "evidence": "locator.evaluate: Error: Masks or clip paths need manual paint review\n    at eval (eval at evaluate (:370:30), <anonymous>:11:103)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "one ancestor reference supported",
+      "pass": false
+    },
+    {
+      "name": "one reverse reference rejected",
+      "pass": true,
+      "evidence": "Reference frame must remain visible when paint is hidden; it cannot be the paint part or its descendant"
+    },
+    {
+      "name": "two/square remains review-only",
+      "pass": true
+    },
+    {
+      "name": "two/triangle remains review-only",
+      "pass": true
+    },
+    {
+      "name": "two/circle remains review-only",
+      "pass": false,
+      "evidence": "Component paint changed at 16 pixels during isolation; inspect original/restored crops and capture a stable state"
+    },
+    {
+      "name": "two/badge remains review-only",
+      "pass": true
+    },
+    {
+      "name": "two/threshold remains review-only",
+      "pass": true
+    },
+    {
+      "name": "two/hollow remains review-only",
+      "pass": true
+    },
+    {
+      "name": "two/fractional remains review-only",
+      "pass": true
+    },
+    {
+      "name": "two/badge-base remains review-only",
+      "pass": true
+    },
+    {
+      "name": "two triangle exposes distinct centers",
+      "pass": true,
+      "evidence": {
+        "threshold": 8,
+        "referenceBoundsCssPx": {
+          "x": 208,
+          "y": 24,
+          "width": 64,
+          "height": 64
+        },
+        "referenceCenterCssPx": {
+          "x": 240,
+          "y": 56
+        },
+        "inkBoundsCssPx": {
+          "x": 224,
+          "y": 36,
+          "width": 32,
+          "height": 40
+        },
+        "boundsCenterCssPx": {
+          "x": 240,
+          "y": 56
+        },
+        "boundsCenterOffsetCssPx": {
+          "x": 0,
+          "y": 0
+        },
+        "coverageCentroidCssPx": {
+          "x": 234.78363914373088,
+          "y": 56.03363914373089
+        },
+        "coverageCentroidOffsetCssPx": {
+          "x": -5.2163608562691195,
+          "y": 0.03363914373088761
+        },
+        "signedInsetsCssPx": {
+          "left": 16,
+          "top": 12,
+          "right": 16,
+          "bottom": 12
+        },
+        "paintedAreaCssPx2": 654,
+        "paintPixels": 2616
+      }
+    },
+    {
+      "name": "two light satellite sensitivity",
+      "pass": true,
+      "evidence": [
+        {
+          "threshold": 4,
+          "count": 4224,
+          "offset": {
+            "x": 4.954545454545453,
+            "y": 0
+          }
+        },
+        {
+          "threshold": 8,
+          "count": 2304,
+          "offset": {
+            "x": -8,
+            "y": 0
+          }
+        },
+        {
+          "threshold": 16,
+          "count": 2304,
+          "offset": {
+            "x": -8,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "two clipped shape not silently measured",
+      "pass": true,
+      "evidence": "locator.evaluate: Error: Masks or clip paths need manual paint review\n    at eval (eval at evaluate (:370:30), <anonymous>:11:103)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "name": "two ancestor reference supported",
+      "pass": false,
+      "evidence": {
+        "threshold": 8,
+        "referenceBoundsCssPx": {
+          "x": 592,
+          "y": 44,
+          "width": 28,
+          "height": 24
+        },
+        "referenceCenterCssPx": {
+          "x": 606,
+          "y": 56
+        },
+        "inkBoundsCssPx": {
+          "x": 592,
+          "y": 44,
+          "width": 28,
+          "height": 24
+        },
+        "boundsCenterCssPx": {
+          "x": 606,
+          "y": 56
+        },
+        "boundsCenterOffsetCssPx": {
+          "x": 0,
+          "y": 0
+        },
+        "coverageCentroidCssPx": {
+          "x": 605.7976370510397,
+          "y": 56.169848771266544
+        },
+        "coverageCentroidOffsetCssPx": {
+          "x": -0.2023629489602854,
+          "y": 0.16984877126654396
+        },
+        "signedInsetsCssPx": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "paintedAreaCssPx2": 661.25,
+        "paintPixels": 2645
+      }
+    },
+    {
+      "name": "two reverse reference rejected",
+      "pass": true,
+      "evidence": "Reference frame must remain visible when paint is hidden; it cannot be the paint part or its descendant"
+    }
+  ]
+}

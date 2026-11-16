@@ -1,0 +1,25 @@
+{
+  "reportSha256": "b9853f2b232d4f21183170220f5516ece20e70a8ed8652a6545a67edeb889818",
+  "reviewer": "Codex visual review, 2026-11-16",
+  "context": {
+    "decision": "accept",
+    "evidence": "context.html; desktop-context.png; phone-context.png; report.html",
+    "rationale": "Scoped to the idle play symbol in its transport row. It reads as a clear primary play control beside the seek buttons, with comfortable visible clearance and coherent vertical placement at both captured widths. Retain its intentional triangle asymmetry. This does not approve adjacent seek-icon numeral clearance, other states, interaction behavior or the entire application."
+  },
+  "decisions": [
+    {
+      "id": "desktop-1x/cue-play/0/1",
+      "decision": "accept",
+      "evidence": "report.html and context.html: desktop-1x/cue-play/0/1",
+      "rationale": "The intact triangle remains legible inside the circular control at natural CSS size. Its paint-bounds center and binary coverage centroid disagree as expected for a directional silhouette. Neither is a correction target; in the transport context there is no demonstrated need to shift this mark. Containment passes and all three paint thresholds produce measurements.",
+      "action": ""
+    },
+    {
+      "id": "phone-2x/cue-play/0/1",
+      "decision": "accept",
+      "evidence": "report.html and context.html: phone-2x/cue-play/0/1",
+      "rationale": "The intact triangle remains legible inside the circular control at natural CSS size. Its paint-bounds center and binary coverage centroid disagree as expected for a directional silhouette. Neither is a correction target; in the transport context there is no demonstrated need to shift this mark. Containment passes and all three paint thresholds produce measurements.",
+      "action": ""
+    }
+  ]
+}

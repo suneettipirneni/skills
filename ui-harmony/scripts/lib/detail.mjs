@@ -27,7 +27,7 @@ export function validateDetailConfig(c) {
     if(!Array.isArray(x.checks)||!x.checks.length)throw Error('checks required');
     for(const q of x.checks){
       if(!object(q))throw Error('Each check must be an object');
-      const extras={center:['tolerance','offsetX','offsetY'],inside:['tolerance','region'],gap:['tolerance','axis','minGap'],'ink-gap':['minGap'],between:['c','axis','tolerance','minGap']};
+      const extras={center:['tolerance','offsetX','offsetY'],inside:['tolerance','region'],gap:['tolerance','axis','minGap'],'ink-gap':['minGap'],'paint-balance':['region'],'edge-align':['edge','referenceEdge','offset','tolerance'],insets:['insets','tolerance'],between:['c','axis','tolerance','minGap']};
       if(!extras[q.kind])throw Error('Unknown check kind');
       keys(q,['kind','a','b','rationale',...extras[q.kind]]);
       if(!Object.hasOwn(x.parts,q.a)||!Object.hasOwn(x.parts,q.b)||q.a===q.b||typeof q.rationale!=='string'||!q.rationale.trim())throw Error('Checks require valid distinct parts and rationale');
@@ -37,7 +37,16 @@ export function validateDetailConfig(c) {
       if(['gap','between'].includes(q.kind)&&!['x','y'].includes(q.axis))throw Error('gap/between needs x/y axis');
       if(['gap','ink-gap','between'].includes(q.kind)&&!num(q.minGap))throw Error('gap needs minGap');
       if(q.kind==='ink-gap'&&q.minGap>16)throw Error('ink-gap is a local diagnostic: minGap <=16 CSS px');
-      if(q.region){keys(q.region,['x','y','width','height']);const r=q.region;if(!['x','y','width','height'].every(k=>num(r[k]))||!r.width||!r.height||r.x+r.width>1||r.y+r.height>1)throw Error('region must fit normalized 0..1 bounds');}
+      if(q.kind==='edge-align'){
+        const axes={left:'x',right:'x',centerX:'x',top:'y',bottom:'y',centerY:'y'};
+        if(!Object.hasOwn(axes,q.edge)||!Object.hasOwn(axes,q.referenceEdge??q.edge)||axes[q.edge]!==axes[q.referenceEdge??q.edge])throw Error('edge-align requires valid edges on the same axis');
+        if(q.offset!==undefined&&!Number.isFinite(q.offset))throw Error('offset must be finite');
+      }
+      if(q.kind==='insets'){
+        keys(q.insets,['left','right','top','bottom']);
+        if(!Object.keys(q.insets).length||!Object.values(q.insets).every(Number.isFinite))throw Error('insets requires at least one finite signed side value');
+      }
+      if(q.region!==undefined){keys(q.region,['x','y','width','height']);const r=q.region;if(!['x','y','width','height'].every(k=>num(r[k]))||!r.width||!r.height||r.x+r.width>1||r.y+r.height>1)throw Error('region must fit normalized 0..1 bounds');}
     }
   }
   return c;
@@ -45,6 +54,16 @@ export function validateDetailConfig(c) {
 
 export function geometryCheck(q,parts){
   const a=parts[q.a].rect,b=parts[q.b].rect,t=q.tolerance??.5;
+  if(q.kind==='edge-align'){
+    const edge=(r,e)=>({left:r.x,right:r.x+r.width,centerX:r.x+r.width/2,top:r.y,bottom:r.y+r.height,centerY:r.y+r.height/2})[e];
+    const referenceEdge=q.referenceEdge??q.edge,aEdge=edge(a,q.edge),bReferenceEdge=edge(b,referenceEdge),delta=aEdge-bReferenceEdge,offset=q.offset??0;
+    return {pass:Math.abs(delta-offset)<=t,observed:{aEdge,bReferenceEdge,delta},expected:{edge:q.edge,referenceEdge,offset,tolerance:t},note:'Signed CSS-coordinate edge difference, a minus reference. This is an authored geometric contract, not optical alignment.'};
+  }
+  if(q.kind==='insets'){
+    const clearance={left:a.x-b.x,right:b.x+b.width-a.x-a.width,top:a.y-b.y,bottom:b.y+b.height-a.y-a.height};
+    const deltas=Object.fromEntries(Object.entries(q.insets).map(([side,value])=>[side,clearance[side]-value]));
+    return {pass:Object.values(deltas).every(d=>Math.abs(d)<=t),observed:{clearance,deltas},expected:{insets:{...q.insets},tolerance:t},note:'Only explicitly authored signed CSS-pixel insets are compared. Negative values describe overhang; use inside separately for containment.'};
+  }
   if(q.kind==='center'){
     const dx=a.x+a.width/2-(b.x+b.width/2)-(q.offsetX??0),dy=a.y+a.height/2-(b.y+b.height/2)-(q.offsetY??0);
     return {pass:Math.abs(dx)<=t&&Math.abs(dy)<=t,observed:{deltaX:dx,deltaY:dy},expected:{offsetX:q.offsetX??0,offsetY:q.offsetY??0,tolerance:t}};
@@ -89,4 +108,41 @@ export function inkGap(a,b,dpr,minGap){
   }
   const gap=Number.isFinite(nearest)?nearest/dpr:null;
   return {status:'measured',pass:overlapPixels===0&&(gap===null||gap>=minGap),observed:{overlapPixels,minimumClearanceCssPx:gap,clearanceAtLeastCssPx:gap===null?minGap:null,closestPaintCssPx:witness,aPaintPixels:a.count,bPaintPixels:b.count},expected:{minimumClearanceCssPx:minGap},note:'Thresholded raster coverage; clearance uses pixel-cell edge approximation. Witness coordinates are local to the crop. Not perceptual centering or a universal optical verdict.'};
+}
+
+// Descriptive binary pixel-cell statistics, never an optical center or verdict.
+// Bounds include complete occupied pixel cells, and the centroid gives each
+// thresholded cell equal weight. Coordinates are document CSS pixels.
+export function paintBalance(mask,dpr,referenceBoundsCssPx,origin={x:0,y:0}){
+  if(!Number.isFinite(dpr)||dpr<=0)throw Error('DPR must be positive');
+  const r=referenceBoundsCssPx;
+  if(!r||![r.x,r.y,r.width,r.height,origin.x,origin.y].every(Number.isFinite)||r.width<=0||r.height<=0)throw Error('Reference bounds and crop origin must be finite and nonempty');
+  if(!Number.isInteger(mask.width)||!Number.isInteger(mask.height)||mask.width<1||mask.height<1||mask.mask.length!==mask.width*mask.height)throw Error('Invalid binary mask dimensions');
+  let count=0,minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity,sumX=0,sumY=0;
+  for(let y=0;y<mask.height;y++)for(let x=0;x<mask.width;x++)if(mask.mask[y*mask.width+x]){
+    count++;minX=Math.min(minX,x);minY=Math.min(minY,y);maxX=Math.max(maxX,x);maxY=Math.max(maxY,y);sumX+=x+.5;sumY+=y+.5;
+  }
+  if(!count)return {status:'unverified',reviewRequired:true,reason:'No paint cells exceeded this threshold; no balance statistics are available.'};
+  const inkBoundsCssPx={x:origin.x+minX/dpr,y:origin.y+minY/dpr,width:(maxX-minX+1)/dpr,height:(maxY-minY+1)/dpr};
+  const referenceCenterCssPx={x:r.x+r.width/2,y:r.y+r.height/2};
+  const boundsCenterCssPx={x:inkBoundsCssPx.x+inkBoundsCssPx.width/2,y:inkBoundsCssPx.y+inkBoundsCssPx.height/2};
+  const coverageCentroidCssPx={x:origin.x+sumX/count/dpr,y:origin.y+sumY/count/dpr};
+  const offset=p=>({x:p.x-referenceCenterCssPx.x,y:p.y-referenceCenterCssPx.y});
+  return {status:'review-needed',reviewRequired:true,observed:{referenceBoundsCssPx:{...r},referenceCenterCssPx,inkBoundsCssPx,boundsCenterCssPx,boundsCenterOffsetCssPx:offset(boundsCenterCssPx),coverageCentroidCssPx,coverageCentroidOffsetCssPx:offset(coverageCentroidCssPx),signedInsetsCssPx:{left:inkBoundsCssPx.x-r.x,top:inkBoundsCssPx.y-r.y,right:r.x+r.width-inkBoundsCssPx.x-inkBoundsCssPx.width,bottom:r.y+r.height-inkBoundsCssPx.y-inkBoundsCssPx.height},paintedAreaCssPx2:count/(dpr*dpr),paintPixels:count},note:'Binary thresholded visible paint contribution. Bounds center and equal-area pixel-cell coverage centroid are descriptive statistics, not a perceptual center, preferred offset, or automatic CSS correction.'};
+}
+
+export function paintBalanceSensitivity(base,layer,dpr,referenceBoundsCssPx,origin,threshold=8){
+  if(!Number.isInteger(threshold)||threshold<1||threshold>255)throw Error('paintThreshold must be 1..255');
+  const samples=[.5,1,2].map(factor=>{
+    const effective=Math.max(1,Math.min(255,Math.round(threshold*factor)));
+    const result=paintBalance(paintMask(base,layer,effective),dpr,referenceBoundsCssPx,origin);
+    return {factor,threshold:effective,...result, ...(result.observed?{observed:{threshold:effective,...result.observed}}:{})};
+  });
+  const nominal=samples[1];
+  // Counts are monotone under thresholding. A changed count means the binary
+  // set changed even when the corresponding bounds or centroid happen not to.
+  const counts=samples.map(s=>s.observed?.paintPixels??0);
+  const sensitivity={samples,measurementVariation:new Set(counts).size>1,note:'Half/double sensitivity uses rounded thresholds clamped to 1..255. Variation flags a changed binary paint set, not poor optical balance.'};
+  const {factor,...result}=nominal;
+  return {...result,sensitivity};
 }
