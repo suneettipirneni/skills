@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title><!--DOCUMENT_TITLE--></title>
+<style>
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #232925;
+  background: #fafbf9;
+  font-synthesis: none;
+  line-height: 1.5;
+  color-scheme: light;
+  --muted: #626b65;
+  --border: #e1e5df;
+  --accent: #31634e;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button, input, summary { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+button {
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 7px 12px;
+  background: #fff;
+  color: #404943;
+  font-size: 12px;
+  font-weight: 500;
+}
+button:hover { background: #f0f3ee; }
+main { max-width: 1320px; margin: auto; padding: 48px 40px 28px; }
+header { margin-bottom: 28px; }
+h1 { font-size: 28px; line-height: 1.25; letter-spacing: -.035em; margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.intro { color: var(--muted); max-width: 760px; font-size: 14px; margin: 8px 0 0; }
+.toolbar { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+.search { position: relative; display: flex; align-items: center; width: 244px; max-width: 100%; }
+.search svg { position: absolute; left: 11px; color: var(--muted); pointer-events: none; }
+.search input { width: 100%; min-width: 0; background: #fff; border: 1px solid var(--border); border-radius: 7px; padding: 8px 12px 8px 34px; font-size: 12px; color: inherit; }
+.search input::placeholder { color: var(--muted); }
+.count { margin-right: auto; color: var(--muted); font-size: 12px; }
+.sync { display: flex; gap: 8px; align-items: center; font-size: 12px; color: #404943; cursor: pointer; min-height: 32px; }
+.sync input { appearance: none; flex-shrink: 0; width: 28px; height: 18px; margin: 0; border: 1px solid #87918a; border-radius: 20px; background: #e8ece6; position: relative; cursor: pointer; }
+.sync input::after { content: ''; position: absolute; width: 12px; height: 12px; left: 2px; top: 2px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px #0002; }
+.sync input:checked { background: var(--accent); border-color: var(--accent); }
+.sync input:checked::after { transform: translateX(10px); }
+#reset { display: inline-flex; align-items: center; gap: 6px; }
+.grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; align-items: start; }
+.grid.single { grid-template-columns: minmax(0,1fr); max-width: 1040px; margin: auto; }
+.card { min-width: 0; }
+.card-head { padding: 0 0 12px; }
+.card h2 { font-size: 14px; line-height: 1.5; margin: 0; font-weight: 550; letter-spacing: -.015em; overflow-wrap: anywhere; }
+.stage { --split: 50%; position: relative; aspect-ratio: 16/10; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: repeating-conic-gradient(#e8ece5 0% 25%,#f1f4ee 0% 50%) 0/20px 20px; cursor: ew-resize; touch-action: pan-y; user-select: none; }
+.stage:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 4px; }
+.stage img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; position: absolute; inset: 0; pointer-events: none; }
+.stage .before { clip-path: inset(0 calc(100% - var(--split)) 0 0); }
+.image-labels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 8px; color: var(--muted); font-size: 11px; }
+.image-labels span { overflow-wrap: anywhere; }
+.image-labels .right { text-align: right; }
+.divider { position: absolute; left: var(--split); top: 0; bottom: 0; width: 2px; background: #fff; transform: translateX(-50%); box-shadow: 0 0 0 1px #23392b26; pointer-events: none; }
+.handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 32px; height: 40px; display: grid; place-items: center; background: #fff; color: #404943; border: 1px solid #0000000d; border-radius: 8px; box-shadow: 0 2px 8px #00000014; }
+.scrub-input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; margin: 0; pointer-events: none; }
+.controls { padding-top: 12px; }
+.control-row { display: flex; gap: 12px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.presets { display: flex; gap: 2px; padding: 3px; background: #edf0eb; border-radius: 7px; max-width: 100%; flex-wrap: wrap; }
+.presets button { border: 0; border-radius: 5px; padding: 5px 10px; background: transparent; color: #5b655e; font-size: 11px; overflow-wrap: anywhere; min-width: 0; }
+.presets button[aria-pressed="true"] { background: #fff; color: #2b3930; box-shadow: 0 1px 3px #00000012; }
+.presets button:hover { color: #1d2f23; background: #ffffff80; }
+.control-row output { font-size: 11px; font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+.caption { font-size: 12px; line-height: 1.6; color: var(--muted); margin: 10px 0 0; overflow-wrap: anywhere; }
+.export-actions { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
+.export-actions button { font-size: 11px; padding: 6px 9px; }
+.export-actions button:disabled { cursor: wait; opacity: .6; }
+.export-status { font-size: 11px; color: var(--muted); margin: 8px 0 0; }
+.export-status:empty { display: none; }
+.error { color: #8d2424; font-size: 13px; margin: 12px 0 0; }
+.footer { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 11px; }
+.hint { margin: 0; }
+.help { max-width: 360px; }
+.help summary { cursor: pointer; list-style: none; text-align: right; }
+.help summary::-webkit-details-marker { display: none; }
+.help summary:hover { color: #273a2b; }
+.help p { margin: 8px 0 0; line-height: 1.7; }
+.empty { padding: 48px 16px; text-align: center; color: var(--muted); font-size: 14px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+[hidden] { display: none !important; }
+@media(min-width:1400px) { .grid.many { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media(max-width:760px) {
+  main { padding: 28px 20px; }
+  h1 { font-size: 24px; }
+  header { margin-bottom: 24px; }
+  .grid { grid-template-columns: minmax(0,1fr); gap: 28px; }
+  .toolbar { gap: 12px 16px; margin-bottom: 24px; padding-bottom: 16px; }
+  .search { width: 100%; }
+  .sync { min-height: 40px; }
+  #reset { min-height: 40px; }
+  .presets button { min-height: 36px; }
+  .export-actions button { min-height: 36px; }
+  .footer { flex-wrap: wrap; margin-top: 28px; }
+  .help summary { text-align: left; }
+}
+@media(max-width:380px) { .count { flex-basis: 100%; } .sync { margin-right: auto; } }
+@media(prefers-reduced-motion:no-preference) {
+  button { transition: background .12s, color .12s; }
+  .sync input::after { transition: transform .12s; }
+}
+@media(forced-colors:active) {
+  .sync input { appearance: auto; }
+  .sync input::after { display: none; }
+  .stage:focus-within { outline: 2px solid Highlight; }
+  .presets button[aria-pressed="true"] { outline: 1px solid Highlight; }
+}
+</style>
+</head>
+<body>
+<main>
+<header><h1 id="title"></h1><p class="intro" id="description"></p></header>
+<div class="toolbar">
+<label class="search" id="search-label"><span class="sr-only">Search comparisons</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input type="search" id="search" placeholder="Search comparisons"></label>
+<span class="count" id="count" role="status"></span>
+<label class="sync" id="sync-label"><input type="checkbox" id="sync">Sync sliders</label>
+<button id="reset" type="button"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></svg>Reset all</button>
+</div>
+<div class="grid" id="comparisons"></div>
+<p class="empty" id="empty" hidden>No comparisons match your search.</p>
+<footer class="footer"><p class="hint">Drag an image to compare.</p><details class="help"><summary>Keyboard shortcuts</summary><p id="slider-help">Tab to an image slider. Use arrow keys to adjust, Home for all after, or End for all before. Positions reset when you reopen this file.</p></details></footer>
+<noscript>This comparison needs JavaScript enabled in your browser. It does not need an internet connection or a server.</noscript>
+</main>
+<script id="comparison-data" type="application/json">/*COMPARISON_DATA*/</script>
+<script>
+'use strict';
+/*EXPORT_CODE*/
+const data = JSON.parse(document.getElementById('comparison-data').textContent);
+const grid = document.getElementById('comparisons');
+const sync = document.getElementById('sync');
+const states = [];
+let activeExport = null;
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+function setPosition(state, value) {
+  value = Math.max(0, Math.min(100, Math.round(Number(value))));
+  state.range.value = value;
+  state.output.value = `${value}% before`;
+  state.buttons?.forEach(({ button, position }) => button.setAttribute('aria-pressed', String(value === position)));
+  state.stage.style.setProperty('--split', `${value}%`);
+  state.range.setAttribute('aria-valuetext', `${value}% ${state.pair.beforeLabel}, ${100-value}% ${state.pair.afterLabel}`);
+}
+function move(state, value) {
+  if (sync.checked) states.forEach(s => setPosition(s, value));
+  else setPosition(state, value);
+}
+document.getElementById('title').textContent = data.title;
+document.getElementById('description').textContent = data.description;
+document.getElementById('description').hidden = !data.description;
+if (data.pairs.length === 1) {
+  grid.classList.add('single');
+  document.getElementById('search-label').hidden = true;
+  document.getElementById('sync-label').hidden = true;
+}
+if (data.pairs.length >= 6) grid.classList.add('many');
+data.pairs.forEach((pair, index) => {
+  const card = el('article', 'card');
+  const head = el('div', 'card-head');
+  const heading = el('h2', '', pair.title);
+  heading.id = `heading-${index}`;
+  card.setAttribute('aria-labelledby', heading.id);
+  head.append(heading);
+  const stage = el('div', 'stage');
+  const error = el('p', 'error');
+  error.hidden = true;
+  error.setAttribute('role', 'alert');
+  for (const key of ['after', 'before']) {
+    const img = el('img', key);
+    img.alt = `${pair.title} — ${pair[key + 'Label']}`;
+    img.draggable = false;
+    img.decoding = 'async';
+    img.style.objectFit = pair.fit;
+    img.addEventListener('error', () => { error.hidden = false; error.textContent = 'An image could not be decoded. Re-export using a supported image file.'; });
+    if (key === 'before') img.addEventListener('load', () => { if (img.naturalWidth && img.naturalHeight) stage.style.aspectRatio = `${img.naturalWidth} / ${img.naturalHeight}`; });
+    img.src = pair[key];
+    stage.append(img);
+  }
+  const divider = el('span', 'divider');
+  const handle = el('span', 'handle');
+  const handleIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  handleIcon.setAttribute('width', '18'); handleIcon.setAttribute('height', '18');
+  handleIcon.setAttribute('viewBox', '0 0 24 24'); handleIcon.setAttribute('fill', 'none');
+  handleIcon.setAttribute('stroke', 'currentColor'); handleIcon.setAttribute('stroke-width', '1.5');
+  const arrows = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  arrows.setAttribute('d', 'm8 8-4 4 4 4m8-8 4 4-4 4');
+  handleIcon.append(arrows); handle.append(handleIcon); divider.append(handle);
+  divider.setAttribute('aria-hidden', 'true');
+  const imageLabels = el('div', 'image-labels');
+  const left = el('span', 'left', pair.beforeLabel);
+  const right = el('span', 'right', pair.afterLabel);
+  left.setAttribute('aria-hidden','true'); right.setAttribute('aria-hidden','true');
+  imageLabels.append(left, right);
+  stage.append(divider);
+  const controls = el('div', 'controls');
+  const row = el('div', 'control-row');
+  const range = el('input', 'scrub-input');
+  range.type = 'range'; range.min = '0'; range.max = '100'; range.step = '1';
+  range.id = `slider-${index}`;
+  range.setAttribute('aria-describedby', 'slider-help');
+  range.setAttribute('aria-label', `${pair.title}: reveal ${pair.beforeLabel}`);
+  const output = el('output'); output.htmlFor = range.id; output.setAttribute('aria-hidden','true');
+  stage.append(range);
+  const state = {pair, card, stage, range, output};
+  states.push(state);
+  setPosition(state, pair.position);
+  range.addEventListener('input', () => move(state, range.value));
+  let pointer = null;
+  const scrub = event => { const box = stage.getBoundingClientRect(); move(state, (event.clientX - box.left) / box.width * 100); };
+  stage.addEventListener('pointerdown', event => {
+    if (!event.isPrimary || event.button !== 0) return;
+    pointer = event.pointerId; stage.setPointerCapture(pointer); range.focus({preventScroll:true}); scrub(event);
+  });
+  stage.addEventListener('pointermove', event => { if (event.pointerId === pointer) scrub(event); });
+  stage.addEventListener('pointerup', event => { if (event.pointerId === pointer) { scrub(event); pointer = null; } });
+  stage.addEventListener('pointercancel', () => { pointer = null; });
+  stage.addEventListener('lostpointercapture', () => { pointer = null; });
+  const presets = el('div', 'presets');
+  state.buttons = [];
+  presets.setAttribute('role', 'group');
+  presets.setAttribute('aria-label', `${pair.title}: comparison view`);
+  for (const [name, value] of [[pair.beforeLabel,100], ['Split',50], [pair.afterLabel,0]]) {
+    const button = el('button', '', name); button.type = 'button';
+    button.setAttribute('aria-label', `${pair.title}: ${name}`);
+    button.addEventListener('click', () => move(state, value)); presets.append(button);
+    state.buttons.push({ button, position: value });
+  }
+  setPosition(state, pair.position);
+  const exportActions = el('div', 'export-actions');
+  const exportStatus = el('p', 'export-status');
+  exportStatus.setAttribute('role', 'status');
+  const pngButton = el('button', '', 'Export PNG'); pngButton.type = 'button';
+  const gifButton = el('button', '', 'Export GIF'); gifButton.type = 'button';
+  pngButton.setAttribute('aria-label', `Export PNG for ${pair.title}`);
+  gifButton.setAttribute('aria-label', `Export GIF for ${pair.title}`);
+  pngButton.title = 'Save a side-by-side before and after image';
+  gifButton.title = 'Save a looping slider animation';
+  state.exportButtons = [pngButton, gifButton];
+  async function exportEntry(format) {
+    if (activeExport?.state === state && format === 'gif') { activeExport.controller.abort(); return; }
+    if (activeExport) return;
+    const controller = new AbortController();
+    activeExport = { state, controller };
+    states.forEach(s => s.exportButtons.forEach(button => { button.disabled = true; }));
+    if (format === 'gif') { gifButton.disabled = false; gifButton.textContent = 'Cancel GIF'; gifButton.setAttribute('aria-label', `Cancel GIF for ${pair.title}`); }
+    exportStatus.textContent = `Preparing ${format.toUpperCase()}…`;
+    error.hidden = true;
+    try {
+      // Yield before rasterization so progress and cancellation controls can paint.
+      await new Promise(resolve => setTimeout(resolve, 0));
+      const blob = await comparisonExports[format](pair, {
+        signal: controller.signal,
+        onProgress: percent => { exportStatus.textContent = `Creating GIF · ${percent}%`; }
+      });
+      comparisonExports.download(blob, comparisonExports.filename(pair, format));
+      exportStatus.textContent = `${format.toUpperCase()} ready. Download started.`;
+    } catch (failure) {
+      if (failure.name === 'AbortError') exportStatus.textContent = 'GIF export cancelled.';
+      else { exportStatus.textContent = ''; error.hidden = false; error.textContent = `Export failed: ${failure.message}`; }
+    } finally {
+      activeExport = null;
+      states.forEach(s => s.exportButtons.forEach(button => { button.disabled = false; }));
+      gifButton.textContent = 'Export GIF'; gifButton.setAttribute('aria-label', `Export GIF for ${pair.title}`);
+    }
+  }
+  pngButton.addEventListener('click', () => exportEntry('png'));
+  gifButton.addEventListener('click', () => exportEntry('gif'));
+  exportActions.append(pngButton, gifButton);
+  row.append(presets, output, exportActions);
+  controls.append(row);
+  if (pair.caption) controls.append(el('p', 'caption', pair.caption));
+  controls.append(exportStatus, error);
+  card.append(head, imageLabels, stage, controls); grid.append(card);
+});
+function filter() {
+  const query = document.getElementById('search').value.trim().toLocaleLowerCase();
+  let visible = 0;
+  for (const state of states) {
+    state.card.hidden = !`${state.pair.title} ${state.pair.caption} ${state.pair.id}`.toLocaleLowerCase().includes(query);
+    if (!state.card.hidden) visible++;
+  }
+  document.getElementById('count').textContent = `${query ? `${visible} of ` : ''}${states.length} comparison${states.length === 1 ? '' : 's'}`;
+  document.getElementById('empty').hidden = visible !== 0;
+}
+document.getElementById('search').addEventListener('input', filter);
+document.getElementById('reset').addEventListener('click', () => {
+  sync.checked = false;
+  states.forEach(state => setPosition(state, state.pair.position));
+});
+sync.addEventListener('change', () => {
+  if (sync.checked) { const first = states.find(s => !s.card.hidden) || states[0]; states.forEach(s => setPosition(s, first.range.value)); }
+});
+filter();
+</script>
+</body>
+</html>

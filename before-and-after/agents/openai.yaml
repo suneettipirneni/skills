@@ -1,0 +1,4 @@
+interface:
+  display_name: "Before and After"
+  short_description: "Demonstrate visual changes with sliders, GIFs, and PNGs"
+  default_prompt: "Use $before-and-after to demonstrate these UI or visual changes with an offline HTML comparison and per-entry GIF or PNG exports."

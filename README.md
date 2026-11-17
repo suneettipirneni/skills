@@ -24,6 +24,35 @@ It defaults to modern SaaS minimalism: restrained surfaces, clear typography, us
 - [Tool setup and usage](ui-harmony/references/tools.md)
 - [Rendered calibration and adversarial validation](ui-harmony/references/preferences/modern-saas-validation.md)
 
+## Before and After
+
+[Before and After](before-and-after/SKILL.md) demonstrates UI changes and other visual changes with interactive image comparisons in a single self-contained HTML file. Images, styles, and controls are embedded: open the file directly in a browser, offline, with no dev server.
+
+- Drag, touch, or use the keyboard to reveal before and after images.
+- Compare one pair or a batch, search comparisons, and optionally synchronize sliders.
+- Append later requests to an existing export or replace a pair by its stable ID.
+- Keep original image proportions; use contain by default or opt into cover.
+- Export each entry as a looping slider GIF or a static side-by-side PNG, directly from the offline HTML.
+- Use the [copy-ready recipes](before-and-after/references/snippets.md) for repeated requests and batch GIF/PNG export.
+
+[Open the static example](examples/before-and-after/index.html) after downloading it, or regenerate it with Node.js 20+:
+
+```sh
+node before-and-after/scripts/render.mjs \
+  --manifest examples/before-and-after/comparisons.json \
+  --output /tmp/before-and-after.html
+```
+
+No npm install is required for HTML generation, viewing, or the per-entry export buttons. The optional `scripts/export.mjs` batch helper uses an existing Playwright installation and browser. All runtime JavaScript, including the compact GIF encoder, is inlined once in the HTML.
+
+To validate the generator:
+
+```sh
+node --test before-and-after/scripts/tests/render.test.mjs
+```
+
+Install this skill by selecting `--skill before-and-after` in the install command below. Invoke it with `$before-and-after`.
+
 ## Install in Codex
 
 Use the [skills CLI](https://github.com/vercel-labs/skills), which requires Node.js 22.20 or later. To make UI Harmony available across your Codex projects:

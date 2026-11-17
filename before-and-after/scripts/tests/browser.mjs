@@ -1,0 +1,90 @@
+// Run with an existing Playwright install (no dependency needed by the export):
+// BEFORE_AFTER_TEST_DEPS=/absolute/path/to/project/package.json node scripts/tests/browser.mjs
+// That project should provide playwright and @axe-core/playwright.
+// Uses installed Chrome; BEFORE_AFTER_BROWSER may select another Playwright channel.
+import { createRequire } from 'node:module';
+import { mkdtemp, writeFile, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import assert from 'node:assert/strict';
+import { render } from '../render.mjs';
+const require = createRequire(process.env.BEFORE_AFTER_TEST_DEPS ? resolve(process.env.BEFORE_AFTER_TEST_DEPS) : import.meta.url);
+const { chromium } = require('playwright');
+const { default: AxeBuilder } = require('@axe-core/playwright');
+const root = await mkdtemp(join(tmpdir(), 'before-after-browser-'));
+const output = join(root, 'review.html');
+const manifest = join(root, 'pairs.json');
+const svg = (color, width, height) => `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"><rect width="100%" height="100%" fill="${color}"/></svg>`;
+let browser;
+try {
+  await writeFile(join(root,'before.svg'),svg('#ef4444',400,240));
+  await writeFile(join(root,'after.svg'),svg('#3b82f6',240,400));
+  await writeFile(manifest,JSON.stringify({title:'Offline comparison',pairs:Array.from({length:12},(_,i)=>({id:`pair-${i}`,title:`Screen ${i+1}`,before:'before.svg',after:'after.svg'}))}));
+  await render(['--manifest',manifest,'--output',output]);
+  browser = await chromium.launch({channel:process.env.BEFORE_AFTER_BROWSER || 'chrome',headless:true});
+  const context = await browser.newContext({viewport:{width:1280,height:900},offline:true});
+  const page = await context.newPage();
+  const errors = [];
+  const requests = [];
+  page.on('pageerror',error=>errors.push(error.message));
+  page.on('request',request=> { if (/^https?:/.test(request.url())) requests.push(request.url()); });
+  await page.goto(pathToFileURL(output).href);
+  await page.waitForFunction(()=>[...document.images].every(i=>i.complete && i.naturalWidth>0));
+  assert.equal(await page.locator('.card').count(),12);
+  const first = page.locator('input[type=range]').nth(0);
+  const second = page.locator('input[type=range]').nth(1);
+  await first.focus(); await page.keyboard.press('Home'); assert.equal(await first.inputValue(),'0');
+  assert.equal(await page.locator('.stage').first().evaluate(node => getComputedStyle(node).outlineStyle), 'solid');
+  const firstPresets = page.locator('.presets').first();
+  assert.equal(await firstPresets.getByRole('button', { name: 'Screen 1: After', exact: true }).getAttribute('aria-pressed'), 'true');
+  assert.equal(await second.inputValue(),'50');
+  assert.equal(await page.locator('.before').first().evaluate(img=>getComputedStyle(img).clipPath),'inset(0px 100% 0px 0px)');
+  await page.keyboard.press('End'); assert.equal(await first.inputValue(),'100');
+  assert.equal(await page.locator('.before').first().evaluate(img=>getComputedStyle(img).clipPath),'inset(0px 0% 0px 0px)');
+  await page.keyboard.press('ArrowLeft'); assert.equal(await first.inputValue(),'99');
+  assert.equal(await firstPresets.locator('[aria-pressed="true"]').count(), 0);
+  await firstPresets.getByRole('button', { name: 'Screen 1: Split', exact: true }).click();
+  assert.equal(await first.inputValue(), '50');
+  assert.equal(await firstPresets.getByRole('button', { name: 'Screen 1: Split', exact: true }).getAttribute('aria-pressed'), 'true');
+  await page.getByText('Keyboard shortcuts', { exact: true }).click();
+  assert.equal(await page.locator('#slider-help').isVisible(), true);
+  await page.getByText('Keyboard shortcuts', { exact: true }).click();
+  const stage = page.locator('.stage').first();
+  await stage.scrollIntoViewIfNeeded();
+  const box = await stage.boundingBox();
+  await page.mouse.move(box.x+box.width*.2,box.y+box.height*.5);
+  await page.mouse.down(); await page.mouse.move(box.x+box.width*.75,box.y+box.height*.5); await page.mouse.up();
+  assert.equal(await first.inputValue(),'75');
+  await page.locator('#sync').check();
+  await first.focus(); await page.keyboard.press('Home'); assert.equal(await second.inputValue(),'0');
+  await page.locator('#reset').click(); assert.equal(await first.inputValue(),'50'); assert.equal(await second.inputValue(),'50');
+  assert.equal(await page.locator('#sync').isChecked(),false);
+  await page.locator('#search').fill('Screen 12'); assert.equal(await page.locator('.card:visible').count(),1);
+  await page.locator('#search').fill('no such comparison'); assert.equal(await page.locator('#empty').isVisible(),true);
+  await page.locator('#search').fill('');
+  const accessibility = await new AxeBuilder({page}).analyze();
+  assert.deepEqual(accessibility.violations.map(v=>({id:v.id,impact:v.impact})),[]);
+  await page.setViewportSize({width:320,height:740});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true);
+  const mobile = await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,offline:true});
+  const touchPage = await mobile.newPage();
+  await touchPage.goto(pathToFileURL(output).href);
+  const touchBox = await touchPage.locator('.stage').first().boundingBox();
+  await touchPage.touchscreen.tap(touchBox.x+touchBox.width*.25,touchBox.y+touchBox.height*.5);
+  assert.ok(Math.abs(Number(await touchPage.locator('input[type=range]').first().inputValue())-25)<=1);
+  await mobile.close();
+  // Single-pair mode and literal hostile metadata, still no network.
+  await render(['--before',join(root,'before.svg'),'--after',join(root,'after.svg'),'--title','</script><script>window.injected=true</script>','--output',output,'--force']);
+  await page.reload();
+  assert.equal(await page.locator('.card').count(),1);
+  assert.equal(await page.locator('#search-label').isVisible(),false);
+  assert.equal(await page.evaluate(()=>window.injected),undefined);
+  assert.equal(await page.locator('h1').textContent(),'</script><script>window.injected=true</script>');
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth),true);
+  assert.deepEqual(errors,[]); assert.deepEqual(requests,[]);
+  console.log('Passed: visible keyboard focus, preset selection states, keyboard help, offline file export, 12 pairs, image decode, keyboard, drag, touch, independent/synced sliders, reset, search, 320px layout, accessibility, single pair, literal metadata, no network requests.');
+} finally {
+  await browser?.close();
+  await rm(root,{recursive:true,force:true});
+}

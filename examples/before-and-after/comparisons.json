@@ -1,0 +1,20 @@
+{
+  "title": "Visual comparisons",
+  "description": "Interface refresh and color study.",
+  "pairs": [
+    {
+      "id": "workspace",
+      "title": "Workspace",
+      "before": "images/workspace-before.svg",
+      "after": "images/workspace-after.svg",
+      "caption": "Navigation, surfaces, and status treatments. Synthetic example."
+    },
+    {
+      "id": "landscape",
+      "title": "Landscape",
+      "before": "images/landscape-before.svg",
+      "after": "images/landscape-after.svg",
+      "caption": "Same composition, warmer palette. Synthetic example."
+    }
+  ]
+}

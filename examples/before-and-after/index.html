@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Visual comparisons</title>
+<style>
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #232925;
+  background: #fafbf9;
+  font-synthesis: none;
+  line-height: 1.5;
+  color-scheme: light;
+  --muted: #626b65;
+  --border: #e1e5df;
+  --accent: #31634e;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button, input, summary { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+button {
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 7px 12px;
+  background: #fff;
+  color: #404943;
+  font-size: 12px;
+  font-weight: 500;
+}
+button:hover { background: #f0f3ee; }
+main { max-width: 1320px; margin: auto; padding: 48px 40px 28px; }
+header { margin-bottom: 28px; }
+h1 { font-size: 28px; line-height: 1.25; letter-spacing: -.035em; margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.intro { color: var(--muted); max-width: 760px; font-size: 14px; margin: 8px 0 0; }
+.toolbar { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+.search { position: relative; display: flex; align-items: center; width: 244px; max-width: 100%; }
+.search svg { position: absolute; left: 11px; color: var(--muted); pointer-events: none; }
+.search input { width: 100%; min-width: 0; background: #fff; border: 1px solid var(--border); border-radius: 7px; padding: 8px 12px 8px 34px; font-size: 12px; color: inherit; }
+.search input::placeholder { color: var(--muted); }
+.count { margin-right: auto; color: var(--muted); font-size: 12px; }
+.sync { display: flex; gap: 8px; align-items: center; font-size: 12px; color: #404943; cursor: pointer; min-height: 32px; }
+.sync input { appearance: none; flex-shrink: 0; width: 28px; height: 18px; margin: 0; border: 1px solid #87918a; border-radius: 20px; background: #e8ece6; position: relative; cursor: pointer; }
+.sync input::after { content: ''; position: absolute; width: 12px; height: 12px; left: 2px; top: 2px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px #0002; }
+.sync input:checked { background: var(--accent); border-color: var(--accent); }
+.sync input:checked::after { transform: translateX(10px); }
+#reset { display: inline-flex; align-items: center; gap: 6px; }
+.grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; align-items: start; }
+.grid.single { grid-template-columns: minmax(0,1fr); max-width: 1040px; margin: auto; }
+.card { min-width: 0; }
+.card-head { padding: 0 0 12px; }
+.card h2 { font-size: 14px; line-height: 1.5; margin: 0; font-weight: 550; letter-spacing: -.015em; overflow-wrap: anywhere; }
+.stage { --split: 50%; position: relative; aspect-ratio: 16/10; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: repeating-conic-gradient(#e8ece5 0% 25%,#f1f4ee 0% 50%) 0/20px 20px; cursor: ew-resize; touch-action: pan-y; user-select: none; }
+.stage:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 4px; }
+.stage img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; position: absolute; inset: 0; pointer-events: none; }
+.stage .before { clip-path: inset(0 calc(100% - var(--split)) 0 0); }
+.image-labels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 8px; color: var(--muted); font-size: 11px; }
+.image-labels span { overflow-wrap: anywhere; }
+.image-labels .right { text-align: right; }
+.divider { position: absolute; left: var(--split); top: 0; bottom: 0; width: 2px; background: #fff; transform: translateX(-50%); box-shadow: 0 0 0 1px #23392b26; pointer-events: none; }
+.handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 32px; height: 40px; display: grid; place-items: center; background: #fff; color: #404943; border: 1px solid #0000000d; border-radius: 8px; box-shadow: 0 2px 8px #00000014; }
+.scrub-input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; margin: 0; pointer-events: none; }
+.controls { padding-top: 12px; }
+.control-row { display: flex; gap: 12px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.presets { display: flex; gap: 2px; padding: 3px; background: #edf0eb; border-radius: 7px; max-width: 100%; flex-wrap: wrap; }
+.presets button { border: 0; border-radius: 5px; padding: 5px 10px; background: transparent; color: #5b655e; font-size: 11px; overflow-wrap: anywhere; min-width: 0; }
+.presets button[aria-pressed="true"] { background: #fff; color: #2b3930; box-shadow: 0 1px 3px #00000012; }
+.presets button:hover { color: #1d2f23; background: #ffffff80; }
+.control-row output { font-size: 11px; font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+.caption { font-size: 12px; line-height: 1.6; color: var(--muted); margin: 10px 0 0; overflow-wrap: anywhere; }
+.export-actions { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
+.export-actions button { font-size: 11px; padding: 6px 9px; }
+.export-actions button:disabled { cursor: wait; opacity: .6; }
+.export-status { font-size: 11px; color: var(--muted); margin: 8px 0 0; }
+.export-status:empty { display: none; }
+.error { color: #8d2424; font-size: 13px; margin: 12px 0 0; }
+.footer { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 11px; }
+.hint { margin: 0; }
+.help { max-width: 360px; }
+.help summary { cursor: pointer; list-style: none; text-align: right; }
+.help summary::-webkit-details-marker { display: none; }
+.help summary:hover { color: #273a2b; }
+.help p { margin: 8px 0 0; line-height: 1.7; }
+.empty { padding: 48px 16px; text-align: center; color: var(--muted); font-size: 14px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+[hidden] { display: none !important; }
+@media(min-width:1400px) { .grid.many { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media(max-width:760px) {
+  main { padding: 28px 20px; }
+  h1 { font-size: 24px; }
+  header { margin-bottom: 24px; }
+  .grid { grid-template-columns: minmax(0,1fr); gap: 28px; }
+  .toolbar { gap: 12px 16px; margin-bottom: 24px; padding-bottom: 16px; }
+  .search { width: 100%; }
+  .sync { min-height: 40px; }
+  #reset { min-height: 40px; }
+  .presets button { min-height: 36px; }
+  .export-actions button { min-height: 36px; }
+  .footer { flex-wrap: wrap; margin-top: 28px; }
+  .help summary { text-align: left; }
+}
+@media(max-width:380px) { .count { flex-basis: 100%; } .sync { margin-right: auto; } }
+@media(prefers-reduced-motion:no-preference) {
+  button { transition: background .12s, color .12s; }
+  .sync input::after { transition: transform .12s; }
+}
+@media(forced-colors:active) {
+  .sync input { appearance: auto; }
+  .sync input::after { display: none; }
+  .stage:focus-within { outline: 2px solid Highlight; }
+  .presets button[aria-pressed="true"] { outline: 1px solid Highlight; }
+}
+</style>
+</head>
+<body>
+<main>
+<header><h1 id="title"></h1><p class="intro" id="description"></p></header>
+<div class="toolbar">
+<label class="search" id="search-label"><span class="sr-only">Search comparisons</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input type="search" id="search" placeholder="Search comparisons"></label>
+<span class="count" id="count" role="status"></span>
+<label class="sync" id="sync-label"><input type="checkbox" id="sync">Sync sliders</label>
+<button id="reset" type="button"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></svg>Reset all</button>
+</div>
+<div class="grid" id="comparisons"></div>
+<p class="empty" id="empty" hidden>No comparisons match your search.</p>
+<footer class="footer"><p class="hint">Drag an image to compare.</p><details class="help"><summary>Keyboard shortcuts</summary><p id="slider-help">Tab to an image slider. Use arrow keys to adjust, Home for all after, or End for all before. Positions reset when you reopen this file.</p></details></footer>
+<noscript>This comparison needs JavaScript enabled in your browser. It does not need an internet connection or a server.</noscript>
+</main>
+<script id="comparison-data" type="application/json">{"version":1,"title":"Visual comparisons","description":"Interface refresh and color study.","pairs":[{"id":"workspace","title":"Workspace","caption":"Navigation, surfaces, and status treatments. Synthetic example.","beforeLabel":"Before","afterLabel":"After","fit":"contain","position":50,"before":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTYwIiB2aWV3Qm94PSIwIDAgOTAwIDU2MCI+CjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNTYwIiBmaWxsPSIjZWVmMGYzIi8+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iNTYwIiBmaWxsPSIjZmZmIi8+CjxnIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIj48dGV4dCB4PSIyNSIgeT0iNDMiIGZpbGw9IiMyOTJlMzgiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtd2VpZ2h0PSJib2xkIj5GaWVsZHdvcms8L3RleHQ+CjxyZWN0IHg9IjE0IiB5PSI5MCIgd2lkdGg9IjE1MiIgaGVpZ2h0PSI0MCIgcng9IjAiIGZpbGw9IiNkYmU2ZmYiLz4KPGcgZmlsbD0iIzRjNTY2YiIgZm9udC1zaXplPSIxMyI+PHRleHQgeD0iMjgiIHk9IjExNiI+T3ZlcnZpZXc8L3RleHQ+PHRleHQgeD0iMjgiIHk9IjE2MCI+UHJvamVjdHM8L3RleHQ+PHRleHQgeD0iMjgiIHk9IjIwNCI+VGVhbTwvdGV4dD48dGV4dCB4PSIyOCIgeT0iMjQ4Ij5SZXBvcnRzPC90ZXh0PjwvZz4KPHRleHQgeD0iMjE0IiB5PSI0NCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzY2NzU2NiI+V29ya3NwYWNlIC8gT3ZlcnZpZXc8L3RleHQ+Cjx0ZXh0IHg9IjIxNCIgeT0iOTYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMWUzNDI4Ij5BIGxpdHRsZSByb29tIHRvIGdyb3cuPC90ZXh0Pgo8dGV4dCB4PSIyMTQiIHk9IjEyMiIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzUyNjY1YiI+WW91ciB0ZWFtJ3Mgd29yaywgYWxsIGluIG9uZSBwbGFjZS48L3RleHQ+CjxyZWN0IHg9IjIxNCIgeT0iMTU0IiB3aWR0aD0iMjAyIiBoZWlnaHQ9IjEwNSIgcng9IjAiIGZpbGw9IiNlMGU2ZjIiIHN0cm9rZT0iI2JjYzdkZiIvPjx0ZXh0IHg9IjIzMiIgeT0iMTgyIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNTI2NjViIj5BY3RpdmUgcHJvamVjdHM8L3RleHQ+PHRleHQgeD0iMjMyIiB5PSIyMjYiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9IiMxZTM0MjgiPjEyPC90ZXh0PjxyZWN0IHg9IjQzMiIgeT0iMTU0IiB3aWR0aD0iMjAyIiBoZWlnaHQ9IjEwNSIgcng9IjAiIGZpbGw9IiNlMGU2ZjIiIHN0cm9rZT0iI2JjYzdkZiIvPjx0ZXh0IHg9IjQ1MCIgeT0iMTgyIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNTI2NjViIj5Db21wbGV0ZWQgdGhpcyB3ZWVrPC90ZXh0Pjx0ZXh0IHg9IjQ1MCIgeT0iMjI2IiBmb250LXNpemU9IjMwIiBmaWxsPSIjMWUzNDI4Ij4yODwvdGV4dD48cmVjdCB4PSI2NTAiIHk9IjE1NCIgd2lkdGg9IjIwMiIgaGVpZ2h0PSIxMDUiIHJ4PSIwIiBmaWxsPSIjZTBlNmYyIiBzdHJva2U9IiNiY2M3ZGYiLz48dGV4dCB4PSI2NjgiIHk9IjE4MiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzUyNjY1YiI+VGVhbSBjYXBhY2l0eTwvdGV4dD48dGV4dCB4PSI2NjgiIHk9IjIyNiIgZm9udC1zaXplPSIzMCIgZmlsbD0iIzFlMzQyOCI+ODQlPC90ZXh0Pgo8cmVjdCB4PSIyMTQiIHk9IjI4MiIgd2lkdGg9IjYzOCIgaGVpZ2h0PSIyNDAiIHJ4PSIwIiBmaWxsPSIjZmZmIiBzdHJva2U9IiNkOGRmZDgiLz4KPHRleHQgeD0iMjM0IiB5PSIzMTQiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMWUzNDI4Ij5Qcm9qZWN0IGFjdGl2aXR5PC90ZXh0Pgo8cGF0aCBkPSJNMjM0IDMzN0g4MzIiIHN0cm9rZT0iI2U2ZWFlNSIvPjxyZWN0IHg9IjIzNCIgeT0iMzUxIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSIwIiBmaWxsPSIjZGJlNmZmIi8+PHRleHQgeD0iMjc4IiB5PSIzNzAiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiMzNTRhM2MiPldlYnNpdGUgcmVmcmVzaDwvdGV4dD48cmVjdCB4PSI3MTgiIHk9IjM1NCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIyNCIgcng9IjAiIGZpbGw9IiNlMWU3ZjUiLz48dGV4dCB4PSI3MzUiIHk9IjM3MCIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzNlNWE0NCI+SW4gcHJvZ3Jlc3M8L3RleHQ+PHBhdGggZD0iTTIzNCAzOTZIODMyIiBzdHJva2U9IiNlNmVhZTUiLz48cmVjdCB4PSIyMzQiIHk9IjQxMCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iMCIgZmlsbD0iI2RiZTZmZiIvPjx0ZXh0IHg9IjI3OCIgeT0iNDI5IiBmb250LXNpemU9IjEzIiBmaWxsPSIjMzU0YTNjIj5NZW1iZXIgb25ib2FyZGluZzwvdGV4dD48cmVjdCB4PSI3MTgiIHk9IjQxMyIgd2lkdGg9IjExMCIgaGVpZ2h0PSIyNCIgcng9IjAiIGZpbGw9IiNlMWU3ZjUiLz48dGV4dCB4PSI3MzUiIHk9IjQyOSIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzNlNWE0NCI+SW4gcmV2aWV3PC90ZXh0PjxwYXRoIGQ9Ik0yMzQgNDU1SDgzMiIgc3Ryb2tlPSIjZTZlYWU1Ii8+PHJlY3QgeD0iMjM0IiB5PSI0NjkiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjAiIGZpbGw9IiNkYmU2ZmYiLz48dGV4dCB4PSIyNzgiIHk9IjQ4OCIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzM1NGEzYyI+QnJhbmQgZ3VpZGVsaW5lczwvdGV4dD48cmVjdCB4PSI3MTgiIHk9IjQ3MiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIyNCIgcng9IjAiIGZpbGw9IiNlMWU3ZjUiLz48dGV4dCB4PSI3MzUiIHk9IjQ4OCIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzNlNWE0NCI+Q29tcGxldGU8L3RleHQ+CjwvZz48L3N2Zz4=","after":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTYwIiB2aWV3Qm94PSIwIDAgOTAwIDU2MCI+CjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNTYwIiBmaWxsPSIjZjVmNmYyIi8+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iNTYwIiBmaWxsPSIjMTgzYzJiIi8+CjxnIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIj48dGV4dCB4PSIyNSIgeT0iNDMiIGZpbGw9IiNmZmYiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtd2VpZ2h0PSJib2xkIj5GaWVsZHdvcms8L3RleHQ+CjxyZWN0IHg9IjE0IiB5PSI5MCIgd2lkdGg9IjE1MiIgaGVpZ2h0PSI0MCIgcng9IjgiIGZpbGw9IiMzMDUwM2YiLz4KPGcgZmlsbD0iI2ZmZiIgZm9udC1zaXplPSIxMyI+PHRleHQgeD0iMjgiIHk9IjExNiI+T3ZlcnZpZXc8L3RleHQ+PHRleHQgeD0iMjgiIHk9IjE2MCI+UHJvamVjdHM8L3RleHQ+PHRleHQgeD0iMjgiIHk9IjIwNCI+VGVhbTwvdGV4dD48dGV4dCB4PSIyOCIgeT0iMjQ4Ij5SZXBvcnRzPC90ZXh0PjwvZz4KPHRleHQgeD0iMjE0IiB5PSI0NCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzY2NzU2NiI+V29ya3NwYWNlIC8gT3ZlcnZpZXc8L3RleHQ+Cjx0ZXh0IHg9IjIxNCIgeT0iOTYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMWUzNDI4Ij5BIGxpdHRsZSByb29tIHRvIGdyb3cuPC90ZXh0Pgo8dGV4dCB4PSIyMTQiIHk9IjEyMiIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzUyNjY1YiI+WW91ciB0ZWFtJ3Mgd29yaywgYWxsIGluIG9uZSBwbGFjZS48L3RleHQ+CjxyZWN0IHg9IjIxNCIgeT0iMTU0IiB3aWR0aD0iMjAyIiBoZWlnaHQ9IjEwNSIgcng9IjEyIiBmaWxsPSIjZmZmIiBzdHJva2U9IiNkOGRmZDgiLz48dGV4dCB4PSIyMzIiIHk9IjE4MiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzUyNjY1YiI+QWN0aXZlIHByb2plY3RzPC90ZXh0Pjx0ZXh0IHg9IjIzMiIgeT0iMjI2IiBmb250LXNpemU9IjMwIiBmaWxsPSIjMWUzNDI4Ij4xMjwvdGV4dD48cmVjdCB4PSI0MzIiIHk9IjE1NCIgd2lkdGg9IjIwMiIgaGVpZ2h0PSIxMDUiIHJ4PSIxMiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjZDhkZmQ4Ii8+PHRleHQgeD0iNDUwIiB5PSIxODIiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1MjY2NWIiPkNvbXBsZXRlZCB0aGlzIHdlZWs8L3RleHQ+PHRleHQgeD0iNDUwIiB5PSIyMjYiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9IiMxZTM0MjgiPjI4PC90ZXh0PjxyZWN0IHg9IjY1MCIgeT0iMTU0IiB3aWR0aD0iMjAyIiBoZWlnaHQ9IjEwNSIgcng9IjEyIiBmaWxsPSIjZmZmIiBzdHJva2U9IiNkOGRmZDgiLz48dGV4dCB4PSI2NjgiIHk9IjE4MiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzUyNjY1YiI+VGVhbSBjYXBhY2l0eTwvdGV4dD48dGV4dCB4PSI2NjgiIHk9IjIyNiIgZm9udC1zaXplPSIzMCIgZmlsbD0iIzFlMzQyOCI+ODQlPC90ZXh0Pgo8cmVjdCB4PSIyMTQiIHk9IjI4MiIgd2lkdGg9IjYzOCIgaGVpZ2h0PSIyNDAiIHJ4PSIxMiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjZDhkZmQ4Ii8+Cjx0ZXh0IHg9IjIzNCIgeT0iMzE0IiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFlMzQyOCI+UHJvamVjdCBhY3Rpdml0eTwvdGV4dD4KPHBhdGggZD0iTTIzNCAzMzdIODMyIiBzdHJva2U9IiNlNmVhZTUiLz48cmVjdCB4PSIyMzQiIHk9IjM1MSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIgZmlsbD0iI2U2ZWFkOCIvPjx0ZXh0IHg9IjI3OCIgeT0iMzcwIiBmb250LXNpemU9IjEzIiBmaWxsPSIjMzU0YTNjIj5XZWJzaXRlIHJlZnJlc2g8L3RleHQ+PHJlY3QgeD0iNzE4IiB5PSIzNTQiIHdpZHRoPSIxMTAiIGhlaWdodD0iMjQiIHJ4PSIxMiIgZmlsbD0iI2VkZjJlNyIvPjx0ZXh0IHg9IjczNSIgeT0iMzcwIiBmb250LXNpemU9IjExIiBmaWxsPSIjM2U1YTQ0Ij5JbiBwcm9ncmVzczwvdGV4dD48cGF0aCBkPSJNMjM0IDM5Nkg4MzIiIHN0cm9rZT0iI2U2ZWFlNSIvPjxyZWN0IHg9IjIzNCIgeT0iNDEwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjZTRlZGU3Ii8+PHRleHQgeD0iMjc4IiB5PSI0MjkiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiMzNTRhM2MiPk1lbWJlciBvbmJvYXJkaW5nPC90ZXh0PjxyZWN0IHg9IjcxOCIgeT0iNDEzIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjI0IiByeD0iMTIiIGZpbGw9IiNlZGYyZTciLz48dGV4dCB4PSI3MzUiIHk9IjQyOSIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzNlNWE0NCI+SW4gcmV2aWV3PC90ZXh0PjxwYXRoIGQ9Ik0yMzQgNDU1SDgzMiIgc3Ryb2tlPSIjZTZlYWU1Ii8+PHJlY3QgeD0iMjM0IiB5PSI0NjkiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciIGZpbGw9IiNlZmU5ZGUiLz48dGV4dCB4PSIyNzgiIHk9IjQ4OCIgZm9udC1zaXplPSIxMyIgZmlsbD0iIzM1NGEzYyI+QnJhbmQgZ3VpZGVsaW5lczwvdGV4dD48cmVjdCB4PSI3MTgiIHk9IjQ3MiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIyNCIgcng9IjEyIiBmaWxsPSIjZWRmMmU3Ii8+PHRleHQgeD0iNzM1IiB5PSI0ODgiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMzZTVhNDQiPkNvbXBsZXRlPC90ZXh0Pgo8L2c+PC9zdmc+"},{"id":"landscape","title":"Landscape","caption":"Same composition, warmer palette. Synthetic example.","beforeLabel":"Before","afterLabel":"After","fit":"contain","position":50,"before":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTYwIiB2aWV3Qm94PSIwIDAgOTAwIDU2MCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJza3kiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzk1YmNjYiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q5ZTRkYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNTYwIiBmaWxsPSJ1cmwoI3NreSkiLz48Y2lyY2xlIGN4PSI2NDAiIGN5PSIxNzIiIHI9IjY0IiBmaWxsPSIjZWRmMWRmIi8+PHBhdGggZD0iTTAgMzUwIDIyMCAxMjggNDYwIDM2OSA2NjAgMjIzIDkwMCAzNzVWNTYwSDBaIiBmaWxsPSIjNmQ5NDkwIi8+PHBhdGggZD0ibTE0MCAyMTAgODAtODIgODggOTMtNzQtMzEtMjUgMzUtMzEtMjZaIiBmaWxsPSIjZmFmNGU2Ii8+PHBhdGggZD0iTTAgNDUwIDIxOSAzMzEgNDMwIDQyOSA2ODAgMzAxIDkwMCA0MTVWNTYwSDBaIiBmaWxsPSIjNDE2ZDY4Ii8+PHBhdGggZD0iTTAgNDkyUTI4MCAzOTYgNTEwIDQ4NVQ5MDAgNDY1VjU2MEgwWiIgZmlsbD0iIzI0NGM0OSIvPjxwYXRoIGQ9Ik00NDQgNDcwcTMwIDM1IDEyMCA1NXQ0MiAzNWgxMTBxLTctMzUtMTAwLTUwdC0xNzItNDAiIGZpbGw9IiM4ZmI3YjUiLz48L3N2Zz4=","after":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTYwIiB2aWV3Qm94PSIwIDAgOTAwIDU2MCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJza3kiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iI2Y1YzlhNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Y2ZTRjYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNTYwIiBmaWxsPSJ1cmwoI3NreSkiLz48Y2lyY2xlIGN4PSI2NDAiIGN5PSIxNzIiIHI9IjY0IiBmaWxsPSIjZmZmMGM0Ii8+PHBhdGggZD0iTTAgMzUwIDIyMCAxMjggNDYwIDM2OSA2NjAgMjIzIDkwMCAzNzVWNTYwSDBaIiBmaWxsPSIjOWM4ZDgyIi8+PHBhdGggZD0ibTE0MCAyMTAgODAtODIgODggOTMtNzQtMzEtMjUgMzUtMzEtMjZaIiBmaWxsPSIjZmFmNGU2Ii8+PHBhdGggZD0iTTAgNDUwIDIxOSAzMzEgNDMwIDQyOSA2ODAgMzAxIDkwMCA0MTVWNTYwSDBaIiBmaWxsPSIjNmY3OTYyIi8+PHBhdGggZD0iTTAgNDkyUTI4MCAzOTYgNTEwIDQ4NVQ5MDAgNDY1VjU2MEgwWiIgZmlsbD0iIzQwNGYzYyIvPjxwYXRoIGQ9Ik00NDQgNDcwcTMwIDM1IDEyMCA1NXQ0MiAzNWgxMTBxLTctMzUtMTAwLTUwdC0xNzItNDAiIGZpbGw9IiNkOGM4YTEiLz48L3N2Zz4="}]}</script>
+<script>
+'use strict';
+/*! gifenc 1.0.3 | https://github.com/mattdesl/gifenc
+Vendored npm dist/gifenc.esm.js; ESM exports adapted to a local closure.
+The MIT License (MIT)
+Copyright (c) 2017 Matt DesLauriers
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/
+const comparisonGifEncoder=(()=>{var X={signature:"GIF",version:"89a",trailer:59,extensionIntroducer:33,applicationExtensionLabel:255,graphicControlExtensionLabel:249,imageSeparator:44,signatureSize:3,versionSize:3,globalColorTableFlagMask:128,colorResolutionMask:112,sortFlagMask:8,globalColorTableSizeMask:7,applicationIdentifierSize:8,applicationAuthCodeSize:3,disposalMethodMask:28,userInputFlagMask:2,transparentColorFlagMask:1,localColorTableFlagMask:128,interlaceFlagMask:64,idSortFlagMask:32,localColorTableSizeMask:7};function F(t=256){let e=0,s=new Uint8Array(t);return{get buffer(){return s.buffer},reset(){e=0},bytesView(){return s.subarray(0,e)},bytes(){return s.slice(0,e)},writeByte(r){n(e+1),s[e]=r,e++},writeBytes(r,o=0,i=r.length){n(e+i);for(let c=0;c<i;c++)s[e++]=r[c+o]},writeBytesView(r,o=0,i=r.byteLength){n(e+i),s.set(r.subarray(o,o+i),e),e+=i}};function n(r){var o=s.length;if(o>=r)return;var i=1024*1024;r=Math.max(r,o*(o<i?2:1.125)>>>0),o!=0&&(r=Math.max(r,256));let c=s;s=new Uint8Array(r),e>0&&s.set(c.subarray(0,e),0)}}var O=12,J=5003,lt=[0,1,3,7,15,31,63,127,255,511,1023,2047,4095,8191,16383,32767,65535];function at(t,e,s,n,r=F(512),o=new Uint8Array(256),i=new Int32Array(J),c=new Int32Array(J)){let x=i.length,a=Math.max(2,n);o.fill(0),c.fill(0),i.fill(-1);let l=0,f=0,g=a+1,h=g,b=!1,w=h,_=(1<<w)-1,u=1<<g-1,k=u+1,B=u+2,p=0,A=s[0],z=0;for(let y=x;y<65536;y*=2)++z;z=8-z,r.writeByte(a),I(u);let d=s.length;for(let y=1;y<d;y++){t:{let m=s[y],v=(m<<O)+A,M=m<<z^A;if(i[M]===v){A=c[M];break t}let V=M===0?1:x-M;for(;i[M]>=0;)if(M-=V,M<0&&(M+=x),i[M]===v){A=c[M];break t}I(A),A=m,B<1<<O?(c[M]=B++,i[M]=v):(i.fill(-1),B=u+2,b=!0,I(u))}}return I(A),I(k),r.writeByte(0),r.bytesView();function I(y){for(l&=lt[f],f>0?l|=y<<f:l=y,f+=w;f>=8;)o[p++]=l&255,p>=254&&(r.writeByte(p),r.writeBytesView(o,0,p),p=0),l>>=8,f-=8;if((B>_||b)&&(b?(w=h,_=(1<<w)-1,b=!1):(++w,_=w===O?1<<w:(1<<w)-1)),y==k){for(;f>0;)o[p++]=l&255,p>=254&&(r.writeByte(p),r.writeBytesView(o,0,p),p=0),l>>=8,f-=8;p>0&&(r.writeByte(p),r.writeBytesView(o,0,p),p=0)}}}var $=at;function D(t,e,s){return t<<8&63488|e<<2&992|s>>3}function G(t,e,s,n){return t>>4|e&240|(s&240)<<4|(n&240)<<8}function j(t,e,s){return t>>4<<8|e&240|s>>4}function R(t,e,s){return t<e?e:t>s?s:t}function T(t){return t*t}function tt(t,e,s){var n=0,r=1e100;let o=t[e],i=o.cnt,c=o.ac,x=o.rc,a=o.gc,l=o.bc;for(var f=o.fw;f!=0;f=t[f].fw){let h=t[f],b=h.cnt,w=i*b/(i+b);if(!(w>=r)){var g=0;s&&(g+=w*T(h.ac-c),g>=r)||(g+=w*T(h.rc-x),!(g>=r)&&(g+=w*T(h.gc-a),!(g>=r)&&(g+=w*T(h.bc-l),!(g>=r)&&(r=g,n=f))))}}o.err=r,o.nn=n}function Q(){return{ac:0,rc:0,gc:0,bc:0,cnt:0,nn:0,fw:0,bk:0,tm:0,mtm:0,err:0}}function ut(t,e){let s=e==="rgb444"?4096:65536,n=new Array(s),r=t.length;if(e==="rgba4444")for(let o=0;o<r;++o){let i=t[o],c=i>>24&255,x=i>>16&255,a=i>>8&255,l=i&255,f=G(l,a,x,c),g=f in n?n[f]:n[f]=Q();g.rc+=l,g.gc+=a,g.bc+=x,g.ac+=c,g.cnt++}else if(e==="rgb444")for(let o=0;o<r;++o){let i=t[o],c=i>>16&255,x=i>>8&255,a=i&255,l=j(a,x,c),f=l in n?n[l]:n[l]=Q();f.rc+=a,f.gc+=x,f.bc+=c,f.cnt++}else for(let o=0;o<r;++o){let i=t[o],c=i>>16&255,x=i>>8&255,a=i&255,l=D(a,x,c),f=l in n?n[l]:n[l]=Q();f.rc+=a,f.gc+=x,f.bc+=c,f.cnt++}return n}function H(t,e,s={}){let{format:n="rgb565",clearAlpha:r=!0,clearAlphaColor:o=0,clearAlphaThreshold:i=0,oneBitAlpha:c=!1}=s;if(!t||!t.buffer)throw new Error("quantize() expected RGBA Uint8Array data");if(!(t instanceof Uint8Array)&&!(t instanceof Uint8ClampedArray))throw new Error("quantize() expected RGBA Uint8Array data");let x=new Uint32Array(t.buffer),a=s.useSqrt!==!1,l=n==="rgba4444",f=ut(x,n),g=f.length,h=g-1,b=new Uint32Array(g+1);for(var w=0,u=0;u<g;++u){let C=f[u];if(C!=null){var _=1/C.cnt;l&&(C.ac*=_),C.rc*=_,C.gc*=_,C.bc*=_,f[w++]=C}}T(e)/w<.022&&(a=!1);for(var u=0;u<w-1;++u)f[u].fw=u+1,f[u+1].bk=u,a&&(f[u].cnt=Math.sqrt(f[u].cnt));a&&(f[u].cnt=Math.sqrt(f[u].cnt));var k,B,p;for(u=0;u<w;++u){tt(f,u,!1);var A=f[u].err;for(B=++b[0];B>1&&(p=B>>1,!(f[k=b[p]].err<=A));B=p)b[B]=k;b[B]=u}var z=w-e;for(u=0;u<z;){for(var d;;){var I=b[1];if(d=f[I],d.tm>=d.mtm&&f[d.nn].mtm<=d.tm)break;d.mtm==h?I=b[1]=b[b[0]--]:(tt(f,I,!1),d.tm=u);var A=f[I].err;for(B=1;(p=B+B)<=b[0]&&(p<b[0]&&f[b[p]].err>f[b[p+1]].err&&p++,!(A<=f[k=b[p]].err));B=p)b[B]=k;b[B]=I}var y=f[d.nn],m=d.cnt,v=y.cnt,_=1/(m+v);l&&(d.ac=_*(m*d.ac+v*y.ac)),d.rc=_*(m*d.rc+v*y.rc),d.gc=_*(m*d.gc+v*y.gc),d.bc=_*(m*d.bc+v*y.bc),d.cnt+=y.cnt,d.mtm=++u,f[y.bk].fw=y.fw,f[y.fw].bk=y.bk,y.mtm=h}let M=[];var V=0;for(u=0;;++V){let L=R(Math.round(f[u].rc),0,255),C=R(Math.round(f[u].gc),0,255),Y=R(Math.round(f[u].bc),0,255),E=255;if(l){if(E=R(Math.round(f[u].ac),0,255),c){let st=typeof c=="number"?c:127;E=E<=st?0:255}r&&E<=i&&(L=C=Y=o,E=0)}let K=l?[L,C,Y,E]:[L,C,Y];if(xt(M,K)||M.push(K),(u=f[u].fw)==0)break}return M}function xt(t,e){for(let s=0;s<t.length;s++){let n=t[s],r=n[0]===e[0]&&n[1]===e[1]&&n[2]===e[2],o=n.length>=4&&e.length>=4?n[3]===e[3]:!0;if(r&&o)return!0}return!1}function U(t,e){var s=0,n;for(n=0;n<t.length;n++){let r=t[n]-e[n];s+=r*r}return s}function P(t,e){return e>1?Math.round(t/e)*e:t}function et(t,{roundRGB:e=5,roundAlpha:s=10,oneBitAlpha:n=null}={}){let r=new Uint32Array(t.buffer);for(let o=0;o<r.length;o++){let i=r[o],c=i>>24&255,x=i>>16&255,a=i>>8&255,l=i&255;if(c=P(c,s),n){let f=typeof n=="number"?n:127;c=c<=f?0:255}l=P(l,e),a=P(a,e),x=P(x,e),r[o]=c<<24|x<<16|a<<8|l<<0}}function nt(t,e,s="rgb565"){if(!t||!t.buffer)throw new Error("quantize() expected RGBA Uint8Array data");if(!(t instanceof Uint8Array)&&!(t instanceof Uint8ClampedArray))throw new Error("quantize() expected RGBA Uint8Array data");if(e.length>256)throw new Error("applyPalette() only works with 256 colors or less");let n=new Uint32Array(t.buffer),r=n.length,o=s==="rgb444"?4096:65536,i=new Uint8Array(r),c=new Array(o),x=s==="rgba4444";if(s==="rgba4444")for(let a=0;a<r;a++){let l=n[a],f=l>>24&255,g=l>>16&255,h=l>>8&255,b=l&255,w=G(b,h,g,f),_=w in c?c[w]:c[w]=gt(b,h,g,f,e);i[a]=_}else{let a=s==="rgb444"?j:D;for(let l=0;l<r;l++){let f=n[l],g=f>>16&255,h=f>>8&255,b=f&255,w=a(b,h,g),_=w in c?c[w]:c[w]=bt(b,h,g,e);i[l]=_}}return i}function gt(t,e,s,n,r){let o=0,i=1e100;for(let c=0;c<r.length;c++){let x=r[c],a=x[3],l=q(a-n);if(l>i)continue;let f=x[0];if(l+=q(f-t),l>i)continue;let g=x[1];if(l+=q(g-e),l>i)continue;let h=x[2];l+=q(h-s),!(l>i)&&(i=l,o=c)}return o}function bt(t,e,s,n){let r=0,o=1e100;for(let i=0;i<n.length;i++){let c=n[i],x=c[0],a=q(x-t);if(a>o)continue;let l=c[1];if(a+=q(l-e),a>o)continue;let f=c[2];a+=q(f-s),!(a>o)&&(o=a,r=i)}return r}function rt(t,e,s=5){if(!t.length||!e.length)return;let n=t.map(i=>i.slice(0,3)),r=s*s,o=t[0].length;for(let i=0;i<e.length;i++){let c=e[i];c.length<o?c=[c[0],c[1],c[2],255]:c.length>o?c=c.slice(0,3):c=c.slice();let x=N(n,c.slice(0,3),U),a=x[0],l=x[1];l>0&&l<=r&&(t[a]=c)}}function q(t){return t*t}function W(t,e,s=U){let n=Infinity,r=-1;for(let o=0;o<t.length;o++){let i=t[o],c=s(e,i);c<n&&(n=c,r=o)}return r}function N(t,e,s=U){let n=Infinity,r=-1;for(let o=0;o<t.length;o++){let i=t[o],c=s(e,i);c<n&&(n=c,r=o)}return[r,n]}function ot(t,e,s=U){return t[W(t,e,s)]}function ct(t={}){let{initialCapacity:e=4096,auto:s=!0}=t,n=F(e),r=5003,o=new Uint8Array(256),i=new Int32Array(r),c=new Int32Array(r),x=!1;return{reset(){n.reset(),x=!1},finish(){n.writeByte(X.trailer)},bytes(){return n.bytes()},bytesView(){return n.bytesView()},get buffer(){return n.buffer},get stream(){return n},writeHeader:a,writeFrame(l,f,g,h={}){let{transparent:b=!1,transparentIndex:w=0,delay:_=0,palette:u=null,repeat:k=0,colorDepth:B=8,dispose:p=-1}=h,A=!1;if(s?x||(A=!0,a(),x=!0):A=Boolean(h.first),f=Math.max(0,Math.floor(f)),g=Math.max(0,Math.floor(g)),A){if(!u)throw new Error("First frame must include a { palette } option");pt(n,f,g,u,B),it(n,u),k>=0&&dt(n,k)}let z=Math.round(_/10);wt(n,p,z,b,w);let d=Boolean(u)&&!A;ht(n,f,g,d?u:null),d&&it(n,u),yt(n,l,f,g,B,o,i,c)}};function a(){ft(n,"GIF89a")}}function wt(t,e,s,n,r){t.writeByte(33),t.writeByte(249),t.writeByte(4),r<0&&(r=0,n=!1);var o,i;n?(o=1,i=2):(o=0,i=0),e>=0&&(i=e&7),i<<=2;let c=0;t.writeByte(0|i|c|o),S(t,s),t.writeByte(r||0),t.writeByte(0)}function pt(t,e,s,n,r=8){let o=1,i=0,c=Z(n.length)-1,x=o<<7|r-1<<4|i<<3|c,a=0,l=0;S(t,e),S(t,s),t.writeBytes([x,a,l])}function dt(t,e){t.writeByte(33),t.writeByte(255),t.writeByte(11),ft(t,"NETSCAPE2.0"),t.writeByte(3),t.writeByte(1),S(t,e),t.writeByte(0)}function it(t,e){let s=1<<Z(e.length);for(let n=0;n<s;n++){let r=[0,0,0];n<e.length&&(r=e[n]),t.writeByte(r[0]),t.writeByte(r[1]),t.writeByte(r[2])}}function ht(t,e,s,n){if(t.writeByte(44),S(t,0),S(t,0),S(t,e),S(t,s),n){let r=0,o=0,i=Z(n.length)-1;t.writeByte(128|r|o|0|i)}else t.writeByte(0)}function yt(t,e,s,n,r=8,o,i,c){$(s,n,e,r,t,o,i,c)}function S(t,e){t.writeByte(e&255),t.writeByte(e>>8&255)}function ft(t,e){for(var s=0;s<e.length;s++)t.writeByte(e.charCodeAt(s))}function Z(t){return Math.max(Math.ceil(Math.log2(t)),1)}var Bt=ct;return {GIFEncoder:ct,applyPalette:nt,quantize:H};
+
+})();
+
+// Shared by every entry; embedded once in the exported HTML.
+const comparisonExports = (() => {
+  const background = '#fafbf9';
+  function canvas(width, height) {
+    const node = document.createElement('canvas');
+    node.width = width; node.height = height;
+    const context = node.getContext('2d', { willReadFrequently: true });
+    if (!context) throw new Error('Image export is unavailable in this browser.');
+    context.fillStyle = background; context.fillRect(0, 0, width, height);
+    return { node, context };
+  }
+  async function image(source) {
+    const img = new Image(); img.src = source;
+    await img.decode();
+    if (!img.naturalWidth || !img.naturalHeight) throw new Error('An image could not be decoded.');
+    return img;
+  }
+  async function snapshots(pair, maxEdge) {
+    const [before, after] = await Promise.all([image(pair.before), image(pair.after)]);
+    const scale = Math.min(1, maxEdge / Math.max(before.naturalWidth, before.naturalHeight));
+    const width = Math.max(1, Math.round(before.naturalWidth * scale));
+    const height = Math.max(1, Math.round(before.naturalHeight * scale));
+    const render = img => {
+      const frame = canvas(width, height);
+      const ratio = (pair.fit === 'cover' ? Math.max : Math.min)(width / img.naturalWidth, height / img.naturalHeight);
+      const w = img.naturalWidth * ratio, h = img.naturalHeight * ratio;
+      frame.context.drawImage(img, (width - w) / 2, (height - h) / 2, w, h);
+      return frame.node;
+    };
+    return { before: render(before), after: render(after), width, height };
+  }
+  function text(context, value, x, y, maxWidth, right = false, title = false) {
+    context.font = `${title ? '600 16px' : '12px'} system-ui, sans-serif`;
+    context.fillStyle = title ? '#232925' : '#626b65';
+    context.textAlign = right ? 'right' : 'left';
+    let label = String(value);
+    // Bound pathological metadata before measuring it repeatedly.
+    if (label.length > 160) label = label.slice(0, 157) + '…';
+    if (context.measureText(label).width > maxWidth) {
+      while (label.length && context.measureText(label + '…').width > maxWidth) label = label.slice(0, -1);
+      label += '…';
+    }
+    context.fillText(label, x, y);
+  }
+  function filename(pair, extension) {
+    const stem = String(pair.id || pair.title || 'comparison').normalize('NFKD')
+      .replace(/[^a-zA-Z0-9_-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80) || 'comparison';
+    return `${stem}-before-after.${extension}`;
+  }
+  async function png(pair) {
+    const frames = await snapshots(pair, 1600);
+    const margin = 20, gap = 20, top = 72;
+    const panelWidth = Math.max(160, frames.width);
+    const result = canvas(panelWidth * 2 + gap + margin * 2, frames.height + top + margin);
+    const { context, node } = result;
+    text(context, pair.title, margin, 28, node.width - margin * 2, false, true);
+    text(context, pair.beforeLabel, margin, 55, panelWidth);
+    text(context, pair.afterLabel, margin + panelWidth + gap, 55, panelWidth);
+    context.drawImage(frames.before, margin + (panelWidth - frames.width) / 2, top);
+    context.drawImage(frames.after, margin + panelWidth + gap + (panelWidth - frames.width) / 2, top);
+    const blob = await new Promise(resolve => node.toBlob(resolve, 'image/png'));
+    if (!blob) throw new Error('The browser could not create the PNG.');
+    return blob;
+  }
+  async function gif(pair, { signal, onProgress = () => {} } = {}) {
+    const check = () => { if (signal?.aborted) throw new DOMException('Export cancelled.', 'AbortError'); };
+    check();
+    const frames = await snapshots(pair, 960);
+    check();
+    const margin = 16, top = 68;
+    const panelWidth = Math.max(280, frames.width);
+    const width = panelWidth + margin * 2, height = frames.height + top + margin;
+    const x = margin + Math.floor((panelWidth - frames.width) / 2);
+    const result = canvas(width, height);
+    const { context, node } = result;
+    const draw = position => {
+      context.fillStyle = background; context.fillRect(0, 0, width, height);
+      text(context, pair.title, margin, 26, panelWidth, false, true);
+      text(context, pair.beforeLabel, margin, 51, panelWidth / 2 - 8);
+      text(context, pair.afterLabel, width - margin, 51, panelWidth / 2 - 8, true);
+      context.drawImage(frames.after, x, top);
+      const split = Math.round(frames.width * position);
+      if (split) context.drawImage(frames.before, 0, 0, split, frames.height, x, top, split, frames.height);
+      // Keep the endpoint images unobstructed during their pauses.
+      if (position > 0 && position < 1) {
+        const line = x + split, middle = top + frames.height / 2;
+        context.fillStyle = '#ffffff'; context.fillRect(line - 1, top, 2, frames.height);
+        context.fillRect(line - 12, middle - 16, 24, 32);
+        context.strokeStyle = '#626b65'; context.lineWidth = 1;
+        context.beginPath();
+        context.moveTo(line - 4, middle - 4); context.lineTo(line - 8, middle); context.lineTo(line - 4, middle + 4);
+        context.moveTo(line + 4, middle - 4); context.lineTo(line + 8, middle); context.lineTo(line + 4, middle + 4);
+        context.stroke();
+      }
+      return context.getImageData(0, 0, width, height).data;
+    };
+    // One shared palette prevents color flicker between slider positions.
+    const before = draw(1), after = draw(0);
+    const sample = new Uint8Array(before.length + after.length);
+    sample.set(before); sample.set(after, before.length);
+    const palette = comparisonGifEncoder.quantize(sample, 252);
+    palette.push([255, 255, 255], [98, 107, 101], [250, 251, 249]);
+    const encoder = comparisonGifEncoder.GIFEncoder();
+    const steps = 30, count = steps * 2;
+    for (let frame = 0; frame < count; frame++) {
+      check();
+      const progress = frame <= steps ? frame / steps : (count - frame) / steps;
+      const position = (1 + Math.cos(progress * Math.PI)) / 2;
+      const rgba = draw(position);
+      const indices = comparisonGifEncoder.applyPalette(rgba, palette);
+      encoder.writeFrame(indices, width, height, {
+        ...(frame === 0 ? { palette, repeat: 0 } : {}),
+        delay: frame === 0 || frame === steps ? 700 : 70
+      });
+      onProgress(Math.round((frame + 1) / count * 100));
+      await new Promise(resolve => setTimeout(resolve, 0));
+    }
+    check(); encoder.finish();
+    return new Blob([encoder.bytes()], { type: 'image/gif' });
+  }
+  function download(blob, name) {
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a'); link.href = url; link.download = name;
+    document.body.append(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
+  }
+  return { png, gif, filename, download };
+})();
+
+const data = JSON.parse(document.getElementById('comparison-data').textContent);
+const grid = document.getElementById('comparisons');
+const sync = document.getElementById('sync');
+const states = [];
+let activeExport = null;
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+function setPosition(state, value) {
+  value = Math.max(0, Math.min(100, Math.round(Number(value))));
+  state.range.value = value;
+  state.output.value = `${value}% before`;
+  state.buttons?.forEach(({ button, position }) => button.setAttribute('aria-pressed', String(value === position)));
+  state.stage.style.setProperty('--split', `${value}%`);
+  state.range.setAttribute('aria-valuetext', `${value}% ${state.pair.beforeLabel}, ${100-value}% ${state.pair.afterLabel}`);
+}
+function move(state, value) {
+  if (sync.checked) states.forEach(s => setPosition(s, value));
+  else setPosition(state, value);
+}
+document.getElementById('title').textContent = data.title;
+document.getElementById('description').textContent = data.description;
+document.getElementById('description').hidden = !data.description;
+if (data.pairs.length === 1) {
+  grid.classList.add('single');
+  document.getElementById('search-label').hidden = true;
+  document.getElementById('sync-label').hidden = true;
+}
+if (data.pairs.length >= 6) grid.classList.add('many');
+data.pairs.forEach((pair, index) => {
+  const card = el('article', 'card');
+  const head = el('div', 'card-head');
+  const heading = el('h2', '', pair.title);
+  heading.id = `heading-${index}`;
+  card.setAttribute('aria-labelledby', heading.id);
+  head.append(heading);
+  const stage = el('div', 'stage');
+  const error = el('p', 'error');
+  error.hidden = true;
+  error.setAttribute('role', 'alert');
+  for (const key of ['after', 'before']) {
+    const img = el('img', key);
+    img.alt = `${pair.title} — ${pair[key + 'Label']}`;
+    img.draggable = false;
+    img.decoding = 'async';
+    img.style.objectFit = pair.fit;
+    img.addEventListener('error', () => { error.hidden = false; error.textContent = 'An image could not be decoded. Re-export using a supported image file.'; });
+    if (key === 'before') img.addEventListener('load', () => { if (img.naturalWidth && img.naturalHeight) stage.style.aspectRatio = `${img.naturalWidth} / ${img.naturalHeight}`; });
+    img.src = pair[key];
+    stage.append(img);
+  }
+  const divider = el('span', 'divider');
+  const handle = el('span', 'handle');
+  const handleIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  handleIcon.setAttribute('width', '18'); handleIcon.setAttribute('height', '18');
+  handleIcon.setAttribute('viewBox', '0 0 24 24'); handleIcon.setAttribute('fill', 'none');
+  handleIcon.setAttribute('stroke', 'currentColor'); handleIcon.setAttribute('stroke-width', '1.5');
+  const arrows = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  arrows.setAttribute('d', 'm8 8-4 4 4 4m8-8 4 4-4 4');
+  handleIcon.append(arrows); handle.append(handleIcon); divider.append(handle);
+  divider.setAttribute('aria-hidden', 'true');
+  const imageLabels = el('div', 'image-labels');
+  const left = el('span', 'left', pair.beforeLabel);
+  const right = el('span', 'right', pair.afterLabel);
+  left.setAttribute('aria-hidden','true'); right.setAttribute('aria-hidden','true');
+  imageLabels.append(left, right);
+  stage.append(divider);
+  const controls = el('div', 'controls');
+  const row = el('div', 'control-row');
+  const range = el('input', 'scrub-input');
+  range.type = 'range'; range.min = '0'; range.max = '100'; range.step = '1';
+  range.id = `slider-${index}`;
+  range.setAttribute('aria-describedby', 'slider-help');
+  range.setAttribute('aria-label', `${pair.title}: reveal ${pair.beforeLabel}`);
+  const output = el('output'); output.htmlFor = range.id; output.setAttribute('aria-hidden','true');
+  stage.append(range);
+  const state = {pair, card, stage, range, output};
+  states.push(state);
+  setPosition(state, pair.position);
+  range.addEventListener('input', () => move(state, range.value));
+  let pointer = null;
+  const scrub = event => { const box = stage.getBoundingClientRect(); move(state, (event.clientX - box.left) / box.width * 100); };
+  stage.addEventListener('pointerdown', event => {
+    if (!event.isPrimary || event.button !== 0) return;
+    pointer = event.pointerId; stage.setPointerCapture(pointer); range.focus({preventScroll:true}); scrub(event);
+  });
+  stage.addEventListener('pointermove', event => { if (event.pointerId === pointer) scrub(event); });
+  stage.addEventListener('pointerup', event => { if (event.pointerId === pointer) { scrub(event); pointer = null; } });
+  stage.addEventListener('pointercancel', () => { pointer = null; });
+  stage.addEventListener('lostpointercapture', () => { pointer = null; });
+  const presets = el('div', 'presets');
+  state.buttons = [];
+  presets.setAttribute('role', 'group');
+  presets.setAttribute('aria-label', `${pair.title}: comparison view`);
+  for (const [name, value] of [[pair.beforeLabel,100], ['Split',50], [pair.afterLabel,0]]) {
+    const button = el('button', '', name); button.type = 'button';
+    button.setAttribute('aria-label', `${pair.title}: ${name}`);
+    button.addEventListener('click', () => move(state, value)); presets.append(button);
+    state.buttons.push({ button, position: value });
+  }
+  setPosition(state, pair.position);
+  const exportActions = el('div', 'export-actions');
+  const exportStatus = el('p', 'export-status');
+  exportStatus.setAttribute('role', 'status');
+  const pngButton = el('button', '', 'Export PNG'); pngButton.type = 'button';
+  const gifButton = el('button', '', 'Export GIF'); gifButton.type = 'button';
+  pngButton.setAttribute('aria-label', `Export PNG for ${pair.title}`);
+  gifButton.setAttribute('aria-label', `Export GIF for ${pair.title}`);
+  pngButton.title = 'Save a side-by-side before and after image';
+  gifButton.title = 'Save a looping slider animation';
+  state.exportButtons = [pngButton, gifButton];
+  async function exportEntry(format) {
+    if (activeExport?.state === state && format === 'gif') { activeExport.controller.abort(); return; }
+    if (activeExport) return;
+    const controller = new AbortController();
+    activeExport = { state, controller };
+    states.forEach(s => s.exportButtons.forEach(button => { button.disabled = true; }));
+    if (format === 'gif') { gifButton.disabled = false; gifButton.textContent = 'Cancel GIF'; gifButton.setAttribute('aria-label', `Cancel GIF for ${pair.title}`); }
+    exportStatus.textContent = `Preparing ${format.toUpperCase()}…`;
+    error.hidden = true;
+    try {
+      // Yield before rasterization so progress and cancellation controls can paint.
+      await new Promise(resolve => setTimeout(resolve, 0));
+      const blob = await comparisonExports[format](pair, {
+        signal: controller.signal,
+        onProgress: percent => { exportStatus.textContent = `Creating GIF · ${percent}%`; }
+      });
+      comparisonExports.download(blob, comparisonExports.filename(pair, format));
+      exportStatus.textContent = `${format.toUpperCase()} ready. Download started.`;
+    } catch (failure) {
+      if (failure.name === 'AbortError') exportStatus.textContent = 'GIF export cancelled.';
+      else { exportStatus.textContent = ''; error.hidden = false; error.textContent = `Export failed: ${failure.message}`; }
+    } finally {
+      activeExport = null;
+      states.forEach(s => s.exportButtons.forEach(button => { button.disabled = false; }));
+      gifButton.textContent = 'Export GIF'; gifButton.setAttribute('aria-label', `Export GIF for ${pair.title}`);
+    }
+  }
+  pngButton.addEventListener('click', () => exportEntry('png'));
+  gifButton.addEventListener('click', () => exportEntry('gif'));
+  exportActions.append(pngButton, gifButton);
+  row.append(presets, output, exportActions);
+  controls.append(row);
+  if (pair.caption) controls.append(el('p', 'caption', pair.caption));
+  controls.append(exportStatus, error);
+  card.append(head, imageLabels, stage, controls); grid.append(card);
+});
+function filter() {
+  const query = document.getElementById('search').value.trim().toLocaleLowerCase();
+  let visible = 0;
+  for (const state of states) {
+    state.card.hidden = !`${state.pair.title} ${state.pair.caption} ${state.pair.id}`.toLocaleLowerCase().includes(query);
+    if (!state.card.hidden) visible++;
+  }
+  document.getElementById('count').textContent = `${query ? `${visible} of ` : ''}${states.length} comparison${states.length === 1 ? '' : 's'}`;
+  document.getElementById('empty').hidden = visible !== 0;
+}
+document.getElementById('search').addEventListener('input', filter);
+document.getElementById('reset').addEventListener('click', () => {
+  sync.checked = false;
+  states.forEach(state => setPosition(state, state.pair.position));
+});
+sync.addEventListener('change', () => {
+  if (sync.checked) { const first = states.find(s => !s.card.hidden) || states[0]; states.forEach(s => setPosition(s, first.range.value)); }
+});
+filter();
+</script>
+</body>
+</html>
