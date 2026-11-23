@@ -1,0 +1,10 @@
+import React,{useState} from 'react';
+import {Dialog} from '@base-ui/react/dialog';
+import {X} from 'lucide-react';
+import {Action} from './system';
+import {energy,money} from './data';
+export function Modal({title,desc,onClose,children}){return <Dialog.Root open onOpenChange={opened=>{if(!opened)onClose()}}><Dialog.Portal><Dialog.Backdrop className="backdrop"/><Dialog.Popup className="modal"><header><Dialog.Title>{title}</Dialog.Title><Dialog.Close aria-label="Close dialog" className="action"><X size={16}/></Dialog.Close></header><Dialog.Description>{desc}</Dialog.Description>{children}</Dialog.Popup></Dialog.Portal></Dialog.Root>}
+export function RatePlan({rates,onSave,onClose}){const [off,setOff]=useState(String(+(rates.off*100).toFixed(4))),[peak,setPeak]=useState(String(+(rates.peak*100).toFixed(4)));return <Modal title="Electricity rate plan" desc="Set this sample home's time-of-use rates. Estimates include electricity usage only, before taxes and fixed charges." onClose={onClose}><form onSubmit={e=>{e.preventDefault();onSave({off:Number(off)/100,peak:Number(peak)/100})}}>
+ {[['Off-peak rate','9 PM – 4 PM',off,setOff],['Peak rate','4 PM – 9 PM',peak,setPeak]].map(([name,time,val,change])=><label className="rate-row" key={name}><span><b>{name}</b><small>{time} daily</small></span><span className="rate-input"><input aria-label={name} type="number" min="0" max="999" step="0.01" required value={val} onChange={e=>change(e.target.value)}/>¢/kWh</span></label>)}
+ <footer><Action onClick={onClose}>Cancel</Action><Action type="submit" className="primary">Save rates</Action></footer></form></Modal>}
+export function Details({device,data,total,when,onClose}){const share=total?data.kwh/total*100:0;return <Modal title={device.name} desc={device.location+' · '+when} onClose={onClose}><dl className="detail-facts">{[['Electricity used',energy(data.kwh)+' kWh'],['Share of home usage',share.toFixed(1)+'%'],['Estimated energy cost',money(data.cost)],['Off-peak usage',energy(data.off)+' kWh'],['Highest 30-minute demand',data.max.toFixed(2)+' kW']].map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl></Modal>}

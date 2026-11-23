@@ -1,0 +1,17 @@
+{
+  "name": "ui-harmony-branch",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs --specimen && node build.mjs"
+  },
+  "dependencies": {
+    "@base-ui/react": "1.9.0",
+    "lucide-react": "0.468.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}
