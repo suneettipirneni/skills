@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voice mix</title>
+<style>
+  :root { color-scheme:light dark; font: 16px/1.45 system-ui; --paper:light-dark(#fff,#202120); --rail:light-dark(#e7e9e5,#3f433e); --muted:light-dark(#50594f,#bbc3b8); }
+  * { box-sizing:border-box }
+  body { margin:0; padding:clamp(18px,7vw,104px); background:light-dark(#f5f6f3,#191b19); color:light-dark(#20251f,#eff2ed) }
+  main { max-width:31rem; margin:auto; background:var(--paper); border:1px solid var(--rail); border-radius:12px; padding:clamp(18px,4vw,36px) }
+  h1 { font-size:1.45rem; letter-spacing:-.035em; line-height:1.2; margin:0 0 .35rem }
+  p { margin:0; color:var(--muted) }
+  fieldset { margin:2rem 0 0; padding:0; border:0; min-width:0 }
+  .row { display:flex; align-items:baseline; justify-content:space-between; gap:1rem }
+  label { font-weight:550 }
+  output { font:500 .95rem/1.3 ui-monospace,monospace; font-variant-numeric:tabular-nums }
+  input { width:100%; margin:8px 0 0; accent-color:light-dark(#40543d,#a5c29f); cursor:pointer; height:28px }
+  input:focus-visible { outline:2px solid currentColor; outline-offset:3px }
+</style>
+<main>
+  <h1>Voice mix</h1>
+  <p>Adjust the balance between the source and the processed voice.</p>
+  <fieldset aria-label="Mix controls">
+    <div class="row"><label for="strength">Strength</label><output id="readout" for="strength">60%</output></div>
+    <input type="range" id="strength" min="0" max="100" value="60" step="1">
+  </fieldset>
+</main>
+<script>
+  const strength = document.querySelector('#strength');
+  const readout = document.querySelector('#readout');
+  strength.addEventListener('input', () => { readout.value = strength.value + '%'; });
+</script>
+</html>

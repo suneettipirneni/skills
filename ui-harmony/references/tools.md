@@ -15,6 +15,10 @@ If Google Chrome is already installed, omit the browser download and pass `--cha
 
 Pinned versions are in `package.json`/`package-lock.json`. No dependencies are needed for `contrast.mjs`, `compare.mjs`, `review.mjs`, `route.mjs`, or the unit tests. `npm test` runs deterministic tests; `npm run test:browser` launches a local synthetic before/after fixture and checks meaningful detection and coverage behavior. The browser test uses Chrome by default; set `UI_HARMONY_TEST_CHANNEL=chromium` for the downloaded browser.
 
+## Compare a component across states
+
+The [state-study runner](state-study.md) exercises a named sequence in the same browser context, captures each frame, reads product-specific outcomes, and compares justified geometry anchors within each variant. Start here for repeated input, value-column movement, focus transfer or a stable caption. Run `npm run test:state-study` for the local browser calibration.
+
 ## Capture and audit
 
 ```sh
@@ -133,9 +137,36 @@ Reports record `environment.toolVersion`; comparison rejects mismatched versions
 
 Use the [Untitled UI anchor](preferences/untitled-ui.md) for semantic craft feedback alongside the existing browser outputs. The [live reference study](preferences/untitled-ui-evidence.md) records actual audit findings and their limits. Geometry can check a justified relationship; it cannot establish optical quality or pleasantness. Inspect the actual control wrapper and pseudo-elements: a bare input can have zero radius while its parent supplies the rounded material. Keep measured facts, manual craft judgments and functional evidence separate.
 
-## Modern SaaS preference scoring
+## Source-relative appearance studies
 
-Use [style scoring](preferences/style-scoring.md) for the user's preferred visual direction. `scripts/style-score.mjs` validates evidence-backed manual ratings, calculates the configured weighted fit, preserves functional gates and refuses mismatched comparisons. `scripts/review.mjs` accepts optional `styleReview`. This is separate from automated browser findings. Start from [the template](../assets/style-review-template.json).
+Use `appearance-study.mjs` to capture a candidate and compare selected corresponding regions with a local JPG or PNG source. Create a **trusted local executable** spec (it is imported and may run code), for example `/tmp/appearance-case.mjs`:
+
+```js
+export default [{
+  id: 'settings', title: 'Settings panel', intent: 'Compare the settings hierarchy',
+  url: 'http://localhost:3000/settings', viewport: { width: 1000, height: 800 },
+  source: '/absolute/path/source.jpg', sourceBox: [0, 0, 800, 700],
+  subject: '[data-study=panel]', polarity: 'dark',
+  regions: [{
+    name: 'Heading', reason: 'Compare type and position',
+    box: [40, 40, 300, 80], selector: '[data-study=heading]',
+    type: { selector: '[data-study=heading]', families: ['Example Sans'], custom: true }
+  }]
+}];
+```
+
+From the skill directory, with the app already running:
+
+```sh
+node scripts/appearance-study.mjs --spec /tmp/appearance-case.mjs \
+  --out /tmp/appearance-report --channel chrome
+```
+
+Use an empty output directory. Coordinates are `[x, y, width, height]` in source image pixels; each region box must lie within `sourceBox`. Selectors must match exactly one visible candidate element. Omit `sourceBox` or `subject` to use the full image or viewport; omit `type` when type evidence is irrelevant. `polarity: 'dark'` detects dark foreground on a light region; use `light` for light foreground on dark. The optional `enter(page)` hook runs trusted code to set up a state. The report includes linked context, subject and region crops, with `report.json` for the same data.
+
+Set `textBounds: true` on a region to compare its DOM text range with a manually marked text block. This helps distinguish a short title from the full-width block that contains it.
+
+The paired crops are sampled at a common width (at most 192 pixels). Geometry is relative to each subject, while median OKLab lightness, tonal span, mean chroma, binned palette shares, foreground share and centroid, and local edge activity are descriptive observations. Chromium reports candidate computed type and painted fonts, not source font identity. The foreground threshold and polarity are approximations; antialiasing, imagery, resampling and different crops can change results. These measures do not establish color accessibility, optical alignment, semantic equivalence, quality or motion. Captures use reduced motion and disabled animations; inspect real playback and state changes separately. Review the linked images and record what succeeds, what drifts, and why the proposed correction serves the task. An incomplete case or a failed expected-font match exits nonzero; a completed capture is not visual approval.
 
 ## Small details and paired spacing
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "UI Harmony"
   short_description: "Modern SaaS design, critique and validation"
-  default_prompt: "Use $ui-harmony to turn this UI task into a focused brief, preserve product identity, choose task-appropriate idioms and a considered modern SaaS direction where suitable, and verify the generated or refined interface with rendered and interaction evidence."
+  default_prompt: "Use $ui-harmony to build new web examples from a rendered React and Base UI design system with Lucide interface icons, verify the painted typography, then judge the finished interface against its references and on its own visual merits, including density and observed motion."

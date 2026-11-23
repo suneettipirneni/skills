@@ -6,6 +6,14 @@ The aesthetic anchor remains [Untitled UI](../preferences/untitled-ui.md). Headl
 
 ## Choose by behavior
 
+### Build and inspect the system before the screen
+
+For a set of new examples, establish a shared React entry point for authored text roles, control components and their states. Use Base UI parts for the behavior each component needs. Render the real definitions in a specimen or existing workbench with content from the references. A serif title with a particular break, a dense file row and a numeric readout reveal different requirements. Make the type decision there and carry it into the screen. Preserve host typography when the task calls for it.
+
+When using Tailwind 4, publish tokens with `@theme` and consume them from the shared components or generated utilities. Source-specific adjustments can live with the composing screen. Keep reference artwork, labels and icon weight faithful to the particular object. A shared system can support both an expressive editorial surface and a quiet instrument panel.
+
+For a generation trial, keep the settled specimen capture before creating the page modules. Record the shared source revision or hashes with it. Trace a component import from each page to the specimen's implementation. A later capture can verify reuse but provides no evidence of the order of construction. [Tailwind theme variables](https://tailwindcss.com/docs/theme)
+
 | Product need | Primitive / integration decision | Verify after composition |
 | --- | --- | --- |
 | Invitation, edit or contextual task | Dialog with a title, a description when useful, and trigger/close semantics | Initial focus, keyboard containment, Escape policy, return focus, long content and error recovery |

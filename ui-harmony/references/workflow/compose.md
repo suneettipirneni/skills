@@ -6,6 +6,23 @@ Layer: **workflow** · Route: `compose`
 
 **Avoid when:** Polishing a structure already known to fail the task.
 
+## Design the primitives first
+
+Before laying out a new screen, make a compact sheet in the delivery medium. Use real component instances or shared type and surface styles. A web build can use an existing story or temporary preview, a design file can use a component frame, and native work can use platform previews. If rendering is unavailable, author the definitions and specimen first, proceed with composition, and report that the visual check is outstanding.
+
+For standalone HTML studies, a shared local stylesheet or render function can serve both the sheet and the page. Inspect one distinctive primitive in both places. A generic swatch on the sheet and a separately drawn avatar on the page leave the actual portrait and status-ring relationship untested. For a toolbar, inspect the real glyph family at control size, including stroke and optical weight.
+
+| Decide on the sheet | Example of a useful specimen | What the composition owns |
+| --- | --- | --- |
+| Type and tone | A real object name beside a quiet metadata label and tabular value. For a publication, set the actual title, standfirst, body and caption. | Reading order, column measure and the space between groups |
+| Shape, surface and emphasis | Put the actual selected mark on its surface next to the resting one. Check the edge, label and accent together. | Which object is selected, and how that group sits beside the main task |
+| Operable elements | Show each required control with its real label, relevant active/focus states, and a representative awkward value. Reuse an existing primitive where it fits. | Action scope, focus flow, feedback and position at narrow widths |
+| Domain-specific visual parts | Design a waveform, folio, glyph or swatch when it helps the task. Show it at its intended working size. | How the part combines with labels, controls or neighboring content |
+
+Use only rows that apply. A printed essay might need four type roles, a rule, an image treatment and a reading link. A review queue might need a recording label, timestamp, selection mark and approval action. Give each part an owner in the implementation: a component, CSS role, platform style or library instance. The stage is complete when those parts can be inspected with real content and instantiated in the composition. A list of token names alone cannot show how the parts sit together.
+
+Build a representative group from these owners before repeating it through the page. For verification, trace a distinctive part from the sheet to its consumer. Compare them in the same variant and state, including a rendered property that should agree. Allow differences in available width, wrapping, placement and inherited theme when the composition calls for them. If a consumer needs a new variant, define and inspect it at the owner first. Keep preview controls and labels outside the user’s production UI.
+
 ## Make the direction concrete
 
 Choose the template by dominant task, then only the organisms, molecules and atoms needed. Use existing system roles first. Design the whole and the parts together; a beautiful button cannot rescue a misleading priority order.
@@ -35,6 +52,14 @@ Choose a consequential interaction and follow **intent → response → commitme
 For example, assigning an owner may change the record's position in a filtered queue. Decide how confirmation and the next useful task remain available when the row disappears. An attractive success toast alone does not settle that behavior. Reuse established product semantics; do not silently alter persistence or introduce optimistic success without a credible failure path.
 
 Evaluate immediate response separately from completion: a pressed or pending state can acknowledge input while work continues. Preserve input and control geometry when useful; avoid moving a target under the pointer or forcing a person to wait for decorative animation. For frequent actions, try repeated, interrupted and reversed use. Motion earns its place by communicating a transition or the intended character, and must preserve meaning under reduced motion. A static concept can specify these choices but cannot verify them.
+
+### Test the consequence of an edit
+
+For an editor or workbench, take a small, known fixture. Predict the downstream result of one meaningful decision before implementing it. Name a nearby object that should stay the same. Let a person make the decision, inspect its consequences in context, and recover or continue as the task calls for. Use the [state-study runner](../state-study.md) or an existing browser test to compare the actual object and its visible representation against that prediction. A toast can acknowledge the edit. The evidence lives in the changed work.
+
+In a weaving draft, removing a tie affects every crossing that uses both its shaft and its treadle. A miniature fixture can predict the exact affected coordinates. Keep those crossings readable alongside the tie, trace one back to its inputs, and check that undo restores the original drawdown. A preset picker and a recolored image would miss that decision.
+
+When an interaction feels shallow, revisit what the user can accomplish with the underlying object. Compare two placements of the decision and its consequence if their relationship is hard to see. Keep the version that lets someone inspect or act with less reconstruction. On a reading surface, follow the reader’s actual purpose, such as comparing passages or returning to a cited figure, only when the brief calls for it.
 
 ## Behavior and adaptation
 

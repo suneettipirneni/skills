@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Canvas tools</title>
+<style>
+  :root { color-scheme:light dark; font:15px/1.4 system-ui }
+  * { box-sizing:border-box }
+  body { margin:0; padding:12vh 16px; color:light-dark(#282927,#eee); background:light-dark(#f4f4f1,#20211f) }
+  main { max-width:28rem; margin:auto }
+  h1 { font-size:1.1rem; font-weight:600; margin:0 0 12px }
+  section { background:light-dark(white,#2a2c29); border:1px solid light-dark(#d8dad5,#424440); border-radius:8px; padding:20px 20px 48px }
+  .tools { display:inline-flex; gap:4px; position:relative }
+  button { color:inherit; background:transparent; border:0; border-radius:5px; width:36px; height:36px; display:grid; place-items:center }
+  button:hover,button:focus-visible { background:light-dark(#efefeb,#383b36) }
+  button:focus-visible { outline:2px solid light-dark(#3a5366,#abccdf); outline-offset:1px }
+  svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round }
+  [role="tooltip"] { position:absolute; top:44px; left:0; transform:translateX(-50%); transition:left 140ms ease-out; border-radius:4px; padding:3px 7px; color:light-dark(#fff,#232421); background:light-dark(#292b27,#f2f2ef); white-space:nowrap; pointer-events:none }
+  @media (prefers-reduced-motion:reduce) { [role="tooltip"] { transition:none } }
+</style>
+<main><h1>Canvas tools</h1>
+<section aria-label="Drawing tools"><div class="tools">
+  <button aria-label="Select"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 3 13 10-7 1-3 7z"/></svg></button>
+  <button aria-label="Rectangle"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="5.5" width="15" height="13" rx="1"/></svg></button>
+  <button aria-label="Text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7V5h16v2M12 5v14m-4 0h8"/></svg></button>
+  <span role="tooltip" id="hint" hidden></span>
+</div></section></main>
+<script>
+  const tools = document.querySelector('.tools');
+  const hint = document.querySelector('#hint');
+  function dismiss() {
+    tools.querySelector('[aria-describedby]')?.removeAttribute('aria-describedby');
+    hint.hidden = true;
+  }
+  function show(event) {
+    const button = event.target.closest('button');
+    if (!button) return;
+    tools.querySelector('[aria-describedby]')?.removeAttribute('aria-describedby');
+    button.setAttribute('aria-describedby', hint.id);
+    hint.textContent = button.getAttribute('aria-label');
+    hint.style.left = (button.offsetLeft + button.offsetWidth / 2) + 'px';
+    hint.hidden = false;
+  }
+  tools.addEventListener('focusin', show);
+  tools.addEventListener('focusout', event => { if (!tools.contains(event.relatedTarget)) dismiss(); });
+  tools.addEventListener('pointerover', show);
+  tools.addEventListener('pointerleave', () => {
+    if (tools.contains(document.activeElement)) show({target: document.activeElement});
+    else dismiss();
+  });
+  tools.addEventListener('keydown', event => { if (event.key === 'Escape') dismiss(); });
+</script>
+</html>

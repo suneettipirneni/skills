@@ -1,6 +1,6 @@
 # Route by task, then by the relationship that needs work
 
-This catalog uses Brad Frost’s **atoms → molecules → organisms → templates → pages** as concurrent levels of a system. Foundations/tokens support them; workflow and conditions are separate axes. These extra categories are this skill’s organization, not additional canonical Atomic Design stages. Organisms may contain atoms, molecules or organisms. No framework, directory reorganization, atom-first build order or adjacent-level-only traversal is required.
+This catalog uses Brad Frost’s **atoms → molecules → organisms → templates → pages** as concurrent levels of a system. Foundations/tokens support them; workflow and conditions are separate axes. These extra categories are this skill’s organization, not additional canonical Atomic Design stages. Organisms may contain atoms, molecules or organisms. For generation, use the task route to select the needed parts, then [design the primitives first](workflow/compose.md#design-the-primitives-first) and compose upward. For diagnosis, enter at the level that owns the defect. Both workflows fit the project’s existing framework and directories.
 
 ## Make a bounded route choice
 

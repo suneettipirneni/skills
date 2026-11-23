@@ -12,7 +12,9 @@
     "test:resilience": "node scripts/tests/resilience-browser.mjs",
     "test:realworld": "node scripts/tests/realworld-browser.mjs",
     "test:detail": "node scripts/tests/detail-browser.mjs",
-    "test:optical": "node scripts/tests/paint-balance-browser.mjs"
+    "test:optical": "node scripts/tests/paint-balance-browser.mjs",
+    "test:state-study": "node scripts/tests/state-study-browser.mjs",
+    "test:appearance": "node scripts/tests/appearance-study-browser.mjs"
   },
   "dependencies": {
     "@axe-core/playwright": "4.14.0",

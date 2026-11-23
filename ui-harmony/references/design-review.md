@@ -4,6 +4,23 @@ Use this as a diagnostic vocabulary, not a universal style recipe. The named sou
 
 ## 1. Read the composition before inspecting components
 
+### Make an aesthetic judgment
+
+Review the settled source and candidate at comparable subject scale before looking at test outcomes. First identify where the eye enters and how the main masses and negative space balance. Then compare letterforms, type scale, weight, line endings and text density. Finally inspect the recognizable artwork, glyph silhouettes, edges, depth and contrast. Use the dimensions that actually shape this reference. For a wordless avatar, the crop, texture and ring matter more than a font inventory.
+
+Apply six lenses to the aspects that matter to the actual screen. Describe both the candidate's independent merits and its relationship to the source; a faithful copy can still feel unresolved, and a deliberate deviation can improve the result.
+
+1. **Hierarchy and typography:** Compare focal order, size, weight, spacing, contrast, letterform contours, line endings and reading tension. Identify the type that paints the candidate when browser evidence is available.
+2. **Color balance and contrast:** Describe dominant, secondary and accent roles, their relative visual weight and contrast, including the atmosphere they create. A 60–30–10 distribution is an optional compositional heuristic, never a required ratio or accessibility test.
+3. **Layout and whitespace:** Inspect alignment, proximity, grouping, rhythm, optical balance, meaningful density and negative space. Compare corresponding regions at comparable subject scale; do not assume sparse means simple.
+4. **Depth and elevation:** Assess how surfaces, borders, shadows, translucency and stacking communicate relationships and material. Distinguish useful layers from decorative noise.
+5. **Consistency:** Compare recurring controls, icon silhouettes, spacing and state treatments by role. Preserve purposeful variation that explains hierarchy or character.
+6. **Purposeful motion:** Observe transitions in time when available: continuity, pacing, feedback, interruption and reduced motion. A still frame cannot establish how motion feels or behaves; mark it unobserved if playback is unavailable.
+
+Use [appearance studies](tools.md#source-relative-appearance-studies) for descriptive source-relative geometry, tonal, palette, foreground and type evidence when appropriate. Measurements help locate a difference; they do not establish beauty, semantic grouping, accessibility or a pass threshold.
+
+Give the screen a visual disposition with a reason grounded in something visible. “The serif now has the tall, narrow lowercase of the reference, but the wider paragraph still pushes the image below the fold” is actionable. Describe the strongest match and the most consequential remaining drift. Re-render when addressing it. Report functional checks independently so a working control cannot settle a judgment about typography or composition.
+
 Write a one-sentence account of the screen: “Compare outstanding invoices and act on overdue ones.” Identify the visual entry point, the next useful information, and the action. Compare that order to the intended task. A title need not be the largest object; a monitoring screen may properly emphasize an exception count.
 
 At full size, check whether the content is legible. At a reduced overview, check broad emphasis and grouping. This is an inspection technique, not eye tracking. Never claim where users looked or how many milliseconds comprehension takes without actual study data.

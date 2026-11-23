@@ -14,6 +14,10 @@ Build hierarchy through several signals, not ever-larger text alone. Keep expres
 
 ## Behavior and adaptation
 
+Choose faces from representative letterforms. Compare the actual title or label at matched size and width. Look for differences in cap width, x-height, contrast between thick and thin strokes, numeral shapes and line breaks. Check the chosen weight in both quiet labels and dominant text. Put the selected licensed font in the build, including its required weights. Where the reference typeface is unknown, identify the chosen face as an approximation and name what made it fit. An explicitly chosen platform face can also be appropriate.
+
+Inspect the face used for a text node after font loading. In Chromium, Rendered Fonts or `CSS.getPlatformFontsForNode` reveals the face that contributed glyphs. A CSS family declaration and a resolved `document.fonts.ready` can both accompany a fallback. Inspect representative letters and digits, especially across weights and scripts.
+
 Test actual fonts, fallback/font failure, long headings, localization and user text growth. Tight leading/tracking can be intentional but must preserve word boundaries and avoid collision.
 
 ## Evidence and repair

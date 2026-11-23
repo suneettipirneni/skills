@@ -1,0 +1,104 @@
+[
+  {
+    "id": "linear-shell", "title": "Let the sidebar recede", "credit": "Charlie Aufmann and Maxime Heckel · Linear",
+    "tasks": ["workspace", "monitoring"], "source": "https://linear.app/now/behind-the-latest-design-refresh",
+    "frames": ["linear-shell"], "preserve": "Smaller quiet glyphs, recognizable selection and enough row space to distinguish neighboring destinations.",
+    "test": "Compare the same route and selection in each theme. Verify text contrast and the visible focus state."
+  },
+  {
+    "id": "linear-tracks", "title": "Align like objects at each depth", "credit": "Karri Saarinen · Linear",
+    "tasks": ["workspace", "settings"], "source": "https://x.com/karrisaarinen/status/2119321203076977020",
+    "frames": ["linear-tracks"], "preserve": "The icon centers, label starts and trailing utilities each have a reference track. Nested items get a different inset.",
+    "test": "Measure same-depth peers separately. Inspect the top-bar control centers and repeat with longer labels."
+  },
+  {
+    "id": "guided-review", "title": "Keep the change readable on a phone", "credit": "Adrien Griveau · Linear",
+    "tasks": ["record-detail", "workspace"], "source": "https://x.com/Griveau/status/2121169976363307276",
+    "frames": ["linear-mobile"], "preserve": "Guide title and sequence lead, compact filenames and signed change counts support the decision, and merge has its own space.",
+    "test": "Load a long branch name and a pending check. Return to the same review step after inspecting a file."
+  },
+  {
+    "id": "editorial-type", "title": "Give an editorial statement room", "credit": "Paul Macgregor · Linear",
+    "tasks": ["article", "landing"], "source": "https://x.com/pdotcv/status/2121337054877601914",
+    "frames": ["linear-brand"], "preserve": "A large, short serif statement, restrained sans-serif paragraph and wide dark image establish a reading sequence.",
+    "test": "Read the actual title at two widths. Inspect its wrap and distance to the paragraph and photograph."
+  },
+  {
+    "id": "value-row", "title": "Keep an adjustable value in reading position", "credit": "Breno Lasserre",
+    "tasks": ["settings", "form", "workspace"], "source": "https://x.com/brenolasserre/status/2103957463506849840",
+    "frames": ["slider"], "preserve": "A persistent label occupies one end of a shallow track. The numerical value and unit share the opposite edge.",
+    "test": "Drive the range to both limits and reverse. Read the underlying and displayed values and compare the value edge."
+  },
+  {
+    "id": "tool-hints", "title": "Carry a hint between neighboring tools", "credit": "Micka · Fluid Functionalism",
+    "tasks": ["workspace", "settings"], "source": "https://fluidfunctionalism.com/docs/tooltip",
+    "frames": ["tooltip", "tooltip-focus", "tooltip-next"], "preserve": "A small contrasting label travels with the active glyph while the strip keeps its position.",
+    "test": "Move across the strip twice, reverse and dismiss. Verify the owner, visible hint, focus and settled placement."
+  },
+  {
+    "id": "object-status", "title": "Attach a status to its object", "credit": "Nitish Khagwal",
+    "tasks": ["record-detail", "settings"], "source": "https://x.com/nitishkmrk/status/2121129936497111406",
+    "frames": ["status"], "preserve": "An edge ring separates the status disc from a detailed avatar and anchors it to the same person.",
+    "test": "Switch status and inspect the actual accessible value and a non-color indication of the new state."
+  },
+  {
+    "id": "bulk-icons", "title": "Use silhouette and secondary mass", "credit": "Hugeicons",
+    "tasks": ["workspace", "collection"], "source": "https://x.com/huge_icons/status/2122557160853004677",
+    "frames": ["icons"], "preserve": "A dark silhouette identifies the subject, while a second tone describes its interior or setting.",
+    "test": "Compare equivalent glyphs at their real control size across normal, selected and disabled states."
+  },
+  {
+    "id": "inline-edit", "title": "Keep a selected passage readable", "credit": "Yağız",
+    "tasks": ["article", "workspace"], "source": "https://x.com/yagizsigned/status/2095514762893205758",
+    "frames": ["inline-edit"], "preserve": "Local editing controls sit beside the passage. The result uses space beneath the original.",
+    "test": "Select a middle sentence, then reject and accept changes. Check the range, neighboring text and toolbar clearance."
+  },
+  {
+    "id": "proposal", "title": "Put a proposed change beside its source", "credit": "Carl Harrisson · Daybook",
+    "tasks": ["workspace", "record-detail"], "source": "https://x.com/carlharrisson/status/2120918051314954422",
+    "frames": ["review"], "preserve": "Connected records occupy the canvas while a localized proposal offers a decision point.",
+    "test": "Inspect an original value, reject one proposal, accept another and verify which records changed."
+  },
+  {
+    "id": "no-results", "title": "Give a quiet empty state one way forward", "credit": "Kevin",
+    "tasks": ["search-results", "collection", "analytics"], "source": "https://x.com/keviduk/status/2120158050644537513",
+    "frames": ["empty-state"], "preserve": "The pale isometric drawing and blue detail sit above a specific search result and its recovery action.",
+    "test": "Compare an empty collection with an unmatched query. Operate recovery without hover."
+  },
+  {
+    "id": "infrastructure", "title": "Move from properties to a plotted measure", "credit": "Noman",
+    "tasks": ["monitoring", "analytics", "settings"], "source": "https://x.com/Nomandsign/status/2122729397979635850",
+    "frames": ["infra"], "preserve": "Aligned plan values change into a chart section with a local selector. Lavender carries data while the action stays dark.",
+    "test": "Try a long plan name, empty series and narrow plot. Verify units and series identity."
+  },
+  {
+    "id": "feature-proof", "title": "Vary the demonstration inside a stable slot", "credit": "Roman Tesliuk · ElevenLabs",
+    "tasks": ["landing", "collection"], "source": "https://x.com/RomaTesla/status/2122316404066242649",
+    "frames": ["feature-cards", "feature-cards-second"], "preserve": "Distinct product imagery carries each tile while the captions share a reading track.",
+    "test": "Inspect inactive, active and motion-reduced states. Verify caption placement and that the still communicates the feature."
+  },
+  {
+    "id": "card-deck", "title": "Make a tactile deck interruptible", "credit": "Lorenzo Dossi with Tom Parkes",
+    "tasks": ["landing", "wizard"], "source": "https://x.com/lorenzodossi/status/2121243159250473097",
+    "frames": ["card-stack", "card-stack-second"], "preserve": "Photo and text cards overlap and rotate within the stage. The caption belongs to the stage and stays outside it.",
+    "test": "Go forward twice and back before settling. Check the final object and active count."
+  },
+  {
+    "id": "onboarding", "title": "Keep landmarks while the step changes shape", "credit": "J. Kyorov",
+    "tasks": ["wizard", "form"], "source": "https://x.com/j_kyorov/status/2117208671046479968",
+    "frames": ["onboarding"], "preserve": "The segmented progress line and bottom action stay recognizable through illustration, summary and choice screens.",
+    "test": "Navigate back with a long answer, short viewport and large text. Inspect retained input and the final line above the action."
+  },
+  {
+    "id": "landscape-proof", "title": "Frame a product preview with a landscape", "credit": "Adrian Kuleszo · StatiQ exploration",
+    "tasks": ["landing"], "source": "https://x.com/adriankuleszo/status/2122759186958418103",
+    "frames": ["editorial"], "preserve": "The centered headline and dark action lead into a light product sample. The mountain crosses the lower edge of the preview.",
+    "test": "Check the crop at the narrowest intended width and verify that the preview’s useful detail and action survive."
+  },
+  {
+    "id": "theme-art", "title": "Retune the artwork with the surface", "credit": "Emili · Framer",
+    "tasks": ["landing", "collection"], "source": "https://x.com/emili_iv/status/2122068581777014969",
+    "frames": ["theme-product-light", "theme-product-dark", "theme"], "preserve": "The product begins with a slim navigation row and the artwork itself. Light mode shows a cluster of tilted image tiles; dark mode shows a HAUS editor preview. Short feature copy follows the art. The first two images isolate those product regions from the recording in the third.",
+    "test": "Render both themes with the images loaded and inspect foreground detail, logo separation and text over art."
+  }
+]
