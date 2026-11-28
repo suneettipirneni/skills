@@ -102,6 +102,8 @@ node scripts/style-score.mjs profile
 
 For browser audits, install the pinned dependencies and a browser as described in the [tool guide](ui-harmony/references/tools.md). Keep audit dependencies separate from the application being reviewed. The npm package is marked private to prevent accidental npm publication; the GitHub repository is public.
 
+For [DesignParser rule verification](ui-harmony/references/design-rules.md), run `npm run design-rules -- run --all --url URL --out NEW_DIR` from the skill folder. Use the `loop` subcommand to retain findings and recheck repairs until every applicable rule is verified.
+
 ## Research and examples
 
 Source articles are linked and summarized in the reference ledgers. Public-site screenshots are included as evidence for limited design critiques; they are not templates or claims of endorsement. Third-party names, screenshots and referenced material retain their respective ownership. Synthetic calibration fixtures illustrate the tools. The bespoke React examples implement complete local review workflows with fictional content; they are prototypes, not production applications.

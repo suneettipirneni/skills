@@ -15,6 +15,10 @@ If Google Chrome is already installed, omit the browser download and pass `--cha
 
 Pinned versions are in `package.json`/`package-lock.json`. No dependencies are needed for `contrast.mjs`, `compare.mjs`, `review.mjs`, `route.mjs`, or the unit tests. `npm test` runs deterministic tests; `npm run test:browser` launches a local synthetic before/after fixture and checks meaningful detection and coverage behavior. The browser test uses Chrome by default; set `UI_HARMONY_TEST_CHANNEL=chromium` for the downloaded browser.
 
+## Run every DesignParser rule
+
+Run `node scripts/design-rules.mjs run --all --url URL --out NEW_DIR` for a holistic review. The [rule runner guide](design-rules.md) covers scoped contracts, supported studies, evidence files and the resumable repair loop.
+
 ## Compare a component across states
 
 The [state-study runner](state-study.md) exercises a named sequence in the same browser context, captures each frame, reads product-specific outcomes, and compares justified geometry anchors within each variant. Start here for repeated input, value-column movement, focus transfer or a stable caption. Run `npm run test:state-study` for the local browser calibration.

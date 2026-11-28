@@ -1,0 +1,7 @@
+{
+  "audit": {"viewports": [{"name":"phone","width":390,"height":844},{"name":"desktop","width":1280,"height":800}]},
+  "checks": {
+    "line-height": {"selector":"#terms","reason":"The statement's body text uses the approved 1.5 leading ratio.","expect":{"leadingRatio":{"min":1.49,"max":1.51}}},
+    "aspect-ratios": {"selector":"#preview","reason":"The statement preview should keep its 3:2 delivery frame.","expect":{"aspectRatio":{"min":1.49,"max":1.51}}}
+  }
+}

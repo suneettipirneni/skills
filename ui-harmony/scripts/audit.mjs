@@ -61,6 +61,7 @@ export async function runAudit(options) {
         // Capture natural state. Do not fast-forward transitions or disable animation,
         // which could hide defects or fire transition handlers before measurement.
         const snapshot=await page.evaluate(collect,config);
+        if(options.collectSupplement) snapshot.supplement=await options.collectSupplement(page,viewport);
         Object.assign(snapshot,{caseId,viewport,theme,motion,textSpacing:!!options.textSpacing,screenshot,viewportScreenshot});
         await page.screenshot({path:path.join(out,viewportScreenshot),fullPage:false,animations:'allow'});
         await page.screenshot({path:path.join(out,screenshot),fullPage:true,animations:'allow'});

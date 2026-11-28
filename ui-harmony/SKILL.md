@@ -88,6 +88,8 @@ For a narrow defect, use the repair loop below without requiring an art-directio
 
 Scale the depth to the work. One awkward button does not require a full product audit. For a broad quality review, use the scenario matrix and anchored rubric in [evaluation.md](references/evaluation.md).
 
+For a full design critique or an iterative polish pass, run the [DesignParser rule workflow](references/design-rules.md). Use `design-rules.mjs run --all` for one assessment and `loop` to recheck a changing design. The [88-rule catalog](references/design-rule-catalog.md) gives each rule a verification procedure and acceptance evidence. Use `feedback.md` to locate defects, inspect the cited frame, preserve successful details and verify the correction in the same state. Record audience observations or production proofs when the rule calls for them.
+
 ## Calibrate the critique
 
 When testing this skill or learning from established interfaces, use [reference calibration](references/conditions/reference-calibration.md). Compare concrete tasks and current versions, preserve successful relationships, and challenge both reputation bias and indiscriminate modernization. A respected design can have accessibility defects; a criticized one can still support a task. Grouped automated counts are not a cross-site quality ranking.

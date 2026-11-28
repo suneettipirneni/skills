@@ -7,6 +7,8 @@
     "node": ">=20"
   },
   "scripts": {
+    "design-rules": "node scripts/design-rules.mjs",
+    "test:design-rules": "node scripts/tests/design-rules-browser.mjs",
     "test": "node --test scripts/tests/*.test.mjs",
     "test:browser": "node scripts/tests/browser.mjs",
     "test:resilience": "node scripts/tests/resilience-browser.mjs",
